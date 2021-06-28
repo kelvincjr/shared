@@ -195,7 +195,7 @@ df.to_csv("./data/lgb.csv", index=False)
 play_cols = [
     'is_finish', 'play_times', 'play', 'stay'
 ]
-df = pd.read_csv("data/lgb.csv")
+df = pd.read_csv("/kaggle/input/wechat-bigdata-lgb-2021/wechat_bigdata_lgb/data/lgb.csv")
 df = reduce_mem(df, [f for f in df.columns if f not in ['date_'] + play_cols + y_list])
 train = df[~df['read_comment'].isna()].reset_index(drop=True)
 test = df[df['read_comment'].isna()].reset_index(drop=True)
