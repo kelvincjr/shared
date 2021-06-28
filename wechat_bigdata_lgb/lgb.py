@@ -197,6 +197,7 @@ del df
 print(train[cols].shape)
 trn_x = train[train['date_'] < 14].reset_index(drop=True)
 val_x = train[train['date_'] == 14].reset_index(drop=True)
+del train,test
 ##################### 线下验证 #####################
 uauc_list = []
 r_list = []
@@ -228,6 +229,8 @@ for y in y_list[:4]:
 weighted_uauc = 0.4 * uauc_list[0] + 0.3 * uauc_list[1] + 0.2 * uauc_list[2] + 0.1 * uauc_list[3]
 print(uauc_list)
 print(weighted_uauc)
+
+'''
 ##################### 全量训练 #####################
 r_dict = dict(zip(y_list[:4], r_list))
 for y in y_list[:4]:
@@ -253,3 +256,4 @@ test[['userid', 'feedid'] + y_list[:4]].to_csv(
     'sub_%.6f_%.6f_%.6f_%.6f_%.6f.csv' % (weighted_uauc, uauc_list[0], uauc_list[1], uauc_list[2], uauc_list[3]),
     index=False
 )
+'''
