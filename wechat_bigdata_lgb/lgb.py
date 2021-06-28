@@ -189,10 +189,11 @@ mem_info()
 ## 内存够用的不需要做这一步
 df = reduce_mem(df, [f for f in df.columns if f not in ['date_'] + play_cols + y_list])
 df.to_csv("./data/lgb.csv", index=False)
-assert False
+#assert False
 train = df[~df['read_comment'].isna()].reset_index(drop=True)
 test = df[df['read_comment'].isna()].reset_index(drop=True)
 cols = [f for f in df.columns if f not in ['date_'] + play_cols + y_list]
+del df
 print(train[cols].shape)
 trn_x = train[train['date_'] < 14].reset_index(drop=True)
 val_x = train[train['date_'] == 14].reset_index(drop=True)
