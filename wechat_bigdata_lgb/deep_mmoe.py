@@ -21,12 +21,13 @@ if __name__ == "__main__":
     batch_size = 512
     embedding_dim = 512
     df = pd.read_csv("data/lgb.csv")
-    feed_embeddings = pd.read_csv("feed_embedding.csv")
+    feed_embeddings = pd.read_csv("data/wechat_algo_data1/feed_embedding.csv")
     feed_embeddings['feed_embedding'] = feed_embeddings['feed_embedding'].apply(
         lambda x: list(map(float, x.strip().split())))
     feed_embedding = np.array(feed_embeddings['feed_embedding'].values.tolist())
     data = df[~df['read_comment'].isna()].reset_index(drop=True)
     test = df[df['read_comment'].isna()].reset_index(drop=True)
+    del df
 
     play_cols = ['is_finish', 'play_times', 'play', 'stay']
     y_list = ['read_comment', 'like', 'click_avatar', 'forward', 'favorite', 'comment', 'follow']
@@ -56,7 +57,7 @@ if __name__ == "__main__":
                                  SparseFeat(feat, vocabulary_size=data[feat].max() + 1, embedding_dim=embedding_dim)
                                  for feat in sparse_features if feat is not 'feedid'] + [DenseFeat(feat, 1) for feat in
                                                                                          dense_features]
-
+    del data
     dnn_feature_columns = fixlen_feature_columns
     feature_names = get_feature_names(dnn_feature_columns)
 
@@ -68,6 +69,8 @@ if __name__ == "__main__":
 
     train_labels = [train[y].values for y in target]
     val_labels = [val[y].values for y in target]
+
+    del train, val
 
     # 4.Define Model,train,predict and evaluate
     train_model = MMOE(dnn_feature_columns, num_tasks=4, expert_dim=8, dnn_hidden_units=(128, 128),
