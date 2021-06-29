@@ -10,7 +10,7 @@ from mmoe import MMOE
 from evaluation import evaluate_deepctr
 
 # GPU相关设置
-os.environ["CUDA_VISIBLE_DEVICES"] = "0"
+os.environ["CUDA_VISIBLE_DEVICES"] = "2"
 # 设置GPU按需增长
 '''
 config = tf.ConfigProto()
@@ -37,7 +37,7 @@ def mem_info():
 
 def deep_mmoe(df):
     epochs = 4 #5
-    batch_size = 128  #512
+    batch_size = 512
     embedding_dim = 128 #512
     #df = pd.read_csv("data/lgb.csv")
     feed_embeddings = pd.read_csv("data/wechat_algo_data1/feed_embeddings.csv")
