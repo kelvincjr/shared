@@ -262,8 +262,7 @@ for y in y_list[:4]:
         num_leaves=63,
         subsample=0.8,
         colsample_bytree=0.8,
-        random_state=2021,
-        device='gpu'
+        random_state=2021
     )
     print('check point after LGBMClassifier')
     mem_info()

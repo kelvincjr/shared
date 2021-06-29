@@ -12,9 +12,17 @@ from evaluation import evaluate_deepctr
 # GPU相关设置
 os.environ["CUDA_VISIBLE_DEVICES"] = "2"
 # 设置GPU按需增长
+'''
 config = tf.ConfigProto()
 config.gpu_options.allow_growth = True
 sess = tf.Session(config=config)
+'''
+if tf.__version__.startswith('1.'):  # tensorflow 1
+    config = tf.ConfigProto()  # allow_soft_placement=True
+    config.gpu_options.allow_growth = True
+    sess = tf.Session(config=config)
+else:  # tensorflow 2
+    tf.config.gpu.set_per_process_memory_growth(enabled=True)
 
 import os,signal
 import psutil
@@ -26,14 +34,33 @@ def mem_info():
     print('Memory used: {:.2f} MB'.format(memory))
 
 def deep_mmoe(df):
-    epochs = 5
+    epochs = 4 #5
     batch_size = 512
-    embedding_dim = 512
+    embedding_dim = 128 #512
     #df = pd.read_csv("data/lgb.csv")
     feed_embeddings = pd.read_csv("data/wechat_algo_data1/feed_embeddings.csv")
     feed_embeddings['feed_embedding'] = feed_embeddings['feed_embedding'].apply(
         lambda x: list(map(float, x.strip().split())))
-    feed_embedding = np.array(feed_embeddings['feed_embedding'].values.tolist())
+    #feed_embedding = np.array(feed_embeddings['feed_embedding'].values.tolist())
+    #print('feed_embedding shape[0] {}'.format(feed_embedding.shape[0]))
+    
+    embeddings_index = {}
+    for i, row in feed_embeddings.iterrows():
+        feedid = row['feedid']
+        feed_embedding = row['feed_embedding']
+            # coefs = np.fromstring(row['feed_embedding'], "f", sep=" ")
+        embeddings_index[feedid] = np.asarray(feed_embedding, dtype=float)
+    num_tokens = feed_embeddings['feedid'].max() + 1
+    feed_embedding_dim = len(feed_embeddings.feed_embedding[0])
+    # Prepare embedding matrix
+    embedding_matrix = np.zeros((num_tokens, feed_embedding_dim))
+    for feedid, embedding in embeddings_index.items():
+        # Words not found in embedding index will be all-zeros.
+        # This includes the representation for "padding" and "OOV"
+        embedding_matrix[feedid] = embedding
+
+    del feed_embeddings
+    del embeddings_index
     print('check point after feed_embedding')
     mem_info()
     data = df[~df['read_comment'].isna()].reset_index(drop=True)
@@ -70,13 +97,18 @@ def deep_mmoe(df):
     val = data[data['date_'] == 14]  # 第14天样本作为验证集
     pretrained_feed_embedding_initializer = tf.initializers.identity(feed_embedding)
 
+    print('feedid max() + 1 {}'.format(data['feedid'].max() + 1))
     # 2.count #unique features for each sparse field,and record dense feature field name
     fixlen_feature_columns = [SparseFeat('feedid', vocabulary_size=data['feedid'].max() + 1, embedding_dim=512,
+    #fixlen_feature_columns = [SparseFeat('feedid', vocabulary_size=feed_embedding.shape[0], embedding_dim=512,                                        
                                          embeddings_initializer=pretrained_feed_embedding_initializer)] + [
                                  SparseFeat(feat, vocabulary_size=data[feat].max() + 1, embedding_dim=embedding_dim)
                                  for feat in sparse_features if feat is not 'feedid'] + [DenseFeat(feat, 1) for feat in
                                                                                          dense_features]
     del data
+    print('check point after train test')
+    mem_info()
+
     dnn_feature_columns = fixlen_feature_columns
     feature_names = get_feature_names(dnn_feature_columns)
 
@@ -90,12 +122,14 @@ def deep_mmoe(df):
     val_labels = [val[y].values for y in target]
 
     del train, val
+    print('check point after train_model_input val_model_input')
+    mem_info()
 
     # 4.Define Model,train,predict and evaluate
     train_model = MMOE(dnn_feature_columns, num_tasks=4, expert_dim=8, dnn_hidden_units=(128, 128),
                        tasks=['binary', 'binary', 'binary', 'binary'])
     train_model.compile("adagrad", loss='binary_crossentropy')
-    # print(train_model.summary())
+    print(train_model.summary())
     for epoch in range(epochs):
         history = train_model.fit(train_model_input, train_labels,
                                   batch_size=batch_size, epochs=1, verbose=1)
