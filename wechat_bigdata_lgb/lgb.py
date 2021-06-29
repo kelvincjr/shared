@@ -89,6 +89,7 @@ def uAUC(labels, preds, user_id_list):
 
 y_list = ['read_comment', 'like', 'click_avatar', 'forward', 'favorite', 'comment', 'follow']
 max_day = 15
+
 ## 读取训练集
 train = pd.read_csv('data/wechat_algo_data1/user_action.csv')
 print(train.shape)
@@ -188,13 +189,24 @@ print('check point after 全局信息统计')
 mem_info()
 ## 内存够用的不需要做这一步
 df = reduce_mem(df, [f for f in df.columns if f not in ['date_'] + play_cols + y_list])
-df.to_csv("./data/lgb.csv", index=False)
+#df.to_csv("./data/lgb.csv", index=False)
+
 #assert False
+#play_cols = [
+#    'is_finish', 'play_times', 'play', 'stay'
+#]
+#df = pd.read_csv("data/lgb.csv")
+#df = reduce_mem(df, [f for f in df.columns if f not in ['date_'] + play_cols + y_list])
 train = df[~df['read_comment'].isna()].reset_index(drop=True)
 test = df[df['read_comment'].isna()].reset_index(drop=True)
 cols = [f for f in df.columns if f not in ['date_'] + play_cols + y_list]
 del df
 print(train[cols].shape)
+train = reduce_mem(train, [f for f in train.columns if f not in ['date_'] + play_cols + y_list])
+test = reduce_mem(test, [f for f in test.columns if f not in ['date_'] + play_cols + y_list])   
+print('check point after train, test')
+mem_info()
+'''
 trn_x = train[train['date_'] < 14].reset_index(drop=True)
 val_x = train[train['date_'] == 14].reset_index(drop=True)
 del train,test
@@ -232,6 +244,9 @@ print(weighted_uauc)
 
 '''
 ##################### 全量训练 #####################
+r_list = [467, 284, 238, 108]
+weighted_uauc = 0.645492376613249
+uauc_list = [0.6243128506926658, 0.6168539342388198, 0.7107710600545564, 0.6855684405362542]
 r_dict = dict(zip(y_list[:4], r_list))
 for y in y_list[:4]:
     print('=========', y, '=========')
@@ -256,4 +271,3 @@ test[['userid', 'feedid'] + y_list[:4]].to_csv(
     'sub_%.6f_%.6f_%.6f_%.6f_%.6f.csv' % (weighted_uauc, uauc_list[0], uauc_list[1], uauc_list[2], uauc_list[3]),
     index=False
 )
-'''
