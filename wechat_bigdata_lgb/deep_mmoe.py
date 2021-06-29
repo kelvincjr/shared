@@ -37,7 +37,7 @@ def mem_info():
 
 def deep_mmoe(df):
     epochs = 4 #5
-    batch_size = 512
+    batch_size = 128  #512
     embedding_dim = 128 #512
     #df = pd.read_csv("data/lgb.csv")
     feed_embeddings = pd.read_csv("data/wechat_algo_data1/feed_embeddings.csv")
