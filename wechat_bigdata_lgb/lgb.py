@@ -15,6 +15,7 @@ from lightgbm.sklearn import LGBMClassifier
 from collections import defaultdict
 import gc
 import time
+from deep_mmoe import deep_mmoe
 
 pd.set_option('display.max_columns', None)
 import os,signal
@@ -197,6 +198,7 @@ df = reduce_mem(df, [f for f in df.columns if f not in ['date_'] + play_cols + y
 #]
 #df = pd.read_csv("data/lgb.csv")
 #df = reduce_mem(df, [f for f in df.columns if f not in ['date_'] + play_cols + y_list])
+'''
 train = df[~df['read_comment'].isna()].reset_index(drop=True)
 test = df[df['read_comment'].isna()].reset_index(drop=True)
 cols = [f for f in df.columns if f not in ['date_'] + play_cols + y_list]
@@ -206,6 +208,8 @@ train = reduce_mem(train, [f for f in train.columns if f not in ['date_'] + play
 test = reduce_mem(test, [f for f in test.columns if f not in ['date_'] + play_cols + y_list])   
 print('check point after train, test')
 mem_info()
+'''
+deep_mmoe(df)
 '''
 trn_x = train[train['date_'] < 14].reset_index(drop=True)
 val_x = train[train['date_'] == 14].reset_index(drop=True)
@@ -244,6 +248,7 @@ print(weighted_uauc)
 
 '''
 ##################### 全量训练 #####################
+'''
 r_list = [467, 284, 238, 108]
 weighted_uauc = 0.645492376613249
 uauc_list = [0.6243128506926658, 0.6168539342388198, 0.7107710600545564, 0.6855684405362542]
@@ -276,3 +281,4 @@ test[['userid', 'feedid'] + y_list[:4]].to_csv(
     'sub_%.6f_%.6f_%.6f_%.6f_%.6f.csv' % (weighted_uauc, uauc_list[0], uauc_list[1], uauc_list[2], uauc_list[3]),
     index=False
 )
+'''
