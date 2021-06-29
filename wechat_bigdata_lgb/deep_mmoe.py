@@ -10,7 +10,7 @@ from mmoe import MMOE
 from evaluation import evaluate_deepctr
 
 # GPU相关设置
-os.environ["CUDA_VISIBLE_DEVICES"] = "2"
+os.environ["CUDA_VISIBLE_DEVICES"] = "0"
 # 设置GPU按需增长
 '''
 config = tf.ConfigProto()
