@@ -36,7 +36,7 @@ def mem_info():
     print('Memory used: {:.2f} MB'.format(memory))
 
 def deep_mmoe(df):
-    epochs = 1 #5
+    epochs = 4 #5
     batch_size = 256 #512
     embedding_dim = 128 #512
     #df = pd.read_csv("data/lgb.csv")
@@ -138,6 +138,12 @@ def deep_mmoe(df):
 
         val_pred_ans = train_model.predict(val_model_input, batch_size=batch_size) # * 4)
         evaluate_deepctr(val_labels, val_pred_ans, userid_list, target)
+
+        pred_ans = train_model.predict(test_model_input, batch_size=batch_size) # * 20)
+        for i, action in enumerate(target):
+            test[action] = pred_ans[i]
+        test[['userid', 'feedid'] + target].to_csv('result_epoch_{}.csv'.format(epoch), index=None, float_format='%.6f')
+        print('epoch {} to_csv ok'.format(epoch))
 
     t1 = time()
     pred_ans = train_model.predict(test_model_input, batch_size=batch_size) # * 20)
