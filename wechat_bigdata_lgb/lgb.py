@@ -154,7 +154,7 @@ for stat_cols in tqdm([['userid'],['feedid'],['authorid'],['userid', 'authorid']
         del g, tmp
     stat_df_mem = stat_df.memory_usage().sum() / 1024 ** 2
     print('stat_df_mem: ', str(stat_df_mem))
-    df = df.merge(stat_df, on=stat_cols + ['date_'], how='left')
+    df = df.merge(stat_df, on=stat_cols + ['date_'], how='left', copy=False)
     del stat_df
     gc.collect()
     df = reduce_mem(df, [f for f in df.columns if f not in ['date_'] + play_cols + y_list])
@@ -257,14 +257,19 @@ for y in y_list[:4]:
         num_leaves=63,
         subsample=0.8,
         colsample_bytree=0.8,
-        random_state=2021
+        random_state=2021,
+        device='gpu'
     )
+    print('check point after LGBMClassifier')
+    mem_info()
     clf.fit(
         train[cols], train[y],
         eval_set=[(train[cols], train[y])],
         early_stopping_rounds=r_dict[y],
         verbose=100
     )
+    print('check point after fit')
+    mem_info()
     test[y] = clf.predict_proba(test[cols])[:, 1]
     print('runtime: {}\n'.format(time.time() - t))
 test[['userid', 'feedid'] + y_list[:4]].to_csv(
