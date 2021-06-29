@@ -36,8 +36,8 @@ def mem_info():
     print('Memory used: {:.2f} MB'.format(memory))
 
 def deep_mmoe(df):
-    epochs = 4 #5
-    batch_size = 256 #512
+    epochs = 1 #5
+    batch_size = 512
     embedding_dim = 128 #512
     #df = pd.read_csv("data/lgb.csv")
     feed_embeddings = pd.read_csv("data/wechat_algo_data1/feed_embeddings.csv")
