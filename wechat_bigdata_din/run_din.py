@@ -100,5 +100,7 @@ if __name__ == '__main__':
         #np.savetxt(label +'_result.csv', preds, delimiter=',')
         #all_predicts.append(np.expand_dims(preds, axis=1))
         print('------' + label + ' is ok -----' )
+        del train_x, train_y, test_x
+        del din
     #result = np.concatenate(all_predicts, axis=1)
     #np.savetxt('result.csv', result, delimiter=',')
