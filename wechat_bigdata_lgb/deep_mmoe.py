@@ -36,8 +36,8 @@ def mem_info():
     print('Memory used: {:.2f} MB'.format(memory))
 
 def deep_mmoe(df):
-    epochs = 4 #5
-    batch_size = 512
+    epochs = 1 #5
+    batch_size = 256 #512
     embedding_dim = 128 #512
     #df = pd.read_csv("data/lgb.csv")
     feed_embeddings = pd.read_csv("data/wechat_algo_data1/feed_embeddings.csv")
@@ -136,11 +136,11 @@ def deep_mmoe(df):
         history = train_model.fit(train_model_input, train_labels,
                                   batch_size=batch_size, epochs=1, verbose=1)
 
-        val_pred_ans = train_model.predict(val_model_input, batch_size=batch_size * 4)
+        val_pred_ans = train_model.predict(val_model_input, batch_size=batch_size) # * 4)
         evaluate_deepctr(val_labels, val_pred_ans, userid_list, target)
 
     t1 = time()
-    pred_ans = train_model.predict(test_model_input, batch_size=batch_size * 20)
+    pred_ans = train_model.predict(test_model_input, batch_size=batch_size) # * 20)
     t2 = time()
     print('4个目标行为%d条样本预测耗时（毫秒）：%.3f' % (len(test), (t2 - t1) * 1000.0))
     ts = (t2 - t1) * 1000.0 / len(test) * 2000.0
