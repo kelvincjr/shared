@@ -22,7 +22,9 @@ if tf.__version__.startswith('1.'):  # tensorflow 1
     config.gpu_options.allow_growth = True
     sess = tf.Session(config=config)
 else:  # tensorflow 2
-    tf.config.gpu.set_per_process_memory_growth(enabled=True)
+    gpus = tf.config.experimental.list_physical_devices('GPU')
+    for gpu in gpus:
+        tf.config.experimental.set_memory_growth(gpu, True)
 
 import os,signal
 import psutil
