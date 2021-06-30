@@ -92,12 +92,12 @@ y_list = ['read_comment', 'like', 'click_avatar', 'forward', 'favorite', 'commen
 max_day = 15
 
 ## 读取训练集
-train = pd.read_csv('data/wechat_algo_data1/user_action.csv', nrows=5000000)
+train = pd.read_csv('data/wechat_algo_data1/user_action.csv')
 print(train.shape)
 for y in y_list:
     print(y, train[y].mean())
 ## 读取测试集
-test = pd.read_csv('data/wechat_algo_data1/test_b.csv', nrows=10000)
+test = pd.read_csv('data/wechat_algo_data1/test_b.csv')
 test['date_'] = max_day
 print(test.shape)
 print('check point after train test')
