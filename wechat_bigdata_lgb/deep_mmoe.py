@@ -36,7 +36,7 @@ def mem_info():
     print('Memory used: {:.2f} MB'.format(memory))
 
 def deep_mmoe(df):
-    epochs = 4 #5
+    epochs = 2 #5
     batch_size = 512
     embedding_dim = 128 #512
     #df = pd.read_csv("data/lgb.csv")
