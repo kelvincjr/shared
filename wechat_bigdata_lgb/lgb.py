@@ -97,7 +97,7 @@ print(train.shape)
 for y in y_list:
     print(y, train[y].mean())
 ## 读取测试集
-test = pd.read_csv('data/wechat_algo_data1/test_a.csv')
+test = pd.read_csv('data/wechat_algo_data1/test_b.csv')
 test['date_'] = max_day
 print(test.shape)
 print('check point after train test')
