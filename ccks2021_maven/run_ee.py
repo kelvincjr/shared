@@ -61,7 +61,8 @@ logger = logging.getLogger(__name__)
 #import logging
 #logging.basicConfig(level=logging.ERROR)
 
-tf_logger = logging.getLogger("transformers")
+#tf_logger = logging.getLogger("transformers")
+tf_logger = logging.getLogger("transformers.tokenization_utils_base")
 tf_logger.setLevel(level = logging.ERROR)
 
 ALL_MODELS = sum(
