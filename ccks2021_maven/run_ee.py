@@ -45,7 +45,7 @@ from transformers import (
     BERT_PRETRAINED_CONFIG_ARCHIVE_MAP,
 )
 # from utils_add_title import convert_examples_to_features, processors
-from utils_att import convert_examples_to_features, processors
+from utils_att import convert_examples_to_features, processors, FGM
 from sklearn.metrics import f1_score,precision_score,recall_score
 # from model_hloss import DMBERT
 from model import DMBERT
@@ -61,7 +61,6 @@ logger = logging.getLogger(__name__)
 #import logging
 #logging.basicConfig(level=logging.ERROR)
 
-#tf_logger = logging.getLogger("transformers")
 tf_logger = logging.getLogger("transformers.tokenization_utils_base")
 tf_logger.setLevel(level = logging.ERROR)
 
@@ -119,6 +118,11 @@ def train(args, train_dataset, model, tokenizer):
     scheduler = get_linear_schedule_with_warmup(
         optimizer, num_warmup_steps=args.warmup_steps, num_training_steps=t_total
     )
+
+    if args.adv_training:
+        if args.adv_training == 'fgm':
+            adv = FGM(model, param_name='word_embeddings')
+
     if args.fp16:
         try:
             from apex import amp
@@ -190,6 +194,9 @@ def train(args, train_dataset, model, tokenizer):
             else:
                 loss.backward()
                 torch.nn.utils.clip_grad_norm_(model.parameters(), args.max_grad_norm)
+
+            if args.adv_training:
+                    adv.adversarial_training(args, inputs, optimizer)
 
             tr_loss += loss.item()
             if (step + 1) % args.gradient_accumulation_steps == 0:
@@ -485,6 +492,7 @@ def main():
     parser.add_argument(
         "--evaluate_during_training", action="store_true", help="Run evaluation during training at each logging step."
     )
+    parser.add_argument("--adv_training", default=None, choices=['fgm', 'pgd'], help="fgm adversarial training")
     parser.add_argument(
         "--do_lower_case", action="store_true", help="Set this flag if you are using an uncased model."
     )
