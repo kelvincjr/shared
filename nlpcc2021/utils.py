@@ -11,7 +11,7 @@ except ImportError:
 class PLMConfig():
     def __init__(self):
         self.PLMpath = {
-            "roberta": "/kaggle/input",
+            "roberta": "/kaggle/working",
             "roberta_large": "",
             "roberta_wwm": "G:/预训练模型/RoBERTa_wwm/chinese_roberta_wwm_ext",
             "roberta_wwm_large": "",
