@@ -832,6 +832,13 @@ def main():
         train_dataset, _ = load_and_cache_fold_examples(args, tokenizer, labels, mode="fold_{}_train".format(fold))
         eval_dataset, _ = load_and_cache_fold_examples(args, tokenizer, labels, mode="fold_{}_dev".format(fold))
 
+        config = config_class.from_pretrained(
+            args.config_name if args.config_name else model_path,
+            num_labels=num_labels,
+            id2label={str(i): label for i, label in enumerate(labels)},
+            label2id={label: i for i, label in enumerate(labels)},
+            cache_dir=args.cache_dir if args.cache_dir else None,
+        )
         model = model_class.from_pretrained(
             model_path,
             from_tf=bool(".ckpt" in args.model_name_or_path),
