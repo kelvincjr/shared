@@ -116,7 +116,7 @@ class TransformerEncoderModel(nn.Module):
         loss['crf_loss'] = -self.crf_layer(emissions, tag, mask=mask_crf) / tag.size(1)
         if self.use_dae:
             # src_encoding = self._encode(transformer_out)
-            loss['dae_loss'] = self.dae_loss(src=src, text_len=text_len).to(DEVICE) * self.dae_lambda
+            loss['dae_loss'] = self.dae_loss(src=src, text_len=text_len) * self.dae_lambda
         if self.use_dice:
             loss['dice_loss'] = self.dice_loss(emissions, tag).to(DEVICE) * self.dice_lambda
         # att_out = torch.bmm(lstm_out.transpose(0,1), self.att_weight.transpose(0,1)).transpose(0,1)
@@ -131,7 +131,7 @@ class TransformerEncoderModel(nn.Module):
         return loss
 
     def dae_loss(self, src, text_len):
-        src_encoding = self.encode(src, text_len)
+        src_encoding = self.encode(src, text_len.cpu())
         lm_output = self.decode_lm(src_encoding)
         lm_loss = self.criterion(lm_output.view(-1, self.vocab_size), src.view(-1))
         return lm_loss
