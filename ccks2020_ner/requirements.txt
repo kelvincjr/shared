@@ -1,0 +1,4 @@
+# Python3
+numpy
+torch
+pytorch-crf

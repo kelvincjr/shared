@@ -1,0 +1,1052 @@
+{"originalText": "患者于2011年10月无明显诱因发现左乳内上象限一3.0×2.0cm质中等，边界尚清。", "entities": [{"start_pos": 18, "end_pos": 20, "label_type": "解剖部位"}]}
+{"originalText": "于2012年4月于*****医院就诊，彩超示：“乳癌？”,建议手术,术中冰冻回报:恶性，遂行“左乳癌改良根治术”，", "entities": [{"start_pos": 19, "end_pos": 21, "label_type": "影像检查"}, {"start_pos": 24, "end_pos": 26, "label_type": "疾病和诊断"}, {"start_pos": 47, "end_pos": 55, "label_type": "手术"}]}
+{"originalText": "术后病检示：乳腺浸润性导管癌,腋窝淋巴结13/14,锁骨下淋巴结4/4,,组织蜡块免疫组化示:左乳浸润性导管癌Ⅱ级，", "entities": [{"start_pos": 6, "end_pos": 14, "label_type": "疾病和诊断"}, {"start_pos": 15, "end_pos": 20, "label_type": "解剖部位"}, {"start_pos": 26, "end_pos": 32, "label_type": "解剖部位"}, {"start_pos": 47, "end_pos": 57, "label_type": "疾病和诊断"}]}
+{"originalText": "er(++)、pr(++)、cerbb2(+)。", "entities": []}
+{"originalText": "术后遂予ta方案“多西他赛75mg/㎡+表柔比星60mg/㎡”化疗8周期，末次化疗：2012年9月2日。", "entities": [{"start_pos": 9, "end_pos": 13, "label_type": "药物"}, {"start_pos": 20, "end_pos": 24, "label_type": "药物"}]}
+{"originalText": "今为进一步治疗来我院就诊，门诊以“左乳浸润性导管癌术后化疗后t2n3m0”收入院。", "entities": [{"start_pos": 17, "end_pos": 27, "label_type": "疾病和诊断"}]}
+{"originalText": "自发病以来，病人精神状态良好，体力情况良好，食欲食量正常，睡眠情况良好，体重无明显变化，大便正常，小便正常。", "entities": []}
+{"originalText": "，缘于入院前1个月无明显诱因出现食物反流，偶于睡觉时从嘴角流出，为胃内容物，伴咳嗽，乏力，进食后、卧位以及夜间明显，", "entities": [{"start_pos": 33, "end_pos": 34, "label_type": "解剖部位"}]}
+{"originalText": "无反酸、烧心，无吞咽困难、进食障碍，无胸闷、胸痛，无发热、畏冷，无咳痰，无腹胀、腹痛，就诊我院，予“世福素、", "entities": [{"start_pos": 19, "end_pos": 20, "label_type": "解剖部位"}, {"start_pos": 22, "end_pos": 23, "label_type": "解剖部位"}, {"start_pos": 37, "end_pos": 38, "label_type": "解剖部位"}, {"start_pos": 40, "end_pos": 41, "label_type": "解剖部位"}, {"start_pos": 50, "end_pos": 53, "label_type": "药物"}]}
+{"originalText": "甘草合剂”等治疗后无明显好转。", "entities": [{"start_pos": 0, "end_pos": 4, "label_type": "药物"}]}
+{"originalText": "入院前7天就诊我院消化科，，查腹部CT示：1、右下下腹部残胃腔管壁明显增厚伴轻度强化，最厚约24MM，", "entities": [{"start_pos": 15, "end_pos": 19, "label_type": "影像检查"}, {"start_pos": 23, "end_pos": 28, "label_type": "解剖部位"}, {"start_pos": 29, "end_pos": 30, "label_type": "解剖部位"}]}
+{"originalText": "管腔变窄，食管轻度扩张，考虑残胃癌，建议内镜检查，残胃周围未见明显肿大淋巴结。", "entities": [{"start_pos": 5, "end_pos": 7, "label_type": "解剖部位"}, {"start_pos": 15, "end_pos": 16, "label_type": "解剖部位"}, {"start_pos": 26, "end_pos": 27, "label_type": "解剖部位"}]}
+{"originalText": "，胃镜检查:食管腔见大量液体残留，影响观察；距门齿40CM处见一隆起性病灶，表面糜烂、出血，质地组织脆,", "entities": [{"start_pos": 6, "end_pos": 8, "label_type": "解剖部位"}, {"start_pos": 23, "end_pos": 25, "label_type": "解剖部位"}]}
+{"originalText": "活检易出血，管腔狭窄，内镜不能通过，无法观察全貌。", "entities": []}
+{"originalText": "，考虑:胃癌术后复发？，胃镜病理示：（距门齿40CM），：乳头状-管状腺癌。", "entities": [{"start_pos": 4, "end_pos": 10, "label_type": "疾病和诊断"}, {"start_pos": 20, "end_pos": 22, "label_type": "解剖部位"}, {"start_pos": 29, "end_pos": 37, "label_type": "疾病和诊断"}]}
+{"originalText": "予“右卡尼汀、力素营养心肌，氨基酸、脂肪乳营养支持，胸腺五肽增强免疫力，潘妥洛克制酸保胃、头孢替安抗感染”等处理后症状稍好转。", "entities": [{"start_pos": 2, "end_pos": 6, "label_type": "药物"}, {"start_pos": 7, "end_pos": 9, "label_type": "药物"}, {"start_pos": 14, "end_pos": 17, "label_type": "药物"}, {"start_pos": 18, "end_pos": 21, "label_type": "药物"}, {"start_pos": 26, "end_pos": 30, "label_type": "药物"}, {"start_pos": 36, "end_pos": 40, "label_type": "药物"}, {"start_pos": 45, "end_pos": 49, "label_type": "药物"}]}
+{"originalText": "今为求进一步诊治，就诊我院，门诊拟“贲门癌”收住入院。", "entities": [{"start_pos": 18, "end_pos": 21, "label_type": "疾病和诊断"}]}
+{"originalText": "自发病以来，精神、饮食、睡眠一般，大小便正常，体重减轻3KG。", "entities": []}
+{"originalText": "入院前3周，患者因“反复中下腹痛2+年，加重3天”入我院消化科，行胃镜提示胃角巨大胃溃疡、局部结节样增生、", "entities": [{"start_pos": 12, "end_pos": 15, "label_type": "解剖部位"}, {"start_pos": 37, "end_pos": 44, "label_type": "疾病和诊断"}]}
+{"originalText": "胃壁僵硬、触之易出血，取病检提示胃腺癌，转入我科后于2014-11-14在全麻上行“腹腔镜上胃癌根治术（BILLROTHS II式）”，", "entities": [{"start_pos": 0, "end_pos": 2, "label_type": "解剖部位"}, {"start_pos": 16, "end_pos": 19, "label_type": "疾病和诊断"}, {"start_pos": 42, "end_pos": 66, "label_type": "手术"}]}
+{"originalText": "术后病检（1409438）：胃低分化腺癌浸润深肌层、淋巴结转移（2/14），术后分期为T3N1M0。", "entities": [{"start_pos": 14, "end_pos": 20, "label_type": "疾病和诊断"}, {"start_pos": 26, "end_pos": 31, "label_type": "疾病和诊断"}]}
+{"originalText": "术后恢复佳，无发热、恶心、腹痛、血便等不适，现患者为求进一步化疗求治我院，门诊以“胃癌术后，拟行第1次化疗”收入我科。", "entities": [{"start_pos": 13, "end_pos": 14, "label_type": "解剖部位"}, {"start_pos": 41, "end_pos": 45, "label_type": "疾病和诊断"}]}
+{"originalText": "患者入院前10年每逢冬春季节受凉后感咳嗽，咯白色泡沫痰，每年累计发病超过3月，未正规就诊治疗，抗炎等处理后症状可稍缓解。", "entities": []}
+{"originalText": "入院前1年患者感活动后心累、气喘，无胸痛、咯血，无上肢浮肿等，受凉后症状加重，曾在**医院检查治疗，", "entities": [{"start_pos": 11, "end_pos": 12, "label_type": "解剖部位"}, {"start_pos": 18, "end_pos": 19, "label_type": "解剖部位"}, {"start_pos": 25, "end_pos": 27, "label_type": "解剖部位"}]}
+{"originalText": "考虑“肺气肿”，平时气喘加重后服用“氨茶碱”治疗。", "entities": [{"start_pos": 3, "end_pos": 6, "label_type": "疾病和诊断"}, {"start_pos": 18, "end_pos": 21, "label_type": "药物"}]}
+{"originalText": "3月前患者双次均因受凉后感咳嗽，咯痰，稍动伴喘累明显，在我院内一科检查诊断为“慢性阻塞性肺病 肺心病，", "entities": [{"start_pos": 39, "end_pos": 46, "label_type": "疾病和诊断"}, {"start_pos": 47, "end_pos": 50, "label_type": "疾病和诊断"}]}
+{"originalText": "高血压3级极高危，脑梗死后遗症，”经住院治疗后好转出院，2天前患者因受凉后出现咳嗽、无痰，伴喘累明显，", "entities": [{"start_pos": 0, "end_pos": 8, "label_type": "疾病和诊断"}, {"start_pos": 9, "end_pos": 15, "label_type": "疾病和诊断"}]}
+{"originalText": "可平卧休息，无发热气促， 无胸痛咯血，无恶心呕吐，无两上肢水肿，今日遂在门诊检查，门诊以“慢性阻塞性肺病、", "entities": [{"start_pos": 14, "end_pos": 15, "label_type": "解剖部位"}, {"start_pos": 26, "end_pos": 29, "label_type": "解剖部位"}, {"start_pos": 45, "end_pos": 52, "label_type": "疾病和诊断"}]}
+{"originalText": "高血压”收入我科住院治疗。", "entities": [{"start_pos": 0, "end_pos": 3, "label_type": "疾病和诊断"}]}
+{"originalText": "患者此次患病以来精神食欲差，大小便正常，睡眠尚可,体力及体重无明显改变.", "entities": []}
+{"originalText": "，缘于入院前2年患者于我院诊断为“胃癌”，于2013年11月22日在全麻上行“腹腔镜根治性远端胃大部切除术（毕I式D2R0）”，", "entities": [{"start_pos": 17, "end_pos": 19, "label_type": "疾病和诊断"}, {"start_pos": 39, "end_pos": 62, "label_type": "手术"}]}
+{"originalText": "，术中见：无腹水，盆底、膀胱、未及结节；肝表面光滑，腹膜后、空回肠未见结节，肿瘤位于胃小弯侧胃角处，", "entities": [{"start_pos": 6, "end_pos": 7, "label_type": "解剖部位"}, {"start_pos": 9, "end_pos": 11, "label_type": "解剖部位"}, {"start_pos": 12, "end_pos": 14, "label_type": "解剖部位"}, {"start_pos": 20, "end_pos": 21, "label_type": "解剖部位"}, {"start_pos": 26, "end_pos": 27, "label_type": "解剖部位"}, {"start_pos": 30, "end_pos": 33, "label_type": "解剖部位"}, {"start_pos": 42, "end_pos": 48, "label_type": "解剖部位"}]}
+{"originalText": "大小3×3×1.5CM，浸润溃疡型，侵出浆膜层，侵及邻近脂肪组织，腹腔动脉周围见数个0.8-1CM大小不一肿大淋巴结。", "entities": [{"start_pos": 33, "end_pos": 37, "label_type": "解剖部位"}]}
+{"originalText": "术后病理（201336699），：（远端胃）胃角溃疡型低分化腺癌，侵出浆膜层，侵犯神经，脉管内见癌栓，", "entities": [{"start_pos": 17, "end_pos": 32, "label_type": "疾病和诊断"}]}
+{"originalText": "手术标本下、上切端及另送（下切端）、（上切端）均未见癌浸润。", "entities": []}
+{"originalText": "找到小弯淋巴结10/15个，大弯淋巴结1/7个，幽门上淋巴结5/5个，及另送（第七组）淋巴结1/2个，", "entities": [{"start_pos": 2, "end_pos": 7, "label_type": "解剖部位"}, {"start_pos": 14, "end_pos": 19, "label_type": "解剖部位"}, {"start_pos": 24, "end_pos": 30, "label_type": "解剖部位"}, {"start_pos": 38, "end_pos": 46, "label_type": "解剖部位"}]}
+{"originalText": "（第八组）淋巴结2/7个，（第九组）淋巴结0/4个，（第十二组）淋巴结0/1个，（第十五组）淋巴结0/1个见癌转移。", "entities": [{"start_pos": 0, "end_pos": 8, "label_type": "解剖部位"}, {"start_pos": 13, "end_pos": 21, "label_type": "解剖部位"}, {"start_pos": 26, "end_pos": 35, "label_type": "解剖部位"}, {"start_pos": 40, "end_pos": 49, "label_type": "解剖部位"}]}
+{"originalText": "，免疫组化结果：CK7（++），CK20（-），VILLIN（+++），CEA（-），CDX-2（+++），", "entities": []}
+{"originalText": "CGA（-），CD56（-），SY（-），KI67（70%+），HER-2（++）。", "entities": []}
+{"originalText": "术后恢复良好,于我院行“多柔比星40MGD1+奥沙利铂（艾恒）150MGD2+希罗达1000MGBIDD1-14”方案行术后化疗8次。", "entities": [{"start_pos": 12, "end_pos": 16, "label_type": "药物"}, {"start_pos": 23, "end_pos": 27, "label_type": "药物"}, {"start_pos": 28, "end_pos": 30, "label_type": "药物"}, {"start_pos": 39, "end_pos": 42, "label_type": "药物"}]}
+{"originalText": "化疗后出院后，饮食睡眠可，一般情况可。", "entities": []}
+{"originalText": "3天前突发腹痛，伴腹胀，肛门停止排气排便，无恶心呕吐，无畏冷寒战，遂就诊我院，门诊拟“胃癌术后化疗后”收住入院，", "entities": [{"start_pos": 5, "end_pos": 6, "label_type": "解剖部位"}, {"start_pos": 9, "end_pos": 10, "label_type": "解剖部位"}, {"start_pos": 12, "end_pos": 14, "label_type": "解剖部位"}, {"start_pos": 43, "end_pos": 47, "label_type": "疾病和诊断"}]}
+{"originalText": "自发病以来，精神欠佳，饮食欠佳，大便未解，小便如常。", "entities": []}
+{"originalText": "患者1月余前因“间断下腹部疼痛1年，加重十余天”就诊，1腹痛呈阵发性绞痛，无发热，无恶心、呕吐，当时未作治疗，", "entities": [{"start_pos": 10, "end_pos": 13, "label_type": "解剖部位"}, {"start_pos": 28, "end_pos": 29, "label_type": "解剖部位"}]}
+{"originalText": "疼痛间断发作，在来我院行B超及MRI检查提示胆囊泥沙样结石、胆总管末端可疑结石,入院后完善相关化验检查，", "entities": [{"start_pos": 12, "end_pos": 14, "label_type": "影像检查"}, {"start_pos": 15, "end_pos": 20, "label_type": "影像检查"}, {"start_pos": 22, "end_pos": 29, "label_type": "疾病和诊断"}, {"start_pos": 30, "end_pos": 39, "label_type": "疾病和诊断"}]}
+{"originalText": "于2013.4.2在全麻上行胆囊切除、胆总管探查取石、T管引流术。", "entities": [{"start_pos": 14, "end_pos": 32, "label_type": "手术"}]}
+{"originalText": "术中见胆囊张力高，胆囊壁充血水肿，周围血管曲张，胆总管粗约2CM，壁厚，术后给予禁食、胃肠减压、抗感染、", "entities": [{"start_pos": 3, "end_pos": 5, "label_type": "解剖部位"}, {"start_pos": 9, "end_pos": 11, "label_type": "解剖部位"}, {"start_pos": 24, "end_pos": 27, "label_type": "解剖部位"}, {"start_pos": 43, "end_pos": 44, "label_type": "解剖部位"}, {"start_pos": 44, "end_pos": 45, "label_type": "解剖部位"}]}
+{"originalText": "保肝、止血、抑酸等治疗，病人恢复良好，术后病理回示：急性单纯性胆囊炎，现为进一步治疗今来我院就诊，门诊以\\\"胆石症术后\\\"收入院。", "entities": [{"start_pos": 1, "end_pos": 2, "label_type": "解剖部位"}, {"start_pos": 26, "end_pos": 34, "label_type": "疾病和诊断"}, {"start_pos": 54, "end_pos": 59, "label_type": "疾病和诊断"}]}
+{"originalText": "   患者自出院以来，饮食睡眠良好，大小便正常，体重无减轻。", "entities": []}
+{"originalText": "患者于2016年04月26日因“体检发现左乳肿块1天”至我院就诊，完善相关检查后，未见明显手术禁忌症，", "entities": [{"start_pos": 20, "end_pos": 22, "label_type": "解剖部位"}]}
+{"originalText": "于2016年05月10日在钼靶定位下行左乳肿块穿刺活检术，穿刺术后病检（x201603919）：（左乳肿块穿刺）浸润性癌。", "entities": [{"start_pos": 13, "end_pos": 15, "label_type": "影像检查"}, {"start_pos": 19, "end_pos": 28, "label_type": "手术"}, {"start_pos": 48, "end_pos": 60, "label_type": "疾病和诊断"}]}
+{"originalText": "免疫组化：er（+，约80%），pr（+，约40%），ki-67（+约40%），cerb-b2（3+）。", "entities": []}
+{"originalText": "未见化疗禁忌症，于2016年5月13日行“epi：140mg+ctx：0.9g”方案治疗1周期，化疗期间未见明显化疗副反应，", "entities": [{"start_pos": 21, "end_pos": 24, "label_type": "药物"}, {"start_pos": 31, "end_pos": 34, "label_type": "药物"}]}
+{"originalText": "今为进一步治疗来我院就诊，门诊以“左乳癌”收入院。", "entities": [{"start_pos": 17, "end_pos": 20, "label_type": "疾病和诊断"}]}
+{"originalText": "自发病以来，病人精神状态良好，体力情况良好，食欲食量正常，睡眠情况良好，体重无明显变化，大便正常，小便正常。", "entities": []}
+{"originalText": "患者2月前因酒后腹痛、大便发黑，呕血1次伴眩晕，行胃镜检查确诊为胃低分化腺癌，遂于2009-7-2在我院行远端胃癌根治+B-I式吻合术，", "entities": [{"start_pos": 8, "end_pos": 9, "label_type": "解剖部位"}, {"start_pos": 32, "end_pos": 38, "label_type": "疾病和诊断"}, {"start_pos": 53, "end_pos": 67, "label_type": "手术"}]}
+{"originalText": "术后恢复良好，病理回报：胃窦部溃疡型低分化腺癌，大小约2.7*1.7CM，侵透浆膜，淋巴结2/28可见转移，", "entities": [{"start_pos": 12, "end_pos": 23, "label_type": "疾病和诊断"}]}
+{"originalText": "并于2009-8-14开始行FOLFOX7方案化疗，化疗后副反应评价食欲不振1°，恶心1°，呕吐2°，", "entities": []}
+{"originalText": "手足综合症1°。", "entities": [{"start_pos": 0, "end_pos": 5, "label_type": "疾病和诊断"}]}
+{"originalText": "现为行第2周期辅助化疗入院。", "entities": []}
+{"originalText": "患者自前次出院以来精神，睡眠，饮食可，大小便正常，体重无明显变化。", "entities": []}
+{"originalText": "患者2007年在*****医院诊断为鼻咽癌，具体分期不详，予根治性放疗npdt:70gy，并辅助化疗4程，", "entities": [{"start_pos": 18, "end_pos": 21, "label_type": "疾病和诊断"}]}
+{"originalText": "具体方案不详。", "entities": []}
+{"originalText": "2010-09-07因“反复双鼻塞、浓涕1月余”在*******医院诊断为“慢性鼻窦炎”，术中切除左侧中鼻甲、", "entities": [{"start_pos": 15, "end_pos": 16, "label_type": "解剖部位"}, {"start_pos": 38, "end_pos": 43, "label_type": "疾病和诊断"}, {"start_pos": 49, "end_pos": 54, "label_type": "解剖部位"}]}
+{"originalText": "下鼻甲后端及鼻咽新生物，病理为未分化型非角化癌。", "entities": [{"start_pos": 0, "end_pos": 5, "label_type": "解剖部位"}, {"start_pos": 6, "end_pos": 8, "label_type": "解剖部位"}, {"start_pos": 15, "end_pos": 23, "label_type": "疾病和诊断"}]}
+{"originalText": "术后予患者3程pf方案化疗，具体剂量及治疗效果不详。", "entities": []}
+{"originalText": "于5-6、5-26、6-17行白蛋白紫杉醇+奈达铂化疗三程后行二程放疗，放疗期间行爱必妥靶向治疗，8月17日放疗结束出院，", "entities": [{"start_pos": 15, "end_pos": 21, "label_type": "药物"}, {"start_pos": 22, "end_pos": 25, "label_type": "药物"}, {"start_pos": 41, "end_pos": 44, "label_type": "药物"}]}
+{"originalText": "鼻咽肿物较前好转，左面麻有减轻。", "entities": [{"start_pos": 0, "end_pos": 2, "label_type": "解剖部位"}, {"start_pos": 9, "end_pos": 11, "label_type": "解剖部位"}]}
+{"originalText": "患者出院后一直伴有左侧口腔及头痛，为间歇性发作，伴有鼻咽异味，在当地行消炎治疗（具体不详）疗效欠佳，", "entities": [{"start_pos": 9, "end_pos": 13, "label_type": "解剖部位"}, {"start_pos": 14, "end_pos": 15, "label_type": "解剖部位"}, {"start_pos": 26, "end_pos": 28, "label_type": "解剖部位"}]}
+{"originalText": "现为进一步诊治入住我院，患者发病以来,精神欠佳,饮食睡眠较差,大小便正常，体重减轻3kg。", "entities": []}
+{"originalText": "，根治性全胃切除术后2月余复查。", "entities": [{"start_pos": 1, "end_pos": 10, "label_type": "疾病和诊断"}]}
+{"originalText": "，术后病理：胃体小弯侧溃疡型低分化腺癌（LAUREN，分型：弥漫型），大小5×3.5CM；侵至浆膜层，", "entities": [{"start_pos": 6, "end_pos": 34, "label_type": "疾病和诊断"}]}
+{"originalText": "见神经侵犯，免疫组化CD34(+),D2-40(+)示脉管癌栓；食道残端及十二指肠残端均未见癌；淋巴结见癌转移【共44枚，21，枚转移：第1组0/5、第2组0/0、第3组8/13、第4SA组0/2、第4SB组0/0、第4D组5/7、第5组1/1、第6组5/5、（第7、9组）0/6、第8组1/1、第11P组0/1、12A组0/2、 14V1/1】；", "entities": [{"start_pos": 32, "end_pos": 34, "label_type": "解剖部位"}, {"start_pos": 37, "end_pos": 41, "label_type": "解剖部位"}, {"start_pos": 48, "end_pos": 173, "label_type": "解剖部位"}]}
+{"originalText": "，肿瘤病理学分期：PT4N3B。", "entities": []}
+{"originalText": "，免疫组化结果显示:CD34(+),CD44(+),CMET(+),D2-40(+),EGFR(+),", "entities": []}
+{"originalText": "HER2(－),KI-67(+25～50%),P170(+),P27(+25～50%),P53(+25～50%),", "entities": []}
+{"originalText": "TOPOII(+＜25%)。", "entities": []}
+{"originalText": "术后化疗1周期SOX（2013-8-8，乐沙定200MG D1，爱斯万 60MG BID1-14，Q3WKS），", "entities": [{"start_pos": 20, "end_pos": 23, "label_type": "药物"}, {"start_pos": 32, "end_pos": 35, "label_type": "药物"}]}
+{"originalText": "骨髓毒性II度，升白治疗，胃肠道反应0度，外周神经毒性I度。", "entities": [{"start_pos": 13, "end_pos": 14, "label_type": "解剖部位"}, {"start_pos": 14, "end_pos": 15, "label_type": "解剖部位"}]}
+{"originalText": "，患者因“直肠癌”于2016-11-08于我院在全麻上予行直肠HARTMANN手术，术后病理（3766.2013），", "entities": [{"start_pos": 5, "end_pos": 8, "label_type": "疾病和诊断"}, {"start_pos": 29, "end_pos": 41, "label_type": "手术"}]}
+{"originalText": "回示：病理诊断 ，:直肠腺癌（中度分化），浸润溃疡型，体积8*6*0.6CM，侵达外膜脂肪组织，未累及切除面。", "entities": [{"start_pos": 10, "end_pos": 26, "label_type": "疾病和诊断"}]}
+{"originalText": "双端切线未查见癌。", "entities": []}
+{"originalText": "呈肠壁一站（1/22个）淋巴结癌转移。", "entities": [{"start_pos": 1, "end_pos": 15, "label_type": "解剖部位"}]}
+{"originalText": "肠壁二站（2个）淋巴结未查见癌。", "entities": [{"start_pos": 0, "end_pos": 11, "label_type": "解剖部位"}]}
+{"originalText": "低级别腺管状腺瘤。", "entities": [{"start_pos": 0, "end_pos": 8, "label_type": "疾病和诊断"}]}
+{"originalText": "，免疫组化染色示癌组织：SYN（-）、BRAF（-）、MLH1（+）、MSH2（+）、MSH6（+）、", "entities": []}
+{"originalText": "PMS2（+）。", "entities": []}
+{"originalText": "患者术后恢复好。", "entities": []}
+{"originalText": "根据患者病情，除外化疗禁忌症，于2016-12-8、201-01-08给予化疗双周期，，方案为：奥沙利铂200MG DL+亚叶酸钙0.3GD2-6+替加氟1000MG D2-6静滴，", "entities": [{"start_pos": 48, "end_pos": 52, "label_type": "药物"}, {"start_pos": 61, "end_pos": 65, "label_type": "药物"}, {"start_pos": 74, "end_pos": 77, "label_type": "药物"}]}
+{"originalText": "同时给予升白细胞、护肝、止吐、免疫增强治疗，无明显化疗副反应。", "entities": [{"start_pos": 10, "end_pos": 11, "label_type": "解剖部位"}]}
+{"originalText": "自下次出院后，患者一般情况保持良好， 无乏力感，无发热，无恶心、呕吐，无反酸、嗳气，无明显进食不适，", "entities": []}
+{"originalText": "未现明显 腹痛、腹胀；大小便情况良好。", "entities": [{"start_pos": 5, "end_pos": 6, "label_type": "解剖部位"}, {"start_pos": 8, "end_pos": 9, "label_type": "解剖部位"}]}
+{"originalText": "现患者为行复查来我院就诊，门诊以“直肠癌术后”收入院。", "entities": [{"start_pos": 17, "end_pos": 22, "label_type": "疾病和诊断"}]}
+{"originalText": "目前患者精神及情绪状态可，食欲、饮食好，夜间睡眠可，大便出现便秘，不规律，不成形，小便正常，近期无明显体重变化。", "entities": []}
+{"originalText": "，患者于2012-11无明显诱因出现下腹不适，轻度腹痛，与饮食无关，伴嗳气，无反酸、腹胀、恶心、呕吐及黑便。", "entities": [{"start_pos": 18, "end_pos": 20, "label_type": "解剖部位"}, {"start_pos": 25, "end_pos": 26, "label_type": "解剖部位"}, {"start_pos": 42, "end_pos": 43, "label_type": "解剖部位"}]}
+{"originalText": "2012-11-9，就诊*********行电子胃镜检查：胃窦小弯侧见一巨大溃疡，大小约4.0X4.0CM,", "entities": [{"start_pos": 29, "end_pos": 34, "label_type": "解剖部位"}]}
+{"originalText": "周围粘膜红肿，累及胃角，，胃窦活检病理为：粘膜慢性炎伴溃疡形成，局部腺体排列紊乱，不排外恶变可能.2012-11-22，", "entities": [{"start_pos": 9, "end_pos": 11, "label_type": "解剖部位"}, {"start_pos": 13, "end_pos": 15, "label_type": "解剖部位"}]}
+{"originalText": "入**三院行电子胃镜检查示：胃角结构破坏，可见一3X3CM巨大溃疡，底部凹凸不平，，胃角粘膜活检病理为：低分化腺癌。", "entities": [{"start_pos": 14, "end_pos": 16, "label_type": "解剖部位"}, {"start_pos": 42, "end_pos": 44, "label_type": "解剖部位"}, {"start_pos": 52, "end_pos": 57, "label_type": "疾病和诊断"}]}
+{"originalText": "后转我院就诊，于2012-12-14日在全麻上行“胃癌根治术”术程顺利，术后病理为胃低分化腺癌，浸润至浆膜层，", "entities": [{"start_pos": 25, "end_pos": 30, "label_type": "手术"}, {"start_pos": 41, "end_pos": 47, "label_type": "疾病和诊断"}]}
+{"originalText": "淋巴结7(+)/34，后遵原主诊医师意见2013-01-06、2013-01-25、2-25、3-15予多西他赛＋S-1”化疗3程，", "entities": [{"start_pos": 52, "end_pos": 56, "label_type": "药物"}, {"start_pos": 57, "end_pos": 60, "label_type": "药物"}]}
+{"originalText": "过程顺利。", "entities": []}
+{"originalText": "现为上一程化疗入院，起病以来，精神、饮食、睡眠尚可，大小便正常，体重无明显上降。", "entities": []}
+{"originalText": "，缘于入院前4月于我院确诊诊为直肠癌伴肝转移，，病理示：（201407122）管状腺癌。", "entities": [{"start_pos": 15, "end_pos": 22, "label_type": "疾病和诊断"}, {"start_pos": 39, "end_pos": 43, "label_type": "疾病和诊断"}]}
+{"originalText": "，腹部CT示：1、直肠中、上段部分管壁不规则增厚，考虑直肠CA，周围及两侧盆壁、腹股沟区及腹膜后多发肿大淋巴结征。", "entities": [{"start_pos": 1, "end_pos": 5, "label_type": "影像检查"}, {"start_pos": 9, "end_pos": 15, "label_type": "解剖部位"}, {"start_pos": 27, "end_pos": 31, "label_type": "疾病和诊断"}, {"start_pos": 40, "end_pos": 43, "label_type": "解剖部位"}, {"start_pos": 45, "end_pos": 46, "label_type": "解剖部位"}]}
+{"originalText": "2、肝内多发类圆形低密度影，多考虑转移瘤。", "entities": [{"start_pos": 2, "end_pos": 3, "label_type": "解剖部位"}]}
+{"originalText": "考虑肿瘤晚期，不宜手术切除，于2014.03.20在我院胃肠外科行“奥沙利铂150MGIVGTTD1+希罗达1000MGPOBIDD2-15”方案化疗，", "entities": [{"start_pos": 34, "end_pos": 38, "label_type": "药物"}, {"start_pos": 51, "end_pos": 54, "label_type": "药物"}]}
+{"originalText": "我科继续行氟尿嘧啶1GD1-D4保留灌肠,予以“艾恒200MGD1+希罗达1500MGPOBIDD1-14”方案化疗5个周期，", "entities": [{"start_pos": 5, "end_pos": 9, "label_type": "药物"}, {"start_pos": 24, "end_pos": 26, "label_type": "药物"}, {"start_pos": 34, "end_pos": 37, "label_type": "药物"}]}
+{"originalText": "过程顺利，效果良好，未见明显化疗副反应。", "entities": []}
+{"originalText": "，1个月前复查肝脏MRI：1、肝内多发异常信号，结合病史，符合转移瘤并囊变，与2014-7-2旧片对比无明显变化。", "entities": [{"start_pos": 7, "end_pos": 12, "label_type": "影像检查"}, {"start_pos": 15, "end_pos": 16, "label_type": "解剖部位"}]}
+{"originalText": "2、肝多发小囊肿。", "entities": [{"start_pos": 2, "end_pos": 8, "label_type": "疾病和诊断"}]}
+{"originalText": "3、右肾小囊肿。", "entities": [{"start_pos": 2, "end_pos": 7, "label_type": "疾病和诊断"}]}
+{"originalText": "盆腔，MRI:1、中上段直肠癌化疗后改变，部分癌组织存活可能，右后侧壁病灶与右侧肛提肌分界欠清，直肠系膜内多发小淋巴结。", "entities": [{"start_pos": 0, "end_pos": 6, "label_type": "影像检查"}, {"start_pos": 9, "end_pos": 15, "label_type": "疾病和诊断"}, {"start_pos": 38, "end_pos": 43, "label_type": "解剖部位"}, {"start_pos": 48, "end_pos": 50, "label_type": "解剖部位"}]}
+{"originalText": "建议治疗后复查。", "entities": []}
+{"originalText": "2、子宫直肠陷凹少量积液。", "entities": [{"start_pos": 2, "end_pos": 8, "label_type": "解剖部位"}]}
+{"originalText": "化疗效果良好，并于2014.08.09行腹腔镜上直肠癌根治术（MILES），术顺。", "entities": [{"start_pos": 20, "end_pos": 37, "label_type": "手术"}]}
+{"originalText": "术后病理（201426224）1、（直肠+肛门），：送检带肛门的直肠切除标本一份，大肠乳头状管状腺瘤，", "entities": [{"start_pos": 18, "end_pos": 20, "label_type": "解剖部位"}, {"start_pos": 21, "end_pos": 23, "label_type": "解剖部位"}, {"start_pos": 29, "end_pos": 31, "label_type": "解剖部位"}, {"start_pos": 32, "end_pos": 34, "label_type": "解剖部位"}, {"start_pos": 41, "end_pos": 50, "label_type": "疾病和诊断"}]}
+{"originalText": "大部分腺体低级别下皮内瘤变，小部分腺体高级别下皮内瘤变。", "entities": [{"start_pos": 5, "end_pos": 13, "label_type": "疾病和诊断"}, {"start_pos": 19, "end_pos": 27, "label_type": "疾病和诊断"}]}
+{"originalText": "部分区域大肠粘膜慢性炎症，表面糜烂。", "entities": [{"start_pos": 4, "end_pos": 6, "label_type": "解剖部位"}]}
+{"originalText": "肠周找到淋巴结2/8个见癌转移，肠周脂肪内找到2个癌结节。", "entities": [{"start_pos": 16, "end_pos": 17, "label_type": "解剖部位"}]}
+{"originalText": "2、（提肌组织），：送检为平滑肌组织和少量脂肪脉管结缔组织。", "entities": []}
+{"originalText": "术后恢复良好。", "entities": []}
+{"originalText": "今为复查再次就诊我院，门诊以“直肠癌伴肝转移化疗后术后”收入院。", "entities": [{"start_pos": 15, "end_pos": 27, "label_type": "疾病和诊断"}]}
+{"originalText": "下次出院以来精神、睡眠、饮食可，大便如下术，小便正常，体力稍差、体重较前无明显变化。", "entities": []}
+{"originalText": "，患者于8月前无明显诱因出现腹痛，遂就诊**六院，，行胃镜检查示：距门齿36CM处可见一肿物，，活检病理示：低分化鳞状细胞癌。", "entities": [{"start_pos": 14, "end_pos": 15, "label_type": "解剖部位"}, {"start_pos": 34, "end_pos": 36, "label_type": "解剖部位"}, {"start_pos": 54, "end_pos": 62, "label_type": "疾病和诊断"}]}
+{"originalText": "，行CT示：肝、腹膜及腹膜后淋巴结转移。", "entities": [{"start_pos": 2, "end_pos": 4, "label_type": "影像检查"}, {"start_pos": 6, "end_pos": 19, "label_type": "疾病和诊断"}]}
+{"originalText": "2013-06-21至2013-12-05行DCX方案化疗6程。", "entities": []}
+{"originalText": "5程化疗后出现声嘶。", "entities": []}
+{"originalText": "6程化疗后出现味觉消失。", "entities": []}
+{"originalText": "对症处理后缓解。", "entities": []}
+{"originalText": "2、5，程化疗后CT示：转移瘤较前缩小。", "entities": [{"start_pos": 8, "end_pos": 10, "label_type": "影像检查"}]}
+{"originalText": "2013-12-05行DX方案化疗1程。", "entities": []}
+{"originalText": "后予希罗达维持4个月。", "entities": [{"start_pos": 2, "end_pos": 5, "label_type": "药物"}]}
+{"originalText": "后再改为DCX方案化疗2程，2程后评价为PD。", "entities": []}
+{"originalText": "于2014-09-22行FOLFIPI方案化疗1程。", "entities": []}
+{"originalText": "今为求进一步诊治来我院。", "entities": []}
+{"originalText": "患者发病以来。", "entities": []}
+{"originalText": "精神佳,饮食睡眠不佳,大小便正常，体重无减轻。", "entities": []}
+{"originalText": "患者老年女性，既往有高血压、脑梗死、冠心病、充血性心力衰竭、陈旧性心肌梗死、室壁瘤、二尖瓣脱垂、房颤、", "entities": [{"start_pos": 10, "end_pos": 13, "label_type": "疾病和诊断"}, {"start_pos": 14, "end_pos": 17, "label_type": "疾病和诊断"}, {"start_pos": 18, "end_pos": 21, "label_type": "疾病和诊断"}, {"start_pos": 22, "end_pos": 29, "label_type": "疾病和诊断"}, {"start_pos": 30, "end_pos": 37, "label_type": "疾病和诊断"}, {"start_pos": 38, "end_pos": 41, "label_type": "疾病和诊断"}, {"start_pos": 42, "end_pos": 50, "label_type": "疾病和诊断"}]}
+{"originalText": "腰椎骨折等病史，2013-07-29主因反复咳痰喘4年，加重伴发热3天入院，完善各项常规检查，结合病史、", "entities": [{"start_pos": 0, "end_pos": 4, "label_type": "疾病和诊断"}]}
+{"originalText": "临床表现及辅助检查考虑肺部感染，Ⅰ型呼吸衰竭、冠心病-充血性心衰Ⅱ度诊断。", "entities": [{"start_pos": 11, "end_pos": 15, "label_type": "疾病和诊断"}, {"start_pos": 16, "end_pos": 22, "label_type": "疾病和诊断"}, {"start_pos": 23, "end_pos": 26, "label_type": "疾病和诊断"}, {"start_pos": 28, "end_pos": 32, "label_type": "疾病和诊断"}]}
+{"originalText": "入院后给予头孢地嗪静点抗炎，并予扩张支气管、祛痰、扩冠、利尿、补钾、吸氧、雾化吸入及对症等治疗。", "entities": [{"start_pos": 5, "end_pos": 9, "label_type": "药物"}]}
+{"originalText": "经治疗后患者症状好转,患者及家属拒绝进一步住院治疗，签字出院。", "entities": []}
+{"originalText": "出院诊断：1、肺部感染Ⅰ型呼吸衰竭2、冠心病--充血性心衰Ⅱ度，心律失常-房颤，陈旧性心肌梗死室壁瘤，", "entities": [{"start_pos": 7, "end_pos": 17, "label_type": "疾病和诊断"}, {"start_pos": 19, "end_pos": 22, "label_type": "疾病和诊断"}, {"start_pos": 25, "end_pos": 29, "label_type": "疾病和诊断"}, {"start_pos": 32, "end_pos": 39, "label_type": "疾病和诊断"}, {"start_pos": 40, "end_pos": 50, "label_type": "疾病和诊断"}]}
+{"originalText": "3、高血压病2级（极高危），4、电解质紊乱低钾血症，5、脑梗死后遗症患者出院后再次于受凉后出现咳嗽、", "entities": [{"start_pos": 2, "end_pos": 13, "label_type": "疾病和诊断"}, {"start_pos": 16, "end_pos": 25, "label_type": "疾病和诊断"}, {"start_pos": 28, "end_pos": 32, "label_type": "疾病和诊断"}]}
+{"originalText": "咯痰、发热，伴有意识障碍，精神饮食差，于2013/8/11主因咳嗽、咯痰伴发热2天入院。", "entities": []}
+{"originalText": "结合病史、临床表现等考虑肺部感染诊断，给予抗炎、化痰、平喘及对症治疗，患者咳嗽、咯痰症状好转，体温降至正常，", "entities": [{"start_pos": 12, "end_pos": 16, "label_type": "疾病和诊断"}]}
+{"originalText": "治疗有效；超声心动提示左房增大，左室壁运动不协调，节段性运动幅度减低，左室收缩功能正常，主动脉硬化，", "entities": [{"start_pos": 11, "end_pos": 13, "label_type": "解剖部位"}, {"start_pos": 16, "end_pos": 18, "label_type": "解剖部位"}, {"start_pos": 35, "end_pos": 37, "label_type": "解剖部位"}, {"start_pos": 44, "end_pos": 49, "label_type": "疾病和诊断"}]}
+{"originalText": "彩超提示胆囊切除术后，肝胰脾双肾未见异常，双侧胸腔未见明显积液。", "entities": [{"start_pos": 0, "end_pos": 2, "label_type": "影像检查"}, {"start_pos": 4, "end_pos": 10, "label_type": "疾病和诊断"}, {"start_pos": 11, "end_pos": 14, "label_type": "解剖部位"}, {"start_pos": 15, "end_pos": 16, "label_type": "解剖部位"}, {"start_pos": 23, "end_pos": 25, "label_type": "解剖部位"}]}
+{"originalText": "患者病程中反复夜间烦躁不安，请精神科会诊考虑脑器质性精神障碍，给予口服药物治疗后好转；患者家属拒绝完善ct及复查相关化验，", "entities": [{"start_pos": 22, "end_pos": 30, "label_type": "疾病和诊断"}]}
+{"originalText": "患者症状好转，上级医师同意后今日出院。", "entities": []}
+{"originalText": "出院诊断：1、肺部感染2、冠心病-心律失常-房颤陈旧性心肌梗死室壁瘤形成心功能iii级3、高血压病2级很高危4、", "entities": [{"start_pos": 7, "end_pos": 11, "label_type": "疾病和诊断"}, {"start_pos": 13, "end_pos": 16, "label_type": "疾病和诊断"}, {"start_pos": 17, "end_pos": 43, "label_type": "疾病和诊断"}, {"start_pos": 45, "end_pos": 54, "label_type": "疾病和诊断"}]}
+{"originalText": "脑梗死后遗症出院后患者即开始出现低热，体温波动在37-38摄氏度之间，无明显畏寒、寒战，偶有咳嗽，无明显咯痰，", "entities": [{"start_pos": 0, "end_pos": 4, "label_type": "疾病和诊断"}]}
+{"originalText": "无尿频、尿急，无腹痛、腹泻，无恶心、呕吐，精神饮食逐渐变差，近2天出现高热，体温升至39摄氏度以上，", "entities": [{"start_pos": 8, "end_pos": 9, "label_type": "解剖部位"}, {"start_pos": 11, "end_pos": 12, "label_type": "解剖部位"}]}
+{"originalText": "伴有精神饮食不佳，就诊于社区医院给予退热、抗炎对症治疗，患者仍间断发热，伴有意识障碍、纳差、尿少，今为进一步治疗就诊于我院，", "entities": []}
+{"originalText": "以“肺部感染”收入我科。", "entities": [{"start_pos": 2, "end_pos": 6, "label_type": "疾病和诊断"}]}
+{"originalText": "患者自发病以来精神萎靡、昏睡状态，无恶心呕吐，无抽搐，无夜间阵发性呼吸困难，睡眠差，大便干燥，小便失禁。", "entities": []}
+{"originalText": "否认药敏、外伤、输血史。", "entities": []}
+{"originalText": "，患者2012年5月出现吞咽困难，伴下腹部不适，为隐痛，无明显放射，疼痛间断发作，患者无恶心、呕吐，", "entities": [{"start_pos": 18, "end_pos": 21, "label_type": "解剖部位"}]}
+{"originalText": "无明显黑便，，患者行胃镜检查示：食管上段、贲门处占位，，病理示：低分化腺癌；，免疫组化结果显示:CK5/6(－),", "entities": [{"start_pos": 16, "end_pos": 20, "label_type": "解剖部位"}, {"start_pos": 21, "end_pos": 23, "label_type": "解剖部位"}]}
+{"originalText": "P63(－),CK8/18(+),CK7(+)。", "entities": []}
+{"originalText": "后行2次术前新辅助化疗，方案为奥沙利铂+替吉奥。", "entities": [{"start_pos": 15, "end_pos": 19, "label_type": "药物"}, {"start_pos": 20, "end_pos": 23, "label_type": "药物"}]}
+{"originalText": "患者于2012年11月29日在全麻上行经腹食管胃交界腺癌根治术，，术后病理回报：（食管胃交界腺癌化疗后）食管及胃交界部低分化腺癌，", "entities": [{"start_pos": 19, "end_pos": 31, "label_type": "手术"}, {"start_pos": 40, "end_pos": 64, "label_type": "疾病和诊断"}]}
+{"originalText": "癌灶散在分布，直径0.2－0.5CM，侵及深肌层，癌细胞变性显著（约70％），肿瘤退缩分级（TRG），", "entities": []}
+{"originalText": "：1级，未见脉管癌栓；淋巴结未见癌转移（胃周0/2、胃小弯侧0/0、食管胃交界处0/3、大弯侧0/1)，", "entities": [{"start_pos": 20, "end_pos": 21, "label_type": "解剖部位"}, {"start_pos": 26, "end_pos": 30, "label_type": "解剖部位"}, {"start_pos": 34, "end_pos": 39, "label_type": "解剖部位"}, {"start_pos": 44, "end_pos": 47, "label_type": "解剖部位"}]}
+{"originalText": "食管和胃断端未见癌，网膜组织未见特殊；，肿瘤病理分期：YPT2NOM0G3 IIA期。", "entities": [{"start_pos": 0, "end_pos": 2, "label_type": "解剖部位"}, {"start_pos": 3, "end_pos": 4, "label_type": "解剖部位"}]}
+{"originalText": "患者自发病以来，饮食睡眠好，体重无减轻；患者体重无明显减轻。", "entities": []}
+{"originalText": "患者1周前无明显诱因出现下腹部隐痛隐痛不适，进食后加重，无头痛、头晕，无咳嗽、咳痰，无心慌、胸闷、胸痛，", "entities": [{"start_pos": 12, "end_pos": 15, "label_type": "解剖部位"}, {"start_pos": 29, "end_pos": 30, "label_type": "解剖部位"}, {"start_pos": 32, "end_pos": 33, "label_type": "解剖部位"}, {"start_pos": 43, "end_pos": 44, "label_type": "解剖部位"}, {"start_pos": 46, "end_pos": 47, "label_type": "解剖部位"}, {"start_pos": 49, "end_pos": 50, "label_type": "解剖部位"}]}
+{"originalText": "无反酸、嗳气，无恶心、呕吐，无腹胀、腹泻,无尿频、尿急、尿痛，无发热、畏寒、寒战，今日行电子结肠镜检查，", "entities": [{"start_pos": 15, "end_pos": 16, "label_type": "解剖部位"}, {"start_pos": 18, "end_pos": 19, "label_type": "解剖部位"}]}
+{"originalText": "发现结肠息肉5枚，给予内镜上息肉切除术，送病理诊断，为进一步治疗来诊，门诊以“肠息肉内镜上切除术”收入我科。", "entities": [{"start_pos": 2, "end_pos": 6, "label_type": "疾病和诊断"}, {"start_pos": 11, "end_pos": 19, "label_type": "手术"}, {"start_pos": 39, "end_pos": 48, "label_type": "手术"}]}
+{"originalText": "   患者自发现本次发病以来，神志清，精神可，饮食、睡眠可，大小便无异常，体重无明显变化。", "entities": []}
+{"originalText": "1+周前，患者无明显原因出现尿急，尿后感下腹部隐痛，小便次数及每日尿量无明显改变，尿液呈黄色，无浑浊，", "entities": [{"start_pos": 20, "end_pos": 23, "label_type": "解剖部位"}]}
+{"originalText": "无腰背部疼痛，无腹痛、腹泻，无发热、咳嗽咳痰，无头痛、头晕等不适，病情无明显加重，患者未予重视。", "entities": [{"start_pos": 1, "end_pos": 4, "label_type": "解剖部位"}, {"start_pos": 8, "end_pos": 9, "label_type": "解剖部位"}, {"start_pos": 11, "end_pos": 12, "label_type": "解剖部位"}, {"start_pos": 24, "end_pos": 25, "label_type": "解剖部位"}, {"start_pos": 27, "end_pos": 28, "label_type": "解剖部位"}]}
+{"originalText": "3+天前患者受凉后出现全身乏力，伴有轻微头晕，无头痛，小便次数增加，伴有腰部酸痛不适，无发热、咳嗽咳痰，", "entities": [{"start_pos": 20, "end_pos": 21, "label_type": "解剖部位"}, {"start_pos": 24, "end_pos": 25, "label_type": "解剖部位"}, {"start_pos": 36, "end_pos": 38, "label_type": "解剖部位"}]}
+{"originalText": "患者自服药后（药名及剂量不详）稍感缓解。", "entities": []}
+{"originalText": "昨日患者自感发热不适，未测体温，仍感尿频、尿急、尿痛，无明显加重或减轻，自服头孢（剂量不详），午睡时感发热，", "entities": [{"start_pos": 38, "end_pos": 40, "label_type": "解剖部位"}]}
+{"originalText": "出汗较多，感头晕加重，家属发现后将患者送至我院急诊科，查尿液提示尿路感染，予以补液、抗感染、降温等对症治疗，", "entities": [{"start_pos": 6, "end_pos": 7, "label_type": "解剖部位"}, {"start_pos": 32, "end_pos": 36, "label_type": "疾病和诊断"}]}
+{"originalText": "患者家属要求转入我科，以“尿路感染”收入我科住院治疗。", "entities": [{"start_pos": 13, "end_pos": 17, "label_type": "疾病和诊断"}]}
+{"originalText": "患病以来，患者精神、食欲、睡眠尚可，小便次数增多，感尿急、尿痛，色泽无明显异常，大便正常，体重无明显改变。", "entities": []}
+{"originalText": "孕妇平素月经规律，末次月经2014年12月20日，根据早孕B超推算预产期2015年10月3日。", "entities": [{"start_pos": 27, "end_pos": 31, "label_type": "影像检查"}]}
+{"originalText": "停经后有恶心、呕吐等早孕反应。", "entities": []}
+{"originalText": "孕期正规产检，唐氏筛查1:758，拒行无创基因检测，3+月前孕检OGTT提示“妊娠期糖尿病”,予饮食控制及适当运动，", "entities": [{"start_pos": 39, "end_pos": 45, "label_type": "疾病和诊断"}]}
+{"originalText": "其后监测血糖大致正常。", "entities": [{"start_pos": 4, "end_pos": 6, "label_type": "实验室检验"}]}
+{"originalText": "孕期甲功提示“亚临床甲减”，予优甲乐口服治疗，现优甲乐剂量为50ugQd。", "entities": [{"start_pos": 7, "end_pos": 12, "label_type": "疾病和诊断"}, {"start_pos": 15, "end_pos": 18, "label_type": "药物"}, {"start_pos": 24, "end_pos": 27, "label_type": "药物"}]}
+{"originalText": "孕期查总胆汁酸结果正常。", "entities": [{"start_pos": 3, "end_pos": 7, "label_type": "实验室检验"}]}
+{"originalText": "孕中晚期无头昏、眼花及皮肤瘙痒等不适。", "entities": [{"start_pos": 5, "end_pos": 6, "label_type": "解剖部位"}, {"start_pos": 8, "end_pos": 9, "label_type": "解剖部位"}]}
+{"originalText": "患者入院前1+小时（5:40）无明显诱因出现阴道少量血性分泌物，无腹痛，无阴道流液，门诊以“先兆临产，", "entities": [{"start_pos": 22, "end_pos": 24, "label_type": "解剖部位"}, {"start_pos": 33, "end_pos": 34, "label_type": "解剖部位"}, {"start_pos": 37, "end_pos": 39, "label_type": "解剖部位"}, {"start_pos": 46, "end_pos": 50, "label_type": "疾病和诊断"}]}
+{"originalText": "妊娠期糖尿病，妊娠合并亚临床甲减”收入院。", "entities": [{"start_pos": 0, "end_pos": 6, "label_type": "疾病和诊断"}, {"start_pos": 7, "end_pos": 16, "label_type": "疾病和诊断"}]}
+{"originalText": "孕妇诉既往无糖尿病史，平素无多饮、多食、多尿等，孕期以来，精神食欲好，大小便正常，体重增长约5.5Kg。", "entities": [{"start_pos": 6, "end_pos": 9, "label_type": "疾病和诊断"}]}
+{"originalText": "缘于入院前4月余于我院诊为“胃癌、直肠癌”，于2016.6.11在全麻上行“全腹腔镜上根治性远端胃大部切除术+直肠癌根治术”。", "entities": [{"start_pos": 14, "end_pos": 16, "label_type": "疾病和诊断"}, {"start_pos": 17, "end_pos": 20, "label_type": "疾病和诊断"}, {"start_pos": 38, "end_pos": 61, "label_type": "手术"}]}
+{"originalText": "术后病理示“（远端胃)胃角溃疡型低黏附性癌(低分化腺癌，部分为印戒细胞癌)，侵出浆膜层，侵犯神经及脉管组织，", "entities": [{"start_pos": 9, "end_pos": 10, "label_type": "解剖部位"}, {"start_pos": 11, "end_pos": 37, "label_type": "疾病和诊断"}]}
+{"originalText": "手术标本下、上切端及另送(胃下切端)均未见癌浸润；找到胃小弯淋巴结0/18个，大弯及网膜淋巴结0/9个，", "entities": [{"start_pos": 13, "end_pos": 14, "label_type": "解剖部位"}, {"start_pos": 27, "end_pos": 33, "label_type": "解剖部位"}, {"start_pos": 39, "end_pos": 47, "label_type": "解剖部位"}]}
+{"originalText": "幽门下淋巴结1/1个，幽门上淋巴结0/8个，见癌转移。", "entities": [{"start_pos": 0, "end_pos": 6, "label_type": "解剖部位"}, {"start_pos": 11, "end_pos": 17, "label_type": "解剖部位"}]}
+{"originalText": "小弯侧脂肪组织见少量胰腺组织”，术后给予对症、营养支持等治疗，恢复良好,伤口愈合II/甲。", "entities": [{"start_pos": 0, "end_pos": 2, "label_type": "解剖部位"}, {"start_pos": 10, "end_pos": 12, "label_type": "解剖部位"}]}
+{"originalText": "术后分别于2016.7.13、2016.8.3、2016.8.23予“乐沙定200MGIVGTTQDD1+卡培他滨片1500MGPOBIDD1-14”方案化疗。", "entities": [{"start_pos": 35, "end_pos": 38, "label_type": "药物"}, {"start_pos": 53, "end_pos": 57, "label_type": "药物"}]}
+{"originalText": "于2016.09.21行回肠造口还纳术，术后恢复可，此次为行再次化疗就诊我院，门诊拟胃癌、直肠癌术后收入院。", "entities": [{"start_pos": 12, "end_pos": 19, "label_type": "手术"}, {"start_pos": 42, "end_pos": 44, "label_type": "疾病和诊断"}, {"start_pos": 45, "end_pos": 50, "label_type": "疾病和诊断"}]}
+{"originalText": "下次出院以来精神、睡眠、饮食可，无腹痛、腹胀、发热，大小便正常，体重较前无明显变化。", "entities": [{"start_pos": 17, "end_pos": 18, "label_type": "解剖部位"}, {"start_pos": 20, "end_pos": 21, "label_type": "解剖部位"}]}
+{"originalText": "患者约1年余前因“皮肤黏膜及巩膜黄染”入院，入院后积极完善相关入院检查，考虑患者壶腹周围癌并梗阻性黄疸诊断明确，", "entities": [{"start_pos": 14, "end_pos": 16, "label_type": "解剖部位"}, {"start_pos": 40, "end_pos": 51, "label_type": "疾病和诊断"}]}
+{"originalText": "排除手术禁忌后于2015.12.11在全麻上行胰十二指肠切除术，手术过程顺利，病理回示：壶腹部腺癌，", "entities": [{"start_pos": 23, "end_pos": 31, "label_type": "手术"}, {"start_pos": 44, "end_pos": 49, "label_type": "疾病和诊断"}]}
+{"originalText": "中度分化，体积1.5*1.5*1.3CM，侵达肌层。", "entities": []}
+{"originalText": "胃切线、十二指肠切线、胆总管切线及胰腺切除面未查见癌。", "entities": [{"start_pos": 0, "end_pos": 1, "label_type": "解剖部位"}, {"start_pos": 4, "end_pos": 8, "label_type": "解剖部位"}, {"start_pos": 11, "end_pos": 14, "label_type": "解剖部位"}, {"start_pos": 17, "end_pos": 19, "label_type": "解剖部位"}]}
+{"originalText": "胃周围（3个）、胰腺周围（3个）、胆总管旁（2个）、“第十二组”（5个）、“肝十二指肠韧带”（1个）淋巴结未查见癌。", "entities": [{"start_pos": 0, "end_pos": 1, "label_type": "解剖部位"}, {"start_pos": 8, "end_pos": 10, "label_type": "解剖部位"}, {"start_pos": 17, "end_pos": 20, "label_type": "解剖部位"}, {"start_pos": 26, "end_pos": 53, "label_type": "解剖部位"}]}
+{"originalText": "慢性胆囊炎。", "entities": [{"start_pos": 0, "end_pos": 5, "label_type": "疾病和诊断"}]}
+{"originalText": "患者自手术后多次接受吉西他滨化疗和细胞回输治疗。", "entities": [{"start_pos": 10, "end_pos": 14, "label_type": "药物"}]}
+{"originalText": "患者自下次出院以来，无腹痛、腹胀，无恶心、呕吐，无发热、寒战，无咳嗽、咳痰、呼吸困难，无尿频、尿急、", "entities": [{"start_pos": 11, "end_pos": 12, "label_type": "解剖部位"}, {"start_pos": 14, "end_pos": 15, "label_type": "解剖部位"}]}
+{"originalText": "排尿困难，现患者为求入院复查，来我院就诊，门诊以“胰十二指肠术后”收入我科。", "entities": [{"start_pos": 25, "end_pos": 32, "label_type": "疾病和诊断"}]}
+{"originalText": "   患者自发病以来，神志清，精神可，饮食欠佳，睡眠可，大小便正常，体重无明显变化。", "entities": []}
+{"originalText": "患者无明显诱因出现中下腹隐痛下腹隐痛不适，为阵发性（持续时间不详），进食后加重，无反射痛，与时间及活动无关，", "entities": [{"start_pos": 9, "end_pos": 12, "label_type": "解剖部位"}, {"start_pos": 14, "end_pos": 16, "label_type": "解剖部位"}]}
+{"originalText": "伴腹胀、反酸及嗳气，感恶心，无呕吐，无呕血及黑便，无明显咳嗽，有痰，不易咳出，无咯血，时感心悸，无胸闷，", "entities": [{"start_pos": 1, "end_pos": 2, "label_type": "解剖部位"}, {"start_pos": 45, "end_pos": 46, "label_type": "解剖部位"}, {"start_pos": 49, "end_pos": 50, "label_type": "解剖部位"}]}
+{"originalText": "院外行冠脉造影、腹部彩超未见异常，给予抑酸、护胃等对症支持治疗后症状无明显好转。", "entities": [{"start_pos": 3, "end_pos": 7, "label_type": "影像检查"}, {"start_pos": 8, "end_pos": 12, "label_type": "影像检查"}, {"start_pos": 23, "end_pos": 24, "label_type": "解剖部位"}]}
+{"originalText": "后腹痛反复发作（症状同前），院外行胃镜检查示“浅表性胃窦炎”，心电图无异常，现为求进一步诊疗，收入我院。", "entities": [{"start_pos": 1, "end_pos": 2, "label_type": "解剖部位"}, {"start_pos": 23, "end_pos": 29, "label_type": "疾病和诊断"}, {"start_pos": 31, "end_pos": 34, "label_type": "影像检查"}]}
+{"originalText": "\\U0004   患者本次发病以来，食欲正常， 神志清醒，精神尚可，睡眠尚可，解黄色软便，小便正常，", "entities": []}
+{"originalText": "体重无明显变化。", "entities": []}
+{"originalText": "入院前1年余患者出现两上肢凹陷性水肿，在外院查血肌酐大于300umol/L，彩超示两肾缩小，诊断为“肾功能不全、", "entities": [{"start_pos": 10, "end_pos": 13, "label_type": "解剖部位"}, {"start_pos": 23, "end_pos": 26, "label_type": "实验室检验"}, {"start_pos": 38, "end_pos": 40, "label_type": "影像检查"}, {"start_pos": 41, "end_pos": 43, "label_type": "解剖部位"}, {"start_pos": 50, "end_pos": 55, "label_type": "疾病和诊断"}]}
+{"originalText": "高血压肾病”，予降压、保肾等治疗后好转出院（具体不详）。", "entities": [{"start_pos": 0, "end_pos": 5, "label_type": "疾病和诊断"}]}
+{"originalText": "病程中患者未予特殊重视及治疗。", "entities": []}
+{"originalText": "5月前患者发作心累、气促、乏力，入*******医院就诊，查血肌酐大于800umol/L，诊断为“慢性肾脏病5期”，", "entities": [{"start_pos": 7, "end_pos": 8, "label_type": "解剖部位"}, {"start_pos": 30, "end_pos": 33, "label_type": "实验室检验"}, {"start_pos": 49, "end_pos": 56, "label_type": "疾病和诊断"}]}
+{"originalText": "行右前臂动静脉内瘘成形术及左颈内静脉置管术，后行3次/周维持性血液透析治疗，并长期服用“替米沙坦”等药物控制血压，", "entities": [{"start_pos": 1, "end_pos": 21, "label_type": "手术"}, {"start_pos": 44, "end_pos": 48, "label_type": "药物"}]}
+{"originalText": "收缩压维持在140-160mmHg；血红蛋白逐渐上降（具体不详），长期使用促红素纠正肾性贫血。", "entities": [{"start_pos": 42, "end_pos": 46, "label_type": "疾病和诊断"}]}
+{"originalText": "后患者多次因突发心累、气促，入我院予对症治疗后好转出院，出院后遂转入我科行维持性血液净化治疗。", "entities": [{"start_pos": 8, "end_pos": 9, "label_type": "解剖部位"}]}
+{"originalText": "2天前患者透析治疗后自觉心累、气促明显，如走平路十余步即感心累、气促，伴胸闷，常在活动时发作，持续约十几分钟或含服速效救心丸可好转，", "entities": [{"start_pos": 12, "end_pos": 13, "label_type": "解剖部位"}, {"start_pos": 29, "end_pos": 30, "label_type": "解剖部位"}, {"start_pos": 36, "end_pos": 37, "label_type": "解剖部位"}, {"start_pos": 57, "end_pos": 62, "label_type": "药物"}]}
+{"originalText": "伴夜间睡眠障碍，无两上肢水肿，无咯粉红色泡沫痰，无胸痛、咯血，无发热、咳嗽。", "entities": [{"start_pos": 9, "end_pos": 12, "label_type": "解剖部位"}, {"start_pos": 25, "end_pos": 26, "label_type": "解剖部位"}]}
+{"originalText": "2小时前患者感心累、气促明显加重。", "entities": [{"start_pos": 7, "end_pos": 8, "label_type": "解剖部位"}]}
+{"originalText": "遂来我院住院进一步治疗。", "entities": []}
+{"originalText": "患者自患病以来，精神、食欲较差，大便正常，小便约300-400ml/天，体重无明显改变。", "entities": []}
+{"originalText": "，患者4月前因“胃癌”于2017-05-04在我院于全麻上行胃癌癌根治术（远端胃大部切除+毕I式吻合术），", "entities": [{"start_pos": 8, "end_pos": 10, "label_type": "疾病和诊断"}, {"start_pos": 30, "end_pos": 52, "label_type": "手术"}]}
+{"originalText": "手术过程顺利，术后给予抗感染及营养支持治疗，患者恢复好，切口愈合良好，病愈出院。", "entities": []}
+{"originalText": "，术后病理示：（201710017）胃窦前壁腺癌（低分化）粘液性印戒，面积5*4.5CM，厚1.2CM，", "entities": [{"start_pos": 18, "end_pos": 34, "label_type": "疾病和诊断"}]}
+{"originalText": "侵达浆膜。", "entities": []}
+{"originalText": "双端切线未查见癌。", "entities": []}
+{"originalText": "三组（5个）、四组（4个）、七组（1个）、“1、3、7组”（12个）淋巴结，未查见癌。", "entities": [{"start_pos": 0, "end_pos": 37, "label_type": "解剖部位"}]}
+{"originalText": "，免疫组化染色示：CERB-2（-）、SYN少量（+）、β-TUBULIN-III部分（+）、RRM1（-）、", "entities": []}
+{"originalText": "TOPO II少量（+），于我院行化疗，，化疗方案为：奥沙利铂200MG D1+亚叶酸钙0.3D2-6 +氟尿嘧啶750MG D2-6 静滴，", "entities": [{"start_pos": 27, "end_pos": 31, "label_type": "药物"}, {"start_pos": 40, "end_pos": 44, "label_type": "药物"}, {"start_pos": 53, "end_pos": 57, "label_type": "药物"}]}
+{"originalText": "同时予以升白细胞、止吐、抑酸、保肝、免疫增强治疗。", "entities": [{"start_pos": 16, "end_pos": 17, "label_type": "解剖部位"}]}
+{"originalText": "   院外期间患者一般情况好，无恶心，无腹痛腹胀胀不适，现患者为行复查及化疗再次来院就诊，门诊以“胃癌术后”收入院。", "entities": [{"start_pos": 20, "end_pos": 21, "label_type": "解剖部位"}, {"start_pos": 22, "end_pos": 23, "label_type": "解剖部位"}, {"start_pos": 49, "end_pos": 53, "label_type": "疾病和诊断"}]}
+{"originalText": "   近期患者一般情况良好，神志清，精神良好，饮食、睡眠良好，大便次数多，小便正常，近期体重无明显变化。", "entities": []}
+{"originalText": "缘于入院前1月因患“过敏性紫癜”，口服“泼尼松30mg3天”后出现呕血，为鲜血，混有胃内容物。", "entities": [{"start_pos": 10, "end_pos": 15, "label_type": "疾病和诊断"}, {"start_pos": 20, "end_pos": 23, "label_type": "药物"}, {"start_pos": 42, "end_pos": 43, "label_type": "解剖部位"}]}
+{"originalText": "每日10余次，每次约30-50ml，每日解1次糊状黑便，每次量约300g，伴脐周闷痛不适，无头晕、黑曚、", "entities": [{"start_pos": 38, "end_pos": 40, "label_type": "解剖部位"}, {"start_pos": 46, "end_pos": 47, "label_type": "解剖部位"}]}
+{"originalText": "晕厥，无心悸、出汗。", "entities": [{"start_pos": 4, "end_pos": 5, "label_type": "解剖部位"}]}
+{"originalText": "就诊*****医院，胃镜检查示：慢性浅表性胃炎，胃窦、胃角角溃疡？予抑酸、护胃等治疗（具体药物不详）；", "entities": [{"start_pos": 16, "end_pos": 23, "label_type": "疾病和诊断"}, {"start_pos": 24, "end_pos": 32, "label_type": "疾病和诊断"}, {"start_pos": 38, "end_pos": 39, "label_type": "解剖部位"}]}
+{"originalText": "后仍反复呕血及排黑便，遂转诊我院，查血红蛋白158/g/l，尿素氮7.6mm/l，便潜血阳性，急诊胃镜检查示：急性糜烂出血性胃炎，", "entities": [{"start_pos": 18, "end_pos": 22, "label_type": "实验室检验"}, {"start_pos": 30, "end_pos": 33, "label_type": "实验室检验"}, {"start_pos": 41, "end_pos": 44, "label_type": "实验室检验"}, {"start_pos": 55, "end_pos": 64, "label_type": "疾病和诊断"}]}
+{"originalText": "十二指肠球部糜烂炎，慢性浅表性胃炎。", "entities": [{"start_pos": 0, "end_pos": 9, "label_type": "疾病和诊断"}, {"start_pos": 10, "end_pos": 17, "label_type": "疾病和诊断"}]}
+{"originalText": "予生长抑素微量泵入减少内脏血流，泮托拉唑抑酸护胃，于26日予大剂量激素甲强龙500mg冲击治疗，升级抗生素为美罗培南抗感染治疗，", "entities": [{"start_pos": 1, "end_pos": 5, "label_type": "药物"}, {"start_pos": 16, "end_pos": 20, "label_type": "药物"}, {"start_pos": 23, "end_pos": 24, "label_type": "解剖部位"}, {"start_pos": 34, "end_pos": 38, "label_type": "药物"}, {"start_pos": 54, "end_pos": 58, "label_type": "药物"}]}
+{"originalText": "余治疗同前。", "entities": []}
+{"originalText": "患者症状体征改善，期间甲强龙逐渐减量。", "entities": [{"start_pos": 11, "end_pos": 14, "label_type": "药物"}]}
+{"originalText": "8.15改甲强龙用量为120mg。", "entities": [{"start_pos": 5, "end_pos": 8, "label_type": "药物"}]}
+{"originalText": "患者皮疹无再发，治疗有效，大便转黄，排便次数减少。", "entities": []}
+{"originalText": "1天前，甲强龙120mg使用第3天，排黑色糊状粘液便2次，伴恶心、呕吐胃内容物、头晕，症状反复。", "entities": [{"start_pos": 4, "end_pos": 7, "label_type": "药物"}, {"start_pos": 35, "end_pos": 36, "label_type": "解剖部位"}, {"start_pos": 40, "end_pos": 41, "label_type": "解剖部位"}]}
+{"originalText": "为求进一步治疗，门诊拟“消化道出血、过敏性紫癜”收入院。", "entities": [{"start_pos": 12, "end_pos": 17, "label_type": "疾病和诊断"}, {"start_pos": 18, "end_pos": 23, "label_type": "疾病和诊断"}]}
+{"originalText": "发病以来，精神、饮食、睡眠欠佳，大便如前所述，小便如常，体重无明显变化。", "entities": []}
+{"originalText": "，2016年7月患者无诱因出现进食梗咽感，未诊治，后患者哽咽感加重，，外院行胃镜检查：进镜30CM可见食管中段见一3/4周不规则溃疡性病变，", "entities": [{"start_pos": 51, "end_pos": 55, "label_type": "解剖部位"}]}
+{"originalText": "底凹凸不平，镜身不能通过，活检4块，，病理：（食管中段）低分化鳞癌，，钡餐：食管中段可见长度约6CM病变，", "entities": [{"start_pos": 22, "end_pos": 33, "label_type": "疾病和诊断"}, {"start_pos": 38, "end_pos": 42, "label_type": "解剖部位"}]}
+{"originalText": "管壁僵硬，胸、腹部，CT:胸中段食管管壁环周性增厚。", "entities": [{"start_pos": 5, "end_pos": 12, "label_type": "影像检查"}, {"start_pos": 13, "end_pos": 18, "label_type": "解剖部位"}]}
+{"originalText": "2016-12-15 昨日放疗结束.1月后复查胸部、腹部CT及锁骨下B超未见肿瘤复发征象，食管局部肿瘤较前缩小。", "entities": [{"start_pos": 23, "end_pos": 30, "label_type": "影像检查"}, {"start_pos": 31, "end_pos": 36, "label_type": "影像检查"}, {"start_pos": 45, "end_pos": 47, "label_type": "解剖部位"}]}
+{"originalText": "入院前5小时患者无明显诱因晨起后感四肢乏力，不能坐起，右侧较明显，伴有右侧嘴角流涎，言语吐词较前模糊，", "entities": [{"start_pos": 17, "end_pos": 19, "label_type": "解剖部位"}, {"start_pos": 35, "end_pos": 39, "label_type": "解剖部位"}]}
+{"originalText": "小便失禁，无头晕、头痛，无恶心、呕吐，无心悸、胸闷、胸痛，无腹痛、腹泻，无大便失禁，无抽搐等不适。", "entities": [{"start_pos": 6, "end_pos": 7, "label_type": "解剖部位"}, {"start_pos": 9, "end_pos": 10, "label_type": "解剖部位"}, {"start_pos": 20, "end_pos": 21, "label_type": "解剖部位"}, {"start_pos": 23, "end_pos": 24, "label_type": "解剖部位"}, {"start_pos": 26, "end_pos": 27, "label_type": "解剖部位"}, {"start_pos": 30, "end_pos": 31, "label_type": "解剖部位"}, {"start_pos": 33, "end_pos": 34, "label_type": "解剖部位"}]}
+{"originalText": "于我院急诊科就诊，查血常规：WBC 11.5*10^9/L，NEUT 95.01%；血气分析PH 7.39，", "entities": [{"start_pos": 14, "end_pos": 17, "label_type": "实验室检验"}, {"start_pos": 30, "end_pos": 34, "label_type": "实验室检验"}, {"start_pos": 46, "end_pos": 48, "label_type": "实验室检验"}]}
+{"originalText": "PO2 118mmHg，PCO2 35mmHg，HCO3- 22.6mmol/l。", "entities": [{"start_pos": 0, "end_pos": 3, "label_type": "实验室检验"}, {"start_pos": 12, "end_pos": 16, "label_type": "实验室检验"}, {"start_pos": 24, "end_pos": 28, "label_type": "实验室检验"}]}
+{"originalText": "静脉血糖32.28mmol/l，心肌酶谱：CK-MB 26U/L，LDH 337.7U/L。", "entities": [{"start_pos": 2, "end_pos": 4, "label_type": "实验室检验"}, {"start_pos": 21, "end_pos": 26, "label_type": "实验室检验"}, {"start_pos": 33, "end_pos": 36, "label_type": "实验室检验"}]}
+{"originalText": "头部CT：左侧脑室体部旁及左侧基底节区脑梗死。", "entities": [{"start_pos": 0, "end_pos": 4, "label_type": "影像检查"}, {"start_pos": 5, "end_pos": 10, "label_type": "解剖部位"}, {"start_pos": 13, "end_pos": 19, "label_type": "解剖部位"}, {"start_pos": 19, "end_pos": 22, "label_type": "疾病和诊断"}]}
+{"originalText": "给予胰岛素缓慢泵入，疏血通、脑苷肌肽静滴，为进一步诊治收治我科。", "entities": [{"start_pos": 2, "end_pos": 5, "label_type": "药物"}, {"start_pos": 10, "end_pos": 13, "label_type": "药物"}, {"start_pos": 14, "end_pos": 18, "label_type": "药物"}]}
+{"originalText": "患者此次起病以来精神、食欲、睡眠可，小便失禁，大便未解，体力及体重无明显改变。", "entities": []}
+{"originalText": "第一次住院情况：患者老年女性，既往高血压、2型糖尿病、冠心病病史，2012/4/19主因咳嗽咳痰喘息30余年，", "entities": [{"start_pos": 17, "end_pos": 20, "label_type": "疾病和诊断"}, {"start_pos": 21, "end_pos": 26, "label_type": "疾病和诊断"}, {"start_pos": 27, "end_pos": 30, "label_type": "疾病和诊断"}]}
+{"originalText": "加重1周入我科住院治疗。", "entities": []}
+{"originalText": "入院后给予哌拉西林他唑巴坦抗感染、平喘、祛痰、雾化吸入对症等治疗。", "entities": [{"start_pos": 5, "end_pos": 13, "label_type": "药物"}]}
+{"originalText": "病程中患者反复出现喘息，端坐呼吸，考虑急性左心衰，转入icu进一步治疗。", "entities": [{"start_pos": 19, "end_pos": 24, "label_type": "疾病和诊断"}]}
+{"originalText": "转科后给予抗感染、平喘、祛痰、改善心功能等对症治疗，经icu治疗后症状好转，转入心内科二病区，给予抗血小板、", "entities": []}
+{"originalText": "调脂、扩冠等治疗，行冠脉造影检查以了解冠脉情况。", "entities": [{"start_pos": 10, "end_pos": 14, "label_type": "影像检查"}, {"start_pos": 19, "end_pos": 21, "label_type": "解剖部位"}]}
+{"originalText": "患者胸闷、憋气症状明显好转，于2012/5/18出院，1、冠心病-急性左心衰；急性冠脉综合征；不稳定心绞痛；", "entities": [{"start_pos": 2, "end_pos": 3, "label_type": "解剖部位"}, {"start_pos": 29, "end_pos": 32, "label_type": "疾病和诊断"}, {"start_pos": 33, "end_pos": 38, "label_type": "疾病和诊断"}, {"start_pos": 39, "end_pos": 46, "label_type": "疾病和诊断"}, {"start_pos": 47, "end_pos": 53, "label_type": "疾病和诊断"}]}
+{"originalText": "心律失常；阵发房颤；心功能4级2、慢性阻塞性肺疾病并肺感染；ii型呼吸衰竭3、2型糖尿病；糖尿病酮症4、", "entities": [{"start_pos": 0, "end_pos": 4, "label_type": "疾病和诊断"}, {"start_pos": 5, "end_pos": 9, "label_type": "疾病和诊断"}, {"start_pos": 10, "end_pos": 15, "label_type": "疾病和诊断"}, {"start_pos": 17, "end_pos": 29, "label_type": "疾病和诊断"}, {"start_pos": 30, "end_pos": 37, "label_type": "疾病和诊断"}, {"start_pos": 39, "end_pos": 44, "label_type": "疾病和诊断"}, {"start_pos": 45, "end_pos": 50, "label_type": "疾病和诊断"}]}
+{"originalText": "高血压病3级很高危5、电解质紊乱-低钾血症。", "entities": [{"start_pos": 0, "end_pos": 9, "label_type": "疾病和诊断"}, {"start_pos": 11, "end_pos": 21, "label_type": "疾病和诊断"}]}
+{"originalText": "上次住院情况：患者出院后规律口服阿斯美等药物治疗。", "entities": [{"start_pos": 16, "end_pos": 19, "label_type": "药物"}]}
+{"originalText": "2013/9/2患者着凉后出现咳嗽、咳痰、喘息加重，白粘痰，不易咳出，活动后喘息明显，伴有胸闷憋气，", "entities": [{"start_pos": 45, "end_pos": 46, "label_type": "解剖部位"}]}
+{"originalText": "夜间可平卧，无心前区疼痛，无夜间阵发性呼吸困难，无尿量减少，无发热，无咯血，无头晕头痛、无恶心、呕吐、", "entities": [{"start_pos": 7, "end_pos": 10, "label_type": "解剖部位"}, {"start_pos": 39, "end_pos": 40, "label_type": "解剖部位"}, {"start_pos": 41, "end_pos": 42, "label_type": "解剖部位"}]}
+{"originalText": "腹痛、腹泻等，遂收入我院呼吸科二病区治疗，入院后予以抗感染、平喘、祛痰、改善心肌供血、强心、利尿等对症治疗后患者喘息症状明显好转，", "entities": [{"start_pos": 0, "end_pos": 1, "label_type": "解剖部位"}, {"start_pos": 3, "end_pos": 4, "label_type": "解剖部位"}]}
+{"originalText": "于2013/9/13出院，出院诊断：1、慢性阻塞性肺疾病急性发作ii型呼吸衰竭2、冠心病-急性左心衰心功能4级3、", "entities": [{"start_pos": 20, "end_pos": 39, "label_type": "疾病和诊断"}, {"start_pos": 41, "end_pos": 44, "label_type": "疾病和诊断"}, {"start_pos": 45, "end_pos": 55, "label_type": "疾病和诊断"}]}
+{"originalText": "2型糖尿病4、高血压病3级5、代谢性酸中毒。", "entities": [{"start_pos": 0, "end_pos": 5, "label_type": "疾病和诊断"}, {"start_pos": 7, "end_pos": 13, "label_type": "疾病和诊断"}, {"start_pos": 15, "end_pos": 21, "label_type": "疾病和诊断"}]}
+{"originalText": "本次住院情况：患者3天前受凉后出现咳嗽、咳痰、喘息加重，咳大量白色粘痰，量约20-30ml/天，痰液较稠，", "entities": []}
+{"originalText": "不易咳出；活动后喘息明显，夜间睡眠不可平卧，家中自服“阿斯美，茶碱缓释片，欣康”等药物治疗后未见明显好转。", "entities": [{"start_pos": 27, "end_pos": 30, "label_type": "药物"}, {"start_pos": 31, "end_pos": 36, "label_type": "药物"}, {"start_pos": 37, "end_pos": 39, "label_type": "药物"}]}
+{"originalText": "患者遂于今日就诊于我院急诊科，予以多索茶碱、甲强龙静点治疗后未见明显好转，患者为求进一步诊治收入我科。", "entities": [{"start_pos": 17, "end_pos": 21, "label_type": "药物"}, {"start_pos": 22, "end_pos": 25, "label_type": "药物"}]}
+{"originalText": "患者自发病以来，饮食、睡眠差，大便正常，小便量少，体重无明显下降。", "entities": []}
+{"originalText": "否认食物及药物过敏史，近期无输血史。", "entities": []}
+{"originalText": "，患者2011年5月1日因尿频尿急在外院检查，行B超及CT检查提示盆腔包块，建议进一步检查。", "entities": [{"start_pos": 24, "end_pos": 26, "label_type": "影像检查"}, {"start_pos": 27, "end_pos": 29, "label_type": "影像检查"}, {"start_pos": 33, "end_pos": 35, "label_type": "解剖部位"}]}
+{"originalText": "遂就诊于我院，于2011-5-27全麻上行全子宫+两侧附件切除+大网膜切除+盆腔淋巴结清扫+腹主动脉旁淋巴结切除术。", "entities": [{"start_pos": 21, "end_pos": 57, "label_type": "手术"}]}
+{"originalText": "，术中探查：腹水500ML,淡黄。", "entities": [{"start_pos": 6, "end_pos": 7, "label_type": "解剖部位"}]}
+{"originalText": "左卵巢肿瘤融合大小约12×7×6CM,实性，表面光滑，分叶状，质脆，左侧输卵管与盆腔肿块融合，右卵巢4*4*3CM。", "entities": [{"start_pos": 0, "end_pos": 5, "label_type": "疾病和诊断"}, {"start_pos": 34, "end_pos": 39, "label_type": "解剖部位"}, {"start_pos": 40, "end_pos": 42, "label_type": "解剖部位"}, {"start_pos": 47, "end_pos": 50, "label_type": "解剖部位"}]}
+{"originalText": "子宫大小约7×6×5CM，后壁与左侧附件肿物粘连紧密，余未见明显异常。", "entities": [{"start_pos": 0, "end_pos": 2, "label_type": "解剖部位"}, {"start_pos": 16, "end_pos": 20, "label_type": "解剖部位"}]}
+{"originalText": "，术中冰冻病理报告:左卵巢中分化浆液性腺癌。", "entities": [{"start_pos": 9, "end_pos": 21, "label_type": "疾病和诊断"}]}
+{"originalText": "术后病理回报两侧卵巢中分化浆液性乳头状腺癌。", "entities": [{"start_pos": 6, "end_pos": 21, "label_type": "疾病和诊断"}]}
+{"originalText": "盆地结节见癌转移。", "entities": []}
+{"originalText": "送检各组淋巴结未见癌转移。", "entities": []}
+{"originalText": "腹水细胞学可疑癌细胞。", "entities": [{"start_pos": 0, "end_pos": 1, "label_type": "解剖部位"}]}
+{"originalText": "，术后诊断：两卵巢腺癌IIB期。", "entities": [{"start_pos": 6, "end_pos": 15, "label_type": "疾病和诊断"}]}
+{"originalText": "患者术后恢复可，于2011-6-7、2011-6-30、2011-8-9行TP（北华素240MG IV+伯尔定600MG IP）化疗方案三程，", "entities": [{"start_pos": 40, "end_pos": 43, "label_type": "药物"}, {"start_pos": 52, "end_pos": 55, "label_type": "药物"}]}
+{"originalText": "过程顺利。", "entities": []}
+{"originalText": "出院后定期复查血常规白细胞最低3.4X10~9/L,血小板正常,现为进一步化疗再次住院。", "entities": [{"start_pos": 10, "end_pos": 13, "label_type": "实验室检验"}, {"start_pos": 26, "end_pos": 29, "label_type": "实验室检验"}]}
+{"originalText": "近期食欲、精神、睡眠可，小便无明显异常，大便规律，成形，软，体重无明显上降。", "entities": []}
+{"originalText": "，既往化疗及肿瘤标志物情况：，化疗药物毒副反应：。", "entities": []}
+{"originalText": "患者于6月前，因“直肠癌”于2015-12-30在我院行“腹腔镜上直肠癌根治术”，术后病理：（直肠）溃疡型中分化管状乳头状腺癌，", "entities": [{"start_pos": 9, "end_pos": 12, "label_type": "疾病和诊断"}, {"start_pos": 29, "end_pos": 39, "label_type": "手术"}, {"start_pos": 46, "end_pos": 63, "label_type": "疾病和诊断"}]}
+{"originalText": "浸及肠壁全层，脉管、神经未见癌侵犯，双切端未见癌累及，肠壁脂肪中淋巴结未见癌转移（0/11）。", "entities": [{"start_pos": 2, "end_pos": 3, "label_type": "解剖部位"}, {"start_pos": 27, "end_pos": 35, "label_type": "解剖部位"}]}
+{"originalText": "术后患者恢复可，腹泻，不能控制，进食少，无腹痛腹胀，无发热等，为进一步治疗，拟行第2次化疗，门诊以“直肠癌术后”收入院。", "entities": [{"start_pos": 8, "end_pos": 9, "label_type": "解剖部位"}, {"start_pos": 21, "end_pos": 22, "label_type": "解剖部位"}, {"start_pos": 23, "end_pos": 24, "label_type": "解剖部位"}, {"start_pos": 50, "end_pos": 55, "label_type": "疾病和诊断"}]}
+{"originalText": "\\U0004   患者自起病以来，精神可，胃纳略差，大便次数增多，小便如常，体重未见明显上降。", "entities": []}
+{"originalText": "入院前3天患者无明显诱因出现咳嗽，咯少许白色粘痰，无畏寒发热，无鼻塞流涕，无胸痛咯血，无喘累气促，无呼吸困难，", "entities": [{"start_pos": 32, "end_pos": 33, "label_type": "解剖部位"}, {"start_pos": 38, "end_pos": 39, "label_type": "解剖部位"}]}
+{"originalText": "患者在家自服消炎药物（具体不详），下述症状无改善。", "entities": []}
+{"originalText": "今日患者咳嗽咯痰加重，咳嗽较为频繁，喉头闻及较多痰鸣音，咯痰费力，且患者精神较差，阵性呻吟，不能对答，", "entities": [{"start_pos": 18, "end_pos": 20, "label_type": "解剖部位"}]}
+{"originalText": "无潮热、盗汗，无恶心、呕吐，无腹胀、腹泻，无尿频、尿急、尿痛，无喘累、气促，无呼吸困难等。", "entities": [{"start_pos": 15, "end_pos": 16, "label_type": "解剖部位"}, {"start_pos": 18, "end_pos": 19, "label_type": "解剖部位"}]}
+{"originalText": "家属护送患者来我院门诊就诊，拒绝门诊完善检查，要求输液治疗，随后门诊予以静滴“头孢呋辛、氨溴索、多索茶碱”等。", "entities": [{"start_pos": 39, "end_pos": 43, "label_type": "药物"}, {"start_pos": 44, "end_pos": 47, "label_type": "药物"}, {"start_pos": 48, "end_pos": 52, "label_type": "药物"}]}
+{"originalText": "与患者家属进一步沟通后同意住院，随后以“肺部感染”收入我科住院治疗。", "entities": [{"start_pos": 20, "end_pos": 24, "label_type": "疾病和诊断"}]}
+{"originalText": "患者自发病以来精神、食欲差，睡眠可，近4天未解大便，小便未诉异常。", "entities": []}
+{"originalText": "近半月患者懒言少语，反应迟钝，但能正确对答。", "entities": []}
+{"originalText": "近期体重无明显减轻。", "entities": []}
+{"originalText": "，缘于入院前2月余因“反复返酸、嗳气7年”就诊我院，，行胃镜检查示：“1.胃窦癌2.慢性萎缩性胃炎”，", "entities": [{"start_pos": 37, "end_pos": 40, "label_type": "疾病和诊断"}, {"start_pos": 42, "end_pos": 49, "label_type": "疾病和诊断"}]}
+{"originalText": "，病理示：“胃管状腺癌II-III级”，下腹部平扫+，增强示：“胃肿瘤，伴腹腔、腹膜后多发淋巴结肿大”，", "entities": [{"start_pos": 6, "end_pos": 18, "label_type": "疾病和诊断"}, {"start_pos": 20, "end_pos": 26, "label_type": "影像检查"}, {"start_pos": 32, "end_pos": 33, "label_type": "解剖部位"}, {"start_pos": 37, "end_pos": 39, "label_type": "解剖部位"}, {"start_pos": 40, "end_pos": 41, "label_type": "解剖部位"}]}
+{"originalText": "考虑肿瘤局部较晚期，遂于2015.04.18、2015.05.11、2015.06.02予“安素泰210MGIVGTTD1+奥沙利铂（艾恒）150MGIVGTTD2+希罗达1000MGPOBIDD1-14”方案新辅助化疗，", "entities": [{"start_pos": 46, "end_pos": 49, "label_type": "药物"}, {"start_pos": 62, "end_pos": 66, "label_type": "药物"}, {"start_pos": 67, "end_pos": 69, "label_type": "药物"}, {"start_pos": 83, "end_pos": 86, "label_type": "药物"}]}
+{"originalText": "辅以止吐、制酸、保胃、保肝、营养支持等治疗。", "entities": [{"start_pos": 9, "end_pos": 10, "label_type": "解剖部位"}, {"start_pos": 12, "end_pos": 13, "label_type": "解剖部位"}]}
+{"originalText": "化疗后未见明显骨髓抑制，一般情况尚可。", "entities": [{"start_pos": 7, "end_pos": 11, "label_type": "疾病和诊断"}]}
+{"originalText": "今为求第4次化疗就诊我院，门诊拟“胃窦癌”收入院。", "entities": [{"start_pos": 17, "end_pos": 20, "label_type": "疾病和诊断"}]}
+{"originalText": "自发病以来，精神、睡眠可，食欲一般，大小便如常，体重无明显变化。", "entities": []}
+{"originalText": "，患者4月前因“下腹部疼痛不适10余年，加重1月余”入院，2016-06-02在全麻上行胃癌根治+幽门成形术，", "entities": [{"start_pos": 8, "end_pos": 11, "label_type": "解剖部位"}, {"start_pos": 44, "end_pos": 54, "label_type": "手术"}]}
+{"originalText": "手术过程顺利，术后患者恢复好，切口愈合好，按期拆线。", "entities": []}
+{"originalText": "，术后病理：（201611546），：胃体小弯腺癌（中度分化），局部伴神经内分泌分化，体积2*1*0.5CM，", "entities": [{"start_pos": 19, "end_pos": 31, "label_type": "疾病和诊断"}]}
+{"originalText": "溃疡型，侵达浅肌层。", "entities": []}
+{"originalText": "双端切线及另送“近切线”未查见癌。", "entities": []}
+{"originalText": " 呈“三组”淋巴结（8/13个）淋巴结癌转移。", "entities": [{"start_pos": 3, "end_pos": 9, "label_type": "解剖部位"}]}
+{"originalText": "“四组”（5个）淋巴结未查见癌。", "entities": [{"start_pos": 1, "end_pos": 11, "label_type": "解剖部位"}]}
+{"originalText": " ，癌组织免疫组化染色示：TS部分（+）、TOPOII多数（+）、β-TUBULIN-III少数（+）、", "entities": []}
+{"originalText": " RRM1（-）、SYN部分（-）、CERBB-2（-）。", "entities": []}
+{"originalText": "术后给予辅助化疗，，方案为：奥沙利铂150MG D1+亚叶酸钙0.3G D2-6 +氟尿嘧啶750MG D2-6 静滴。", "entities": [{"start_pos": 14, "end_pos": 18, "label_type": "药物"}, {"start_pos": 27, "end_pos": 31, "label_type": "药物"}, {"start_pos": 42, "end_pos": 46, "label_type": "药物"}]}
+{"originalText": "现患者为求复查化疗来我院就诊，为行进一步治疗，门诊以\\\"胃癌术后\\\"收入我科。", "entities": [{"start_pos": 28, "end_pos": 32, "label_type": "疾病和诊断"}]}
+{"originalText": "   患者自发病以来，精神可，饮食可，睡眠可，二便正常，体重体力无明显改变。", "entities": []}
+{"originalText": "，患者门诊，2011-1-4因胃癌于外院行胃癌根治术，术后恢复可。", "entities": [{"start_pos": 15, "end_pos": 17, "label_type": "疾病和诊断"}, {"start_pos": 21, "end_pos": 26, "label_type": "手术"}]}
+{"originalText": "术后行化疗3次，2012-9因阑尾炎行手术，，术后病理：可见癌细胞（未见癌）。", "entities": [{"start_pos": 15, "end_pos": 18, "label_type": "疾病和诊断"}]}
+{"originalText": "2013年1月余出现大便困难，就诊于外院查腹盆部，CT：1,肝内胆管扩张，胆管中段狭窄，考虑占位性病变，", "entities": [{"start_pos": 21, "end_pos": 27, "label_type": "影像检查"}, {"start_pos": 30, "end_pos": 36, "label_type": "疾病和诊断"}, {"start_pos": 37, "end_pos": 43, "label_type": "疾病和诊断"}]}
+{"originalText": "2.腹水。", "entities": [{"start_pos": 2, "end_pos": 3, "label_type": "解剖部位"}]}
+{"originalText": "MRCP提示肝内外胆管扩张，考虑胆总管中段狭窄。", "entities": [{"start_pos": 0, "end_pos": 4, "label_type": "影像检查"}, {"start_pos": 6, "end_pos": 13, "label_type": "疾病和诊断"}, {"start_pos": 16, "end_pos": 23, "label_type": "疾病和诊断"}]}
+{"originalText": "直肠壁增厚。", "entities": [{"start_pos": 0, "end_pos": 2, "label_type": "解剖部位"}]}
+{"originalText": "近期腹部疼痛加重明显，向腰、臀、上肢放射，影响休息，目前口服泰勒宁2片后只能5小时略好，饮食少，大便差，", "entities": [{"start_pos": 2, "end_pos": 3, "label_type": "解剖部位"}, {"start_pos": 12, "end_pos": 13, "label_type": "解剖部位"}, {"start_pos": 14, "end_pos": 15, "label_type": "解剖部位"}, {"start_pos": 16, "end_pos": 18, "label_type": "解剖部位"}, {"start_pos": 30, "end_pos": 33, "label_type": "药物"}]}
+{"originalText": "腹胀、气鼓，脱肛；小便困难,尿痛，尿急，轻度黄染。", "entities": [{"start_pos": 0, "end_pos": 1, "label_type": "解剖部位"}, {"start_pos": 7, "end_pos": 8, "label_type": "解剖部位"}]}
+{"originalText": "忍痛习惯，同理沟通。", "entities": []}
+{"originalText": "办麻卡，指导用药。", "entities": []}
+{"originalText": "（5200）。", "entities": []}
+{"originalText": "入院前7年无明显诱因患者感活动后乏力、气促，偶有头昏，偶有胸闷、心悸，偶有反酸、嗳气，无头痛、胸痛、", "entities": [{"start_pos": 24, "end_pos": 25, "label_type": "解剖部位"}, {"start_pos": 29, "end_pos": 30, "label_type": "解剖部位"}, {"start_pos": 32, "end_pos": 33, "label_type": "解剖部位"}, {"start_pos": 44, "end_pos": 45, "label_type": "解剖部位"}, {"start_pos": 47, "end_pos": 48, "label_type": "解剖部位"}]}
+{"originalText": "晕厥、黑曚、烧心、恶心、呕吐、腹痛、腹胀、腹泻、黑便。", "entities": [{"start_pos": 15, "end_pos": 16, "label_type": "解剖部位"}, {"start_pos": 18, "end_pos": 19, "label_type": "解剖部位"}, {"start_pos": 21, "end_pos": 22, "label_type": "解剖部位"}]}
+{"originalText": "于*****医院诊断“溶血性贫血”，给予输血等处理后病情缓解。", "entities": [{"start_pos": 11, "end_pos": 16, "label_type": "疾病和诊断"}]}
+{"originalText": "病程中下述症状反复发生，多次给予输血治疗后病程好转。", "entities": []}
+{"originalText": "2013年4月*****胸片检查：两肺纹理增多，心影轻度增大。", "entities": [{"start_pos": 12, "end_pos": 14, "label_type": "影像检查"}, {"start_pos": 17, "end_pos": 19, "label_type": "解剖部位"}, {"start_pos": 24, "end_pos": 25, "label_type": "解剖部位"}]}
+{"originalText": "心脏彩超：右房、右室稍增大，EF正常。", "entities": [{"start_pos": 0, "end_pos": 4, "label_type": "影像检查"}, {"start_pos": 5, "end_pos": 7, "label_type": "解剖部位"}, {"start_pos": 8, "end_pos": 10, "label_type": "解剖部位"}, {"start_pos": 14, "end_pos": 16, "label_type": "实验室检验"}]}
+{"originalText": "间接Coomb’s试验（+）P，阳性对照（+++），P。", "entities": [{"start_pos": 0, "end_pos": 11, "label_type": "实验室检验"}]}
+{"originalText": "骨髓象：增生性骨髓象，红系增生旺盛。", "entities": []}
+{"originalText": "2014-4-24（******医院）遗传学检验报告单：未检测到送检样本中G6PD基因G1388A，", "entities": []}
+{"originalText": "G1376T，A95G三个常见突变位点，结合临床确诊“G-6-PD酶缺乏症，贫血性心脏病，肝功能不全”。", "entities": [{"start_pos": 27, "end_pos": 37, "label_type": "疾病和诊断"}, {"start_pos": 38, "end_pos": 44, "label_type": "疾病和诊断"}, {"start_pos": 45, "end_pos": 50, "label_type": "疾病和诊断"}]}
+{"originalText": "输洗涤红细胞后病情好转。", "entities": []}
+{"originalText": "出院后患者反复出现乏力、气促不适，心悸、胸闷不适，在我院多次输洗涤红细胞悬液后好转。", "entities": [{"start_pos": 17, "end_pos": 18, "label_type": "解剖部位"}, {"start_pos": 20, "end_pos": 21, "label_type": "解剖部位"}]}
+{"originalText": "近1周患者再次出现下述症状，为求进一步治疗，门诊以“G-6-PD酶缺乏症，溶血性贫血”收入我科。", "entities": [{"start_pos": 26, "end_pos": 36, "label_type": "疾病和诊断"}, {"start_pos": 37, "end_pos": 42, "label_type": "疾病和诊断"}]}
+{"originalText": "患者患病以来，精神状态欠佳，大小便正常，体重无明显减轻。", "entities": []}
+{"originalText": "缘于入院前5月余前因食管腹段癌于我科行“右进胸食管腹段癌切除+食管-胃底弓上吻合术”（2014-06-25），", "entities": [{"start_pos": 10, "end_pos": 15, "label_type": "疾病和诊断"}, {"start_pos": 20, "end_pos": 41, "label_type": "手术"}]}
+{"originalText": "术后病理(201420098)示“（腹段食管及近端胃）食管蕈伞型鳞状细胞癌II-III级，侵及外膜层，", "entities": [{"start_pos": 17, "end_pos": 44, "label_type": "疾病和诊断"}]}
+{"originalText": "手术标本下、上切端及另送（下切端）均未见癌浸润。", "entities": []}
+{"originalText": "找到食管周淋巴结2个，及另送（右上肺门）淋巴结2个，（隆突上）淋巴结6个，（胃右动脉旁）淋巴结4个，", "entities": [{"start_pos": 2, "end_pos": 8, "label_type": "解剖部位"}, {"start_pos": 14, "end_pos": 23, "label_type": "解剖部位"}, {"start_pos": 26, "end_pos": 34, "label_type": "解剖部位"}, {"start_pos": 37, "end_pos": 47, "label_type": "解剖部位"}]}
+{"originalText": "（贲门旁）淋巴结2个，均未见癌转移。", "entities": [{"start_pos": 0, "end_pos": 8, "label_type": "解剖部位"}]}
+{"originalText": "胃呈轻度慢性浅表性胃炎”。", "entities": [{"start_pos": 0, "end_pos": 1, "label_type": "解剖部位"}, {"start_pos": 2, "end_pos": 11, "label_type": "疾病和诊断"}]}
+{"originalText": "2个多月前因反复进食阻塞，考虑为“吻合口狭窄”并入院行“胃镜上吻合口狭窄扩张术”，按“顺铂40MGD1-3+安素泰240MGD1”方案行术后辅助化疗3周期（2014.09.17，", "entities": [{"start_pos": 17, "end_pos": 22, "label_type": "疾病和诊断"}, {"start_pos": 28, "end_pos": 39, "label_type": "手术"}, {"start_pos": 43, "end_pos": 45, "label_type": "药物"}, {"start_pos": 54, "end_pos": 57, "label_type": "药物"}]}
+{"originalText": "2014.10.07，2014.11.06）。", "entities": []}
+{"originalText": "疗程较为顺利，无明显恶心、呕吐，无头痛、头痛，无呕血、黑便，无胸闷、胸痛，无气促、心悸，无腹痛、腹胀等不适。", "entities": [{"start_pos": 17, "end_pos": 18, "label_type": "解剖部位"}, {"start_pos": 20, "end_pos": 21, "label_type": "解剖部位"}, {"start_pos": 31, "end_pos": 32, "label_type": "解剖部位"}, {"start_pos": 34, "end_pos": 35, "label_type": "解剖部位"}, {"start_pos": 41, "end_pos": 42, "label_type": "解剖部位"}, {"start_pos": 45, "end_pos": 46, "label_type": "解剖部位"}, {"start_pos": 48, "end_pos": 49, "label_type": "解剖部位"}]}
+{"originalText": "今为求术后第4周期辅助化疗再诊我院，门诊拟“食管上段癌”收住我科。", "entities": [{"start_pos": 22, "end_pos": 27, "label_type": "疾病和诊断"}]}
+{"originalText": "近来，精神、睡眠、饮食一般，大小便如常，体重无明显增减。", "entities": []}
+{"originalText": "，5年前出现血便，1年前出现进食后下腹不适。", "entities": [{"start_pos": 17, "end_pos": 19, "label_type": "解剖部位"}]}
+{"originalText": "2013.8.16，我院肠镜检查提示：距肛门15CM乙状结肠腺瘤，直径约1.0CM，，活检病理：乙状结肠绒毛状腺瘤（II级），", "entities": [{"start_pos": 20, "end_pos": 22, "label_type": "解剖部位"}, {"start_pos": 26, "end_pos": 32, "label_type": "疾病和诊断"}, {"start_pos": 48, "end_pos": 62, "label_type": "疾病和诊断"}]}
+{"originalText": "2013.8.30给予肠镜上腺瘤电切术。", "entities": [{"start_pos": 11, "end_pos": 19, "label_type": "手术"}]}
+{"originalText": "2013.26，我院胃镜检查提示：胃窦粘膜红白相间，花斑样改变，小片状糜烂，，活检病理：幽门型粘膜慢性萎缩性炎伴轻度肠化。", "entities": [{"start_pos": 17, "end_pos": 19, "label_type": "解剖部位"}, {"start_pos": 44, "end_pos": 60, "label_type": "疾病和诊断"}]}
+{"originalText": "2014.5.23行结肠镜检查后出现腹部不适，腹痛，自诉阴道有淡黄色粪便样物流出，不伴发热。", "entities": [{"start_pos": 18, "end_pos": 20, "label_type": "解剖部位"}, {"start_pos": 23, "end_pos": 24, "label_type": "解剖部位"}, {"start_pos": 28, "end_pos": 30, "label_type": "解剖部位"}]}
+{"originalText": "患者2012年6月因“进行性吞咽困难”于外院确诊“贲门癌”，于2012年7月2日行贲门癌根治性近端胃切除+胃食管膈上吻合术，", "entities": [{"start_pos": 25, "end_pos": 28, "label_type": "疾病和诊断"}, {"start_pos": 41, "end_pos": 61, "label_type": "手术"}]}
+{"originalText": "术中见贲门肿物约7*5大小，第1、2、3组淋巴结肿大，术后病理示贲门腺癌II级，浸润全层，LN 8/30 (+)，", "entities": [{"start_pos": 3, "end_pos": 5, "label_type": "解剖部位"}, {"start_pos": 32, "end_pos": 39, "label_type": "疾病和诊断"}]}
+{"originalText": "术后恢复可。", "entities": []}
+{"originalText": "遵主诊教授意见于2012-08-07至11-13行XELOX方案辅助化疗5程，现返院行上一程治疗。", "entities": []}
+{"originalText": "起病以来，患者精神睡眠一般，胃纳尚可，二便正常，近3周体重上降3KG。", "entities": [{"start_pos": 14, "end_pos": 15, "label_type": "解剖部位"}]}
+{"originalText": "入院前10+天患者无明显诱因出现下腹部阵发性胀痛，伴背部放射性胀痛，每次疼痛持续约30-40分钟，以饥饿及夜间明显，", "entities": [{"start_pos": 16, "end_pos": 19, "label_type": "解剖部位"}, {"start_pos": 26, "end_pos": 28, "label_type": "解剖部位"}]}
+{"originalText": "进食后腹痛可缓解。", "entities": [{"start_pos": 3, "end_pos": 4, "label_type": "解剖部位"}]}
+{"originalText": "伴反酸、嗳气、烧心，间断出现解黑便，具体情况不详。", "entities": []}
+{"originalText": "无心悸、气促、胸闷、胸痛，无恶心、呕吐、呕血。", "entities": [{"start_pos": 1, "end_pos": 2, "label_type": "解剖部位"}, {"start_pos": 7, "end_pos": 8, "label_type": "解剖部位"}, {"start_pos": 10, "end_pos": 11, "label_type": "解剖部位"}]}
+{"originalText": "在外未予正规处理，口服“斯达舒”感腹痛可稍缓解。", "entities": [{"start_pos": 12, "end_pos": 15, "label_type": "药物"}, {"start_pos": 17, "end_pos": 18, "label_type": "解剖部位"}]}
+{"originalText": "病程中腹痛反复发作，于2015-04-08在“**********医院行下腹部平扫CT示：脂肪肝，余未见异常”。", "entities": [{"start_pos": 3, "end_pos": 4, "label_type": "解剖部位"}, {"start_pos": 37, "end_pos": 43, "label_type": "影像检查"}, {"start_pos": 45, "end_pos": 48, "label_type": "疾病和诊断"}]}
+{"originalText": "今日为进一步诊治遂来我院就诊，门诊查“心电图正常。", "entities": [{"start_pos": 19, "end_pos": 22, "label_type": "影像检查"}]}
+{"originalText": "胃镜示：1、十二指肠球部多发性溃疡A1期；2、糜烂性胃窦炎2级；3、反流性食管炎2级；4、食道静脉轻度曲张；", "entities": [{"start_pos": 6, "end_pos": 20, "label_type": "疾病和诊断"}, {"start_pos": 23, "end_pos": 31, "label_type": "疾病和诊断"}, {"start_pos": 34, "end_pos": 42, "label_type": "疾病和诊断"}, {"start_pos": 45, "end_pos": 53, "label_type": "疾病和诊断"}]}
+{"originalText": "5、食道胃黏膜异位。", "entities": [{"start_pos": 2, "end_pos": 9, "label_type": "疾病和诊断"}]}
+{"originalText": "”，为进一步诊治，以“十二指肠溃疡”收入我科。", "entities": [{"start_pos": 11, "end_pos": 17, "label_type": "疾病和诊断"}]}
+{"originalText": "病程中精神、饮食尚可，大便如下述，小便正常，体重无明显减轻。", "entities": []}
+{"originalText": "患者因“便血伴腹泻5月”入院，经肠镜及病理检查确诊乙状结肠腺癌，子宫肿物，卵巢囊肿。", "entities": [{"start_pos": 7, "end_pos": 8, "label_type": "解剖部位"}, {"start_pos": 25, "end_pos": 31, "label_type": "疾病和诊断"}, {"start_pos": 32, "end_pos": 34, "label_type": "解剖部位"}, {"start_pos": 37, "end_pos": 41, "label_type": "疾病和诊断"}]}
+{"originalText": "影像学分期为CT4N0M0，II期。", "entities": []}
+{"originalText": "2011年12月23日全麻上行DIXON术+子宫肌瘤剔除术，术后恢复良好。", "entities": [{"start_pos": 15, "end_pos": 29, "label_type": "手术"}]}
+{"originalText": "病理示：乙状结肠中分化腺癌，浸润至外膜层，淋巴结1/14（+），PT4AN1M0，IIIB，子宫腺肌症。", "entities": [{"start_pos": 4, "end_pos": 13, "label_type": "疾病和诊断"}, {"start_pos": 46, "end_pos": 51, "label_type": "疾病和诊断"}]}
+{"originalText": "免疫组化提示微卫星稳定。", "entities": []}
+{"originalText": "2012-1-11至2012-5-17予XELOX方案化疗6周期，过程顺利，无明显副反应。", "entities": []}
+{"originalText": "患者现为进一步检查入院。", "entities": []}
+{"originalText": "自出院以来，患者无发热、咳嗽、身目黄染，无骶部痛等，精神可，纳眠可，小便无异常，体重上降不明显。", "entities": [{"start_pos": 21, "end_pos": 23, "label_type": "解剖部位"}]}
+{"originalText": "，入院前5个月余诊断为“贲门-胃体癌”，于2013.12.25在我科行“腹腔镜辅助上根治性全胃切除（D2）+食管空肠ROUX-EN-Y吻合术”，", "entities": [{"start_pos": 12, "end_pos": 18, "label_type": "疾病和诊断"}, {"start_pos": 36, "end_pos": 70, "label_type": "手术"}]}
+{"originalText": "术顺，术后病理（201341015），：(全胃)，：食管胃交界溃疡型管状腺癌III级，伴神经内分泌分化，", "entities": [{"start_pos": 22, "end_pos": 23, "label_type": "解剖部位"}, {"start_pos": 26, "end_pos": 51, "label_type": "疾病和诊断"}]}
+{"originalText": "侵出浆膜层，手术标本下、上切端和另送（下切端）均未见癌浸润。", "entities": []}
+{"originalText": "找到贲门周淋巴结11个，小弯淋巴结13个、大弯淋巴结11个、幽门下淋巴结4个、幽门上淋巴结14个和另送(胃右动脉根部)淋巴结4个、", "entities": [{"start_pos": 2, "end_pos": 8, "label_type": "解剖部位"}, {"start_pos": 12, "end_pos": 17, "label_type": "解剖部位"}, {"start_pos": 21, "end_pos": 26, "label_type": "解剖部位"}, {"start_pos": 30, "end_pos": 36, "label_type": "解剖部位"}, {"start_pos": 39, "end_pos": 45, "label_type": "解剖部位"}, {"start_pos": 51, "end_pos": 62, "label_type": "解剖部位"}]}
+{"originalText": "(脾门)淋巴结4个均未见癌转移。", "entities": [{"start_pos": 0, "end_pos": 7, "label_type": "解剖部位"}]}
+{"originalText": "另送(脾动脉旁淋巴结)为纤维脉管脂肪组织。", "entities": [{"start_pos": 3, "end_pos": 10, "label_type": "解剖部位"}]}
+{"originalText": "，免疫组化结果：KI67（60%），P53（+++），P170（++），GSTπ（++），EGFR（-），", "entities": []}
+{"originalText": "5-FU（++），HER-2（-），SY（+）。", "entities": []}
+{"originalText": "术后予预防感染、补液、营养支持、调节免疫等治疗，恢复良好后出院。", "entities": []}
+{"originalText": "于2014.01.28,2014.02.21，2014.3.18，2014.04.16按“奥沙利铂100MGIVGTTD1+替吉奥40MGBIDPOD2-15”方案行术后化疗，", "entities": [{"start_pos": 45, "end_pos": 49, "label_type": "药物"}, {"start_pos": 62, "end_pos": 65, "label_type": "药物"}]}
+{"originalText": "辅以保肝、止吐、增强免疫等治疗，过程顺利。", "entities": [{"start_pos": 3, "end_pos": 4, "label_type": "解剖部位"}]}
+{"originalText": "现为行术后第4周期化疗就诊我院，门诊拟“胃癌术后化疗”收入院。", "entities": [{"start_pos": 20, "end_pos": 24, "label_type": "疾病和诊断"}]}
+{"originalText": "入院前2天，患者无明显诱因出现纳差、失语，伴发热、流涕，但未测体温，偶有咳痰，无畏寒、寒战，无头昏、", "entities": [{"start_pos": 47, "end_pos": 48, "label_type": "解剖部位"}]}
+{"originalText": "头痛，无胸闷、胸痛，无恶心、呕吐，无腹胀、腹痛，无喘累、气促，无端坐呼吸、阵发性呼吸困难，无咯血、黑朦、", "entities": [{"start_pos": 0, "end_pos": 1, "label_type": "解剖部位"}, {"start_pos": 4, "end_pos": 5, "label_type": "解剖部位"}, {"start_pos": 7, "end_pos": 8, "label_type": "解剖部位"}, {"start_pos": 18, "end_pos": 19, "label_type": "解剖部位"}, {"start_pos": 21, "end_pos": 22, "label_type": "解剖部位"}]}
+{"originalText": "晕厥，无肢体瘫痪、意识障碍、大小便失禁等。", "entities": []}
+{"originalText": "今日未进食，精神较差，故家属送入******，查“血常规示WBC 11.58×10e9/L，RBC 5.30×10e12/L，", "entities": [{"start_pos": 29, "end_pos": 32, "label_type": "实验室检验"}, {"start_pos": 46, "end_pos": 49, "label_type": "实验室检验"}]}
+{"originalText": "HGB 144g/L，N 71.1%，L 26.5%。", "entities": [{"start_pos": 0, "end_pos": 3, "label_type": "实验室检验"}, {"start_pos": 11, "end_pos": 12, "label_type": "实验室检验"}, {"start_pos": 19, "end_pos": 20, "label_type": "实验室检验"}]}
+{"originalText": "心电图示室下性心动过速”，故转入我院急救部治疗，送入急诊科行床旁心电图示室下性心动过速，心率213次/分，", "entities": [{"start_pos": 0, "end_pos": 3, "label_type": "影像检查"}, {"start_pos": 4, "end_pos": 11, "label_type": "疾病和诊断"}, {"start_pos": 30, "end_pos": 35, "label_type": "影像检查"}, {"start_pos": 36, "end_pos": 43, "label_type": "疾病和诊断"}]}
+{"originalText": "T 37.9℃，立即予以吸氧、心电监护、NS 16ml+维拉帕米10mg缓慢静推，静推约8mg后心律恢复为窦性，", "entities": [{"start_pos": 28, "end_pos": 32, "label_type": "药物"}]}
+{"originalText": "心率降至94次/分，同时完善心肌酶谱：谷草转氨酶 17.2 U/L、肌酸激酶 41.5 U/L、肌酸激酶同工酶 8 U/L、", "entities": [{"start_pos": 19, "end_pos": 24, "label_type": "实验室检验"}, {"start_pos": 34, "end_pos": 38, "label_type": "实验室检验"}, {"start_pos": 48, "end_pos": 55, "label_type": "实验室检验"}]}
+{"originalText": "乳酸脱氢酶 245.7 U/L ↑，肾功：尿素 8.28 mmol/L ↑、肌酐 66.2 μmol/l、", "entities": [{"start_pos": 0, "end_pos": 5, "label_type": "实验室检验"}, {"start_pos": 21, "end_pos": 23, "label_type": "实验室检验"}, {"start_pos": 38, "end_pos": 40, "label_type": "实验室检验"}]}
+{"originalText": "尿酸 251.6 μmol/l，高敏肌钙蛋白：40.75 pg/ml ↑，电解质：钾 3.39 mmol/l ↓、", "entities": [{"start_pos": 0, "end_pos": 2, "label_type": "实验室检验"}, {"start_pos": 16, "end_pos": 22, "label_type": "实验室检验"}, {"start_pos": 41, "end_pos": 42, "label_type": "实验室检验"}]}
+{"originalText": "钠 145.2 mmol/l、氯 107.6 mmol/l，凝血功能大致正常。", "entities": [{"start_pos": 0, "end_pos": 1, "label_type": "实验室检验"}, {"start_pos": 15, "end_pos": 16, "label_type": "实验室检验"}]}
+{"originalText": "为进一步治疗以“心律失常”收入我科住院。", "entities": [{"start_pos": 8, "end_pos": 12, "label_type": "疾病和诊断"}]}
+{"originalText": "患者自发病以来精神、食欲差，大便干燥，小便未诉异常。", "entities": []}
+{"originalText": "近期体重无明显减轻。", "entities": []}
+{"originalText": "入院前6+天患者无明显诱因出现咳嗽、咳痰，易咳出大量白色粘痰，感阵发性胸闷，左季肋间断隐痛，休息可缓解，", "entities": [{"start_pos": 35, "end_pos": 36, "label_type": "解剖部位"}, {"start_pos": 38, "end_pos": 41, "label_type": "解剖部位"}]}
+{"originalText": "上肢水肿，无头昏、头痛、发热，无胸痛，无腹痛腹泻，今日为进一步治疗，遂来我院，急诊查X线：左上肺可疑类圆形浅淡密度影，", "entities": [{"start_pos": 0, "end_pos": 2, "label_type": "解剖部位"}, {"start_pos": 6, "end_pos": 7, "label_type": "解剖部位"}, {"start_pos": 9, "end_pos": 10, "label_type": "解剖部位"}, {"start_pos": 16, "end_pos": 17, "label_type": "解剖部位"}, {"start_pos": 20, "end_pos": 21, "label_type": "解剖部位"}, {"start_pos": 22, "end_pos": 23, "label_type": "解剖部位"}, {"start_pos": 42, "end_pos": 44, "label_type": "影像检查"}, {"start_pos": 45, "end_pos": 48, "label_type": "解剖部位"}]}
+{"originalText": "建议CT进一步检查。", "entities": [{"start_pos": 2, "end_pos": 4, "label_type": "影像检查"}]}
+{"originalText": "血常规：白细胞数 3.3 10^9/L ↓、红细胞数 2.70 10^12/L ↓、血红蛋白浓度 98 g/L ↓、", "entities": [{"start_pos": 4, "end_pos": 7, "label_type": "实验室检验"}, {"start_pos": 22, "end_pos": 25, "label_type": "实验室检验"}, {"start_pos": 42, "end_pos": 48, "label_type": "实验室检验"}]}
+{"originalText": "血小板数 32 10^9/L ↓、淋巴细胞绝对值 0.84 10^9/L ↓、红细胞压积 27.7 % ↓、", "entities": [{"start_pos": 0, "end_pos": 3, "label_type": "实验室检验"}, {"start_pos": 17, "end_pos": 24, "label_type": "实验室检验"}, {"start_pos": 39, "end_pos": 44, "label_type": "实验室检验"}]}
+{"originalText": "平均红细胞体积 102.6 fL ↑、平均红细胞血红蛋白量 36.3 pg ↑、红细胞体积分布宽度 56.5 fl ↑、", "entities": [{"start_pos": 0, "end_pos": 7, "label_type": "实验室检验"}, {"start_pos": 19, "end_pos": 29, "label_type": "实验室检验"}, {"start_pos": 40, "end_pos": 49, "label_type": "实验室检验"}]}
+{"originalText": "红细胞体积分布宽度百分比 15.4 % ↑，CRP：C反应蛋白 5 mg/l，未予处理，以“咳嗽待查”收入我科住院治疗。", "entities": [{"start_pos": 0, "end_pos": 12, "label_type": "实验室检验"}, {"start_pos": 26, "end_pos": 31, "label_type": "实验室检验"}, {"start_pos": 46, "end_pos": 50, "label_type": "疾病和诊断"}]}
+{"originalText": "2年前在外院及我院确诊“肝癌”，故诉长期闷油、牙龈易出血，易鼻出血，凝血功能异常。", "entities": [{"start_pos": 12, "end_pos": 14, "label_type": "疾病和诊断"}, {"start_pos": 23, "end_pos": 25, "label_type": "解剖部位"}, {"start_pos": 30, "end_pos": 31, "label_type": "解剖部位"}]}
+{"originalText": "2月22日我院肿瘤标志物：甲胎蛋白 16.90 ng/ml ↑，3月12日我院查乙肝三对：乙肝表面抗原定性 阳性、", "entities": [{"start_pos": 13, "end_pos": 17, "label_type": "实验室检验"}, {"start_pos": 45, "end_pos": 53, "label_type": "实验室检验"}]}
+{"originalText": "乙肝核心抗体定性 阳性，肝功3：谷草转氨酶 87.5 U/L ↑、碱性磷酸酶 172.5 U/L ↑、", "entities": [{"start_pos": 0, "end_pos": 8, "label_type": "实验室检验"}, {"start_pos": 16, "end_pos": 21, "label_type": "实验室检验"}, {"start_pos": 33, "end_pos": 38, "label_type": "实验室检验"}]}
+{"originalText": "总胆红素 44.7 μmol/l ↑、直接胆红素 28.2 μmol/l ↑、总胆汁酸 106.84 μmol/l ↑。", "entities": [{"start_pos": 0, "end_pos": 4, "label_type": "实验室检验"}, {"start_pos": 19, "end_pos": 24, "label_type": "实验室检验"}, {"start_pos": 39, "end_pos": 43, "label_type": "实验室检验"}]}
+{"originalText": "2015年2月20日我院查全腹增强CT：1，考虑为肝硬化、脾脏轻度增大，建议结合临床或必要时进一步检查。", "entities": [{"start_pos": 13, "end_pos": 19, "label_type": "影像检查"}, {"start_pos": 25, "end_pos": 28, "label_type": "疾病和诊断"}, {"start_pos": 29, "end_pos": 31, "label_type": "解剖部位"}]}
+{"originalText": "2，胰头体积稍增大，形态欠规则，不除外肿瘤。", "entities": [{"start_pos": 2, "end_pos": 4, "label_type": "解剖部位"}]}
+{"originalText": "3，大量腹水，腹膜后及网膜、系膜内多个小结节影，考虑为增大的淋巴结可能，建议CT增强进一步明确。", "entities": [{"start_pos": 4, "end_pos": 5, "label_type": "解剖部位"}, {"start_pos": 7, "end_pos": 9, "label_type": "解剖部位"}, {"start_pos": 11, "end_pos": 13, "label_type": "解剖部位"}, {"start_pos": 14, "end_pos": 16, "label_type": "解剖部位"}, {"start_pos": 38, "end_pos": 40, "label_type": "影像检查"}]}
+{"originalText": "4，右侧中上腹部分小肠积气，伴小液平形成，提示不全性肠梗阻可能大，结合临床随访或CT增强检查。", "entities": [{"start_pos": 2, "end_pos": 7, "label_type": "解剖部位"}, {"start_pos": 9, "end_pos": 13, "label_type": "疾病和诊断"}, {"start_pos": 23, "end_pos": 29, "label_type": "疾病和诊断"}, {"start_pos": 40, "end_pos": 42, "label_type": "影像检查"}]}
+{"originalText": "5，前列腺钙化。", "entities": [{"start_pos": 2, "end_pos": 7, "label_type": "疾病和诊断"}]}
+{"originalText": "6，腰椎骨质增生。", "entities": [{"start_pos": 2, "end_pos": 8, "label_type": "疾病和诊断"}]}
+{"originalText": "7，扫描野右肺底少许慢性炎症或纤维化；右侧胸壁胸膜稍增厚。", "entities": [{"start_pos": 5, "end_pos": 8, "label_type": "解剖部位"}, {"start_pos": 19, "end_pos": 25, "label_type": "解剖部位"}]}
+{"originalText": "病程中精神、食欲一般，大小便正常，无明显体重上降。", "entities": []}
+{"originalText": "患者3年前出现发作性心前区疼痛，为闷胀感，无放射痛，持续时间约1分钟左右，多在活动后出现，伴有心慌，", "entities": [{"start_pos": 10, "end_pos": 13, "label_type": "解剖部位"}, {"start_pos": 47, "end_pos": 48, "label_type": "解剖部位"}]}
+{"originalText": "无恶心呕吐，时伴有头晕，无头痛，去当地医院诊治不详。", "entities": [{"start_pos": 9, "end_pos": 10, "label_type": "解剖部位"}, {"start_pos": 13, "end_pos": 14, "label_type": "解剖部位"}]}
+{"originalText": "2年患者出现头晕，摔倒在地，出现一过性意识障碍，持续时间不详，醒来时见天旋地转感，未见舌咬破及大小便失禁，", "entities": [{"start_pos": 6, "end_pos": 7, "label_type": "解剖部位"}, {"start_pos": 43, "end_pos": 44, "label_type": "解剖部位"}]}
+{"originalText": "去当地医院就诊，诊治不详，给予拜阿司匹林、可定、倍他司汀、美西律等药物治疗，症状改善。", "entities": [{"start_pos": 15, "end_pos": 20, "label_type": "药物"}, {"start_pos": 21, "end_pos": 23, "label_type": "药物"}, {"start_pos": 24, "end_pos": 28, "label_type": "药物"}, {"start_pos": 29, "end_pos": 32, "label_type": "药物"}]}
+{"originalText": "1年患者胸痛症状加重，去当地医院行冠脉造影，示rca近中段狭窄20%-30%；lad近中段40%-50%狭窄(内有肌桥，", "entities": [{"start_pos": 4, "end_pos": 5, "label_type": "解剖部位"}, {"start_pos": 17, "end_pos": 21, "label_type": "影像检查"}]}
+{"originalText": "收缩期狭窄30%-40%)，d1开口近段狭窄20%-30%；lcx未见狭窄。", "entities": []}
+{"originalText": "患者胸痛反复发作，近1月发作较前频繁且胸痛程度较前重，性质同前，为求进一步诊治来我院就诊，门诊以“冠心病不稳定心绞痛”收入我科。", "entities": [{"start_pos": 2, "end_pos": 3, "label_type": "解剖部位"}, {"start_pos": 19, "end_pos": 20, "label_type": "解剖部位"}, {"start_pos": 49, "end_pos": 58, "label_type": "疾病和诊断"}]}
+{"originalText": "患者自发病以来，神志清，精神可，饮食可，睡眠欠佳，二便规律，体重无明显变化。", "entities": []}
+{"originalText": "既往有头晕病史2-3年，1年前出现短阵头晕发作，与体位有关，考虑bbpv，后好转。", "entities": [{"start_pos": 3, "end_pos": 4, "label_type": "解剖部位"}, {"start_pos": 19, "end_pos": 20, "label_type": "解剖部位"}]}
+{"originalText": "近2月头晕再次发作，无天旋地转感，偶伴有耳鸣，与体位前后有关，左右及上下时无关，平躺后缓解。", "entities": [{"start_pos": 3, "end_pos": 4, "label_type": "解剖部位"}, {"start_pos": 20, "end_pos": 21, "label_type": "解剖部位"}]}
+{"originalText": "患者诉10年前无明显诱因出现反酸、烧心，胸闷、憋气，无恶心、呕吐，无肢体活动障碍及意识丧失，无咳嗽、", "entities": [{"start_pos": 20, "end_pos": 21, "label_type": "解剖部位"}, {"start_pos": 34, "end_pos": 36, "label_type": "解剖部位"}]}
+{"originalText": "咳痰，下述症状呈阵发性，多发作于活动及平卧时。", "entities": []}
+{"originalText": "2011.5.12因“反复下腹部隐痛伴烧心泛酸”于我院消化内科住院治疗，行胃镜检查提示：浅表萎缩性胃炎伴急性活动。", "entities": [{"start_pos": 13, "end_pos": 16, "label_type": "解剖部位"}, {"start_pos": 44, "end_pos": 51, "label_type": "疾病和诊断"}]}
+{"originalText": "病理诊断 （胃窦）慢性萎缩性胃炎（中度），局部腺体肠下皮化生。", "entities": [{"start_pos": 5, "end_pos": 20, "label_type": "疾病和诊断"}]}
+{"originalText": "给予抑酸、保护胃黏膜及补液对症支持治疗，症状缓解后出院。", "entities": [{"start_pos": 7, "end_pos": 10, "label_type": "解剖部位"}]}
+{"originalText": "出院后患者未规律服药，后下述症状反复发作，患者未接受规律服药治疗。", "entities": []}
+{"originalText": "15天前患者自觉反酸症状加重，伴有胸骨后异物感，无意识丧失，无心前区疼痛及颈部紧缩感，无恶心、呕吐，", "entities": [{"start_pos": 17, "end_pos": 20, "label_type": "解剖部位"}, {"start_pos": 31, "end_pos": 34, "label_type": "解剖部位"}, {"start_pos": 37, "end_pos": 39, "label_type": "解剖部位"}]}
+{"originalText": "无咳嗽、咳痰及其他不适，遂来我院就诊，给予“艾司奥美拉唑镁肠溶片”口服治疗，患者症状稍缓解，现为行进一步诊治，", "entities": [{"start_pos": 22, "end_pos": 32, "label_type": "药物"}]}
+{"originalText": "复来我院就诊，门诊以“反流性食管炎 冠心病”收入院。", "entities": [{"start_pos": 11, "end_pos": 17, "label_type": "疾病和诊断"}, {"start_pos": 18, "end_pos": 21, "label_type": "疾病和诊断"}]}
+{"originalText": "，患者2008年11月17日因“肝细胞癌”行肝癌切除（肝中叶）+胆囊切除术。", "entities": [{"start_pos": 16, "end_pos": 20, "label_type": "疾病和诊断"}, {"start_pos": 22, "end_pos": 37, "label_type": "疾病和诊断"}]}
+{"originalText": "术后接受细胞免疫生物治疗CIK细胞。", "entities": []}
+{"originalText": "随后复查未见重要病变。", "entities": []}
+{"originalText": "3周余前外院CHEST X-RAY发现左下肺肿块。", "entities": [{"start_pos": 6, "end_pos": 17, "label_type": "影像检查"}, {"start_pos": 19, "end_pos": 22, "label_type": "解剖部位"}]}
+{"originalText": "遂到我院检查，2011.07.01胸、，下腹部CT提示：“肝癌切除术后改变。", "entities": [{"start_pos": 17, "end_pos": 25, "label_type": "影像检查"}, {"start_pos": 29, "end_pos": 35, "label_type": "疾病和诊断"}]}
+{"originalText": "左肺下叶前段肿块，考虑肺癌可能性大。", "entities": [{"start_pos": 0, "end_pos": 6, "label_type": "解剖部位"}, {"start_pos": 11, "end_pos": 13, "label_type": "疾病和诊断"}]}
+{"originalText": "心包少量积液”。", "entities": [{"start_pos": 0, "end_pos": 6, "label_type": "疾病和诊断"}]}
+{"originalText": "一直未诉有咳嗽、咳血丝痰、发热、胸痛，盗汗、食欲不振、骨关节疼痛。", "entities": [{"start_pos": 16, "end_pos": 17, "label_type": "解剖部位"}, {"start_pos": 27, "end_pos": 30, "label_type": "解剖部位"}]}
+{"originalText": "为了进一步诊治收住我科。", "entities": []}
+{"originalText": "起病以来，一般情况好，未诉不适，大小便正常，体重无明显变化。", "entities": []}
+{"originalText": "，肿瘤治疗史：2008年11月“肝细胞癌”切除术后接受细胞免疫生物治疗CIK细胞。", "entities": [{"start_pos": 15, "end_pos": 25, "label_type": "疾病和诊断"}]}
+{"originalText": "患者2年前发现左侧颈部豌豆大小包块，无疼痛感，因同期被诊断为“肺结核”故考虑肿块性质为结核，给予HRZ方案抗结核治疗2年后停药。", "entities": [{"start_pos": 7, "end_pos": 11, "label_type": "解剖部位"}, {"start_pos": 31, "end_pos": 34, "label_type": "疾病和诊断"}]}
+{"originalText": "病程中颈部包块无增大及缩小，持续无疼痛，未进一步检查。", "entities": [{"start_pos": 3, "end_pos": 5, "label_type": "解剖部位"}]}
+{"originalText": "3+月前患者因活动后气促加重在***二院住院，完善多项影像学检查后诊断为“左侧肺癌”，家属放弃积极治疗，", "entities": [{"start_pos": 37, "end_pos": 41, "label_type": "疾病和诊断"}]}
+{"originalText": "院外对症治疗。", "entities": []}
+{"originalText": "出院后左侧颈部包块进行性增大，间断有隐痛不适，偶给予口服止痛药物可有效缓解疼痛。", "entities": [{"start_pos": 3, "end_pos": 7, "label_type": "解剖部位"}]}
+{"originalText": "近10天患者感疼痛持续存在，程度较前加重，常可放射至左侧颈肩牵扯痛，自服止痛药（具体不详）缓解较差，", "entities": [{"start_pos": 26, "end_pos": 30, "label_type": "解剖部位"}]}
+{"originalText": "为进一步治疗来我院，门诊予以收住院。", "entities": []}
+{"originalText": "本次发病以来患者精神食欲较差，稀软流质饮食为主，大小便如常，睡眠较差，近期体重上降约10kg。", "entities": []}
+{"originalText": "，患者于2013年6月16日因“停经21周中央型前置胎盘在我院引产”，住院期间（6月18日）行子宫动脉造影术及子宫动脉栓塞术及利凡诺羊膜腔穿刺引产术，", "entities": [{"start_pos": 21, "end_pos": 28, "label_type": "疾病和诊断"}, {"start_pos": 47, "end_pos": 74, "label_type": "手术"}]}
+{"originalText": "，6月22日14：50引产分娩一死婴，当时胎盘粘连剥离不完整，于6月24日在Ｂ超监测上行清宫术，因胎盘粘连重，", "entities": [{"start_pos": 38, "end_pos": 40, "label_type": "影像检查"}, {"start_pos": 44, "end_pos": 47, "label_type": "手术"}]}
+{"originalText": "清宫不全，术后患者发热1天，最高38.6℃，胎盘组织送病检，，病检结果：胎盘组织局灶玻变，大量炎细胞浸润；", "entities": [{"start_pos": 36, "end_pos": 52, "label_type": "疾病和诊断"}]}
+{"originalText": "给予“益保世灵”抗感染治疗，口服补佳乐增加子宫内膜等治疗，本拟择日复查B超后清宫；但后患者及家属签字出院，", "entities": [{"start_pos": 3, "end_pos": 7, "label_type": "药物"}, {"start_pos": 16, "end_pos": 19, "label_type": "药物"}, {"start_pos": 21, "end_pos": 25, "label_type": "解剖部位"}, {"start_pos": 35, "end_pos": 37, "label_type": "影像检查"}]}
+{"originalText": "办理出院后，患者突然阴道流血增加，约60ML，伴头晕，乏力，心悸不适，无恶心呕吐，无呼吸困难，无晕厥，", "entities": [{"start_pos": 10, "end_pos": 12, "label_type": "解剖部位"}, {"start_pos": 24, "end_pos": 25, "label_type": "解剖部位"}, {"start_pos": 30, "end_pos": 31, "label_type": "解剖部位"}]}
+{"originalText": "无畏寒发热等不适；故再次办理入院，入院时患者一般情况可，生命体征正常；\\U0004   患者本次发病以来，", "entities": []}
+{"originalText": "食欲正常， 神志清醒，精神尚可，睡眠尚可，大便正常，小便正常，体重无明显变化。", "entities": []}
+{"originalText": "，患者既往月经规则，绝经15年，2014-01-10因“阴道流血5+月”就诊外院，妇检见宫颈肿物，遂行阴道镜上宫颈活检，", "entities": [{"start_pos": 28, "end_pos": 30, "label_type": "解剖部位"}, {"start_pos": 44, "end_pos": 46, "label_type": "解剖部位"}, {"start_pos": 51, "end_pos": 59, "label_type": "手术"}]}
+{"originalText": "，病理示：宫颈中至低分化鳞癌。", "entities": [{"start_pos": 5, "end_pos": 14, "label_type": "疾病和诊断"}]}
+{"originalText": "诊为“宫颈癌IB2期”入******健院，因宫颈出血不止于2014-01-17行“两侧子宫动脉化疗栓塞术”，", "entities": [{"start_pos": 3, "end_pos": 10, "label_type": "疾病和诊断"}, {"start_pos": 22, "end_pos": 24, "label_type": "解剖部位"}, {"start_pos": 41, "end_pos": 52, "label_type": "手术"}]}
+{"originalText": "术中予5-FU0.5G+卡铂0.25G行左侧髂内动脉灌注化疗。", "entities": [{"start_pos": 3, "end_pos": 7, "label_type": "药物"}, {"start_pos": 12, "end_pos": 14, "label_type": "药物"}, {"start_pos": 20, "end_pos": 26, "label_type": "解剖部位"}]}
+{"originalText": "过程顺利，无明显副反应。", "entities": []}
+{"originalText": "现为进一步治疗入我院。", "entities": []}
+{"originalText": "近1月来患者无发热咳嗽，无恶心呕吐，无腹痛腹泻，精神食欲可，睡眠良好，大小便如常，体重无明显改变。", "entities": [{"start_pos": 19, "end_pos": 20, "label_type": "解剖部位"}, {"start_pos": 21, "end_pos": 22, "label_type": "解剖部位"}]}
+{"originalText": "，外院治疗经过:无。", "entities": []}
+{"originalText": "，宫内孕不全流产清宫（2015-3-12）时，，宫颈活检：低分化鳞癌，宫腔少许低分化鳞癌，已经月经来潮。", "entities": [{"start_pos": 1, "end_pos": 8, "label_type": "疾病和诊断"}, {"start_pos": 8, "end_pos": 10, "label_type": "手术"}, {"start_pos": 24, "end_pos": 26, "label_type": "解剖部位"}, {"start_pos": 29, "end_pos": 34, "label_type": "疾病和诊断"}, {"start_pos": 35, "end_pos": 37, "label_type": "解剖部位"}, {"start_pos": 39, "end_pos": 44, "label_type": "疾病和诊断"}]}
+{"originalText": "2015-4-14腹腔镜宫颈癌根治术。", "entities": [{"start_pos": 9, "end_pos": 18, "label_type": "手术"}]}
+{"originalText": "，病理：低分化癌。", "entities": [{"start_pos": 4, "end_pos": 8, "label_type": "疾病和诊断"}]}
+{"originalText": "脉管癌栓。", "entities": []}
+{"originalText": "术后恢复好。", "entities": []}
+{"originalText": "术后化疗3程，7-13末次化疗。", "entities": []}
+{"originalText": "停化疗后复查盆腹CT未见明显异常。", "entities": [{"start_pos": 6, "end_pos": 10, "label_type": "影像检查"}]}
+{"originalText": "，盆腔B超：膀胱充盈可，子宫切除术后。", "entities": [{"start_pos": 1, "end_pos": 5, "label_type": "影像检查"}, {"start_pos": 6, "end_pos": 8, "label_type": "解剖部位"}, {"start_pos": 12, "end_pos": 18, "label_type": "疾病和诊断"}]}
+{"originalText": "两侧附件区未见明显占位。", "entities": [{"start_pos": 0, "end_pos": 5, "label_type": "解剖部位"}]}
+{"originalText": "两侧髂血管周围未见明显肿大淋巴结。", "entities": [{"start_pos": 0, "end_pos": 5, "label_type": "解剖部位"}]}
+{"originalText": "盆腔可见少量积液，范围约5.7X1.6CM。", "entities": [{"start_pos": 0, "end_pos": 2, "label_type": "解剖部位"}]}
+{"originalText": "盆腔少量积液。", "entities": [{"start_pos": 0, "end_pos": 2, "label_type": "解剖部位"}]}
+{"originalText": "腹部B超提示右锁骨下、两侧腹股沟淋巴结，继续观察。", "entities": [{"start_pos": 0, "end_pos": 4, "label_type": "影像检查"}, {"start_pos": 6, "end_pos": 19, "label_type": "解剖部位"}]}
+{"originalText": "SCC结果未出。", "entities": [{"start_pos": 0, "end_pos": 3, "label_type": "实验室检验"}]}
+{"originalText": "2016-8复查未见异常。", "entities": []}
+{"originalText": "现听力上降，大小便可。", "entities": []}
+{"originalText": "患者入院前20+年多于受凉后出现气喘，心累，伴咳嗽，咯痰，每年累计发病超过3月，抗炎治疗有效，逐渐出现活动后心累，", "entities": [{"start_pos": 19, "end_pos": 20, "label_type": "解剖部位"}, {"start_pos": 54, "end_pos": 55, "label_type": "解剖部位"}]}
+{"originalText": "无胸痛，无胸骨后压榨感，无夜间阵发性呼吸困难等不适，诊断考虑“慢性支气管炎急性发作、阻塞性肺气肿、肺源性心脏病”。", "entities": [{"start_pos": 1, "end_pos": 2, "label_type": "解剖部位"}, {"start_pos": 5, "end_pos": 7, "label_type": "解剖部位"}, {"start_pos": 31, "end_pos": 41, "label_type": "疾病和诊断"}, {"start_pos": 42, "end_pos": 48, "label_type": "疾病和诊断"}, {"start_pos": 49, "end_pos": 55, "label_type": "疾病和诊断"}]}
+{"originalText": "平时服用药物情况不详。", "entities": []}
+{"originalText": "入院前3天患者受凉后再发气喘，活动后明显，并咳嗽，无明显咳痰，并颜面、上肢浮肿，进食乏味，食欲差，无胸痛，", "entities": [{"start_pos": 32, "end_pos": 34, "label_type": "解剖部位"}, {"start_pos": 35, "end_pos": 37, "label_type": "解剖部位"}, {"start_pos": 50, "end_pos": 51, "label_type": "解剖部位"}]}
+{"originalText": "无反酸嗳气，无恶心呕吐，无畏寒发热，无潮热盗汗等不适，今日来院就诊，为进一步治疗门诊收入我科住院。", "entities": []}
+{"originalText": "1天患者不慎烫伤，导致左前臂尺侧皮肤烫伤（3×3cm），局部皮肤泛红，局部水泡破溃（1.5×1.5cm）。", "entities": [{"start_pos": 11, "end_pos": 14, "label_type": "解剖部位"}]}
+{"originalText": "患者此次患病以来精神食欲差，大小便正常，睡眠尚可,体力及体重无明显改变.", "entities": []}
+{"originalText": "，进食哽咽感，我院确诊EGJ中低分化腺癌伴印戒细胞癌，混合型，UT4AN2，SIWERTII型，并见十二指肠降部SMT，", "entities": [{"start_pos": 11, "end_pos": 30, "label_type": "疾病和诊断"}, {"start_pos": 50, "end_pos": 59, "label_type": "疾病和诊断"}]}
+{"originalText": "2016.8.8行ESD切除1CM占位，病理为绒毛状管状腺瘤；术前肿标正常，2016.8.11行全胃切除术，", "entities": [{"start_pos": 9, "end_pos": 12, "label_type": "手术"}, {"start_pos": 23, "end_pos": 30, "label_type": "疾病和诊断"}, {"start_pos": 48, "end_pos": 53, "label_type": "手术"}]}
+{"originalText": "未见腹腔M，CY0，RESOLVE B，，术后病理：中低分化腺癌伴印戒细胞癌，混合型，2.5×XXX2CM；", "entities": [{"start_pos": 2, "end_pos": 3, "label_type": "解剖部位"}, {"start_pos": 26, "end_pos": 42, "label_type": "疾病和诊断"}]}
+{"originalText": "外膜纤维脂肪组织；脉管癌栓及神经侵犯+；18/49；AFP(－),CMET(1+),EGFR(－),", "entities": []}
+{"originalText": "HER2(0),PDL-1(5%+),MSS，EBER(－)。", "entities": []}
+{"originalText": "术后恢复可，腹胀，，CA125:49；易呃逆。", "entities": [{"start_pos": 6, "end_pos": 7, "label_type": "解剖部位"}, {"start_pos": 10, "end_pos": 15, "label_type": "实验室检验"}]}
+{"originalText": "体重稳定。", "entities": []}
+{"originalText": "术后1月行化疗替吉奥+奥沙利铂化疗3周期，末次化疗时间2016.11.嗳气，进食可，睡眠可，大小便无明显异常。", "entities": [{"start_pos": 7, "end_pos": 10, "label_type": "药物"}, {"start_pos": 11, "end_pos": 15, "label_type": "药物"}]}
+{"originalText": "术后体重增加5KG。", "entities": []}
+{"originalText": "，患者1年余前出现腹泻，伴间断血便，2012-07-12，于外院行肠镜示：距肛门5-10CM见环状肿物，", "entities": [{"start_pos": 9, "end_pos": 10, "label_type": "解剖部位"}, {"start_pos": 38, "end_pos": 40, "label_type": "解剖部位"}]}
+{"originalText": "肠腔狭窄，，行活检病理示：中分化腺癌。", "entities": [{"start_pos": 13, "end_pos": 18, "label_type": "疾病和诊断"}]}
+{"originalText": "胸片示两肺多发结节，盆腔CT示直肠癌可能性大。", "entities": [{"start_pos": 0, "end_pos": 2, "label_type": "影像检查"}, {"start_pos": 3, "end_pos": 5, "label_type": "解剖部位"}, {"start_pos": 10, "end_pos": 14, "label_type": "影像检查"}, {"start_pos": 15, "end_pos": 18, "label_type": "疾病和诊断"}]}
+{"originalText": "遂至我院就诊，，我院病理会诊示：中分化腺癌。", "entities": [{"start_pos": 16, "end_pos": 21, "label_type": "疾病和诊断"}]}
+{"originalText": "于2012-8-15，2012－9行XELOX方案化疗2程，同时行放疗，过程顺利无不适，今遵原主诊医生意见为行检查入院。", "entities": []}
+{"originalText": "患者发病以来,精神一般,饮食睡眠欠佳，大便次数增多，偶有便秘，小便正常，体重无明显变化。", "entities": []}
+{"originalText": "，患者于2012-9-24以“停经后不规则阴道流血14个月,咳嗽咯血3个月”为主诉入院，完善相关化验检查，", "entities": [{"start_pos": 21, "end_pos": 23, "label_type": "解剖部位"}]}
+{"originalText": "甲胎蛋白测定>1210.00NG/ML，血清人绒毛膜促性腺激素测定20127.00MIU/ML。", "entities": [{"start_pos": 0, "end_pos": 6, "label_type": "实验室检验"}, {"start_pos": 20, "end_pos": 33, "label_type": "实验室检验"}]}
+{"originalText": "，确定诊断为：盆腔包块（卵巢生殖细胞恶性肿瘤可能大）；肺转移及脑转移不除外，脑血栓不除外。", "entities": [{"start_pos": 12, "end_pos": 22, "label_type": "疾病和诊断"}, {"start_pos": 27, "end_pos": 30, "label_type": "疾病和诊断"}, {"start_pos": 31, "end_pos": 34, "label_type": "疾病和诊断"}, {"start_pos": 38, "end_pos": 41, "label_type": "疾病和诊断"}]}
+{"originalText": "于2012-9-26至2012-12-4行BEP（博莱霉素+依托伯苷+顺铂）联合静脉化疗3次。", "entities": [{"start_pos": 25, "end_pos": 29, "label_type": "药物"}, {"start_pos": 30, "end_pos": 34, "label_type": "药物"}, {"start_pos": 35, "end_pos": 37, "label_type": "药物"}]}
+{"originalText": "化疗过程顺利，副反应轻微。", "entities": []}
+{"originalText": "化疗后咳嗽咳痰较前减轻。", "entities": []}
+{"originalText": "于2012-12-19全麻上行左侧附件切除术。", "entities": [{"start_pos": 15, "end_pos": 22, "label_type": "手术"}]}
+{"originalText": "，术后病理号:Z0445679ABE(左侧卵巢)大片坏死组织中见少量变性的异型细胞,可符合化疗后恶性肿瘤组织。", "entities": [{"start_pos": 19, "end_pos": 23, "label_type": "解剖部位"}]}
+{"originalText": "术后行BEP（博莱霉素+依托伯苷+顺铂）联合静脉化疗3次，现为求补充治疗入院。", "entities": [{"start_pos": 7, "end_pos": 11, "label_type": "药物"}, {"start_pos": 12, "end_pos": 16, "label_type": "药物"}, {"start_pos": 17, "end_pos": 19, "label_type": "药物"}]}
+{"originalText": "患者出院至今咳嗽咳痰较前减轻，近日着凉后感冒，饮食欠佳，睡眠可，大小便正常，体重无明显变化。", "entities": []}
+{"originalText": "患者于1月前无明显诱因出现中下腹饱胀不适，伴嗳气、纳差（饭量减为原来的一半），无反酸、烧心、腹痛、腹泻，", "entities": [{"start_pos": 13, "end_pos": 16, "label_type": "解剖部位"}, {"start_pos": 46, "end_pos": 47, "label_type": "解剖部位"}, {"start_pos": 49, "end_pos": 50, "label_type": "解剖部位"}]}
+{"originalText": "无恶心、呕吐、黑便等不适，院外行服中药（具体不详）治疗，症状缓解不明显，7天前于我科门诊就诊，行胃镜检查，", "entities": []}
+{"originalText": "提示“食管炎（I级）、胃底粘膜上隆起（性质待定）、浅表性胃窦炎”，超声胃镜提示：胃底间质瘤可能性大，", "entities": [{"start_pos": 3, "end_pos": 10, "label_type": "疾病和诊断"}, {"start_pos": 11, "end_pos": 15, "label_type": "解剖部位"}, {"start_pos": 25, "end_pos": 31, "label_type": "疾病和诊断"}, {"start_pos": 40, "end_pos": 45, "label_type": "疾病和诊断"}]}
+{"originalText": "予以抑酸、护胃等对症治疗后症状有所缓解，为进一步处理胃底间质瘤，入我科，门诊以“胃间质瘤”收治入院。", "entities": [{"start_pos": 6, "end_pos": 7, "label_type": "解剖部位"}, {"start_pos": 26, "end_pos": 31, "label_type": "疾病和诊断"}, {"start_pos": 40, "end_pos": 44, "label_type": "疾病和诊断"}]}
+{"originalText": "\\U0004   患者本次发病以来，食欲减退， 神志清醒，精神尚可，睡眠尚可，大便正常，小便正常，近1月体重减少3公斤。", "entities": []}
+{"originalText": "，2015年12月出现间断便血，，外院肠镜提示：据肛门8CM肿物，，活检病理：中分化腺癌，完善分期检查，", "entities": [{"start_pos": 25, "end_pos": 27, "label_type": "解剖部位"}, {"start_pos": 39, "end_pos": 44, "label_type": "疾病和诊断"}]}
+{"originalText": "CT3N+M0，因身体状态不考虑手术治疗，现为行根治性放疗，GTV 50GY CTV 45GY/25F后缩野加量10GY/5F，", "entities": []}
+{"originalText": "同时口服卡培他滨。", "entities": [{"start_pos": 4, "end_pos": 8, "label_type": "药物"}]}
+{"originalText": "因肾功能不全，放疗20次后暂停化疗.2016-7-28复查胸腹CT病情平稳，肿标正常。", "entities": [{"start_pos": 29, "end_pos": 33, "label_type": "影像检查"}]}
+{"originalText": "2016-12复查肠镜及腹盆CT提示病情进展.16-12-26行雷替曲塞单药减量化疗,IV度骨髓抑制/心律失常/肺部感染,", "entities": [{"start_pos": 12, "end_pos": 16, "label_type": "影像检查"}, {"start_pos": 32, "end_pos": 36, "label_type": "药物"}, {"start_pos": 46, "end_pos": 50, "label_type": "疾病和诊断"}, {"start_pos": 51, "end_pos": 55, "label_type": "疾病和诊断"}, {"start_pos": 56, "end_pos": 60, "label_type": "疾病和诊断"}]}
+{"originalText": "此后最佳支持治疗.化疗后便血消失,2017-2-14复查CT提示肠壁较前变薄.中药治疗.，现症:乏力倦怠明显，", "entities": [{"start_pos": 28, "end_pos": 30, "label_type": "影像检查"}, {"start_pos": 32, "end_pos": 33, "label_type": "解剖部位"}]}
+{"originalText": "畏寒怕冷,消瘦,上腹坠痛较前加重，纳差,头晕,体质状况欠佳,ECOG 3分，大便尚可,睡眠良好。", "entities": [{"start_pos": 8, "end_pos": 10, "label_type": "解剖部位"}, {"start_pos": 20, "end_pos": 21, "label_type": "解剖部位"}]}
+{"originalText": "孕妇既往月经规律，末次月经：2016年07月19日，预产期：2017年4月25日，早孕彩超符合孕周。", "entities": [{"start_pos": 41, "end_pos": 45, "label_type": "影像检查"}]}
+{"originalText": "停经11天因急性阴道炎，外院给予保妇康栓及定君生阴道下药、复方黄藤洗液外用、宫炎平片口服治疗。", "entities": [{"start_pos": 6, "end_pos": 11, "label_type": "疾病和诊断"}, {"start_pos": 16, "end_pos": 20, "label_type": "药物"}, {"start_pos": 21, "end_pos": 24, "label_type": "药物"}, {"start_pos": 24, "end_pos": 26, "label_type": "解剖部位"}, {"start_pos": 29, "end_pos": 35, "label_type": "药物"}, {"start_pos": 38, "end_pos": 42, "label_type": "药物"}]}
+{"originalText": "孕早期彩超提示子宫多发肌瘤，较大约1.8cm*1.4cm,患者未诉不适，门诊予观察。", "entities": [{"start_pos": 0, "end_pos": 5, "label_type": "影像检查"}, {"start_pos": 7, "end_pos": 13, "label_type": "疾病和诊断"}]}
+{"originalText": "孕20周自觉胎动至今。", "entities": []}
+{"originalText": "孕中晚期无明显头昏、眼花、皮肤瘙痒不适。", "entities": [{"start_pos": 7, "end_pos": 8, "label_type": "解剖部位"}, {"start_pos": 10, "end_pos": 11, "label_type": "解剖部位"}, {"start_pos": 13, "end_pos": 15, "label_type": "解剖部位"}]}
+{"originalText": "孕期正规产检，早期唐氏筛查低风险，因孕早期用药治疗，建议行无创DNA检查，患者未采纳，四维彩超未见异常。", "entities": [{"start_pos": 43, "end_pos": 47, "label_type": "影像检查"}]}
+{"originalText": "孕期查甲功、肝功结果正常，OGTT提示空腹血糖高于正常，诊断\\\"妊娠期糖尿病\\\",予饮食控制后监测血糖大致正常。", "entities": [{"start_pos": 13, "end_pos": 17, "label_type": "实验室检验"}, {"start_pos": 19, "end_pos": 23, "label_type": "实验室检验"}, {"start_pos": 32, "end_pos": 38, "label_type": "疾病和诊断"}, {"start_pos": 49, "end_pos": 51, "label_type": "实验室检验"}]}
+{"originalText": "患者入院前5+小时（4:00）无明显诱因出现少量阴道流液，色清亮，伴不规律腹痛，其后出现少量血性分泌物，", "entities": [{"start_pos": 24, "end_pos": 26, "label_type": "解剖部位"}, {"start_pos": 37, "end_pos": 38, "label_type": "解剖部位"}]}
+{"originalText": "入院前40分钟（09:00）自觉腹痛较前加重，遂来院，阴道检查未见明显羊水流出，测胰岛素样生长因子阳性，", "entities": [{"start_pos": 16, "end_pos": 17, "label_type": "解剖部位"}, {"start_pos": 27, "end_pos": 29, "label_type": "解剖部位"}, {"start_pos": 41, "end_pos": 49, "label_type": "实验室检验"}]}
+{"originalText": "胎监提示规律宫缩，门诊以\\\"胎膜早破，妊娠期糖尿病，临产\\\"收入院。", "entities": [{"start_pos": 14, "end_pos": 18, "label_type": "疾病和诊断"}, {"start_pos": 19, "end_pos": 25, "label_type": "疾病和诊断"}]}
+{"originalText": "患者孕期以来，精神食欲好，二便正常，孕期体重增长约20.5Kg。", "entities": []}
+{"originalText": "患者于2014-12-21起床小便时突发头晕，呈视物旋转，伴恶心、呕吐，呕吐物为非咖啡色胃内容物，随即意识丧失、", "entities": [{"start_pos": 20, "end_pos": 21, "label_type": "解剖部位"}, {"start_pos": 44, "end_pos": 45, "label_type": "解剖部位"}]}
+{"originalText": "摔倒在地，被家属发现后急呼120来我院，急诊行脑、肺CT示“1.左基底节区低密度灶2.左肺下叶病变，", "entities": [{"start_pos": 23, "end_pos": 28, "label_type": "影像检查"}, {"start_pos": 43, "end_pos": 49, "label_type": "疾病和诊断"}]}
+{"originalText": "较前无明显变化3.两肺炎症伴纤维灶4.两肺上叶钙化灶、轻度肺气肿5.心包积液、两侧胸腔积液”，急诊以“晕厥原因待查”收住我科，", "entities": [{"start_pos": 9, "end_pos": 17, "label_type": "疾病和诊断"}, {"start_pos": 19, "end_pos": 26, "label_type": "疾病和诊断"}, {"start_pos": 29, "end_pos": 32, "label_type": "疾病和诊断"}, {"start_pos": 34, "end_pos": 45, "label_type": "疾病和诊断"}, {"start_pos": 51, "end_pos": 57, "label_type": "疾病和诊断"}]}
+{"originalText": "患者醒后发现右侧肢体活动不灵，2014-12-22在我科做脑DWI示“左侧大脑半球多发急性梗塞灶”，", "entities": [{"start_pos": 6, "end_pos": 10, "label_type": "解剖部位"}, {"start_pos": 29, "end_pos": 33, "label_type": "影像检查"}, {"start_pos": 35, "end_pos": 48, "label_type": "疾病和诊断"}]}
+{"originalText": "考虑“1.急性脑梗死2.高血压病（2级 很高危）3.冠状动脉粥样硬化性心脏病 心房颤动4.肺炎 两侧胸腔积液5.心包积液6.慢性肾功能不全7.胃CA术后8.直肠CA术后9.胆囊摘除术”，", "entities": [{"start_pos": 5, "end_pos": 10, "label_type": "疾病和诊断"}, {"start_pos": 12, "end_pos": 24, "label_type": "疾病和诊断"}, {"start_pos": 26, "end_pos": 38, "label_type": "疾病和诊断"}, {"start_pos": 39, "end_pos": 43, "label_type": "疾病和诊断"}, {"start_pos": 45, "end_pos": 47, "label_type": "疾病和诊断"}, {"start_pos": 48, "end_pos": 54, "label_type": "疾病和诊断"}, {"start_pos": 56, "end_pos": 60, "label_type": "疾病和诊断"}, {"start_pos": 62, "end_pos": 69, "label_type": "疾病和诊断"}, {"start_pos": 71, "end_pos": 76, "label_type": "疾病和诊断"}, {"start_pos": 78, "end_pos": 84, "label_type": "疾病和诊断"}, {"start_pos": 86, "end_pos": 91, "label_type": "手术"}]}
+{"originalText": "给予“拜阿司匹林、氟伐他汀钠缓释片、低分子肝素钙、神经节苷酯、疏血通、舒普深、沐舒坦”等输液治疗，2014-12-30因呼吸衰竭行气管插管呼吸机辅助呼吸，", "entities": [{"start_pos": 3, "end_pos": 8, "label_type": "药物"}, {"start_pos": 9, "end_pos": 17, "label_type": "药物"}, {"start_pos": 18, "end_pos": 24, "label_type": "药物"}, {"start_pos": 25, "end_pos": 30, "label_type": "药物"}, {"start_pos": 31, "end_pos": 34, "label_type": "药物"}, {"start_pos": 35, "end_pos": 38, "label_type": "药物"}, {"start_pos": 39, "end_pos": 42, "label_type": "药物"}, {"start_pos": 60, "end_pos": 64, "label_type": "疾病和诊断"}, {"start_pos": 65, "end_pos": 67, "label_type": "解剖部位"}]}
+{"originalText": "病情平稳后于2015-01-23转入ICU行气管切开后再转入我科继续治疗后好转出院。", "entities": [{"start_pos": 22, "end_pos": 26, "label_type": "手术"}]}
+{"originalText": "   患者出院后病情仍有反复，反复多次入我科治疗，均治疗好转后出院。", "entities": []}
+{"originalText": "现患者为气管切开状态，右侧肢体仍活动不灵，为求进一步治疗，我院门诊以“脑梗死、冠状动脉粥样硬化性心脏病、", "entities": [{"start_pos": 4, "end_pos": 8, "label_type": "手术"}, {"start_pos": 11, "end_pos": 15, "label_type": "解剖部位"}, {"start_pos": 35, "end_pos": 38, "label_type": "疾病和诊断"}, {"start_pos": 39, "end_pos": 51, "label_type": "疾病和诊断"}]}
+{"originalText": "心房颤动、肺部感染”收入我科。", "entities": [{"start_pos": 0, "end_pos": 4, "label_type": "疾病和诊断"}, {"start_pos": 5, "end_pos": 9, "label_type": "疾病和诊断"}]}
+{"originalText": "   患者自发病以来，神志清，精神尚可，气管切开状态，鼻饲饮食，留置导尿，大便正常。", "entities": [{"start_pos": 20, "end_pos": 24, "label_type": "手术"}, {"start_pos": 27, "end_pos": 28, "label_type": "解剖部位"}]}
+{"originalText": "左半结肠切除+胰十二指肠切除术后4年，PT4BN0M0。", "entities": [{"start_pos": 0, "end_pos": 16, "label_type": "疾病和诊断"}]}
+{"originalText": "术后病理提示：（左半）结肠溃疡型低分化腺癌，大小7.0×XXX6.0CM，侵透肠壁全层并侵及胰腺外脂肪组织及十二指肠肠壁浆膜层，", "entities": [{"start_pos": 7, "end_pos": 21, "label_type": "疾病和诊断"}, {"start_pos": 39, "end_pos": 40, "label_type": "解剖部位"}, {"start_pos": 46, "end_pos": 48, "label_type": "解剖部位"}, {"start_pos": 54, "end_pos": 58, "label_type": "解剖部位"}]}
+{"originalText": "未见脉管癌栓，淋巴结未见癌转移（结肠**/13，十二指肠**/1，胰腺周0/4，肝十二指肠韧带0/1，", "entities": [{"start_pos": 16, "end_pos": 18, "label_type": "解剖部位"}, {"start_pos": 24, "end_pos": 28, "label_type": "解剖部位"}, {"start_pos": 33, "end_pos": 35, "label_type": "解剖部位"}, {"start_pos": 40, "end_pos": 47, "label_type": "解剖部位"}]}
+{"originalText": "13组0/1），（近端）、（远端）、胃断端、十二指肠断端及胰腺断端未见癌；阑尾慢性炎；网膜组织未见特殊。", "entities": [{"start_pos": 18, "end_pos": 19, "label_type": "解剖部位"}, {"start_pos": 22, "end_pos": 26, "label_type": "解剖部位"}, {"start_pos": 29, "end_pos": 31, "label_type": "解剖部位"}, {"start_pos": 37, "end_pos": 42, "label_type": "疾病和诊断"}]}
+{"originalText": "本次定期复查提示肝右外叶偏强回声结节，直径1.3CM，较前稍有增大，余检查未见肿瘤转移及复发征象。", "entities": [{"start_pos": 8, "end_pos": 12, "label_type": "解剖部位"}]}
+{"originalText": "腹部CT肝脏未见结节。", "entities": [{"start_pos": 0, "end_pos": 4, "label_type": "影像检查"}, {"start_pos": 4, "end_pos": 6, "label_type": "解剖部位"}]}
+{"originalText": "本次定期复查，未见肿瘤转移及复发征象。", "entities": []}
+{"originalText": "，患者于2009-09于我院经食道镜等候相关检查诊断“食道胸中段鳞癌”，于2009-09-27起行放疗（原发灶40GY/20次）及NP方案化疗2程。", "entities": [{"start_pos": 27, "end_pos": 34, "label_type": "疾病和诊断"}]}
+{"originalText": "于2012-12-09于我院行经左胸三切口部分食管切除+胃食管右颈吻合术，术顺，恢复好，，术后病理示：未见癌组织（PCR）。", "entities": [{"start_pos": 16, "end_pos": 36, "label_type": "手术"}]}
+{"originalText": "于2012-04发现左颈多个肿大淋巴结，行左颈淋巴结活检，，病理示：中分化鳞癌，病情复发，于2012-05-16至2012-07-06予TP方案化疗3程。", "entities": [{"start_pos": 10, "end_pos": 12, "label_type": "解剖部位"}, {"start_pos": 16, "end_pos": 19, "label_type": "解剖部位"}, {"start_pos": 21, "end_pos": 26, "label_type": "解剖部位"}]}
+{"originalText": "今为求进一步诊治来我院。", "entities": []}
+{"originalText": "患者发病以来,无恶性、呕吐、腹痛、腹胀等不适。", "entities": [{"start_pos": 14, "end_pos": 15, "label_type": "解剖部位"}, {"start_pos": 17, "end_pos": 18, "label_type": "解剖部位"}]}
+{"originalText": "精神尚可,饮食睡眠尚可,大小便正常，体重无减轻。", "entities": []}
+{"originalText": "患者2002年发现丙肝，2007年确诊丙肝后肝硬化，间断双下肢水肿，服用托拉塞米利尿治疗水肿消退。", "entities": [{"start_pos": 9, "end_pos": 11, "label_type": "解剖部位"}, {"start_pos": 19, "end_pos": 25, "label_type": "疾病和诊断"}, {"start_pos": 28, "end_pos": 31, "label_type": "解剖部位"}, {"start_pos": 36, "end_pos": 40, "label_type": "药物"}]}
+{"originalText": "曾因呕血、黑便行内镜下食管曲张静脉结扎术2次、食管静脉曲张破裂硬化术2次。", "entities": [{"start_pos": 8, "end_pos": 20, "label_type": "手术"}, {"start_pos": 23, "end_pos": 34, "label_type": "手术"}]}
+{"originalText": "6月前发现肝癌，1月前于****医院住院治疗，住院期间及出院后间断出现发热、腹痛，体温37-38.5摄氏度，", "entities": [{"start_pos": 5, "end_pos": 7, "label_type": "疾病和诊断"}, {"start_pos": 38, "end_pos": 39, "label_type": "解剖部位"}]}
+{"originalText": "自服新癀片体温可降至正常。", "entities": [{"start_pos": 2, "end_pos": 5, "label_type": "药物"}]}
+{"originalText": "近3天腹胀加重，上腹部疼痛明显，大汗，今日前来我院急诊就诊，b超示：符合肝硬化超声改变。", "entities": [{"start_pos": 3, "end_pos": 4, "label_type": "解剖部位"}, {"start_pos": 8, "end_pos": 11, "label_type": "解剖部位"}, {"start_pos": 30, "end_pos": 32, "label_type": "影像检查"}, {"start_pos": 36, "end_pos": 39, "label_type": "疾病和诊断"}]}
+{"originalText": "肝内占位性病变。", "entities": [{"start_pos": 0, "end_pos": 1, "label_type": "解剖部位"}]}
+{"originalText": "脾大。", "entities": [{"start_pos": 0, "end_pos": 1, "label_type": "解剖部位"}]}
+{"originalText": "胆囊壁不光滑。", "entities": [{"start_pos": 0, "end_pos": 3, "label_type": "解剖部位"}]}
+{"originalText": "腹腔积液。", "entities": [{"start_pos": 0, "end_pos": 4, "label_type": "疾病和诊断"}]}
+{"originalText": "为进一步治疗收入我科。", "entities": []}
+{"originalText": "患者自发病以来，进食量下降，偶有恶心，无反酸、嗳气，尿量减少，尿色加深。", "entities": []}
+{"originalText": "大便可，无腹泻，无黑便。", "entities": [{"start_pos": 5, "end_pos": 6, "label_type": "解剖部位"}]}
+{"originalText": "体力下降，活动后喘息。", "entities": []}
+{"originalText": "无咳嗽咳痰，无胸痛，夜间睡眠差。", "entities": [{"start_pos": 7, "end_pos": 8, "label_type": "解剖部位"}]}
+{"originalText": "入院前8年余患者出现头晕、头痛、乏力、两上肢水肿，入**********医院查得血肌酐升高（具体不详），", "entities": [{"start_pos": 10, "end_pos": 11, "label_type": "解剖部位"}, {"start_pos": 13, "end_pos": 14, "label_type": "解剖部位"}, {"start_pos": 19, "end_pos": 22, "label_type": "解剖部位"}, {"start_pos": 40, "end_pos": 43, "label_type": "实验室检验"}]}
+{"originalText": "诊断为“慢性肾功能衰竭，梗阻性肾病”，后长期行2次/周规律血液透析，并行右前臂动静脉内瘘成形术。", "entities": [{"start_pos": 4, "end_pos": 11, "label_type": "疾病和诊断"}, {"start_pos": 12, "end_pos": 17, "label_type": "疾病和诊断"}, {"start_pos": 36, "end_pos": 47, "label_type": "手术"}]}
+{"originalText": "病程中患者血压逐渐升高，最高收缩压达160mmHg，服用降压药物控制血压，后患者血压逐渐降至正常，停用降压药物；", "entities": []}
+{"originalText": "血红蛋白逐渐上降（具体不详），长期使用促红素纠正肾性贫血。", "entities": [{"start_pos": 0, "end_pos": 4, "label_type": "实验室检验"}, {"start_pos": 19, "end_pos": 22, "label_type": "药物"}]}
+{"originalText": "10余天前患者无出现咳嗽、咳痰，呈白色脓痰，不易咳出，无咯血，无发热、胸闷、胸痛，无气促、呼吸困难。", "entities": [{"start_pos": 35, "end_pos": 36, "label_type": "解剖部位"}, {"start_pos": 38, "end_pos": 39, "label_type": "解剖部位"}]}
+{"originalText": "3天前出现进食差、精神差。", "entities": []}
+{"originalText": "1天前进食稀饭后出现恶心、呕吐，呕吐物为胃内容物，伴心悸，无呕血、咖啡色样物，无胸闷、胸痛。", "entities": [{"start_pos": 20, "end_pos": 21, "label_type": "解剖部位"}, {"start_pos": 26, "end_pos": 27, "label_type": "解剖部位"}, {"start_pos": 40, "end_pos": 41, "label_type": "解剖部位"}, {"start_pos": 43, "end_pos": 44, "label_type": "解剖部位"}]}
+{"originalText": "今为进一步诊治，门诊以“慢性肾功能衰竭、膀胱癌、心悸待查”收入我科住院治疗。", "entities": [{"start_pos": 12, "end_pos": 19, "label_type": "疾病和诊断"}, {"start_pos": 20, "end_pos": 23, "label_type": "疾病和诊断"}, {"start_pos": 24, "end_pos": 28, "label_type": "疾病和诊断"}]}
+{"originalText": "患者自患病以来，精神、食欲差，5天未解大便，长期留置导尿、小便约50ml/天，平车推入未称体重。", "entities": []}
+{"originalText": "，2009-1于（右乳癌）行改良根治术，2011-1行左乳癌手术。", "entities": [{"start_pos": 9, "end_pos": 12, "label_type": "疾病和诊断"}, {"start_pos": 14, "end_pos": 19, "label_type": "手术"}, {"start_pos": 27, "end_pos": 30, "label_type": "疾病和诊断"}]}
+{"originalText": "复查门脉与上腔静脉之间可见低回声淋巴结2.8*1.4CM，全面复查，*左肩X片，胸椎正侧位，建议患者拿病，", "entities": [{"start_pos": 2, "end_pos": 4, "label_type": "解剖部位"}, {"start_pos": 5, "end_pos": 9, "label_type": "解剖部位"}, {"start_pos": 35, "end_pos": 39, "label_type": "影像检查"}, {"start_pos": 40, "end_pos": 45, "label_type": "影像检查"}]}
+{"originalText": "腹部MRI检查。", "entities": [{"start_pos": 0, "end_pos": 5, "label_type": "影像检查"}]}
+{"originalText": "已行卵巢切除。", "entities": [{"start_pos": 2, "end_pos": 6, "label_type": "手术"}]}
+{"originalText": "2013-6-3，查腹部增强MRI示：肝S6、S7多发结节，考虑转移可能大，门腔间隙肿大淋巴结，考虑转移，", "entities": [{"start_pos": 10, "end_pos": 17, "label_type": "影像检查"}, {"start_pos": 19, "end_pos": 25, "label_type": "解剖部位"}, {"start_pos": 38, "end_pos": 42, "label_type": "解剖部位"}]}
+{"originalText": "腰椎及骨盆骨转移可能，建议骨扫描。", "entities": [{"start_pos": 0, "end_pos": 8, "label_type": "疾病和诊断"}]}
+{"originalText": "患者入组帕妥珠单抗临床试验，2013.7.18开始第一周期治疗。", "entities": [{"start_pos": 4, "end_pos": 9, "label_type": "药物"}]}
+{"originalText": "患者化疗后出现感冒样症状，昨日出现头痛，今日查血常规提示II度骨髓抑制，白细胞2.57，中性粒细胞1.29.无腹痛、", "entities": [{"start_pos": 17, "end_pos": 18, "label_type": "解剖部位"}, {"start_pos": 31, "end_pos": 35, "label_type": "疾病和诊断"}, {"start_pos": 36, "end_pos": 39, "label_type": "实验室检验"}, {"start_pos": 44, "end_pos": 49, "label_type": "实验室检验"}, {"start_pos": 55, "end_pos": 56, "label_type": "解剖部位"}]}
+{"originalText": "腹泻及其他不适。", "entities": [{"start_pos": 0, "end_pos": 1, "label_type": "解剖部位"}]}
+{"originalText": "患者已行三周期化疗，行评效检查，今日查血常规结果提示III度骨髓抑制，NE1.0，升白治疗中。", "entities": [{"start_pos": 30, "end_pos": 34, "label_type": "疾病和诊断"}]}
+{"originalText": "2013.9.19行第四周期化疗，化疗后骨髓抑制I度，经升白治疗后好转，2013.10.10行第五周期化疗，", "entities": [{"start_pos": 20, "end_pos": 24, "label_type": "疾病和诊断"}]}
+{"originalText": "化疗后无特殊不适，2013.11.1给予第6周期化疗，后评效检查维持PR，2013.11.22给予第七周期化疗，", "entities": []}
+{"originalText": "化疗后无特殊不适。", "entities": []}
+{"originalText": "2013.12.13给予第8周期化疗。", "entities": []}
+{"originalText": "患者手足综合征II度。", "entities": [{"start_pos": 2, "end_pos": 7, "label_type": "疾病和诊断"}]}
+{"originalText": "2014.1.24给予第10周期化疗。", "entities": []}
+{"originalText": "2014.3.7第12周期化疗,化疗后患者脸肿,其他好,评效和继续靶向治疗.2014.4.2就诊，化疗减量240MG。", "entities": []}
+{"originalText": "继续靶向。", "entities": []}
+{"originalText": "，患者化疗18周期后评效检查:，心脏超声：二、三尖瓣少量返流；，2014-7-30腹部CT:较前相仿；", "entities": [{"start_pos": 21, "end_pos": 26, "label_type": "解剖部位"}, {"start_pos": 41, "end_pos": 45, "label_type": "影像检查"}]}
+{"originalText": "2014.9.17完成第21周期治疗，评效检查。", "entities": []}
+{"originalText": "2014.11.21完成24周期治疗，预约评效。", "entities": []}
+{"originalText": "2015.1.26完成第28周期化疗。", "entities": []}
+{"originalText": "2015.8.25 C37治疗，C39评效维持PR，2015-12-10 C42治疗，C42评效维持PR,", "entities": []}
+{"originalText": "C48评效维持PR，2016-5-11行C49，6-23行C51,7-14行C52.10-8行C55。", "entities": []}
+{"originalText": "，5月前患者出现腰部疼痛，对症治疗效果差，，2014-8行胸部CT：纵膈及两肺多发肿大淋巴结，两侧胸腔积液，", "entities": [{"start_pos": 8, "end_pos": 10, "label_type": "解剖部位"}, {"start_pos": 29, "end_pos": 33, "label_type": "影像检查"}, {"start_pos": 34, "end_pos": 36, "label_type": "解剖部位"}, {"start_pos": 37, "end_pos": 39, "label_type": "解剖部位"}, {"start_pos": 47, "end_pos": 53, "label_type": "疾病和诊断"}]}
+{"originalText": "心包积液，胸椎及其附件、左侧肩胛骨、胸骨多发骨质破坏。", "entities": [{"start_pos": 0, "end_pos": 4, "label_type": "疾病和诊断"}, {"start_pos": 5, "end_pos": 11, "label_type": "解剖部位"}, {"start_pos": 12, "end_pos": 17, "label_type": "解剖部位"}, {"start_pos": 18, "end_pos": 20, "label_type": "解剖部位"}, {"start_pos": 22, "end_pos": 23, "label_type": "解剖部位"}]}
+{"originalText": "气管隆突前淋巴结，EBUS-TBNA：转移性腺癌，，IHC:CK7(+),TTF-1（-）,CDX2(+),", "entities": [{"start_pos": 0, "end_pos": 8, "label_type": "解剖部位"}, {"start_pos": 19, "end_pos": 24, "label_type": "疾病和诊断"}]}
+{"originalText": "PAX8(-),CGA(-),SYN(-)。", "entities": []}
+{"originalText": "完善腹部，CT：肝左叶低密度影，性质待定，胸腰骶椎骨、右侧髋骨多发骨质破坏。", "entities": [{"start_pos": 2, "end_pos": 7, "label_type": "影像检查"}, {"start_pos": 8, "end_pos": 11, "label_type": "解剖部位"}, {"start_pos": 21, "end_pos": 26, "label_type": "解剖部位"}, {"start_pos": 27, "end_pos": 31, "label_type": "解剖部位"}, {"start_pos": 33, "end_pos": 34, "label_type": "解剖部位"}]}
+{"originalText": "头MRI未见异常。", "entities": [{"start_pos": 0, "end_pos": 4, "label_type": "影像检查"}]}
+{"originalText": "骨扫描提示全身广泛骨转移。", "entities": [{"start_pos": 0, "end_pos": 1, "label_type": "解剖部位"}, {"start_pos": 9, "end_pos": 12, "label_type": "疾病和诊断"}]}
+{"originalText": "2014-8-19，胃镜：胃角溃疡。", "entities": [{"start_pos": 13, "end_pos": 17, "label_type": "疾病和诊断"}]}
+{"originalText": "，病理活检：胃角低分化腺癌及印戒细胞癌。", "entities": [{"start_pos": 6, "end_pos": 19, "label_type": "疾病和诊断"}]}
+{"originalText": "CEA 1.9NG/ML，CA199 23U/ML。", "entities": [{"start_pos": 0, "end_pos": 3, "label_type": "实验室检验"}, {"start_pos": 13, "end_pos": 18, "label_type": "实验室检验"}]}
+{"originalText": "目前患者腰部疼痛5级，食纳可，二便如常，体重无明显增减。", "entities": [{"start_pos": 4, "end_pos": 6, "label_type": "解剖部位"}]}
+{"originalText": "2月余前患者走路200-300米后出现胸闷，位于心前区，不剧，伴大汗，休息4-5分钟后缓解，当时无畏寒发热，", "entities": [{"start_pos": 19, "end_pos": 20, "label_type": "解剖部位"}, {"start_pos": 24, "end_pos": 27, "label_type": "解剖部位"}]}
+{"originalText": "无头痛头晕，无咳嗽咳痰，患者2月来上述症状反复发作，休息5分钟左右均能缓解，遂于2015-10-12去*******医院就诊，", "entities": [{"start_pos": 1, "end_pos": 2, "label_type": "解剖部位"}, {"start_pos": 3, "end_pos": 4, "label_type": "解剖部位"}]}
+{"originalText": "入院后予抗血小板聚集，调脂、稳定斑块，抗心肌重构，降低心肌耗氧量等对症治疗，于2015-10-14行冠脉造影，", "entities": [{"start_pos": 50, "end_pos": 54, "label_type": "影像检查"}]}
+{"originalText": "术中见右冠优势型，近中段约60%狭窄，左主干正常，前降支中段95%狭窄伴钙化，第一对角支近段约40%狭窄；", "entities": [{"start_pos": 3, "end_pos": 5, "label_type": "解剖部位"}, {"start_pos": 25, "end_pos": 30, "label_type": "解剖部位"}, {"start_pos": 39, "end_pos": 46, "label_type": "解剖部位"}]}
+{"originalText": "术中拟处理前降支病变但未成功，故为进一步诊治转来我院，拟“冠心病”收住入院。", "entities": [{"start_pos": 29, "end_pos": 32, "label_type": "疾病和诊断"}]}
+{"originalText": "自病以来，神清，精神可，胃纳可，睡眠一般，二便无殊，体重无明显减轻。", "entities": [{"start_pos": 12, "end_pos": 13, "label_type": "解剖部位"}]}
+{"originalText": "有高血压病史15年，平日自服硝苯地平控释片2#qd，自诉血压控制良好。", "entities": [{"start_pos": 1, "end_pos": 4, "label_type": "疾病和诊断"}, {"start_pos": 14, "end_pos": 21, "label_type": "药物"}]}
+{"originalText": "，2014-4-30行胃癌根治术。", "entities": [{"start_pos": 11, "end_pos": 16, "label_type": "手术"}]}
+{"originalText": "中低分化腺癌，PT3N0M0，CMET(-),EGFR(+),HER2(+),未行辅化。", "entities": [{"start_pos": 0, "end_pos": 6, "label_type": "疾病和诊断"}]}
+{"originalText": "2014-12-10考虑腹膜后LNM？2015-3-12入组行SP*6，继续S-1维持治疗，内科建议行肝门淋巴结及腹腔病灶放疗，", "entities": [{"start_pos": 12, "end_pos": 18, "label_type": "疾病和诊断"}, {"start_pos": 31, "end_pos": 33, "label_type": "药物"}, {"start_pos": 38, "end_pos": 41, "label_type": "药物"}, {"start_pos": 51, "end_pos": 56, "label_type": "解剖部位"}, {"start_pos": 57, "end_pos": 59, "label_type": "解剖部位"}]}
+{"originalText": "GTV 55GY CTV 50GY/27F，同期替吉奥 40MG BID D1-D5/W，患者未诉明显不适，", "entities": [{"start_pos": 24, "end_pos": 28, "label_type": "药物"}]}
+{"originalText": "，血常规：3.01*109/L PLT 46*109/L。", "entities": [{"start_pos": 16, "end_pos": 19, "label_type": "实验室检验"}]}
+{"originalText": "暂停S-1化疗,，给予特比澳升血小板治疗3天后复查血常规：WBC 2.34*109/L PLT 38*109/L，", "entities": [{"start_pos": 2, "end_pos": 5, "label_type": "药物"}, {"start_pos": 11, "end_pos": 14, "label_type": "解剖部位"}, {"start_pos": 15, "end_pos": 18, "label_type": "实验室检验"}, {"start_pos": 29, "end_pos": 33, "label_type": "实验室检验"}, {"start_pos": 43, "end_pos": 47, "label_type": "实验室检验"}]}
+{"originalText": "暂停放疗,，给予升血细胞治疗后复查：WBC 3.28*109/L PLT 60*109/L,给予单纯放疗，", "entities": [{"start_pos": 18, "end_pos": 21, "label_type": "实验室检验"}, {"start_pos": 33, "end_pos": 36, "label_type": "实验室检验"}]}
+{"originalText": "，复查血常规：PLT 181*109/L WBC 3.73*109/L，目前放疗结束，血小板低上III度，", "entities": [{"start_pos": 7, "end_pos": 10, "label_type": "实验室检验"}, {"start_pos": 21, "end_pos": 24, "label_type": "实验室检验"}, {"start_pos": 43, "end_pos": 46, "label_type": "实验室检验"}]}
+{"originalText": "白细胞II度，中性粒细胞 I度。", "entities": [{"start_pos": 0, "end_pos": 3, "label_type": "实验室检验"}, {"start_pos": 7, "end_pos": 12, "label_type": "实验室检验"}]}
+{"originalText": "2016-6-23，血细胞分析:血小板总数 59.00*10^9/L，白细胞总数 2.97*10^9/L，", "entities": [{"start_pos": 16, "end_pos": 21, "label_type": "实验室检验"}, {"start_pos": 35, "end_pos": 41, "label_type": "实验室检验"}]}
+{"originalText": "，肾功三项:丙氨酸氨基转换酶 42IU/L。", "entities": [{"start_pos": 6, "end_pos": 14, "label_type": "实验室检验"}]}
+{"originalText": "2016-6-21，与2016-03-16腹盆腔CT比较：未见复发及转移病灶。", "entities": [{"start_pos": 21, "end_pos": 26, "label_type": "影像检查"}]}
+{"originalText": "2016-6-21，与2015-12-11胸部CT比较:未见复发及转移病灶。", "entities": [{"start_pos": 21, "end_pos": 25, "label_type": "影像检查"}]}
+{"originalText": "入院5+年前患者因“下腹胀痛、大便干结”到*******医院就诊，行“肠镜+活检：升结肠癌。", "entities": [{"start_pos": 10, "end_pos": 12, "label_type": "解剖部位"}, {"start_pos": 35, "end_pos": 40, "label_type": "手术"}, {"start_pos": 41, "end_pos": 45, "label_type": "疾病和诊断"}]}
+{"originalText": "胃镜：糜烂性胃炎，贲门炎。", "entities": [{"start_pos": 3, "end_pos": 8, "label_type": "疾病和诊断"}, {"start_pos": 9, "end_pos": 12, "label_type": "疾病和诊断"}]}
+{"originalText": "”于2012-03-09行“左半结肠癌根治术，术后行FOLFOX5天化疗6次。", "entities": [{"start_pos": 14, "end_pos": 22, "label_type": "手术"}]}
+{"originalText": "”病程中无大便性状、习惯改变，无腹泻、腹痛、腹胀、恶心、呕吐、血便。", "entities": [{"start_pos": 16, "end_pos": 17, "label_type": "解剖部位"}, {"start_pos": 19, "end_pos": 20, "label_type": "解剖部位"}, {"start_pos": 22, "end_pos": 23, "label_type": "解剖部位"}]}
+{"originalText": "于2016-11-28来我院就诊行肠镜示：结肠息肉，给予无痛肠镜上行肠息肉切除术。", "entities": [{"start_pos": 21, "end_pos": 25, "label_type": "疾病和诊断"}, {"start_pos": 34, "end_pos": 40, "label_type": "手术"}]}
+{"originalText": "1天前患者无明显诱因出现左中上腹持续性隐痛，无阵发性加重，无肩背部及腹股沟区放射痛，与进食及体位无关，", "entities": [{"start_pos": 12, "end_pos": 16, "label_type": "解剖部位"}, {"start_pos": 30, "end_pos": 33, "label_type": "解剖部位"}, {"start_pos": 34, "end_pos": 38, "label_type": "解剖部位"}]}
+{"originalText": "无明显缓解方式。", "entities": []}
+{"originalText": "无恶心、呕吐、腹胀、腹泻，无大便性状、习惯改变，无畏寒、发热、尿频、尿痛、尿急、血尿。", "entities": [{"start_pos": 7, "end_pos": 8, "label_type": "解剖部位"}, {"start_pos": 10, "end_pos": 11, "label_type": "解剖部位"}]}
+{"originalText": "在外未予诊疗。", "entities": []}
+{"originalText": "今日为进一步治疗遂来我院住院处理，门诊以“结肠癌术后”收入我科治疗。", "entities": [{"start_pos": 21, "end_pos": 26, "label_type": "疾病和诊断"}]}
+{"originalText": "患者此次患病以来，精神状态一般，二便正常，饮食尚可，体重无减轻。", "entities": []}
+{"originalText": "，患者因1月前无明显诱因出现腹泻不适，无血便，无恶心、呕吐，无腹痛、腹胀，无大便困难、肛门坠胀感，无里急后重，", "entities": [{"start_pos": 14, "end_pos": 15, "label_type": "解剖部位"}, {"start_pos": 31, "end_pos": 32, "label_type": "解剖部位"}, {"start_pos": 34, "end_pos": 35, "label_type": "解剖部位"}, {"start_pos": 43, "end_pos": 45, "label_type": "解剖部位"}]}
+{"originalText": "，遂于2011-11-01外院肠镜检查示：距肛门22CM乙状结肠见一肿物，环绕肠壁2/3生长，大小约为3.5*4.5CM，", "entities": [{"start_pos": 22, "end_pos": 24, "label_type": "解剖部位"}, {"start_pos": 28, "end_pos": 32, "label_type": "解剖部位"}, {"start_pos": 39, "end_pos": 41, "label_type": "解剖部位"}]}
+{"originalText": "肠腔明显狭窄，肠镜尚能通过；病理示中分化腺癌；2012-11-20在我院行DIXON术，术后恢复可，", "entities": [{"start_pos": 0, "end_pos": 2, "label_type": "解剖部位"}, {"start_pos": 37, "end_pos": 43, "label_type": "手术"}]}
+{"originalText": "有排气排便，，术后病理示：乙状结肠中分化腺癌，浸润至肠壁浆膜上层，未见神经束侵犯和管内癌栓，中央淋巴结（0/1），", "entities": [{"start_pos": 13, "end_pos": 22, "label_type": "疾病和诊断"}, {"start_pos": 26, "end_pos": 32, "label_type": "解剖部位"}, {"start_pos": 46, "end_pos": 51, "label_type": "解剖部位"}]}
+{"originalText": "肠旁淋巴结（0/3）。", "entities": [{"start_pos": 0, "end_pos": 5, "label_type": "解剖部位"}]}
+{"originalText": "2012-12-14、2013-01-04入院行化疗，方案为XELOX（乐沙定150MG QD+希罗达 1500MG BID），", "entities": [{"start_pos": 36, "end_pos": 39, "label_type": "药物"}, {"start_pos": 48, "end_pos": 52, "label_type": "药物"}]}
+{"originalText": "化疗过程顺利，诉有两手轻微麻木不适，无恶心、呕吐，无腹痛、腹胀，今为进一步化疗遂入我科。", "entities": [{"start_pos": 9, "end_pos": 11, "label_type": "解剖部位"}, {"start_pos": 26, "end_pos": 27, "label_type": "解剖部位"}, {"start_pos": 29, "end_pos": 30, "label_type": "解剖部位"}]}
+{"originalText": "患者起病以来，无发热、乏力、咳嗽、气促、身目黄染等，精神睡眠可，胃纳一般，小便可，今日有排少量便，有排气，", "entities": [{"start_pos": 32, "end_pos": 33, "label_type": "解剖部位"}]}
+{"originalText": "体重无明显上降。", "entities": []}
+{"originalText": "患者于2011年6月起前无明显诱因出现下腹部胀痛不适、纳差，无伴发热、黄疸、呕吐、黑便等，无处理，2011年9月再次出现右下腹痛，", "entities": [{"start_pos": 19, "end_pos": 22, "label_type": "解剖部位"}, {"start_pos": 60, "end_pos": 63, "label_type": "解剖部位"}]}
+{"originalText": "遂到**六院查CT示\\\"胰腺囊腺癌\\\"，9-30在气管麻上行“胰体尾切除+空肠近端切除+脾切除+结肠脾区切除+ROUX-EN-Y吻合术”，", "entities": [{"start_pos": 7, "end_pos": 9, "label_type": "影像检查"}, {"start_pos": 12, "end_pos": 17, "label_type": "疾病和诊断"}, {"start_pos": 25, "end_pos": 27, "label_type": "解剖部位"}, {"start_pos": 31, "end_pos": 67, "label_type": "手术"}]}
+{"originalText": "术程顺利，术后病理示胰腺粘液性囊腺癌；12月CT复查未见复发或转移征象。", "entities": [{"start_pos": 10, "end_pos": 18, "label_type": "疾病和诊断"}, {"start_pos": 22, "end_pos": 24, "label_type": "影像检查"}]}
+{"originalText": "半月前患者突觉右下腹酸痛，伴腹胀，遂到外院复查肿瘤标记物CA199 164.1 U/L，CA125 49.6 U/L。", "entities": [{"start_pos": 7, "end_pos": 10, "label_type": "解剖部位"}, {"start_pos": 14, "end_pos": 15, "label_type": "解剖部位"}, {"start_pos": 28, "end_pos": 34, "label_type": "实验室检验"}, {"start_pos": 44, "end_pos": 49, "label_type": "实验室检验"}]}
+{"originalText": "2012-4-17**六院PET/CT示：胰腺提残端高代谢灶，考虑肿瘤复发；腹盆腔、肠旁、肠系膜、大网膜，", "entities": [{"start_pos": 13, "end_pos": 19, "label_type": "影像检查"}, {"start_pos": 21, "end_pos": 23, "label_type": "解剖部位"}, {"start_pos": 38, "end_pos": 41, "label_type": "解剖部位"}, {"start_pos": 42, "end_pos": 43, "label_type": "解剖部位"}, {"start_pos": 45, "end_pos": 46, "label_type": "解剖部位"}]}
+{"originalText": "肝周围膜、子宫子宫直肠窝多发高代谢病灶，考虑腹，盆腔广泛种植性转移。", "entities": [{"start_pos": 0, "end_pos": 1, "label_type": "解剖部位"}, {"start_pos": 5, "end_pos": 7, "label_type": "解剖部位"}, {"start_pos": 7, "end_pos": 12, "label_type": "解剖部位"}, {"start_pos": 22, "end_pos": 23, "label_type": "解剖部位"}, {"start_pos": 24, "end_pos": 26, "label_type": "解剖部位"}]}
+{"originalText": "为进一步诊治至我院就诊，于2012-4-25/2012-5-24行健择方案（D1,D8,D15）化疗2程，", "entities": [{"start_pos": 33, "end_pos": 35, "label_type": "药物"}]}
+{"originalText": "过程顺利，化疗后II度白细胞上降。", "entities": []}
+{"originalText": "入院以来，无头晕头痛，无咳嗽咳痰，右下腹有按压痛，无腹胀，无呕吐、黑便，精神、胃纳、睡眠一般，体重无明显减轻。", "entities": [{"start_pos": 6, "end_pos": 7, "label_type": "解剖部位"}, {"start_pos": 8, "end_pos": 9, "label_type": "解剖部位"}, {"start_pos": 17, "end_pos": 20, "label_type": "解剖部位"}, {"start_pos": 26, "end_pos": 27, "label_type": "解剖部位"}, {"start_pos": 39, "end_pos": 40, "label_type": "解剖部位"}]}
+{"originalText": "患者平时月经规律，末次月经为2016年04月27日，经期经量同既往，停经30+天自测尿HCG阳性，停经50天我院彩超提示“宫内早孕，", "entities": [{"start_pos": 42, "end_pos": 46, "label_type": "实验室检验"}, {"start_pos": 56, "end_pos": 58, "label_type": "影像检查"}, {"start_pos": 61, "end_pos": 65, "label_type": "疾病和诊断"}]}
+{"originalText": "活胎”（未见报告）。", "entities": []}
+{"originalText": "孕期未接触有毒化学物质及辐射物，未饮酒吸烟，未饲养宠物。", "entities": []}
+{"originalText": "6小时前，进食后不久便出现上腹持续性绞痛，伴呕吐，呕吐物为胃内容物，解稀大便2次，便后感腹痛稍缓解，", "entities": [{"start_pos": 13, "end_pos": 15, "label_type": "解剖部位"}, {"start_pos": 29, "end_pos": 30, "label_type": "解剖部位"}, {"start_pos": 44, "end_pos": 45, "label_type": "解剖部位"}]}
+{"originalText": "随后再次出现明显绞痛，伴肛门坠胀，不伴畏寒、发热、里急后重感、腹胀及阴道流血，无头晕、乏力，无尿频、", "entities": [{"start_pos": 12, "end_pos": 14, "label_type": "解剖部位"}, {"start_pos": 31, "end_pos": 32, "label_type": "解剖部位"}, {"start_pos": 34, "end_pos": 36, "label_type": "解剖部位"}, {"start_pos": 40, "end_pos": 41, "label_type": "解剖部位"}]}
+{"originalText": "尿急、尿痛等不适。", "entities": []}
+{"originalText": "来我院门诊就诊，查血白细胞数12.2* 10^9/L、中性粒细胞百分比 92.91 %；彩超：早孕，", "entities": [{"start_pos": 10, "end_pos": 14, "label_type": "实验室检验"}, {"start_pos": 27, "end_pos": 35, "label_type": "实验室检验"}, {"start_pos": 44, "end_pos": 46, "label_type": "影像检查"}, {"start_pos": 47, "end_pos": 49, "label_type": "疾病和诊断"}]}
+{"originalText": "活胎。", "entities": []}
+{"originalText": "建议住院治疗，故门诊以“急性胃肠炎、早孕”收入院。", "entities": [{"start_pos": 12, "end_pos": 17, "label_type": "疾病和诊断"}, {"start_pos": 18, "end_pos": 20, "label_type": "疾病和诊断"}]}
+{"originalText": "患者患病以来，精神、食欲、睡眠尚可，小便尚正常，孕期体重无明显增加。", "entities": []}
+{"originalText": "，患者2017-2-26傍晚无明显诱因出现腹痛、腹胀不适，腹痛呈阵发性，上腹为主，有便意未排便，后出现呕吐数次，", "entities": [{"start_pos": 21, "end_pos": 22, "label_type": "解剖部位"}, {"start_pos": 24, "end_pos": 25, "label_type": "解剖部位"}, {"start_pos": 29, "end_pos": 30, "label_type": "解剖部位"}, {"start_pos": 36, "end_pos": 38, "label_type": "解剖部位"}]}
+{"originalText": "自述量较多，呕吐物先为胃内容物后为胆汁，至27日患者腹痛、腹胀未有缓解遂至当地医就诊，查腹平片提示肠梗阻可能（未见单），", "entities": [{"start_pos": 11, "end_pos": 12, "label_type": "解剖部位"}, {"start_pos": 26, "end_pos": 27, "label_type": "解剖部位"}, {"start_pos": 29, "end_pos": 30, "label_type": "解剖部位"}, {"start_pos": 44, "end_pos": 47, "label_type": "影像检查"}, {"start_pos": 49, "end_pos": 52, "label_type": "疾病和诊断"}]}
+{"originalText": "患者为求进一步诊治至我院就诊，，查腹部平片示：考虑直肠梗阻可能，建议复查。", "entities": [{"start_pos": 17, "end_pos": 21, "label_type": "影像检查"}, {"start_pos": 25, "end_pos": 29, "label_type": "疾病和诊断"}]}
+{"originalText": "腹部立位片未见消化道穿孔征象。", "entities": [{"start_pos": 0, "end_pos": 5, "label_type": "影像检查"}, {"start_pos": 7, "end_pos": 12, "label_type": "疾病和诊断"}]}
+{"originalText": "患者今晨排稀水便双次，量少，未排气，目前禁食中，仍有腹胀，血压偏低，心率偏快，四肢发冷，排尿1次约50ML。", "entities": [{"start_pos": 26, "end_pos": 27, "label_type": "解剖部位"}, {"start_pos": 39, "end_pos": 41, "label_type": "解剖部位"}]}
+{"originalText": "追问病史，患者2016-2-2因“直肠癌”行HARTMANN+乙状结肠造瘘术，，术后病理示：腺癌PT4AN2AM0 IIIC期，", "entities": [{"start_pos": 17, "end_pos": 20, "label_type": "疾病和诊断"}, {"start_pos": 22, "end_pos": 38, "label_type": "手术"}, {"start_pos": 46, "end_pos": 63, "label_type": "疾病和诊断"}]}
+{"originalText": "术后行XELOX方案化疗6程，过程顺利，于2016-11-24行乙状结肠造口回纳术，术后患者恢复可，", "entities": [{"start_pos": 32, "end_pos": 41, "label_type": "手术"}]}
+{"originalText": "排便排气正常，偶有便秘，近期油腻饮食较多。", "entities": []}
+{"originalText": "患者2012年7月无明显诱因出现下腹部不适，在外院通过胃镜诊断为胃窦癌，遂于2013-1-31在我院行胃癌根治术（远端胃大切），", "entities": [{"start_pos": 16, "end_pos": 19, "label_type": "解剖部位"}, {"start_pos": 32, "end_pos": 35, "label_type": "疾病和诊断"}, {"start_pos": 51, "end_pos": 62, "label_type": "手术"}]}
+{"originalText": "术后病理：低分化腺癌，小灶为粘液腺癌，侵及胃壁粘膜上层，1/33(+),PT1BN1M0，IB期。", "entities": [{"start_pos": 5, "end_pos": 10, "label_type": "疾病和诊断"}, {"start_pos": 14, "end_pos": 18, "label_type": "疾病和诊断"}, {"start_pos": 21, "end_pos": 22, "label_type": "解剖部位"}]}
+{"originalText": "术后恢复良好，于2013-3-1、2013-03-26、2013-04-24、2013-05-28、", "entities": []}
+{"originalText": "2013-06-28行单药希罗达辅助化疗5程，化疗后患者耐受性良好，今遵原主诊医师意见继续行原方案化疗。", "entities": [{"start_pos": 13, "end_pos": 16, "label_type": "药物"}]}
+{"originalText": "近期患者精神、睡眠、食欲可，大小便正常，体重未见明显减轻。", "entities": []}
+{"originalText": "，患者2007.4因“右下颈肿物1月”诊断为鼻咽未分化型非角化行癌（T3N2M0），在我院行TP全身化疗2周期，", "entities": [{"start_pos": 11, "end_pos": 14, "label_type": "解剖部位"}, {"start_pos": 22, "end_pos": 41, "label_type": "疾病和诊断"}]}
+{"originalText": "根治性IMRT，DT6800CGY/30F/7.5W，区域淋巴结DT6400CGY/30F/7.5W，", "entities": [{"start_pos": 27, "end_pos": 32, "label_type": "解剖部位"}]}
+{"originalText": "临床疗效评价为CR，定期复查未见异常。", "entities": []}
+{"originalText": "2011.1出现黄疸，于我院PET/CT，检查示：鼻咽癌并肝、腹腔积腹膜后淋巴结转移。", "entities": [{"start_pos": 14, "end_pos": 20, "label_type": "影像检查"}, {"start_pos": 25, "end_pos": 42, "label_type": "疾病和诊断"}]}
+{"originalText": "遂于2011.3.11行ERCP+胆管支架植入术，术后于2011.3.22、2011.4.12、2011.5.4、", "entities": [{"start_pos": 12, "end_pos": 24, "label_type": "手术"}]}
+{"originalText": "2011.5.25行TPF化疗4程。", "entities": []}
+{"originalText": "2011.6.10，复查CT示：肝S4病灶，考虑转移瘤。", "entities": [{"start_pos": 12, "end_pos": 14, "label_type": "影像检查"}, {"start_pos": 16, "end_pos": 19, "label_type": "解剖部位"}]}
+{"originalText": "肝S4 病灶，考虑肝转移瘤，对比2011.4.29 日CT,较前稍缩小。", "entities": [{"start_pos": 0, "end_pos": 3, "label_type": "解剖部位"}, {"start_pos": 9, "end_pos": 13, "label_type": "疾病和诊断"}, {"start_pos": 27, "end_pos": 29, "label_type": "影像检查"}]}
+{"originalText": "肝门区、门腔间隙、腹膜后淋巴结肿大，较前缩小。", "entities": [{"start_pos": 0, "end_pos": 3, "label_type": "解剖部位"}, {"start_pos": 4, "end_pos": 8, "label_type": "解剖部位"}, {"start_pos": 9, "end_pos": 15, "label_type": "解剖部位"}]}
+{"originalText": "鼻咽癌治疗后，鼻咽腔未见明确占位性病变。", "entities": [{"start_pos": 0, "end_pos": 6, "label_type": "疾病和诊断"}, {"start_pos": 7, "end_pos": 9, "label_type": "解剖部位"}]}
+{"originalText": "于2011.6.14、2011.7.5行紫杉醇+顺铂+5-FU化疗2程。", "entities": [{"start_pos": 20, "end_pos": 23, "label_type": "药物"}, {"start_pos": 24, "end_pos": 26, "label_type": "药物"}, {"start_pos": 27, "end_pos": 31, "label_type": "药物"}]}
+{"originalText": "定期复查，2011.10.18复查鼻咽、，颈部及下腹部CT提示：肝S4 病灶，考虑肝转移瘤，较前无大变化。", "entities": [{"start_pos": 17, "end_pos": 29, "label_type": "影像检查"}, {"start_pos": 32, "end_pos": 35, "label_type": "解剖部位"}, {"start_pos": 41, "end_pos": 45, "label_type": "疾病和诊断"}]}
+{"originalText": "肝门区、门腔间隙、腹膜后淋巴结肿大，较前无大变化。", "entities": [{"start_pos": 0, "end_pos": 3, "label_type": "解剖部位"}, {"start_pos": 4, "end_pos": 8, "label_type": "解剖部位"}, {"start_pos": 9, "end_pos": 15, "label_type": "解剖部位"}]}
+{"originalText": "于2011.10.26在我院CT室行肝转移瘤微波消融术；2011.12.，19我院下腹部CT:肝S4病灶较前无明显改变。", "entities": [{"start_pos": 14, "end_pos": 16, "label_type": "影像检查"}, {"start_pos": 18, "end_pos": 27, "label_type": "手术"}, {"start_pos": 41, "end_pos": 46, "label_type": "影像检查"}, {"start_pos": 47, "end_pos": 50, "label_type": "解剖部位"}]}
+{"originalText": "肝门区、门腔间隙、腹主动脉旁多发淋巴结，部分病灶增大提示肿瘤进展，于2011-12-29予GD(艾素135MG D1+泽菲1.8 D1，", "entities": [{"start_pos": 0, "end_pos": 3, "label_type": "解剖部位"}, {"start_pos": 4, "end_pos": 8, "label_type": "解剖部位"}, {"start_pos": 9, "end_pos": 13, "label_type": "解剖部位"}, {"start_pos": 48, "end_pos": 50, "label_type": "药物"}, {"start_pos": 59, "end_pos": 61, "label_type": "药物"}]}
+{"originalText": "8）方案化疗1程、2012-01-19、2012-02-14，2012-3-6开始在我科行4程GD方案化疗，", "entities": []}
+{"originalText": "过程顺利。", "entities": []}
+{"originalText": "今日入我科继续化疗。", "entities": []}
+{"originalText": "自起病以来，患者精神、睡眠可，食欲如常，大小便正常，体重无上降。", "entities": []}
+{"originalText": "患者于4月前被家属发现意识模糊，胡言乱语，无法交流，无呼吸困难、抽搐及大小便失禁等，家属将其送入我院急诊科查指血糖2.1mmol/l，", "entities": [{"start_pos": 54, "end_pos": 57, "label_type": "实验室检验"}]}
+{"originalText": "血压216/98mmHg，收入内一科住院治疗考虑诊断为“1、低血糖症；2、腔隙性脑梗死；3、高血压病？；", "entities": [{"start_pos": 30, "end_pos": 34, "label_type": "疾病和诊断"}, {"start_pos": 37, "end_pos": 43, "label_type": "疾病和诊断"}, {"start_pos": 46, "end_pos": 51, "label_type": "疾病和诊断"}]}
+{"originalText": "4、低钾血症；5、2型糖尿病？”，症状稍好转后自动出院，2小时前患者家属诉患者自行服用某药物（具体不详）后，", "entities": [{"start_pos": 2, "end_pos": 6, "label_type": "疾病和诊断"}, {"start_pos": 9, "end_pos": 15, "label_type": "疾病和诊断"}]}
+{"originalText": "出现呼之不应，无恶心呕吐，无肢体抽搐，无呼吸困难，无两上肢水肿，送至我院急诊科查血糖 1.7mmol/l，", "entities": [{"start_pos": 26, "end_pos": 29, "label_type": "解剖部位"}, {"start_pos": 40, "end_pos": 42, "label_type": "实验室检验"}]}
+{"originalText": "血压190/98mmhg，予以高糖静脉推注后患者神清，呼之能应，遂急诊科以“低血糖”收入我科住院治疗。", "entities": [{"start_pos": 38, "end_pos": 41, "label_type": "疾病和诊断"}]}
+{"originalText": "患者自患病以来，精神、食欲、睡眠尚可，大便、小便正常，体重无明显改变。", "entities": []}
+{"originalText": "，于2006.6.5行乙状结肠癌根治术，术后病理分期PT3N0，术后行FOLFOX7*6，之后XEL*3，", "entities": [{"start_pos": 11, "end_pos": 19, "label_type": "手术"}, {"start_pos": 47, "end_pos": 50, "label_type": "药物"}]}
+{"originalText": "定期复查。", "entities": []}
+{"originalText": "2013.1便血，2013.2.20，复查肠镜：（距肛门14-17CM）中分化腺癌；（升结肠）管状腺瘤，I级。", "entities": [{"start_pos": 26, "end_pos": 28, "label_type": "解剖部位"}, {"start_pos": 36, "end_pos": 41, "label_type": "疾病和诊断"}, {"start_pos": 43, "end_pos": 54, "label_type": "疾病和诊断"}]}
+{"originalText": "2013.3.25行直肠癌低位前切除术，，术后病理：直肠（切除）浸润性中分化腺癌，大小6.6CM；癌浸及肠周脂肪组织；", "entities": [{"start_pos": 10, "end_pos": 19, "label_type": "手术"}, {"start_pos": 26, "end_pos": 40, "label_type": "疾病和诊断"}, {"start_pos": 52, "end_pos": 53, "label_type": "解剖部位"}]}
+{"originalText": "脉管（-），淋巴结（0/15）；断端（-）。", "entities": []}
+{"originalText": "4月前我院行吻合口扩张，扩张后患者排便困难有缓解，此次为复查来诊。", "entities": [{"start_pos": 6, "end_pos": 11, "label_type": "手术"}]}
+{"originalText": "我院内镜上切除肛管病变,术后病理为绒毛状腺瘤,基底切缘净。", "entities": [{"start_pos": 2, "end_pos": 11, "label_type": "手术"}, {"start_pos": 17, "end_pos": 22, "label_type": "疾病和诊断"}]}
+{"originalText": "2015-11自及左腹股沟肿物，当地穿刺病理提示反应性增生，其后发现左髂外占位，PETCT提示恶性。", "entities": [{"start_pos": 9, "end_pos": 13, "label_type": "解剖部位"}, {"start_pos": 40, "end_pos": 45, "label_type": "影像检查"}]}
+{"originalText": "2016-4-7当地骨科腹膜外左髂窝占位活检，病理经我院会诊提示转移性腺癌。", "entities": [{"start_pos": 12, "end_pos": 18, "label_type": "解剖部位"}, {"start_pos": 32, "end_pos": 37, "label_type": "疾病和诊断"}]}
+{"originalText": "CK7-,CK20-。", "entities": []}
+{"originalText": "当地TCT及HPV无异常。", "entities": []}
+{"originalText": "无阴道异常出血或排液。", "entities": [{"start_pos": 1, "end_pos": 3, "label_type": "解剖部位"}]}
+{"originalText": "CEA、CA199及CA72.4升高。", "entities": [{"start_pos": 0, "end_pos": 3, "label_type": "实验室检验"}, {"start_pos": 4, "end_pos": 9, "label_type": "实验室检验"}, {"start_pos": 10, "end_pos": 16, "label_type": "实验室检验"}]}
+{"originalText": "我院复查PET/CT仍未发现原发灶。", "entities": [{"start_pos": 4, "end_pos": 10, "label_type": "影像检查"}]}
+{"originalText": "2016-5-16我院妇科手术，大网膜\\\\左侧结肠旁沟腹膜活检\\\\左附件\\\\左侧盆腔淋巴结\\\\右侧结肠旁沟腹膜\\\\后陷凹腹膜\\\\阑尾\\\\胃壁外生性结节\\\\全子宫+右附件手术切除，", "entities": [{"start_pos": 23, "end_pos": 27, "label_type": "解剖部位"}, {"start_pos": 33, "end_pos": 36, "label_type": "解剖部位"}, {"start_pos": 38, "end_pos": 45, "label_type": "解剖部位"}, {"start_pos": 49, "end_pos": 53, "label_type": "解剖部位"}, {"start_pos": 60, "end_pos": 61, "label_type": "解剖部位"}, {"start_pos": 64, "end_pos": 66, "label_type": "解剖部位"}, {"start_pos": 68, "end_pos": 69, "label_type": "解剖部位"}, {"start_pos": 77, "end_pos": 88, "label_type": "手术"}]}
+{"originalText": "结合外院及本院免疫组化结果符合淋巴结转移性低分化腺癌，肿瘤细胞分化差，考虑原发病灶不明的转移性低分化腺癌。", "entities": [{"start_pos": 15, "end_pos": 26, "label_type": "疾病和诊断"}, {"start_pos": 44, "end_pos": 52, "label_type": "疾病和诊断"}]}
+{"originalText": "2016-6-14开始放疗：CTV(盆腔引流区+左腹股沟淋巴结) 45GY/25F。", "entities": [{"start_pos": 18, "end_pos": 20, "label_type": "解剖部位"}, {"start_pos": 24, "end_pos": 31, "label_type": "解剖部位"}]}
+{"originalText": "放疗20次，左腹股沟区压痛。", "entities": [{"start_pos": 6, "end_pos": 11, "label_type": "解剖部位"}]}
+{"originalText": "2016-6-21TP方案化疗，紫杉醇过敏（颜面部水肿），停用，2016-6-22改用培美曲赛化疗.无恶心呕吐,", "entities": [{"start_pos": 16, "end_pos": 19, "label_type": "药物"}, {"start_pos": 43, "end_pos": 47, "label_type": "药物"}]}
+{"originalText": "腹泻明显,5-6次/日。", "entities": [{"start_pos": 0, "end_pos": 1, "label_type": "解剖部位"}]}
+{"originalText": "2016-7-14多西他赛+DDP。", "entities": [{"start_pos": 9, "end_pos": 13, "label_type": "药物"}, {"start_pos": 14, "end_pos": 17, "label_type": "药物"}]}
+{"originalText": "2016-8-18我科行多西他赛+伯尔定化疗1疗程，化疗后无不适。", "entities": [{"start_pos": 12, "end_pos": 16, "label_type": "药物"}, {"start_pos": 17, "end_pos": 20, "label_type": "药物"}]}
+{"originalText": "，4月余前患者于我院行胃镜检查时发现食管距门齿31-33CM肿物，活检病理示低分化鳞癌，患者无吞咽困难、", "entities": [{"start_pos": 18, "end_pos": 20, "label_type": "解剖部位"}, {"start_pos": 21, "end_pos": 23, "label_type": "解剖部位"}, {"start_pos": 38, "end_pos": 43, "label_type": "疾病和诊断"}]}
+{"originalText": "反酸烧心、吞咽疼痛等不适，，胸CT示：食管胸上段可疑管壁增厚（较厚约8MM），双侧腋上多发小淋巴结。", "entities": [{"start_pos": 14, "end_pos": 17, "label_type": "影像检查"}, {"start_pos": 19, "end_pos": 24, "label_type": "解剖部位"}, {"start_pos": 39, "end_pos": 43, "label_type": "解剖部位"}]}
+{"originalText": "，腹部CT示：两肾囊肿，，全消化道钡餐：食管癌（胸中段 肿块型）；胃癌术后改变；小肠功能较快，考虑胃肠功能紊乱。", "entities": [{"start_pos": 1, "end_pos": 5, "label_type": "影像检查"}, {"start_pos": 7, "end_pos": 11, "label_type": "疾病和诊断"}, {"start_pos": 20, "end_pos": 32, "label_type": "疾病和诊断"}, {"start_pos": 33, "end_pos": 37, "label_type": "疾病和诊断"}, {"start_pos": 40, "end_pos": 42, "label_type": "解剖部位"}, {"start_pos": 49, "end_pos": 55, "label_type": "疾病和诊断"}]}
+{"originalText": "，浅表淋巴结B超示：右锁骨下占位（3.0×1.7×2.1CM），考虑M。", "entities": [{"start_pos": 1, "end_pos": 8, "label_type": "影像检查"}, {"start_pos": 11, "end_pos": 14, "label_type": "解剖部位"}]}
+{"originalText": "行行超声引导上右锁骨下淋巴结穿刺活检，，病理：低分化鳞状细胞癌。", "entities": [{"start_pos": 2, "end_pos": 4, "label_type": "影像检查"}, {"start_pos": 23, "end_pos": 31, "label_type": "疾病和诊断"}]}
+{"originalText": "于2009-10-12给予食管原发灶及锁骨下区域放疗，DT 66GY/33F），并予同步化疗（紫杉醇45MG/M^2/W 75MG，", "entities": [{"start_pos": 13, "end_pos": 15, "label_type": "解剖部位"}, {"start_pos": 19, "end_pos": 22, "label_type": "解剖部位"}, {"start_pos": 47, "end_pos": 50, "label_type": "药物"}]}
+{"originalText": "6W）及右锁骨下淋巴结浅部热疗（2/W，3W）。", "entities": [{"start_pos": 4, "end_pos": 11, "label_type": "解剖部位"}]}
+{"originalText": "放疗食管粘膜反应II度，皮肤粘膜反应II度，骨髓抑制II度，，评效：PR。", "entities": [{"start_pos": 2, "end_pos": 4, "label_type": "解剖部位"}, {"start_pos": 22, "end_pos": 29, "label_type": "疾病和诊断"}]}
+{"originalText": "给予紫杉醇+顺铂方案化疗2周期，现为行进一步治疗入院，患者自发病以来患者精神好，进食可，二便正常，体重无明显改变。", "entities": [{"start_pos": 2, "end_pos": 5, "label_type": "药物"}, {"start_pos": 6, "end_pos": 8, "label_type": "药物"}]}
+{"originalText": "缘于入院前19年因“装修接触油漆”后出现胸闷、气喘、呼吸困难，可闻及喉间喘鸣音，无咳嗽、咳痰，无出汗，", "entities": [{"start_pos": 20, "end_pos": 21, "label_type": "解剖部位"}]}
+{"originalText": "无伴嗜睡、意识模糊，无皮疹、鼻塞，无流涕、打喷嚏，无发热、心悸、胸痛、咳粉红色泡沫痰、咯血，持续半小时症状不缓解，", "entities": [{"start_pos": 14, "end_pos": 15, "label_type": "解剖部位"}, {"start_pos": 29, "end_pos": 30, "label_type": "解剖部位"}, {"start_pos": 32, "end_pos": 33, "label_type": "解剖部位"}]}
+{"originalText": "遂就诊于当地医院，诊断为“支气管哮喘”，予“解痉平喘、抗炎、激素”等治疗（具体药物不详），症状缓解。", "entities": [{"start_pos": 13, "end_pos": 18, "label_type": "疾病和诊断"}]}
+{"originalText": "此后平均每年发作1-2次，多发于寒冷天气变化、感冒后，症状性质同前，多次住外院及我院治疗（住院号29232705），", "entities": []}
+{"originalText": "经“解痉平喘、激素、抗炎”治疗后（具体不详），症状可以缓解。", "entities": []}
+{"originalText": "此后长期使用“布地奈德福莫特罗粉吸入剂”，病情可以控制。", "entities": [{"start_pos": 7, "end_pos": 16, "label_type": "药物"}]}
+{"originalText": "入院前5年逐渐出现“爬3层楼、平地负重快走”后胸闷、气促，伴后背闷痛感，无伴喉间喘鸣音，静息约15分钟后可缓解。", "entities": [{"start_pos": 23, "end_pos": 24, "label_type": "解剖部位"}, {"start_pos": 30, "end_pos": 32, "label_type": "解剖部位"}]}
+{"originalText": "入院前2年无明显诱因出现反复夜间阵发性呼吸困难，伴心悸、胸闷，偶有心前区针刺样疼痛，无放射痛，无咳嗽、", "entities": [{"start_pos": 25, "end_pos": 26, "label_type": "解剖部位"}, {"start_pos": 28, "end_pos": 29, "label_type": "解剖部位"}, {"start_pos": 33, "end_pos": 36, "label_type": "解剖部位"}]}
+{"originalText": "咯粉红色泡沫样痰，无发热，无肢体浮肿等，不规律使用“舒利迭”及间断吸氧治疗，症状无明显改善，于我院住院予“解痉平喘、", "entities": [{"start_pos": 14, "end_pos": 16, "label_type": "解剖部位"}, {"start_pos": 26, "end_pos": 29, "label_type": "药物"}]}
+{"originalText": "激素、抗炎”治疗后（病历号29273204），症状可以缓解。", "entities": []}
+{"originalText": "出院后坚持使用“舒利迭”吸入及口服“顺尔宁”治疗，上述症状控制良好。", "entities": [{"start_pos": 8, "end_pos": 11, "label_type": "药物"}, {"start_pos": 18, "end_pos": 21, "label_type": "药物"}]}
+{"originalText": "入院前5个月不慎着凉后再次出现胸闷、气喘，伴咳嗽、咳脓痰，无寒战、发热，无胸痛、心悸，无夜间阵发性呼吸困难等不适，", "entities": [{"start_pos": 15, "end_pos": 16, "label_type": "解剖部位"}, {"start_pos": 37, "end_pos": 38, "label_type": "解剖部位"}, {"start_pos": 40, "end_pos": 41, "label_type": "解剖部位"}]}
+{"originalText": "就诊我科，以“支气管哮喘、肺部感染”等收入院，经予“头孢地尼”抗感染，“舒利迭、顺耳宁”改善气道顺应性等治疗症状缓解出院（旧病历号14018343），", "entities": [{"start_pos": 7, "end_pos": 12, "label_type": "疾病和诊断"}, {"start_pos": 13, "end_pos": 17, "label_type": "疾病和诊断"}, {"start_pos": 26, "end_pos": 30, "label_type": "药物"}, {"start_pos": 36, "end_pos": 39, "label_type": "药物"}, {"start_pos": 40, "end_pos": 43, "label_type": "药物"}]}
+{"originalText": "出院后仍偶有咳嗽，痰少而粘。", "entities": []}
+{"originalText": "入院前1周无明显诱因再次出现胸闷反复发作，伴心悸，时有咳嗽，无明显咳痰，无胸痛、夜间阵发性呼吸困难、", "entities": [{"start_pos": 14, "end_pos": 15, "label_type": "解剖部位"}, {"start_pos": 22, "end_pos": 23, "label_type": "解剖部位"}, {"start_pos": 37, "end_pos": 38, "label_type": "解剖部位"}]}
+{"originalText": "端坐呼吸，无浮肿，无寒战、发热，就诊我院门诊考虑““支气管哮喘急性发作、肺部感染”等。", "entities": [{"start_pos": 26, "end_pos": 35, "label_type": "疾病和诊断"}, {"start_pos": 36, "end_pos": 40, "label_type": "疾病和诊断"}]}
+{"originalText": "予“拜复乐”抗感染、“舒利迭”解痉平喘、抗炎治疗后，症状缓解。", "entities": [{"start_pos": 2, "end_pos": 5, "label_type": "药物"}, {"start_pos": 11, "end_pos": 14, "label_type": "药物"}]}
+{"originalText": "今为进一步中西医结合诊治，门诊拟“哮喘”收入院。", "entities": [{"start_pos": 17, "end_pos": 19, "label_type": "疾病和诊断"}]}
+{"originalText": "自发病以来，精神尚可，食欲、睡眠欠佳，大小便正常，体重无明显变化。", "entities": []}
+{"originalText": "现症见：胸闷、心悸、咳嗽、咳痰，痰白粘，量少。", "entities": [{"start_pos": 4, "end_pos": 5, "label_type": "解剖部位"}, {"start_pos": 7, "end_pos": 8, "label_type": "解剖部位"}]}
+{"originalText": "纳寐欠佳。", "entities": []}
+{"originalText": "患者因胃MT于2010年1月14日在我科行腹腔镜根治性全胃切除术，术后病理示：(全胃)平坦型低分化腺癌,", "entities": [{"start_pos": 3, "end_pos": 6, "label_type": "疾病和诊断"}, {"start_pos": 21, "end_pos": 32, "label_type": "手术"}, {"start_pos": 39, "end_pos": 51, "label_type": "疾病和诊断"}]}
+{"originalText": "侵及全层及周围脂肪组织,呈弥漫浸润性生长,侵及神经束,部分脉管可见癌栓,双切缘未见肿瘤累及. 检出小弯淋巴结13枚,", "entities": [{"start_pos": 49, "end_pos": 54, "label_type": "解剖部位"}]}
+{"originalText": "其中9枚见癌转移; 检出大弯淋巴结3枚,均可见癌转移; 检出幽门下淋巴结2枚,均未见癌转移; 检出幽门上淋巴结13枚,", "entities": [{"start_pos": 12, "end_pos": 17, "label_type": "解剖部位"}, {"start_pos": 30, "end_pos": 36, "label_type": "解剖部位"}, {"start_pos": 49, "end_pos": 55, "label_type": "解剖部位"}]}
+{"originalText": "均见癌转移; 另送14组淋巴结2枚,均可见癌转移; 另送切缘未见癌累及。", "entities": []}
+{"originalText": "患者术少量多餐，偶有腹泻，无发热、恶心、呕吐等。", "entities": [{"start_pos": 10, "end_pos": 11, "label_type": "解剖部位"}]}
+{"originalText": "已行2次化疗，现为化疗收住入院。", "entities": []}
+{"originalText": "，主因”腹痛”就诊，诊断胃癌，于2013.6.11行全胃切除术，未见手术记录，，术后病理：胃未分化癌，部分低分化癌，", "entities": [{"start_pos": 4, "end_pos": 5, "label_type": "解剖部位"}, {"start_pos": 12, "end_pos": 14, "label_type": "疾病和诊断"}, {"start_pos": 26, "end_pos": 31, "label_type": "手术"}, {"start_pos": 45, "end_pos": 57, "label_type": "疾病和诊断"}]}
+{"originalText": "侵及胃壁肌层，伴网膜淋巴结可见癌转移，断端-，，**三院病理会诊：胃低分化腺癌，大部分为印戒细胞癌，", "entities": [{"start_pos": 2, "end_pos": 3, "label_type": "解剖部位"}, {"start_pos": 8, "end_pos": 13, "label_type": "解剖部位"}, {"start_pos": 33, "end_pos": 49, "label_type": "疾病和诊断"}]}
+{"originalText": "浸润至浆膜上层，未见脉管癌栓及神经侵犯，淋巴结0/4。", "entities": []}
+{"originalText": "术后恢复可。", "entities": []}
+{"originalText": "饮食少。", "entities": []}
+{"originalText": "2013.7.26口服TS-1 50MG BID，完成1周期。", "entities": [{"start_pos": 11, "end_pos": 15, "label_type": "药物"}]}
+{"originalText": "自觉头晕、胃肠不适。", "entities": [{"start_pos": 2, "end_pos": 3, "label_type": "解剖部位"}, {"start_pos": 5, "end_pos": 7, "label_type": "解剖部位"}]}
+{"originalText": "因白细胞减少2度、粒细胞减少2度，贫血1度，血象恢复慢，停药3周，2013-8-31起行第2周期TS-1 40MGBID口服。", "entities": [{"start_pos": 1, "end_pos": 4, "label_type": "实验室检验"}, {"start_pos": 17, "end_pos": 19, "label_type": "疾病和诊断"}, {"start_pos": 48, "end_pos": 53, "label_type": "药物"}]}
+{"originalText": "2013-9-4，复查血常规：WBC3.88，NE2.2，HGB126，PLT205。", "entities": [{"start_pos": 15, "end_pos": 18, "label_type": "实验室检验"}, {"start_pos": 23, "end_pos": 25, "label_type": "实验室检验"}, {"start_pos": 29, "end_pos": 32, "label_type": "实验室检验"}, {"start_pos": 36, "end_pos": 39, "label_type": "实验室检验"}]}
+{"originalText": "\\U0004\\U0004 进食较前好转，体重不足70斤。", "entities": []}
+{"originalText": "患者于2月前无明显诱因出现粘液血便，就诊当地医院，直肠指检示：距肛门5cm直肠前壁可及菜花样肿物，3/4周肠腔占位，", "entities": [{"start_pos": 25, "end_pos": 27, "label_type": "解剖部位"}, {"start_pos": 32, "end_pos": 34, "label_type": "解剖部位"}, {"start_pos": 37, "end_pos": 39, "label_type": "解剖部位"}, {"start_pos": 53, "end_pos": 54, "label_type": "解剖部位"}]}
+{"originalText": "质硬，当地电子肠镜检查报告示：距肛门5cm直肠见一环形隆起肿物，病理诊断为直肠管状腺癌，浸润肌层。", "entities": [{"start_pos": 16, "end_pos": 18, "label_type": "解剖部位"}, {"start_pos": 21, "end_pos": 23, "label_type": "解剖部位"}, {"start_pos": 37, "end_pos": 43, "label_type": "疾病和诊断"}]}
+{"originalText": "未经诊治，为求进一步治疗入我院。", "entities": []}
+{"originalText": "我院病理会诊示：（直肠）符合中分化腺癌，超声内镜示直肠壁实性占位病变，符合直肠癌声像，考虑侵犯肠壁全壁，", "entities": [{"start_pos": 9, "end_pos": 11, "label_type": "解剖部位"}, {"start_pos": 14, "end_pos": 19, "label_type": "疾病和诊断"}, {"start_pos": 25, "end_pos": 27, "label_type": "解剖部位"}, {"start_pos": 37, "end_pos": 40, "label_type": "疾病和诊断"}, {"start_pos": 47, "end_pos": 48, "label_type": "解剖部位"}]}
+{"originalText": "肠周可见多个淋巴结，盆腔mri示：直肠中上段肠壁不规则增厚，符合直肠癌，右侧髂血管旁见一淋巴结，大小约17×15cm，", "entities": [{"start_pos": 0, "end_pos": 1, "label_type": "解剖部位"}, {"start_pos": 10, "end_pos": 15, "label_type": "影像检查"}, {"start_pos": 17, "end_pos": 19, "label_type": "解剖部位"}, {"start_pos": 22, "end_pos": 23, "label_type": "解剖部位"}, {"start_pos": 32, "end_pos": 35, "label_type": "疾病和诊断"}, {"start_pos": 36, "end_pos": 41, "label_type": "解剖部位"}]}
+{"originalText": "信号均匀，强化较明显。", "entities": []}
+{"originalText": "遂就诊我科，于2013-03-04及2013-03-27于我科行xelox方案化疗2程，过程顺利，未诉特殊不适。", "entities": []}
+{"originalText": "2013年3月20日给予辅助性放疗，总剂量50gy/25f，区域淋巴结预防剂量46gy/25f，现患者来院行下一程化疗，", "entities": []}
+{"originalText": "患者自起病以来，胃纳睡眠可，小便正常，体重无明显下降。", "entities": [{"start_pos": 8, "end_pos": 9, "label_type": "解剖部位"}]}
+{"originalText": "1+年前患者服用“头痛粉”后解黑色成形大便，共3次，量约250g/次，伴头昏、乏力、皮肤黏膜苍白，无反酸、", "entities": [{"start_pos": 36, "end_pos": 37, "label_type": "解剖部位"}]}
+{"originalText": "嗳气、烧心，无呕血、腹痛、腹胀、腹泻，无恶心、呕吐、晕厥，无口干、颜面肢体水肿、腹围增大。", "entities": [{"start_pos": 10, "end_pos": 11, "label_type": "解剖部位"}, {"start_pos": 13, "end_pos": 14, "label_type": "解剖部位"}, {"start_pos": 16, "end_pos": 17, "label_type": "解剖部位"}, {"start_pos": 30, "end_pos": 31, "label_type": "解剖部位"}, {"start_pos": 34, "end_pos": 35, "label_type": "解剖部位"}, {"start_pos": 35, "end_pos": 37, "label_type": "解剖部位"}]}
+{"originalText": "于我院查“Hb32g/L”，诊断为“1、消化道出血原因待查 2、重度贫血3、肝硬化4、慢性丙型肝炎”，", "entities": [{"start_pos": 5, "end_pos": 7, "label_type": "实验室检验"}, {"start_pos": 20, "end_pos": 29, "label_type": "疾病和诊断"}, {"start_pos": 32, "end_pos": 36, "label_type": "疾病和诊断"}, {"start_pos": 38, "end_pos": 41, "label_type": "疾病和诊断"}, {"start_pos": 43, "end_pos": 49, "label_type": "疾病和诊断"}]}
+{"originalText": "拒绝行胃镜检查，给予止血、纠正贫血、抑酸等对症治疗，未解黑便后自动出院。", "entities": []}
+{"originalText": "期间反复解成形7次余，我院无痛胃镜示胃底静脉曲张（1条），F1，红色征阴性；胃体黏膜隆起，不除外静脉曲张；", "entities": [{"start_pos": 18, "end_pos": 24, "label_type": "疾病和诊断"}, {"start_pos": 38, "end_pos": 40, "label_type": "解剖部位"}]}
+{"originalText": "十二指肠球炎”，下消化道出血原因不能明确，建议行小肠镜、腹部血管DSA检查，患者拒绝，给予止血、纠正贫血、", "entities": [{"start_pos": 0, "end_pos": 6, "label_type": "疾病和诊断"}, {"start_pos": 8, "end_pos": 16, "label_type": "疾病和诊断"}, {"start_pos": 28, "end_pos": 35, "label_type": "影像检查"}]}
+{"originalText": "抑酸等对症处理后症状好转出院，未再正规检查及治疗。", "entities": []}
+{"originalText": "1月前患者无明显诱因自觉全身乏力，活动后感心悸，伴头晕，自诉解黄色成形大便，否认呕血、黑便，重度贫血貌，", "entities": [{"start_pos": 21, "end_pos": 22, "label_type": "解剖部位"}, {"start_pos": 25, "end_pos": 26, "label_type": "解剖部位"}]}
+{"originalText": "遂于我院就诊，拟“贫血，丙肝肝硬化”收入住院。", "entities": [{"start_pos": 9, "end_pos": 11, "label_type": "疾病和诊断"}, {"start_pos": 12, "end_pos": 17, "label_type": "疾病和诊断"}]}
+{"originalText": "病程中精神、睡眠欠佳，饮食尚可，大便如下述，小便正常。", "entities": []}
+{"originalText": "体重无明显减轻。", "entities": []}
+{"originalText": "，缘于入院前4月余于我院诊为结肠肝曲管状腺癌，于2014-10-20在全麻上行腹腔镜上扩大根治性左半结肠癌切除，", "entities": [{"start_pos": 14, "end_pos": 22, "label_type": "疾病和诊断"}, {"start_pos": 39, "end_pos": 55, "label_type": "手术"}]}
+{"originalText": "，术中见：腹腔内无明显出血，无明显粘连，无明显腹水，肝脏无明显转移结节，肿瘤位于结肠肝曲，大小约5*5CM，", "entities": [{"start_pos": 5, "end_pos": 7, "label_type": "解剖部位"}, {"start_pos": 23, "end_pos": 24, "label_type": "解剖部位"}, {"start_pos": 26, "end_pos": 28, "label_type": "解剖部位"}, {"start_pos": 40, "end_pos": 44, "label_type": "解剖部位"}]}
+{"originalText": "侵出浆膜层，未明显侵及十二指肠，周围可及多发肿大淋巴结。", "entities": [{"start_pos": 11, "end_pos": 15, "label_type": "解剖部位"}]}
+{"originalText": "术后病理（病理号201435397、201433427），：（左半结肠），：大肠溃疡型管状腺癌II-III级，", "entities": [{"start_pos": 31, "end_pos": 35, "label_type": "解剖部位"}, {"start_pos": 38, "end_pos": 54, "label_type": "疾病和诊断"}]}
+{"originalText": "部分为粘液腺癌，侵出浆膜，侵犯神经，脉管内见癌栓，手术标本回肠切端、结肠切端及另送（近切端）、（远切端）均未见癌浸润。", "entities": [{"start_pos": 3, "end_pos": 7, "label_type": "疾病和诊断"}, {"start_pos": 29, "end_pos": 31, "label_type": "解剖部位"}, {"start_pos": 34, "end_pos": 36, "label_type": "解剖部位"}]}
+{"originalText": "找到回肠周淋巴结0/5个，结肠周淋巴结7/27个，及另送（结肠中动脉根部）淋巴结3/11个，（回结肠动脉根部）淋巴结0/6个，", "entities": [{"start_pos": 2, "end_pos": 8, "label_type": "解剖部位"}, {"start_pos": 13, "end_pos": 19, "label_type": "解剖部位"}, {"start_pos": 28, "end_pos": 40, "label_type": "解剖部位"}, {"start_pos": 46, "end_pos": 58, "label_type": "解剖部位"}]}
+{"originalText": "见癌转移。", "entities": []}
+{"originalText": "另见阑尾组织。", "entities": [{"start_pos": 2, "end_pos": 4, "label_type": "解剖部位"}]}
+{"originalText": "该病例未检测到KRAS基因12、13号密码子热点突变、BRAF基因V600E突变。", "entities": []}
+{"originalText": "，术后给予对症、营养支持等治疗，恢复良好,伤口愈合II/甲。", "entities": []}
+{"originalText": "于2014-11-29、2014-12-20、2015-01-10、2015-02-03予“奥沙利铂150MG静滴D1+希罗达1000MG口服D2-15”行第1、", "entities": [{"start_pos": 46, "end_pos": 50, "label_type": "药物"}, {"start_pos": 60, "end_pos": 63, "label_type": "药物"}]}
+{"originalText": "2、3、4次化疗方案，化疗过程顺利，无明显化疗副作用。", "entities": []}
+{"originalText": "此次为拟行第5次化疗方案再次就诊我院，门诊拟结肠肝曲管状腺癌术后化疗收入院。", "entities": [{"start_pos": 22, "end_pos": 32, "label_type": "疾病和诊断"}]}
+{"originalText": "下次出院以来精神、睡眠、饮食可，无腹痛、腹胀、发热，大小便正常，体重较前无明显变化。", "entities": [{"start_pos": 17, "end_pos": 18, "label_type": "解剖部位"}, {"start_pos": 20, "end_pos": 21, "label_type": "解剖部位"}]}
+{"originalText": "患者约半月前因“皮肤巩膜黄染”来我院就诊，诊断肝门胆管癌、梗阻性黄疸，排除相关禁忌后于2015-02-12行内镜上胆管支架置入术，", "entities": [{"start_pos": 8, "end_pos": 10, "label_type": "解剖部位"}, {"start_pos": 10, "end_pos": 12, "label_type": "解剖部位"}, {"start_pos": 23, "end_pos": 28, "label_type": "疾病和诊断"}, {"start_pos": 29, "end_pos": 34, "label_type": "疾病和诊断"}, {"start_pos": 54, "end_pos": 64, "label_type": "手术"}]}
+{"originalText": "手术过程顺利，术后给予保肝、增强免疫等治疗，患者病情好转出院。", "entities": [{"start_pos": 12, "end_pos": 13, "label_type": "解剖部位"}]}
+{"originalText": "近半月来患者皮肤、巩膜仍有明显黄染，小便色深黄，大便正常，无寒战、发热，无恶心、呕吐，无腹痛、腹胀、", "entities": [{"start_pos": 6, "end_pos": 8, "label_type": "解剖部位"}, {"start_pos": 9, "end_pos": 11, "label_type": "解剖部位"}, {"start_pos": 44, "end_pos": 45, "label_type": "解剖部位"}, {"start_pos": 47, "end_pos": 48, "label_type": "解剖部位"}]}
+{"originalText": "腹泻，无咳嗽、咳痰，无胸闷、喘憋，无四肢酸痛不适，现患者为求入院复查，来我院就诊，门诊以“梗阻性黄疸”收入我科治疗。", "entities": [{"start_pos": 0, "end_pos": 1, "label_type": "解剖部位"}, {"start_pos": 11, "end_pos": 12, "label_type": "解剖部位"}, {"start_pos": 18, "end_pos": 20, "label_type": "解剖部位"}, {"start_pos": 45, "end_pos": 50, "label_type": "疾病和诊断"}]}
+{"originalText": "     患者自发病以来，神志清，精神可，饮食睡眠可，小便色深黄，大便正常，体重较前无明显减轻。", "entities": []}
+{"originalText": "患者10月余前因“体检发现肺占位2年，咳嗽咳痰2周”于*****医院就诊，查“支气管镜：气管下段新生物蔓延至左支气管开口，", "entities": [{"start_pos": 13, "end_pos": 14, "label_type": "解剖部位"}, {"start_pos": 44, "end_pos": 48, "label_type": "解剖部位"}, {"start_pos": 54, "end_pos": 58, "label_type": "解剖部位"}]}
+{"originalText": "右上叶尖端远端新生物，管腔完全闭塞；病理示：（右上叶、气管下段）低分化（腺）癌”。", "entities": [{"start_pos": 0, "end_pos": 5, "label_type": "解剖部位"}, {"start_pos": 11, "end_pos": 13, "label_type": "解剖部位"}, {"start_pos": 22, "end_pos": 39, "label_type": "疾病和诊断"}]}
+{"originalText": "遂前往**某医院进一步就诊。", "entities": []}
+{"originalText": "于2015-05-12开始分别行培美曲塞+卡铂化疗4次，于2015-08-28行培美曲塞单药化疗;2015-10-21,", "entities": [{"start_pos": 16, "end_pos": 20, "label_type": "药物"}, {"start_pos": 21, "end_pos": 23, "label_type": "药物"}, {"start_pos": 40, "end_pos": 44, "label_type": "药物"}]}
+{"originalText": "2015-11-18,2015-12-16,2015-1-13，2016-02-17,2016-03-16分别于我院行培美曲塞（力比泰针）800mgivgtt化疗，", "entities": [{"start_pos": 59, "end_pos": 63, "label_type": "药物"}, {"start_pos": 64, "end_pos": 68, "label_type": "药物"}]}
+{"originalText": "辅以止吐护胃治疗，化疗后患者无明显不适，一直未行手术治疗及放疗。", "entities": [{"start_pos": 5, "end_pos": 6, "label_type": "解剖部位"}]}
+{"originalText": "*****医院病理：（右上叶、气管下段）低分化（腺）癌。", "entities": [{"start_pos": 10, "end_pos": 27, "label_type": "疾病和诊断"}]}
+{"originalText": "后因咳嗽咳痰，活动时或爬楼梯时气急明显。", "entities": []}
+{"originalText": "于2016-04-23行经支气管镜气管及右主主支气管支气管肿瘤切除术。", "entities": [{"start_pos": 12, "end_pos": 34, "label_type": "手术"}]}
+{"originalText": "今再次入院评估。", "entities": []}
+{"originalText": "自病以来，神清，精神可，胃纳可，睡眠一般，二便无殊，体重无明显减轻。", "entities": [{"start_pos": 12, "end_pos": 13, "label_type": "解剖部位"}]}
+{"originalText": "，患者1月余前无明显诱因出现大便带血，与大便混合，呈脓血状，遂于2013-6-4就诊我院行结肠镜检查发现距肛门55CM横结肠中段、", "entities": [{"start_pos": 53, "end_pos": 55, "label_type": "解剖部位"}, {"start_pos": 59, "end_pos": 64, "label_type": "解剖部位"}]}
+{"originalText": "30CM乙状结肠见双枚息肉，均为广基，前者约3CM大小，后者约1CM大小，头部充血，轻度分叶状改变，", "entities": [{"start_pos": 4, "end_pos": 8, "label_type": "解剖部位"}, {"start_pos": 37, "end_pos": 39, "label_type": "解剖部位"}]}
+{"originalText": "质地柔软。", "entities": []}
+{"originalText": "，术后病理示:(横结肠)绒毛状管状腺瘤，III级，（乙状结肠）粘膜急慢性炎症。", "entities": [{"start_pos": 7, "end_pos": 38, "label_type": "疾病和诊断"}]}
+{"originalText": "于2013-6-26在我院行横结肠腺瘤切除术,，术后病理示:横结肠高级别下皮内瘤变,部分恶变(粘膜内癌)。", "entities": [{"start_pos": 14, "end_pos": 22, "label_type": "手术"}, {"start_pos": 30, "end_pos": 52, "label_type": "疾病和诊断"}]}
+{"originalText": "为求进一步手术治疗入院。", "entities": []}
+{"originalText": "患者自发病以来精神睡眠食欲尚好，小便如常，大便如下述，体重无明显改变。", "entities": []}
+{"originalText": "患者入院前1月受凉后感咳嗽，主要以干咳为主，无明显诱发因素，诉白天、夜间均有咳嗽，无喘累、气促，无发热、", "entities": []}
+{"originalText": "盗汗， 无胸痛、咯血，无恶心、呕吐，无两上肢水肿，患者及家属未引起重视，未到医院就诊及治疗，自行服用药物（具体不详），", "entities": [{"start_pos": 5, "end_pos": 6, "label_type": "解剖部位"}, {"start_pos": 19, "end_pos": 22, "label_type": "解剖部位"}]}
+{"originalText": "今日起床后患者咳嗽剧烈伴有头昏等不适，门诊行血常规：白细胞数 11.4 10^9/L、红细胞数 4.71 10^12/L、", "entities": [{"start_pos": 13, "end_pos": 14, "label_type": "解剖部位"}, {"start_pos": 26, "end_pos": 30, "label_type": "实验室检验"}, {"start_pos": 43, "end_pos": 47, "label_type": "实验室检验"}]}
+{"originalText": "血红蛋白浓度 137 g/L、血小板数 214 10^9/L、大型血小板比率 26.80 %，C反应蛋白 <1 mg/l。", "entities": [{"start_pos": 0, "end_pos": 6, "label_type": "实验室检验"}, {"start_pos": 15, "end_pos": 19, "label_type": "实验室检验"}, {"start_pos": 31, "end_pos": 38, "label_type": "实验室检验"}, {"start_pos": 47, "end_pos": 52, "label_type": "实验室检验"}]}
+{"originalText": "胸片：1.两下肺纤维索条病灶，两肺少许感染。", "entities": [{"start_pos": 0, "end_pos": 2, "label_type": "影像检查"}, {"start_pos": 5, "end_pos": 8, "label_type": "解剖部位"}, {"start_pos": 15, "end_pos": 17, "label_type": "解剖部位"}]}
+{"originalText": "结合临床或必要时进一步CT检查。", "entities": [{"start_pos": 11, "end_pos": 13, "label_type": "影像检查"}]}
+{"originalText": "2.主动脉弓迂曲、钙化。", "entities": [{"start_pos": 2, "end_pos": 6, "label_type": "解剖部位"}]}
+{"originalText": "3.胸椎骨质增生。", "entities": [{"start_pos": 2, "end_pos": 4, "label_type": "解剖部位"}]}
+{"originalText": "门诊以“肺部感染、糖尿病？”收入我科住院治疗。", "entities": [{"start_pos": 4, "end_pos": 8, "label_type": "疾病和诊断"}, {"start_pos": 9, "end_pos": 12, "label_type": "疾病和诊断"}]}
+{"originalText": "患者此次患病以来精神食欲差，大小便正常，睡眠尚可,体重无明显改变.", "entities": []}
+{"originalText": "患者2014年1月无明显诱因出现进硬质食物梗噎感，逐步进展为进半流食后有梗噎感，间断呃逆，无返酸，无呕吐，", "entities": []}
+{"originalText": "无胸背部疼痛，未呕血、黑便，无发热。", "entities": [{"start_pos": 1, "end_pos": 4, "label_type": "解剖部位"}]}
+{"originalText": "无心慌、胸闷、憋气，无心前区痛等症状。", "entities": [{"start_pos": 1, "end_pos": 2, "label_type": "解剖部位"}, {"start_pos": 4, "end_pos": 5, "label_type": "解剖部位"}, {"start_pos": 11, "end_pos": 14, "label_type": "解剖部位"}]}
+{"originalText": "于当地医院行胃镜示“距门齿19cm纵行溃疡，距门齿33cm处食管占位”，于2014-4-9于静脉复合麻醉下行左后外侧开胸，食管下段癌切除，食管胃弓下吻合术。", "entities": [{"start_pos": 11, "end_pos": 13, "label_type": "解剖部位"}, {"start_pos": 23, "end_pos": 25, "label_type": "解剖部位"}, {"start_pos": 30, "end_pos": 32, "label_type": "解剖部位"}, {"start_pos": 54, "end_pos": 77, "label_type": "手术"}]}
+{"originalText": "术后病理回报食管下段中分化鳞癌，食管旁淋巴结阳性。", "entities": [{"start_pos": 6, "end_pos": 15, "label_type": "疾病和诊断"}, {"start_pos": 16, "end_pos": 22, "label_type": "解剖部位"}]}
+{"originalText": "具体不详。", "entities": []}
+{"originalText": "术后于当地医院行3周期单药化疗，具体药物及剂量不详。", "entities": []}
+{"originalText": "术后定期复查未见异常。", "entities": []}
+{"originalText": "2016年6月患者无诱因出现干咳，无咳痰、胸痛、吞咽困难等表现，未在意，2016年10月下旬干咳明显，", "entities": [{"start_pos": 21, "end_pos": 22, "label_type": "解剖部位"}]}
+{"originalText": "伴进行性吞咽困难，目前进半流食，就诊于我院普外科门诊，查上消化道造影提示食道中上段病变；胃镜：食道癌术后复发，", "entities": [{"start_pos": 28, "end_pos": 34, "label_type": "影像检查"}, {"start_pos": 36, "end_pos": 41, "label_type": "解剖部位"}, {"start_pos": 47, "end_pos": 54, "label_type": "疾病和诊断"}]}
+{"originalText": "胃镜病理：（距门齿18-20cm）中低分化鳞状细胞癌。", "entities": [{"start_pos": 7, "end_pos": 9, "label_type": "解剖部位"}, {"start_pos": 17, "end_pos": 26, "label_type": "疾病和诊断"}]}
+{"originalText": "综合考虑食管癌术后复发，为进一步治疗就诊于我科。", "entities": [{"start_pos": 4, "end_pos": 11, "label_type": "疾病和诊断"}]}
+{"originalText": "患者近期精神、睡眠尚可，食欲欠佳，二便正常，体力、体重无着变。", "entities": []}
+{"originalText": "，患者因“腹痛、腹胀1年半，发现结肠息肉1月”于2011.12.5第一次入住我科，，查体：老年女性，", "entities": [{"start_pos": 5, "end_pos": 6, "label_type": "解剖部位"}, {"start_pos": 8, "end_pos": 9, "label_type": "解剖部位"}, {"start_pos": 16, "end_pos": 20, "label_type": "疾病和诊断"}]}
+{"originalText": "神志清，精神可。", "entities": []}
+{"originalText": "全身皮肤粘膜无黄染、皮疹及出血点，无肝掌、蜘蛛痣。", "entities": []}
+{"originalText": "浅表淋巴结未触及肿大。", "entities": []}
+{"originalText": "两肺呼吸音清，未闻及干湿性啰音，未闻及胸膜摩擦音。", "entities": [{"start_pos": 0, "end_pos": 2, "label_type": "解剖部位"}, {"start_pos": 19, "end_pos": 20, "label_type": "解剖部位"}]}
+{"originalText": "心前区无隆起，心界不大，心率64次/分，律齐，各瓣膜听诊区未闻及病理性杂音，未闻及心包摩擦音。", "entities": [{"start_pos": 0, "end_pos": 1, "label_type": "解剖部位"}, {"start_pos": 7, "end_pos": 8, "label_type": "解剖部位"}, {"start_pos": 41, "end_pos": 43, "label_type": "解剖部位"}]}
+{"originalText": "腹部饱满，无腹壁静脉曲张。", "entities": [{"start_pos": 0, "end_pos": 2, "label_type": "解剖部位"}, {"start_pos": 6, "end_pos": 10, "label_type": "解剖部位"}]}
+{"originalText": "腹软，脐上腹部压痛，无反跳痛，肝脾肋上未触及，未触及异常包块，MURPHY'S征（-），肝肾区无叩痛，", "entities": [{"start_pos": 0, "end_pos": 1, "label_type": "解剖部位"}, {"start_pos": 3, "end_pos": 7, "label_type": "解剖部位"}, {"start_pos": 15, "end_pos": 16, "label_type": "解剖部位"}, {"start_pos": 16, "end_pos": 17, "label_type": "解剖部位"}, {"start_pos": 44, "end_pos": 45, "label_type": "解剖部位"}, {"start_pos": 45, "end_pos": 46, "label_type": "解剖部位"}]}
+{"originalText": "移动性浊音（-），肠鸣音正常，两上肢无水肿。", "entities": [{"start_pos": 9, "end_pos": 10, "label_type": "解剖部位"}, {"start_pos": 15, "end_pos": 18, "label_type": "解剖部位"}]}
+{"originalText": "入院后完善各项辅助检查，明确病情，于2011.12.6行肠镜检查+息肉切除术，手术顺利，，内镜诊断：结直肠多发息肉内镜上切除术，", "entities": [{"start_pos": 28, "end_pos": 38, "label_type": "手术"}, {"start_pos": 50, "end_pos": 63, "label_type": "手术"}]}
+{"originalText": "，病理诊断：（直肠、乙状结肠）腺管状腺瘤，腺体呈轻度不典型增生。", "entities": [{"start_pos": 7, "end_pos": 9, "label_type": "解剖部位"}, {"start_pos": 10, "end_pos": 14, "label_type": "解剖部位"}, {"start_pos": 15, "end_pos": 20, "label_type": "疾病和诊断"}]}
+{"originalText": "术后给予右氧氟沙星、替硝唑抗感染及对症支持治疗。", "entities": [{"start_pos": 4, "end_pos": 9, "label_type": "药物"}, {"start_pos": 10, "end_pos": 13, "label_type": "药物"}]}
+{"originalText": "患者未述特殊不适症状，病情好转出院。", "entities": []}
+{"originalText": "   患者自下次出院后病情稳定，偶有腹痛、腹胀，但程度较轻，今日为复查肠镜再来我院，，门诊行肠镜示：大肠多发息肉，", "entities": [{"start_pos": 18, "end_pos": 19, "label_type": "解剖部位"}, {"start_pos": 21, "end_pos": 22, "label_type": "解剖部位"}, {"start_pos": 50, "end_pos": 56, "label_type": "疾病和诊断"}]}
+{"originalText": "遂行息肉切除术，并以“多发性大肠息肉，内镜上切除术”收入院。", "entities": [{"start_pos": 2, "end_pos": 7, "label_type": "手术"}, {"start_pos": 11, "end_pos": 18, "label_type": "疾病和诊断"}, {"start_pos": 19, "end_pos": 25, "label_type": "手术"}]}
+{"originalText": "   患者自发病以来，饮食、睡眠好，大小便未见异常。", "entities": []}
+{"originalText": "体重无明显减轻。", "entities": []}
+{"originalText": "，缘患者因“大便带血6月余”来我院就诊，确诊乙状结肠癌，于2017.1.6全麻上行“腹腔镜乙状结肠切除+肠粘连松解”术,", "entities": [{"start_pos": 22, "end_pos": 27, "label_type": "疾病和诊断"}, {"start_pos": 42, "end_pos": 57, "label_type": "手术"}]}
+{"originalText": "，术后病理：1（肠大体）镜检为肠中至低分化腺癌，癌组织浸润至肠壁浆膜上层，可见脉管内癌栓及神经束侵犯。", "entities": [{"start_pos": 8, "end_pos": 9, "label_type": "解剖部位"}, {"start_pos": 15, "end_pos": 23, "label_type": "疾病和诊断"}, {"start_pos": 30, "end_pos": 31, "label_type": "解剖部位"}]}
+{"originalText": "（近切缘）（远切缘）未见癌。", "entities": []}
+{"originalText": "LN 0/5（+）（病理科已经仔细寻找）。", "entities": []}
+{"originalText": "，免疫组化：，1A：PMMR，HER-2（2+），KI67（70%+）。", "entities": []}
+{"originalText": "术后恢复可，2017-2-13行XELOX化疗一程。", "entities": []}
+{"originalText": "近2周出现胸闷，2017-3-3，心电图：加速性房性心律，偶见窦性夺获。", "entities": [{"start_pos": 5, "end_pos": 6, "label_type": "解剖部位"}]}
+{"originalText": "病人至**教授就诊，并查心肌酶，**教授示，心肌酶无明显异常，可予继续化疗，密切观察心脏情况，已向病人反复强调化疗可能加重心脏毒性，", "entities": [{"start_pos": 42, "end_pos": 44, "label_type": "解剖部位"}, {"start_pos": 61, "end_pos": 63, "label_type": "解剖部位"}]}
+{"originalText": "病人表示理解，仍签名要求化疗。", "entities": []}
+{"originalText": "2017-03-09、2017-03-30、2017-04-20行XELOX方案化疗3程，现为行上程化疗，", "entities": []}
+{"originalText": "按主诊教授意见收入我科。", "entities": []}
+{"originalText": "患者入院15天前，因皮肤感染自服中药（具体不详）后出现中下腹不适，持续腹胀，无腹痛，无自行缓解因素，", "entities": [{"start_pos": 10, "end_pos": 12, "label_type": "解剖部位"}, {"start_pos": 27, "end_pos": 30, "label_type": "解剖部位"}, {"start_pos": 35, "end_pos": 36, "label_type": "解剖部位"}, {"start_pos": 39, "end_pos": 40, "label_type": "解剖部位"}]}
+{"originalText": "餐前餐后无加重，伴有恶心、反酸，无呕吐，无畏寒、发热，无咳嗽、咳痰，无胸闷、气促、呼吸困难；患者未予以重视，", "entities": [{"start_pos": 35, "end_pos": 36, "label_type": "解剖部位"}]}
+{"originalText": "下述症状持续存在，入院双天前，患者出现便秘，无肛门坠胀感，今为求进一步诊治，遂入我院门诊就诊，行无痛性电子胃镜检查提示：慢性非萎缩性胃炎伴糜烂。", "entities": [{"start_pos": 23, "end_pos": 25, "label_type": "解剖部位"}, {"start_pos": 60, "end_pos": 71, "label_type": "疾病和诊断"}]}
+{"originalText": "腹部彩超提示胆囊炎、肝功异常。", "entities": [{"start_pos": 0, "end_pos": 4, "label_type": "影像检查"}, {"start_pos": 6, "end_pos": 9, "label_type": "疾病和诊断"}, {"start_pos": 10, "end_pos": 14, "label_type": "疾病和诊断"}]}
+{"originalText": "遂门诊以“胃炎、肝功异常”收入我科治疗。", "entities": [{"start_pos": 5, "end_pos": 7, "label_type": "疾病和诊断"}, {"start_pos": 8, "end_pos": 12, "label_type": "疾病和诊断"}]}
+{"originalText": "，患者约于10月前无明显诱因出现消化不良，餐后饱胀，伴嗳气，偶有反酸，无发热，无恶心、呕吐，无腹泻、", "entities": [{"start_pos": 47, "end_pos": 48, "label_type": "解剖部位"}]}
+{"originalText": "黑便，无肛门上坠感及里急后重感，未规范治疗。", "entities": [{"start_pos": 4, "end_pos": 6, "label_type": "解剖部位"}]}
+{"originalText": "现患者为求明确诊疗来我院就诊，，门诊行胃镜检查示:胃体大弯侧见一直径约0.8CM息肉样隆起，，超声示：隆起为粘膜上层来源等回声光团，", "entities": [{"start_pos": 25, "end_pos": 29, "label_type": "解剖部位"}]}
+{"originalText": "并有颗粒感，，检查诊断：1.萎缩性胃炎伴急性活动；2.胃体隆起，SMT?3.十二指肠炎。", "entities": [{"start_pos": 14, "end_pos": 24, "label_type": "疾病和诊断"}, {"start_pos": 26, "end_pos": 31, "label_type": "疾病和诊断"}, {"start_pos": 32, "end_pos": 35, "label_type": "疾病和诊断"}, {"start_pos": 38, "end_pos": 43, "label_type": "疾病和诊断"}]}
+{"originalText": "现为行进一步治疗，门诊以\\\"胃息肉\\\"收入我科。", "entities": [{"start_pos": 14, "end_pos": 17, "label_type": "疾病和诊断"}]}
+{"originalText": "患者自发病以来，精神可，饮食可，睡眠可，二便正常，体重无明显改变。", "entities": []}
+{"originalText": "2天前无明显诱因患者感左下腹隐痛，呈持续性，症状不明显。", "entities": [{"start_pos": 11, "end_pos": 14, "label_type": "解剖部位"}]}
+{"originalText": "不伴发热、畏寒、寒战、反酸、烧心、嗳气、呃逆、头昏、头痛、乏力、胸闷、胸痛、心悸、气促、腹胀、腹泻、", "entities": [{"start_pos": 15, "end_pos": 16, "label_type": "解剖部位"}, {"start_pos": 23, "end_pos": 24, "label_type": "解剖部位"}, {"start_pos": 26, "end_pos": 27, "label_type": "解剖部位"}, {"start_pos": 32, "end_pos": 33, "label_type": "解剖部位"}, {"start_pos": 35, "end_pos": 36, "label_type": "解剖部位"}, {"start_pos": 38, "end_pos": 39, "label_type": "解剖部位"}, {"start_pos": 44, "end_pos": 45, "label_type": "解剖部位"}, {"start_pos": 47, "end_pos": 48, "label_type": "解剖部位"}]}
+{"originalText": "黑便、纳差、厌油。", "entities": []}
+{"originalText": "腹部不适与活动、体位无明显关系，无肩背部放射痛。", "entities": [{"start_pos": 0, "end_pos": 1, "label_type": "解剖部位"}, {"start_pos": 17, "end_pos": 20, "label_type": "解剖部位"}]}
+{"originalText": "今患者为求进一步治疗入我院门诊，查心肌酶谱：AST 655.1U/L，LDH 670.1U/L。", "entities": [{"start_pos": 22, "end_pos": 25, "label_type": "实验室检验"}, {"start_pos": 35, "end_pos": 38, "label_type": "实验室检验"}]}
+{"originalText": "GLU 12.01mmol/L。", "entities": [{"start_pos": 0, "end_pos": 3, "label_type": "实验室检验"}]}
+{"originalText": "血常规、肌钙蛋白未见明显异常。", "entities": [{"start_pos": 4, "end_pos": 8, "label_type": "实验室检验"}]}
+{"originalText": "心电图：不正常心电图，ST I II v5 v6轻度上移伴T波低平。", "entities": [{"start_pos": 0, "end_pos": 3, "label_type": "影像检查"}]}
+{"originalText": "腹部彩超：轻度脂肪肝，胆囊切除术后，胆总管代偿性增宽，肝内外胆道轻度轻度扩张。", "entities": [{"start_pos": 0, "end_pos": 4, "label_type": "影像检查"}, {"start_pos": 5, "end_pos": 10, "label_type": "疾病和诊断"}, {"start_pos": 11, "end_pos": 17, "label_type": "疾病和诊断"}, {"start_pos": 18, "end_pos": 21, "label_type": "解剖部位"}, {"start_pos": 27, "end_pos": 32, "label_type": "解剖部位"}]}
+{"originalText": "门诊以“肝功能异常”收入我科。", "entities": [{"start_pos": 4, "end_pos": 9, "label_type": "疾病和诊断"}]}
+{"originalText": "患者此次患病以来，精神状态欠佳，小便正常，近期常有便秘。", "entities": []}
+{"originalText": "体重无明显减轻。", "entities": []}
+{"originalText": "患者4+月前以\\\"腹痛20天，发现左侧附件包块2天\\\"，于4个半月前在全麻上行输尿管D-J管置入+剖腹探查+肠粘连分解+盆腔包块切除+放射性粒子置入术。", "entities": [{"start_pos": 9, "end_pos": 10, "label_type": "解剖部位"}, {"start_pos": 17, "end_pos": 21, "label_type": "解剖部位"}, {"start_pos": 39, "end_pos": 75, "label_type": "手术"}]}
+{"originalText": "术后病检回示倾向于颗粒细胞瘤。", "entities": [{"start_pos": 9, "end_pos": 14, "label_type": "疾病和诊断"}]}
+{"originalText": "行BEP方案化疗，化疗顺利。", "entities": []}
+{"originalText": "化疗期间患者生命体征平稳，患者有恶心呕吐等药物毒副反应，化疗后复查血图分析示白细胞上降，予特尔津升白治疗。", "entities": [{"start_pos": 45, "end_pos": 48, "label_type": "药物"}]}
+{"originalText": "现患者一般情况好，无发热畏寒，无恶心呕吐，大小便正常，生命体征正常，心肺未见明显异常。", "entities": [{"start_pos": 34, "end_pos": 35, "label_type": "解剖部位"}, {"start_pos": 35, "end_pos": 36, "label_type": "解剖部位"}]}
+{"originalText": "3月17日血图WBC 0.7×109/L，在我院血液内科行升白细胞治疗，今日遵出院医嘱为第5次化疗入院。", "entities": [{"start_pos": 7, "end_pos": 10, "label_type": "实验室检验"}]}
+{"originalText": "\\U0004   患者本次发病以来，食欲正常， 神志清醒，精神尚可，睡眠欠佳，大便正常，小便正常，体重增加。", "entities": []}
+{"originalText": "，结肠癌切除术后近1年（术中，术后病理不详）术后未行化疗。", "entities": [{"start_pos": 1, "end_pos": 8, "label_type": "疾病和诊断"}]}
+{"originalText": "2月前无诱因腹胀，就诊我院行腹部，C：左肾囊肿。", "entities": [{"start_pos": 6, "end_pos": 7, "label_type": "解剖部位"}, {"start_pos": 14, "end_pos": 15, "label_type": "解剖部位"}, {"start_pos": 19, "end_pos": 23, "label_type": "疾病和诊断"}]}
+{"originalText": "胸，CT：胸上段食管癌，胃周多发淋巴结转移；纵膈7,8组淋巴结转移。", "entities": [{"start_pos": 0, "end_pos": 4, "label_type": "影像检查"}, {"start_pos": 5, "end_pos": 11, "label_type": "疾病和诊断"}, {"start_pos": 12, "end_pos": 21, "label_type": "疾病和诊断"}, {"start_pos": 22, "end_pos": 33, "label_type": "疾病和诊断"}]}
+{"originalText": "左中叶微小结节，转移？，消化道造影：食道胸上段及腹段占位，考虑食管癌可能性大。", "entities": [{"start_pos": 0, "end_pos": 3, "label_type": "解剖部位"}, {"start_pos": 12, "end_pos": 17, "label_type": "影像检查"}, {"start_pos": 18, "end_pos": 26, "label_type": "解剖部位"}, {"start_pos": 31, "end_pos": 34, "label_type": "疾病和诊断"}]}
+{"originalText": "，胃镜：食管上端溃疡隆起性肿物，侵及食管胃结合部。", "entities": [{"start_pos": 4, "end_pos": 6, "label_type": "解剖部位"}, {"start_pos": 18, "end_pos": 24, "label_type": "解剖部位"}]}
+{"originalText": "，活检病理：距门齿35-42CM肿物（活检），：中分化鳞状细胞癌。", "entities": [{"start_pos": 7, "end_pos": 9, "label_type": "解剖部位"}, {"start_pos": 24, "end_pos": 32, "label_type": "疾病和诊断"}]}
+{"originalText": "，肿标：SCC14.7 CYFRA21-1 16.2.目前饮食睡眠可，大小便正常。", "entities": [{"start_pos": 4, "end_pos": 7, "label_type": "实验室检验"}, {"start_pos": 11, "end_pos": 21, "label_type": "实验室检验"}]}
+{"originalText": "体重减轻5KG。", "entities": []}
+{"originalText": "2015-1-15行第3周期TP方案化疗。", "entities": []}
+{"originalText": "，左锁骨下淋巴结肿大半年，PET-CT示代谢增高，全身其他部位未见明显占位及高代谢病灶。", "entities": [{"start_pos": 1, "end_pos": 8, "label_type": "解剖部位"}, {"start_pos": 13, "end_pos": 19, "label_type": "影像检查"}]}
+{"originalText": "，胸CT示：纵膈多发小淋巴结；，胃镜示：食管距门齿30CM处粘膜粗糙，胃窦部粘膜粗糙分别取活检。", "entities": [{"start_pos": 1, "end_pos": 4, "label_type": "影像检查"}, {"start_pos": 6, "end_pos": 8, "label_type": "解剖部位"}, {"start_pos": 20, "end_pos": 22, "label_type": "解剖部位"}, {"start_pos": 23, "end_pos": 25, "label_type": "解剖部位"}, {"start_pos": 35, "end_pos": 38, "label_type": "解剖部位"}]}
+{"originalText": "，病理示:食管粘膜慢性炎、胃慢性炎症伴HP感染。", "entities": [{"start_pos": 4, "end_pos": 12, "label_type": "疾病和诊断"}, {"start_pos": 13, "end_pos": 23, "label_type": "疾病和诊断"}]}
+{"originalText": "鼻咽镜及气管镜检查未见明显异常。", "entities": []}
+{"originalText": "经特需门诊联合会诊，，考虑：原发不明左锁骨下淋巴结转移癌，拟局部放疗，GTV60GY/30F/42D。", "entities": [{"start_pos": 18, "end_pos": 28, "label_type": "疾病和诊断"}]}
+{"originalText": "现已完成10F。", "entities": []}
+{"originalText": "近腹胀明显。", "entities": [{"start_pos": 1, "end_pos": 2, "label_type": "解剖部位"}]}
+{"originalText": "缘于3年前诊为胃癌，在我院全麻上行根治性全胃切除术，手术顺利。", "entities": [{"start_pos": 7, "end_pos": 9, "label_type": "疾病和诊断"}, {"start_pos": 17, "end_pos": 25, "label_type": "手术"}]}
+{"originalText": "术后给予对症、抗感染治疗，恢复良好,伤口愈合II/甲。", "entities": []}
+{"originalText": "此后患者定期复查。", "entities": []}
+{"originalText": "2月余前因感中下腹闷痛不适，自服药物治疗症状仍反复就诊我院，查全腹CT+增强：1、胃大部切除术后改变，", "entities": [{"start_pos": 6, "end_pos": 9, "label_type": "解剖部位"}, {"start_pos": 31, "end_pos": 38, "label_type": "影像检查"}, {"start_pos": 41, "end_pos": 48, "label_type": "疾病和诊断"}]}
+{"originalText": "吻合口区管壁无明显增厚，吻合口周围未见明显肿大淋巴结，下腹部腹膜后少许淋巴结增大，建议隔期复查。", "entities": [{"start_pos": 27, "end_pos": 29, "label_type": "解剖部位"}]}
+{"originalText": "2、胰腺尾部及脾门部脂肪间隙模糊伴斑片状密度增高影，增强扫描轻度强化，多考虑术后改变，建议隔期复查。", "entities": [{"start_pos": 2, "end_pos": 6, "label_type": "解剖部位"}, {"start_pos": 7, "end_pos": 9, "label_type": "解剖部位"}]}
+{"originalText": "3、肝内少许小囊肿，脾脏明显增大。", "entities": [{"start_pos": 2, "end_pos": 3, "label_type": "解剖部位"}, {"start_pos": 10, "end_pos": 12, "label_type": "解剖部位"}]}
+{"originalText": "考虑“胃癌术后腹腔转移”，遂于2014.09.15予“伊立替康280MG静滴D1，替吉奥胶囊(艾奕)80MG口服D1-14”方案，", "entities": [{"start_pos": 3, "end_pos": 11, "label_type": "疾病和诊断"}, {"start_pos": 27, "end_pos": 31, "label_type": "药物"}, {"start_pos": 41, "end_pos": 50, "label_type": "药物"}]}
+{"originalText": "化疗顺利，化疗后无恶心、呕吐，无腹痛、腹泻等不适，今为行上一疗程化疗再次就诊我院，门诊查体后拟“胃癌术后腹腔转移”收住我科。", "entities": [{"start_pos": 16, "end_pos": 17, "label_type": "解剖部位"}, {"start_pos": 19, "end_pos": 20, "label_type": "解剖部位"}, {"start_pos": 48, "end_pos": 56, "label_type": "疾病和诊断"}]}
+{"originalText": "自发病以来，精神睡眠食欲如常，大小便正常，体重无明显改变。", "entities": []}
+{"originalText": "入院前30+年，患者常在受凉后出现咳嗽、咳痰，多为白色泡沫痰，并逐渐出现喘累、气促，好发于冬春季节，", "entities": []}
+{"originalText": "每年累计发病时间超过3月，外院诊断为“慢支炎、肺气肿”，予以抗感染、止咳平喘等治疗后可好转。", "entities": [{"start_pos": 19, "end_pos": 22, "label_type": "疾病和诊断"}, {"start_pos": 23, "end_pos": 26, "label_type": "疾病和诊断"}]}
+{"originalText": "患者喘累、气促症状逐年加重，并逐渐出现间断两上肢水肿，外院考虑为“肺源性心脏病”，未利尿、长期低流量吸氧及吸入剂治疗。", "entities": [{"start_pos": 21, "end_pos": 24, "label_type": "解剖部位"}, {"start_pos": 33, "end_pos": 39, "label_type": "疾病和诊断"}]}
+{"originalText": "7+年前，患者喘累、呼吸困难明显，于外院诊断为“支气管哮喘”（具体检查报告及诊治经过不详），开始使用沙丁胺醇气雾剂治疗。", "entities": [{"start_pos": 24, "end_pos": 29, "label_type": "疾病和诊断"}, {"start_pos": 50, "end_pos": 57, "label_type": "药物"}]}
+{"originalText": "后患者下述症状反复发作，反复住院治疗，最近一次于2017-10-29于我科住院治疗，给予抗感染、化痰、", "entities": []}
+{"originalText": "平喘、改善循环等治疗后好转出院，出院诊断为：1.慢性阻塞性肺疾病急性加重期;2、慢性肺源性心脏病;3、", "entities": [{"start_pos": 24, "end_pos": 37, "label_type": "疾病和诊断"}, {"start_pos": 40, "end_pos": 48, "label_type": "疾病和诊断"}]}
+{"originalText": "支气管哮喘 ;4、冠心病 频发多源性房早，频发室早？院外长期平喘化痰对症治疗。", "entities": [{"start_pos": 0, "end_pos": 5, "label_type": "疾病和诊断"}, {"start_pos": 9, "end_pos": 12, "label_type": "疾病和诊断"}, {"start_pos": 13, "end_pos": 20, "label_type": "疾病和诊断"}, {"start_pos": 21, "end_pos": 26, "label_type": "疾病和诊断"}]}
+{"originalText": "入院前2天前，患者受凉后下述症状较前加重，咳嗽、咳黄白色粘痰，喘累明显，不能平卧位休息，夜间阵发性呼吸困难，", "entities": []}
+{"originalText": "伴有头昏，偶有头疼，无畏寒、寒战、发热，无咯血，无潮热、盗汗，无恶心、呕吐，无腹胀、腹痛，无胸闷、胸痛，", "entities": [{"start_pos": 2, "end_pos": 3, "label_type": "解剖部位"}, {"start_pos": 7, "end_pos": 8, "label_type": "解剖部位"}, {"start_pos": 39, "end_pos": 40, "label_type": "解剖部位"}, {"start_pos": 42, "end_pos": 43, "label_type": "解剖部位"}, {"start_pos": 46, "end_pos": 47, "label_type": "解剖部位"}, {"start_pos": 49, "end_pos": 50, "label_type": "解剖部位"}]}
+{"originalText": "无尿频、尿急、尿痛等不适，自行服用“平喘药”（具体不详），下述症状无明显好转，遂来我院就诊，门诊以“AECOPD”收入我科进一步治疗。", "entities": [{"start_pos": 50, "end_pos": 56, "label_type": "疾病和诊断"}]}
+{"originalText": "患者此次患病以来精神、食欲、睡眠差，大小便正常，体力明显上降，体重无明显改变。", "entities": []}
+{"originalText": "，患者2014-09-23因“便血4天”就诊**二院，09-25，行胃镜示：胃窦低分化腺癌，HER-2（0）。", "entities": [{"start_pos": 38, "end_pos": 45, "label_type": "疾病和诊断"}]}
+{"originalText": " 09-26，全腹CT示：胃窦富血供肿瘤。", "entities": [{"start_pos": 7, "end_pos": 11, "label_type": "影像检查"}, {"start_pos": 13, "end_pos": 15, "label_type": "解剖部位"}]}
+{"originalText": " 09-25胸片（-）。", "entities": [{"start_pos": 6, "end_pos": 8, "label_type": "影像检查"}]}
+{"originalText": " 予抑酸、护胃、输血等支持对症，HB自55G/L升至95G/L.于2014-09-30行腹腔镜胃癌根治术，", "entities": [{"start_pos": 6, "end_pos": 7, "label_type": "解剖部位"}, {"start_pos": 16, "end_pos": 18, "label_type": "实验室检验"}, {"start_pos": 44, "end_pos": 52, "label_type": "手术"}]}
+{"originalText": "，术后病理：胃低分化腺癌，浸润至浆膜层，胃小弯、胃大弯、贲门、幽门、胃右动脉旁周围淋巴结(2/19)(+),", "entities": [{"start_pos": 6, "end_pos": 12, "label_type": "疾病和诊断"}, {"start_pos": 20, "end_pos": 44, "label_type": "解剖部位"}]}
+{"originalText": "大网膜（-），切缘（-），HER-2（0）.分期PT4AN1M0.患者术后恢复可，2014-11-06、", "entities": []}
+{"originalText": "2014-11-27行SOX方案化疗2程，过程顺利，化疗后出现少许皮疹，无恶心、呕吐、腹泻等不良反应。", "entities": [{"start_pos": 43, "end_pos": 44, "label_type": "解剖部位"}]}
+{"originalText": " 2程化疗后出现泪频，胃纳差，腹胀、饮食后腹部隐痛，以夜间为甚，无黑便，偶有稀便，夜间小便频（3次右左），", "entities": [{"start_pos": 11, "end_pos": 12, "label_type": "解剖部位"}, {"start_pos": 15, "end_pos": 16, "label_type": "解剖部位"}, {"start_pos": 21, "end_pos": 22, "label_type": "解剖部位"}]}
+{"originalText": "睡眠精神一般，体重无明显变化。", "entities": []}
+{"originalText": "，患者于2012年9月20日体检行胃镜检查，诊断胃癌，于2012-9-29在**二院行胃癌根治术，，", "entities": [{"start_pos": 24, "end_pos": 26, "label_type": "疾病和诊断"}, {"start_pos": 43, "end_pos": 48, "label_type": "手术"}]}
+{"originalText": "术后病理我院会诊示:胃低分化腺癌，部分印戒细胞癌，可见脉管内瘤栓，浸润深肌层；送检淋巴结27/56见腺癌转移。", "entities": [{"start_pos": 10, "end_pos": 16, "label_type": "疾病和诊断"}, {"start_pos": 19, "end_pos": 24, "label_type": "疾病和诊断"}, {"start_pos": 50, "end_pos": 54, "label_type": "疾病和诊断"}]}
+{"originalText": "原单位，IHC:HER2(1+),VILLIN(+),CDX2(+/-），KI67(25%)，P53（-），", "entities": []}
+{"originalText": "TOP02(15%+),CK(+),CD34血管（+),D2-40淋巴管（+），CEA(+),EGFR(+/-).术后我院，", "entities": []}
+{"originalText": "CT：胃癌术后，吻合口未见明确肿物；右下肺少许纤维增殖灶；肝S7、S3低密度区，考虑囊肿；盆腔未见明确占位病变，", "entities": [{"start_pos": 0, "end_pos": 2, "label_type": "影像检查"}, {"start_pos": 3, "end_pos": 7, "label_type": "疾病和诊断"}, {"start_pos": 18, "end_pos": 21, "label_type": "解剖部位"}, {"start_pos": 29, "end_pos": 35, "label_type": "解剖部位"}, {"start_pos": 45, "end_pos": 47, "label_type": "解剖部位"}]}
+{"originalText": "盆底少量积液。", "entities": [{"start_pos": 0, "end_pos": 6, "label_type": "疾病和诊断"}]}
+{"originalText": "至我可就诊，于2012-10-26、11-20、12-11、2013-1-8给予SOX方案化疗4程，", "entities": []}
+{"originalText": "过程顺利无不适。", "entities": []}
+{"originalText": "病程中精神饮食好睡眠尚可，二便正常，否认恶心呕吐、食欲不振、返酸等不适，自下次出院至今体重未见明显减轻。", "entities": []}
+{"originalText": "患儿生后20天因“左侧嵌顿疝”于外院行“肠切除术”。", "entities": [{"start_pos": 9, "end_pos": 14, "label_type": "疾病和诊断"}, {"start_pos": 20, "end_pos": 24, "label_type": "手术"}]}
+{"originalText": "术后不久，患儿家属即发现其左侧腹股沟可及可复性包块，无红肿，哭吵、活动后明显，平卧位安静时可消失或减轻，", "entities": [{"start_pos": 13, "end_pos": 18, "label_type": "解剖部位"}]}
+{"originalText": "偶诉腹股沟区疼痛，无嵌顿。", "entities": [{"start_pos": 2, "end_pos": 6, "label_type": "解剖部位"}]}
+{"originalText": "今患儿为求进一步诊治来我院，查体示：左腹股沟可及可复性包块，质软，可回纳。", "entities": [{"start_pos": 18, "end_pos": 22, "label_type": "解剖部位"}]}
+{"originalText": "建议患儿手术，遂拟“左斜疝术后”收治患儿平素体健，未见频繁尿路感染，饮食可，睡眠可，大便如常。", "entities": [{"start_pos": 10, "end_pos": 15, "label_type": "疾病和诊断"}]}
+{"originalText": "入院前10+年，患者无明显诱因出现反复咳嗽、咳痰，秋冬季节及受凉感冒后发作，每年累计时间达3月，曾于“***医院”就诊考虑为“慢性支气管炎”，", "entities": [{"start_pos": 63, "end_pos": 69, "label_type": "疾病和诊断"}]}
+{"originalText": "并曾行“气管切开吸痰”（具体不详）。", "entities": [{"start_pos": 4, "end_pos": 8, "label_type": "手术"}]}
+{"originalText": "因患者痴呆，且长期活动量少，多数时间卧床或坐轮椅，不能表述是否有活动后喘累及气促，无两上肢水肿。", "entities": [{"start_pos": 42, "end_pos": 45, "label_type": "解剖部位"}]}
+{"originalText": "入院前4天,患者受凉后咳嗽再发，伴咳痰，痰液粘稠，不易咳出，伴纳差，精神差，不能行走及进食，当地医院给予输注“头孢”后症状无好转，", "entities": [{"start_pos": 55, "end_pos": 57, "label_type": "药物"}]}
+{"originalText": "遂今日就诊于我院，急诊查胸片提示：卧位胸片考虑两肺广泛感染，随访复查或CT进一步检查。", "entities": [{"start_pos": 12, "end_pos": 14, "label_type": "影像检查"}, {"start_pos": 23, "end_pos": 29, "label_type": "疾病和诊断"}, {"start_pos": 35, "end_pos": 37, "label_type": "影像检查"}]}
+{"originalText": "两下肺少许纤维化。", "entities": [{"start_pos": 0, "end_pos": 3, "label_type": "解剖部位"}]}
+{"originalText": "心影稍增大，主动脉球钙化。", "entities": [{"start_pos": 0, "end_pos": 1, "label_type": "解剖部位"}, {"start_pos": 6, "end_pos": 10, "label_type": "解剖部位"}]}
+{"originalText": "两侧肋膈角稍变钝。", "entities": [{"start_pos": 0, "end_pos": 5, "label_type": "解剖部位"}]}
+{"originalText": "为进一步治疗，急诊以“肺部感染”收入我科。", "entities": [{"start_pos": 11, "end_pos": 15, "label_type": "疾病和诊断"}]}
+{"originalText": "患者此次患病以来精神、食欲、睡眠较差，大小便未诉明显异常，体力上降，体重无明显改变。", "entities": []}
+{"originalText": "，缘于入院前半个月前我院行胃镜检查提示：食管炎（A级），贲门息肉样隆起，共双枚，大小分别为1.0CM、", "entities": [{"start_pos": 20, "end_pos": 27, "label_type": "疾病和诊断"}, {"start_pos": 28, "end_pos": 30, "label_type": "解剖部位"}]}
+{"originalText": "1.5CM，慢性萎缩性胃炎，十二指肠球部溃疡（S2期），十二指肠球部炎症。", "entities": [{"start_pos": 6, "end_pos": 13, "label_type": "疾病和诊断"}, {"start_pos": 14, "end_pos": 27, "label_type": "疾病和诊断"}, {"start_pos": 28, "end_pos": 36, "label_type": "疾病和诊断"}]}
+{"originalText": "，胃镜病理：（十二指肠降部）间质中量慢性炎症细胞及少量急性炎症细胞浸润，灶性腺体呈腺瘤样增生。", "entities": [{"start_pos": 7, "end_pos": 13, "label_type": "解剖部位"}]}
+{"originalText": "（贲门）腺下皮轻度肠化，其上见胃固有腺，间质大量急、慢性炎症细胞浸润。", "entities": [{"start_pos": 1, "end_pos": 3, "label_type": "解剖部位"}, {"start_pos": 15, "end_pos": 16, "label_type": "解剖部位"}]}
+{"originalText": "，肠镜检查示：结肠多发息肉，直径0.6CM-1CM。", "entities": [{"start_pos": 7, "end_pos": 9, "label_type": "解剖部位"}]}
+{"originalText": "予内镜上切除部分小息肉。", "entities": []}
+{"originalText": "，病理：（肝曲）肠管状腺瘤，伴腺下皮低级别下皮内瘤变，（横结肠）肠管状腺瘤，伴腺下皮低级别下皮内瘤变（中度不典型增生）。", "entities": [{"start_pos": 4, "end_pos": 13, "label_type": "疾病和诊断"}, {"start_pos": 15, "end_pos": 26, "label_type": "疾病和诊断"}, {"start_pos": 27, "end_pos": 37, "label_type": "疾病和诊断"}, {"start_pos": 39, "end_pos": 59, "label_type": "疾病和诊断"}]}
+{"originalText": "无腹痛、腹胀、腹泻、呕血、排黑便、排血便、里急后重，无恶心、呕吐，无反酸、嗳气、胸骨后烧灼感，无消瘦、", "entities": [{"start_pos": 1, "end_pos": 2, "label_type": "解剖部位"}, {"start_pos": 4, "end_pos": 5, "label_type": "解剖部位"}, {"start_pos": 7, "end_pos": 8, "label_type": "解剖部位"}, {"start_pos": 40, "end_pos": 43, "label_type": "解剖部位"}]}
+{"originalText": "食欲减退等。", "entities": []}
+{"originalText": "今为求进一步诊治求诊我院，门诊拟“胃肠息肉”收住院。", "entities": [{"start_pos": 17, "end_pos": 21, "label_type": "疾病和诊断"}]}
+{"originalText": "近半个月以来，精神、睡眠、食欲尚可，大小便正常，体重无明显变化。", "entities": []}
+{"originalText": "入院前3月患者无明显诱因出现剑突上胀痛，呈阵发性发作，无肩背部放射痛，与进食及体位无明显关系，无明显缓解方式。", "entities": [{"start_pos": 14, "end_pos": 16, "label_type": "解剖部位"}, {"start_pos": 28, "end_pos": 31, "label_type": "解剖部位"}]}
+{"originalText": "伴烧心、嗳气，伴纳差。", "entities": []}
+{"originalText": "无胸闷、胸痛、心累、气促。", "entities": [{"start_pos": 1, "end_pos": 2, "label_type": "解剖部位"}, {"start_pos": 4, "end_pos": 5, "label_type": "解剖部位"}, {"start_pos": 7, "end_pos": 8, "label_type": "解剖部位"}]}
+{"originalText": "在外未予处理。", "entities": []}
+{"originalText": "入院前1月出现活动后心累、气促，以爬坡及下楼后明显，休息后可稍缓解。", "entities": [{"start_pos": 10, "end_pos": 11, "label_type": "解剖部位"}]}
+{"originalText": "无夜间阵发性呼吸困难，无咯粉红色泡沫痰，无咳嗽、咳痰畏寒、发热。", "entities": []}
+{"originalText": "入院前3天出现两上肢浮肿，伴剑突上胀痛、心累、气促，伴咳嗽、咳痰，痰液较少，咯痰费力。", "entities": [{"start_pos": 7, "end_pos": 10, "label_type": "解剖部位"}, {"start_pos": 14, "end_pos": 17, "label_type": "解剖部位"}, {"start_pos": 20, "end_pos": 21, "label_type": "解剖部位"}]}
+{"originalText": "无畏寒、发热、咯血、胸痛。", "entities": []}
+{"originalText": "于2015-07-11在我院门诊行“腹部彩超提示餐后胆囊，两侧胸腔积液，左侧较深间距11.5cm，心电图示：频发室性早搏，", "entities": [{"start_pos": 18, "end_pos": 22, "label_type": "影像检查"}, {"start_pos": 26, "end_pos": 28, "label_type": "解剖部位"}, {"start_pos": 29, "end_pos": 35, "label_type": "疾病和诊断"}, {"start_pos": 49, "end_pos": 52, "label_type": "影像检查"}, {"start_pos": 56, "end_pos": 60, "label_type": "疾病和诊断"}]}
+{"originalText": "顺钟向转位，ST-T改变，窦性心动过速。", "entities": [{"start_pos": 13, "end_pos": 19, "label_type": "疾病和诊断"}]}
+{"originalText": "胸片：1.两上肺感染。", "entities": [{"start_pos": 0, "end_pos": 2, "label_type": "影像检查"}, {"start_pos": 5, "end_pos": 10, "label_type": "疾病和诊断"}]}
+{"originalText": "2.心后多发结节影，建议CT检查，了解是否转移性病变。", "entities": [{"start_pos": 2, "end_pos": 3, "label_type": "解剖部位"}, {"start_pos": 12, "end_pos": 14, "label_type": "影像检查"}]}
+{"originalText": "3.左侧胸腔中等量积液，有包裹趋势。", "entities": [{"start_pos": 2, "end_pos": 11, "label_type": "疾病和诊断"}]}
+{"originalText": "腹部立卧位未见明显异常。", "entities": [{"start_pos": 0, "end_pos": 5, "label_type": "影像检查"}]}
+{"originalText": "4.主动脉硬化。", "entities": [{"start_pos": 2, "end_pos": 7, "label_type": "疾病和诊断"}]}
+{"originalText": "”，当时由于私人原因未予处理。", "entities": []}
+{"originalText": "今日来我院要求住院治疗，为进一步诊治，门诊以“腹痛待查，心衰”收入我科。", "entities": [{"start_pos": 23, "end_pos": 27, "label_type": "疾病和诊断"}, {"start_pos": 28, "end_pos": 30, "label_type": "疾病和诊断"}]}
+{"originalText": "病程中精神、饮食较差，大小便正常，体重无明显改变。", "entities": []}
+{"originalText": "，2016-01-20患者在我院体检胃镜发现胃窦、胃体各见一约1-1.2CM宽基息肉，，胃窦息肉活检病理示：胃粘膜慢性炎。", "entities": [{"start_pos": 22, "end_pos": 24, "label_type": "解剖部位"}, {"start_pos": 25, "end_pos": 27, "label_type": "解剖部位"}, {"start_pos": 44, "end_pos": 46, "label_type": "解剖部位"}, {"start_pos": 54, "end_pos": 57, "label_type": "解剖部位"}]}
+{"originalText": "，胃体息肉活检病理示：胃粘膜慢性活动性炎。", "entities": [{"start_pos": 1, "end_pos": 3, "label_type": "解剖部位"}, {"start_pos": 11, "end_pos": 14, "label_type": "解剖部位"}]}
+{"originalText": "患者无腹痛，无恶心、呕吐，无腹泻、便秘，无呕血、黑便。", "entities": [{"start_pos": 3, "end_pos": 4, "label_type": "解剖部位"}, {"start_pos": 14, "end_pos": 15, "label_type": "解剖部位"}]}
+{"originalText": "各项检查无禁忌，今日下午10AM行内镜上胃多发息肉切除，过程顺利，术后为进一步观察收入院，患者起病以来，", "entities": [{"start_pos": 17, "end_pos": 27, "label_type": "手术"}]}
+{"originalText": "精神、胃纳、睡眠可，大小便正常，体重无明显变化。", "entities": [{"start_pos": 3, "end_pos": 4, "label_type": "解剖部位"}]}

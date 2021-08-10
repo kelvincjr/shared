@@ -1,0 +1,14 @@
+# Byte-compiled / optimized / DLL files
+.idea
+*.pyc
+*.json
+*.pdf
+*.pt
+*.pkl
+*.csv
+result.txt
+pred_info.txt
+result
+ccks2020_ner
+bert
+msra_3_bioes
