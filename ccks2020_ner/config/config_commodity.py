@@ -16,7 +16,7 @@ DEFAULT_CONFIG = {
     'tag_type': 'BIO',  # BIO or BME_SO
     'use_cuda': True,
     'epoch': 100,
-    'batch_size': 64,
+    'batch_size': 32,
     'learning_rate': 0.0002,
     'num_layers': 2,
     'pad_index': 1,
