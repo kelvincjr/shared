@@ -1,0 +1,12 @@
+LICENSE
+MANIFEST.in
+README.md
+requirements.txt
+setup.cfg
+setup.py
+TorchCRF/__init__.py
+TorchCRF.egg-info/PKG-INFO
+TorchCRF.egg-info/SOURCES.txt
+TorchCRF.egg-info/dependency_links.txt
+TorchCRF.egg-info/requires.txt
+TorchCRF.egg-info/top_level.txt
