@@ -13,11 +13,23 @@ from src.utils.functions_utils import set_seed, get_model_path_list, load_model_
 from src.preprocess.processor import NERProcessor, convert_examples_to_features
 
 logger = logging.getLogger(__name__)
+'''
 logging.basicConfig(
     format="%(asctime)s - %(levelname)s - %(name)s -   %(message)s",
     datefmt="%m/%d/%Y %H:%M:%S",
     level=logging.INFO
 )
+'''
+formatter = logging.Formatter(fmt='%(asctime)s - %(levelname)s - %(name)s -   %(message)s', datefmt="%m/%d/%Y %H:%M:%S")
+ 
+# Configure stream handler for the cells
+chandler = logging.StreamHandler()
+chandler.setLevel(logging.INFO)
+chandler.setFormatter(formatter)
+ 
+# Add both handlers
+logger.addHandler(chandler)
+logger.setLevel(logging.INFO)
 
 tf_logger = logging.getLogger("transformers.tokenization_utils_base")
 tf_logger.setLevel(level = logging.ERROR)
