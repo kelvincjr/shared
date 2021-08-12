@@ -303,7 +303,7 @@ def convert_crf_example(ex_idx, example: InputExample, tokenizer: BertTokenizer,
 
     label_ids = None
 
-    if set_type == 'train':
+    if set_type == 'train' or set_type == 'dev':
         # information for dev callback
         label_ids = [0] * len(tokens)
 

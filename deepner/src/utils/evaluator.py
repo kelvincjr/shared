@@ -167,6 +167,8 @@ def crf_evaluation(model, dev_info, device, ent2id):
 
         pred_entities = crf_decode(tmp_tokens, text, id2ent)
 
+        print(pred_entities)
+
         for idx, _type in enumerate(ENTITY_TYPES):
             if _type not in pred_entities:
                 pred_entities[_type] = []

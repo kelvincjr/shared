@@ -233,7 +233,7 @@ def train(opt, model, train_dataset):
             if global_step % save_steps == 0:
                 save_model(opt, model, global_step)
 
-    swa(swa_raw_model, opt.output_dir, swa_start=opt.swa_start)
+    #swa(swa_raw_model, opt.output_dir, swa_start=opt.swa_start)
 
     # clear cuda cache to avoid OOM
     torch.cuda.empty_cache()
