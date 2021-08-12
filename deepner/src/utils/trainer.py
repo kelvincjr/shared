@@ -11,7 +11,16 @@ from src.utils.functions_utils import load_model_and_parallel, swa
 
 
 logger = logging.getLogger(__name__)
-
+formatter = logging.Formatter(fmt='%(asctime)s - %(levelname)s - %(name)s -   %(message)s', datefmt="%m/%d/%Y %H:%M:%S")
+ 
+# Configure stream handler for the cells
+chandler = logging.StreamHandler()
+chandler.setLevel(logging.INFO)
+chandler.setFormatter(formatter)
+ 
+# Add both handlers
+logger.addHandler(chandler)
+logger.setLevel(logging.INFO)
 
 def save_model(opt, model, global_step):
     output_dir = os.path.join(opt.output_dir, 'checkpoint-{}'.format(global_step))

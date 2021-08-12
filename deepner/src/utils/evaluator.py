@@ -177,7 +177,7 @@ def crf_evaluation(model, dev_info, device, ent2id):
 
     for idx, _type in enumerate(ENTITY_TYPES):
         temp_metric = get_p_r_f(role_metric[idx][0], role_metric[idx][1], role_metric[idx][2])
-
+        print('type: {}, precision: {}, recall: {}, f1: {}'.format(_type, temp_metric[0], temp_metric[1], temp_metric[2]))
         mirco_metrics += temp_metric * type_weight[_type]
 
     metric_str = f'[MIRCO] precision: {mirco_metrics[0]:.4f}, ' \

@@ -7,6 +7,16 @@ from collections import defaultdict
 import random
 
 logger = logging.getLogger(__name__)
+formatter = logging.Formatter(fmt='%(asctime)s - %(levelname)s - %(name)s -   %(message)s', datefmt="%m/%d/%Y %H:%M:%S")
+ 
+# Configure stream handler for the cells
+chandler = logging.StreamHandler()
+chandler.setLevel(logging.INFO)
+chandler.setFormatter(formatter)
+ 
+# Add both handlers
+logger.addHandler(chandler)
+logger.setLevel(logging.INFO)
 
 ENTITY_TYPES = ['DRUG', 'DRUG_INGREDIENT', 'DISEASE', 'SYMPTOM', 'SYNDROME', 'DISEASE_GROUP',
                 'FOOD', 'FOOD_GROUP', 'PERSON_GROUP', 'DRUG_GROUP', 'DRUG_DOSAGE', 'DRUG_TASTE',
