@@ -65,12 +65,13 @@ def train_base(opt, train_examples, dev_examples=None):
         for example in dev_examples:
             print('dev_examples, text_len: {}, text: {}, labels: {}'.format(len(example.text), example.text, example.labels))
             break
+        '''
         dev_features, dev_callback_info = convert_examples_to_features(opt.task_type, dev_examples,
                                                                        opt.max_seq_len, opt.bert_dir, ent2id)
-        for dev_feature in dev_features:
-            print('dev_features, tokenids_len: {}, tokenids: {}, labels: {}'.format(len(dev_feature.token_ids), dev_feature.token_ids, dev_feature.labels))
-            break
-        '''
+        #for dev_feature in dev_features:
+            #print('dev_features, tokenids_len: {}, tokenids: {}, labels: {}'.format(len(dev_feature.token_ids), dev_feature.token_ids, dev_feature.labels))
+            #break
+        
         dev_dataset = NERDataset(opt.task_type, dev_features, 'dev', use_type_embed=opt.use_type_embed)
 
         dev_loader = DataLoader(dev_dataset, batch_size=opt.eval_batch_size,
