@@ -113,7 +113,6 @@ class NERProcessor:
     def read_json(file_path):
         with open(file_path, encoding='utf-8') as f:
             raw_examples = json.load(f)
-            print('data len: {}'.format(len(raw_examples)))
         return raw_examples
 
     @staticmethod

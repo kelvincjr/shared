@@ -6,7 +6,16 @@ from collections import defaultdict
 from src.preprocess.processor import ENTITY_TYPES
 
 logger = logging.getLogger(__name__)
-
+formatter = logging.Formatter(fmt='%(asctime)s - %(levelname)s - %(name)s -   %(message)s', datefmt="%m/%d/%Y %H:%M:%S")
+ 
+# Configure stream handler for the cells
+chandler = logging.StreamHandler()
+chandler.setLevel(logging.INFO)
+chandler.setFormatter(formatter)
+ 
+# Add both handlers
+logger.addHandler(chandler)
+logger.setLevel(logging.INFO)
 
 def get_base_out(model, loader, device):
     """
@@ -167,8 +176,6 @@ def crf_evaluation(model, dev_info, device, ent2id):
 
         pred_entities = crf_decode(tmp_tokens, text, id2ent)
 
-        print(pred_entities)
-
         for idx, _type in enumerate(ENTITY_TYPES):
             if _type not in pred_entities:
                 pred_entities[_type] = []
@@ -179,7 +186,7 @@ def crf_evaluation(model, dev_info, device, ent2id):
 
     for idx, _type in enumerate(ENTITY_TYPES):
         temp_metric = get_p_r_f(role_metric[idx][0], role_metric[idx][1], role_metric[idx][2])
-        print('type: {}, precision: {}, recall: {}, f1: {}'.format(_type, temp_metric[0], temp_metric[1], temp_metric[2]))
+        logger.info('type: {}, precision: {:.4f}, recall: {:.4f}, f1: {:.4f}'.format(_type, temp_metric[0], temp_metric[1], temp_metric[2]))
         mirco_metrics += temp_metric * type_weight[_type]
 
     metric_str = f'[MIRCO] precision: {mirco_metrics[0]:.4f}, ' \
