@@ -40,9 +40,9 @@ def train_base(opt, train_examples, dev_examples=None):
 
     train_features = convert_examples_to_features(opt.task_type, train_examples,
                                                   opt.max_seq_len, opt.bert_dir, ent2id)[0]
-    #for feature in train_features:
-    #    print('train_features, tokenids: {}, labels: {}'.format(feature.token_ids, feature.labels))
-    #    break
+    for feature in train_features:
+        print('train_features, tokenids: {}, labels: {}'.format(feature.token_ids, feature.labels))
+        break
     train_dataset = NERDataset(opt.task_type, train_features, 'train', use_type_embed=opt.use_type_embed)
 
     if opt.task_type == 'crf':
@@ -61,16 +61,16 @@ def train_base(opt, train_examples, dev_examples=None):
     train(opt, model, train_dataset)
 
     if dev_examples is not None:
-        '''
+        
         for example in dev_examples:
             print('dev_examples, text_len: {}, text: {}, labels: {}'.format(len(example.text), example.text, example.labels))
             break
-        '''
+
         dev_features, dev_callback_info = convert_examples_to_features(opt.task_type, dev_examples,
                                                                        opt.max_seq_len, opt.bert_dir, ent2id)
-        #for dev_feature in dev_features:
-            #print('dev_features, tokenids_len: {}, tokenids: {}, labels: {}'.format(len(dev_feature.token_ids), dev_feature.token_ids, dev_feature.labels))
-            #break
+        for dev_feature in dev_features:
+            print('dev_features, tokenids_len: {}, tokenids: {}, labels: {}'.format(len(dev_feature.token_ids), dev_feature.token_ids, dev_feature.labels))
+            break
         
         dev_dataset = NERDataset(opt.task_type, dev_features, 'dev', use_type_embed=opt.use_type_embed)
 
@@ -154,7 +154,7 @@ def training(opt):
     if opt.eval_model:
         dev_raw_examples = processor.read_json(os.path.join(opt.raw_data_dir, 'dev.json'))
         dev_examples = processor.get_examples(dev_raw_examples, 'dev')
-    '''
+    
     print('len of train_examples: {}'.format(len(train_examples)))
     for example in train_examples:
         print('train_examples, set_type: {}, text: {}, labels: {}'.format(example.set_type, example.text, example.labels))
@@ -163,7 +163,7 @@ def training(opt):
     for example in dev_examples:
         print('dev_examples, text: {}, labels: {}'.format(example.text, example.labels))
         break
-    '''
+    
     train_base(opt, train_examples, dev_examples)
 
 
