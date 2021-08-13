@@ -345,6 +345,9 @@ def convert_crf_example(ex_idx, example: InputExample, tokenizer: BertTokenizer,
     attention_masks = encode_dict['attention_mask']
     token_type_ids = encode_dict['token_type_ids']
 
+    #print('tokens: {}'.format(tokens))
+    #print('token_ids: {}'.format(token_ids))
+
     # if ex_idx < 3:
     #     logger.info(f"*** {set_type}_example-{ex_idx} ***")
     #     logger.info(f'text: {" ".join(tokens)}')
@@ -585,6 +588,7 @@ def convert_examples_to_features(task_type, examples, max_seq_len, bert_dir, ent
     assert task_type in ['crf', 'span', 'mrc']
 
     tokenizer = BertTokenizer(os.path.join(bert_dir, 'vocab.txt'))
+    tokenizer.add_special_tokens({'additional_special_tokens':['[BLANK]','[INV]']})
 
     features = []
 
