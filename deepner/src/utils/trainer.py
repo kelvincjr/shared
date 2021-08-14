@@ -239,7 +239,7 @@ def train(opt, model, train_dataset):
                 param={}
                 for name,parameters in model_param:
                     #print(name,':',parameters.size())
-                    param[name]=parameters.detach().numpy()
+                    param[name]=parameters.detach().cpu().numpy()
                 print(param['classifier.weight'])
                 avg_loss = 0.
             else:
