@@ -1,0 +1,11 @@
+python -u run.py \
+	--max_len=150 \
+	--model_name_or_path=/opt/kelvin/python/knowledge_graph/ai_contest/working \
+	--per_gpu_train_batch_size=16 \
+	--per_gpu_eval_batch_size=16 \
+	--learning_rate=1e-5 \
+	--linear_learning_rate=1e-2 \
+	--num_train_epochs=100 \
+	--output_dir="./output" \
+	--weight_decay=0.01 \
+	--early_stop=2
