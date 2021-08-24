@@ -20,7 +20,7 @@ else:
 class ConfigRel:
     def __init__(self,
                  lr=0.001,
-                 epochs=100,
+                 epochs=20,
                  vocab_size=16116,  # 22000,
                  embedding_dim=100,
                  hidden_dim_lstm=64,
