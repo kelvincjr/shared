@@ -139,12 +139,14 @@ class Trainer:
         print('STARTING PREDICTING...')
         self.model.train(False)
         pbar = tqdm(enumerate(self.test_dataset), total=len(self.test_dataset))
+        pred_ners = list()
         for i, data_item in pbar:
             pred_ner = self.model(data_item, is_test=True)
+            pred_ners.extend(pred_ner)
         self.model.train(True)
-        token_pred = [[] for _ in range(len(pred_ner))]
-        for i in range(len(pred_ner)):
-            for item in pred_ner[i]:
+        token_pred = [[] for _ in range(len(pred_ners))]
+        for i in range(len(pred_ners)):
+            for item in pred_ners[i]:
                 token_pred[i].append(self.id2token_type[item])
         return token_pred
 
@@ -176,7 +178,7 @@ if __name__ == '__main__':
     train_loader, dev_loader, test_loader = data_processor.get_train_dev_data(
     '../data/fixed_train.json',
     '../data/fixed_dev.json',
-    '/opt/kelvin/python/knowledge_graph/ai_contest/hualu/emergency_data/train/test.json')
+    '../data/test.json')
     # train_loader, dev_loader, test_loader = data_processor.get_train_dev_data('../data/train_data_small.json')
     trainer = Trainer(model, config, train_loader, dev_loader, test_loader)
     trainer.train()
