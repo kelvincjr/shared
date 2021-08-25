@@ -82,8 +82,8 @@ class DataPreparationRel:
             dataset=dataset,
             batch_size=self.config.batch_size,
             collate_fn=dataset.collate_fn,
-            #shuffle=True,
-            shuffle=False,
+            shuffle=True,
+            #shuffle=False,
             drop_last=True
         )
         
@@ -119,7 +119,7 @@ class Dataset(torch.utils.data.Dataset):
         self.rel2id = {}
         for i, rel in enumerate(self.config.relations):
             self.rel2id[rel] = i
-        vocab_file = '/opt/kelvin/python/knowledge_graph/ai_contest/working/vocab.txt'
+        vocab_file = '/kaggle/working/vocab.txt'
         self.bert_tokenizer = BertTokenizer.from_pretrained(vocab_file)
 
         # vocab_file = '../data/vec.txt'
