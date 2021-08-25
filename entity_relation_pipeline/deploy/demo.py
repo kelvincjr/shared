@@ -157,7 +157,7 @@ def test():
     config_rel.batch_size = 1
     rel_model = BertForSequenceClassification.from_pretrained('/kaggle/working', num_labels=config_rel.num_relations)
     # rel_model = AttBiLSTM(config_rel)
-    rel_model_dict = torch.load(PATH_REL)
+    rel_model_dict = torch.load(PATH_REL, map_location='cpu')
     rel_model.load_state_dict(rel_model_dict['state_dict'])
     rel_test_path = './rel_predict.json'
 
