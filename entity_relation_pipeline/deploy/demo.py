@@ -151,13 +151,13 @@ def test():
         json.dump(rel_list, f, ensure_ascii=False, indent=4)
     '''
     
-    PATH_REL = '../models/rel_cls/19m-acc0.76ccks2019_rel.pth'
+    PATH_REL = '/kaggle/input/entity-pipeline-output/entity_relation_pipeline/models/rel_cls/29m-acc0.77ccks2019_rel.pth'
 
     config_rel = ConfigRel()
     config_rel.batch_size = 1
-    rel_model = BertForSequenceClassification.from_pretrained('/opt/kelvin/python/knowledge_graph/ai_contest/working', num_labels=config_rel.num_relations)
+    rel_model = BertForSequenceClassification.from_pretrained('/kaggle/working', num_labels=config_rel.num_relations)
     # rel_model = AttBiLSTM(config_rel)
-    rel_model_dict = torch.load(PATH_REL, map_location='cpu')
+    rel_model_dict = torch.load(PATH_REL)
     rel_model.load_state_dict(rel_model_dict['state_dict'])
     rel_test_path = './rel_predict.json'
 
@@ -165,7 +165,7 @@ def test():
     _, _, test_loader = rel_data_process.get_train_dev_data(path_test=rel_test_path, is_test=True)
     trainREL = trainer_rel.Trainer(rel_model, config_rel, test_dataset=test_loader)
     rel_pred = trainREL.bert_predict()
-    print(rel_pred)
+    #print(rel_pred)
     gen_submission(rel_test_path, rel_pred, './result.json')
     
 

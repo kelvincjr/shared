@@ -76,14 +76,16 @@ class DataPreparationRel:
                         data.append(item_neg)
         
         dataset = Dataset(data, self.config)
+        use_shuffle = True
         if is_test:
             dataset.is_test = True
+            use_shuffle = False
         data_loader = torch.utils.data.DataLoader(
             dataset=dataset,
             batch_size=self.config.batch_size,
             collate_fn=dataset.collate_fn,
-            shuffle=True,
-            #shuffle=False,
+            #shuffle=True,
+            shuffle=use_shuffle,
             drop_last=True
         )
         
