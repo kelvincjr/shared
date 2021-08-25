@@ -1,0 +1,4655 @@
+[
+    {
+        "id": 0,
+        "text": "建立健全分类、分级负责，条块结合、属地管理为主的应急管理体制；各镇人民政府、街道办事处、功能区管委会负责扑灭本辖区内的重大动物疫情；各有关部门按照预案规定，在各自的职责范围内做好疫情应急处理的有关工作。",
+        "spo_list": [
+            {
+                "subject": "街道办事处",
+                "subject-type": "机构",
+                "predicate": "防止",
+                "object": "本辖区内的重大动物疫情",
+                "object-type": "灾害"
+            },
+            {
+                "subject": "功能区管委会",
+                "subject-type": "机构",
+                "predicate": "防止",
+                "object": "本辖区内的重大动物疫情",
+                "object-type": "灾害"
+            },
+            {
+                "subject": "各镇人民政府",
+                "subject-type": "机构",
+                "predicate": "防止",
+                "object": "本辖区内的重大动物疫情",
+                "object-type": "灾害"
+            }
+        ]
+    },
+    {
+        "id": 1,
+        "text": "在区政府统一领导和指挥下，区卫生局及有关部门应该按照预案规定的职责开展工作。发生突发事件的区域内的任何单位和发生突发事件的区域内的任何个人都有义务配合区政府、街道办事处、区卫生局及有关部门做好突发公共卫生事件应急处理工作。",
+        "spo_list": [
+            {
+                "subject": "发生突发事件的区域内的任何单位",
+                "subject-type": "机构",
+                "predicate": "配合",
+                "object": "区卫生局及有关部门",
+                "object-type": "机构"
+            },
+            {
+                "subject": "区政府",
+                "subject-type": "机构",
+                "predicate": "指挥",
+                "object": "区卫生局及有关部门",
+                "object-type": "机构"
+            },
+            {
+                "subject": "发生突发事件的区域内的任何单位",
+                "subject-type": "机构",
+                "predicate": "配合",
+                "object": "街道办事处",
+                "object-type": "机构"
+            },
+            {
+                "subject": "发生突发事件的区域内的任何单位",
+                "subject-type": "机构",
+                "predicate": "配合",
+                "object": "区政府",
+                "object-type": "机构"
+            },
+            {
+                "subject": "发生突发事件的区域内的任何个人",
+                "subject-type": "人物",
+                "predicate": "配合",
+                "object": "区政府",
+                "object-type": "机构"
+            },
+            {
+                "subject": "发生突发事件的区域内的任何个人",
+                "subject-type": "人物",
+                "predicate": "配合",
+                "object": "街道办事处",
+                "object-type": "机构"
+            },
+            {
+                "subject": "发生突发事件的区域内的任何个人",
+                "subject-type": "人物",
+                "predicate": "配合",
+                "object": "区卫生局及有关部门",
+                "object-type": "机构"
+            }
+        ]
+    },
+    {
+        "id": 2,
+        "text": "区卫生局建立突发事件应急处理常备机动队伍，由预防控制、医疗、卫生监督三部分组成。负责处置突发事件，参与和指导各级医疗卫生等机构进行应急处理。",
+        "spo_list": [
+            {
+                "subject": "区卫生局",
+                "subject-type": "机构",
+                "predicate": "建立",
+                "object": "突发事件应急处理常备机动队伍",
+                "object-type": "方案"
+            },
+            {
+                "subject": "突发事件应急处理常备机动队伍",
+                "subject-type": "方案",
+                "predicate": "指导",
+                "object": "各级医疗卫生等机构",
+                "object-type": "机构"
+            },
+            {
+                "subject": "突发事件应急处理常备机动队伍",
+                "subject-type": "方案",
+                "predicate": "参与",
+                "object": "各级医疗卫生等机构",
+                "object-type": "机构"
+            }
+        ]
+    },
+    {
+        "id": 3,
+        "text": "3.疾病预防控制技术指导小组：指导防止突发事件危害进一步蔓延应该采取的预防措施、流行病学调查、疫情统计报告、消毒隔离与个人防护等预防控制工作。",
+        "spo_list": [
+            {
+                "subject": "疾病预防控制技术指导小组",
+                "subject-type": "方案",
+                "predicate": "指导",
+                "object": "个人防护",
+                "object-type": "工作"
+            },
+            {
+                "subject": "疾病预防控制技术指导小组",
+                "subject-type": "方案",
+                "predicate": "指导",
+                "object": "消毒隔离",
+                "object-type": "工作"
+            },
+            {
+                "subject": "疾病预防控制技术指导小组",
+                "subject-type": "方案",
+                "predicate": "指导",
+                "object": "疫情统计报告",
+                "object-type": "工作"
+            },
+            {
+                "subject": "疾病预防控制技术指导小组",
+                "subject-type": "方案",
+                "predicate": "指导",
+                "object": "流行病学调查",
+                "object-type": "工作"
+            }
+        ]
+    },
+    {
+        "id": 4,
+        "text": "根据突发事件应急处理工作的进展和突发事件专家评估委员会的评估建议，市政府终止应急响应后，区卫生局报告区政府，实施执行终止应急响应。",
+        "spo_list": [
+            {
+                "subject": "区政府",
+                "subject-type": "机构",
+                "predicate": "实施",
+                "object": "终止应急响应",
+                "object-type": "措施"
+            }
+        ]
+    },
+    {
+        "id": 5,
+        "text": "区民政局：负责突发环境事件受灾群众的紧急转移、安置工作，负责对特困群众进行生活、医疗救助；组织、协调有关部门和社会团体开展社会捐助工作，接受、分配国内外企业、个人以及外国政府、境外组织捐助的资金和物资，做好款物管理和发放工作；协调做好死亡人员的处理和其他善后工作。",
+        "spo_list": [
+            {
+                "subject": "有关部门",
+                "subject-type": "机构",
+                "predicate": "开展",
+                "object": "社会捐助",
+                "object-type": "工作"
+            },
+            {
+                "subject": "区民政局",
+                "subject-type": "机构",
+                "predicate": "协调",
+                "object": "社会团体",
+                "object-type": "机构"
+            },
+            {
+                "subject": "区民政局",
+                "subject-type": "机构",
+                "predicate": "协调",
+                "object": "有关部门",
+                "object-type": "机构"
+            },
+            {
+                "subject": "区民政局",
+                "subject-type": "机构",
+                "predicate": "协调",
+                "object": "死亡人员的处理",
+                "object-type": "工作"
+            },
+            {
+                "subject": "社会团体",
+                "subject-type": "机构",
+                "predicate": "开展",
+                "object": "社会捐助",
+                "object-type": "工作"
+            },
+            {
+                "subject": "区民政局",
+                "subject-type": "机构",
+                "predicate": "协调",
+                "object": "死亡人员的善后",
+                "object-type": "工作"
+            },
+            {
+                "subject": "区民政局",
+                "subject-type": "机构",
+                "predicate": "组织",
+                "object": "社会团体",
+                "object-type": "机构"
+            },
+            {
+                "subject": "区民政局",
+                "subject-type": "机构",
+                "predicate": "组织",
+                "object": "有关部门",
+                "object-type": "机构"
+            }
+        ]
+    },
+    {
+        "id": 6,
+        "text": "区指挥部办公室组建突发环境事件专家库，根据应急处置需要从中确定人选建立现场专家组。",
+        "spo_list": [
+            {
+                "subject": "区指挥部办公室",
+                "subject-type": "机构",
+                "predicate": "组建",
+                "object": "突发环境事件专家库",
+                "object-type": "机构"
+            },
+            {
+                "subject": "区指挥部办公室",
+                "subject-type": "机构",
+                "predicate": "建立",
+                "object": "现场专家组",
+                "object-type": "方案"
+            }
+        ]
+    },
+    {
+        "id": 7,
+        "text": "（3）局主要领导和相关科室在第一时间到达一线指挥，根据事故启动应急预案，控制局势，制止拥挤，做好人员疏散工作，组织人员对受伤者进行人工呼吸、对受伤者进行止血等应急抢救处置，尽快将伤病员送往医院抢救，妥善安置伤病员，必要时请求区委、区政府支援帮助；",
+        "spo_list": [
+            {
+                "subject": "局主要领导",
+                "subject-type": "人物",
+                "predicate": "启动",
+                "object": "应急预案",
+                "object-type": "方案"
+            },
+            {
+                "subject": "局主要领导",
+                "subject-type": "人物",
+                "predicate": "安置",
+                "object": "伤病员",
+                "object-type": "人物"
+            },
+            {
+                "subject": "相关科室",
+                "subject-type": "机构",
+                "predicate": "组织",
+                "object": "对受伤者进行人工呼吸",
+                "object-type": "工作"
+            },
+            {
+                "subject": "相关科室",
+                "subject-type": "机构",
+                "predicate": "组织",
+                "object": "对受伤者进行止血",
+                "object-type": "工作"
+            },
+            {
+                "subject": "相关科室",
+                "subject-type": "机构",
+                "predicate": "安置",
+                "object": "伤病员",
+                "object-type": "人物"
+            },
+            {
+                "subject": "相关科室",
+                "subject-type": "机构",
+                "predicate": "启动",
+                "object": "应急预案",
+                "object-type": "方案"
+            },
+            {
+                "subject": "局主要领导",
+                "subject-type": "人物",
+                "predicate": "组织",
+                "object": "对受伤者进行人工呼吸",
+                "object-type": "工作"
+            },
+            {
+                "subject": "局主要领导",
+                "subject-type": "人物",
+                "predicate": "组织",
+                "object": "对受伤者进行止血",
+                "object-type": "工作"
+            }
+        ]
+    },
+    {
+        "id": 8,
+        "text": "云川区教育系统抗震减灾应急管理工作根据需要设立相应的处置工作组，云川区教育系统抗震减灾应急管理工作领导小组办公室履行信息汇总和综合协调职责，发挥运转枢纽作用。各工作组组成及职责分工如下：",
+        "spo_list": [
+            {
+                "subject": "云川区教育系统抗震减灾应急管理工作领导小组办公室",
+                "subject-type": "机构",
+                "predicate": "履行",
+                "object": "综合协调",
+                "object-type": "职责"
+            },
+            {
+                "subject": "云川区教育系统抗震减灾应急管理工作领导小组办公室",
+                "subject-type": "机构",
+                "predicate": "履行",
+                "object": "信息汇总",
+                "object-type": "职责"
+            }
+        ]
+    },
+    {
+        "id": 9,
+        "text": "3.4应急物资储备：各校应配备雨衣雨鞋等必要的防汛抗旱应急设施设备、强光灯等必要的防汛抗旱应急设施设备、水泵等必要的防汛抗旱应急设施设备、沙袋等必要的防汛抗旱应急设施设备、食品等必要的防汛抗旱应急设施设备、急救箱等必要的防汛抗旱应急设施设备、救援麻绳等必要的防汛抗旱应急设施设备、应急车辆等必要的防汛抗旱应急设施设备。",
+        "spo_list": [
+            {
+                "subject": "各校",
+                "subject-type": "机构",
+                "predicate": "配备",
+                "object": "水泵等必要的防汛抗旱应急设施设备",
+                "object-type": "资源"
+            },
+            {
+                "subject": "各校",
+                "subject-type": "机构",
+                "predicate": "配备",
+                "object": "救援麻绳等必要的防汛抗旱应急设施设备",
+                "object-type": "资源"
+            },
+            {
+                "subject": "各校",
+                "subject-type": "机构",
+                "predicate": "配备",
+                "object": "沙袋等必要的防汛抗旱应急设施设备",
+                "object-type": "资源"
+            },
+            {
+                "subject": "各校",
+                "subject-type": "机构",
+                "predicate": "配备",
+                "object": "食品等必要的防汛抗旱应急设施设备",
+                "object-type": "资源"
+            },
+            {
+                "subject": "各校",
+                "subject-type": "机构",
+                "predicate": "配备",
+                "object": "应急车辆等必要的防汛抗旱应急设施设备",
+                "object-type": "资源"
+            },
+            {
+                "subject": "各校",
+                "subject-type": "机构",
+                "predicate": "配备",
+                "object": "强光灯等必要的防汛抗旱应急设施设备",
+                "object-type": "资源"
+            },
+            {
+                "subject": "各校",
+                "subject-type": "机构",
+                "predicate": "配备",
+                "object": "雨衣雨鞋等必要的防汛抗旱应急设施设备",
+                "object-type": "资源"
+            },
+            {
+                "subject": "各校",
+                "subject-type": "机构",
+                "predicate": "配备",
+                "object": "急救箱等必要的防汛抗旱应急设施设备",
+                "object-type": "资源"
+            }
+        ]
+    },
+    {
+        "id": 10,
+        "text": "（2）各校根据预案进入Ⅱ级应急响应状态，加强24小时值班，单位主要负责人进岗带班，按照预案和职责分工，检查落实各项防汛抗旱防御措施，确保向全校师生发布有关预警信息和防汛抗旱提示。",
+        "spo_list": [
+            {
+                "subject": "单位负责人",
+                "subject-type": "人物",
+                "predicate": "发布",
+                "object": "预警信息",
+                "object-type": "信息"
+            },
+            {
+                "subject": "单位负责人",
+                "subject-type": "人物",
+                "predicate": "发布",
+                "object": "防汛抗旱提示",
+                "object-type": "信息"
+            }
+        ]
+    },
+    {
+        "id": 11,
+        "text": "（2）各校进入Ⅰ级应急响应状态，主要领导进入指挥岗位，防汛工作有关人员进岗到位，迅速落实各项防汛抗旱抢险措施，做好停课的发布、组织和保障等工作。",
+        "spo_list": [
+            {
+                "subject": "各校",
+                "subject-type": "机构",
+                "predicate": "落实",
+                "object": "各项防汛抗旱抢险措施",
+                "object-type": "措施"
+            }
+        ]
+    },
+    {
+        "id": 12,
+        "text": "（1）各校加强24小时值班，主要领导负责指挥本单位防汛抗旱、本学校防汛抗旱工作，防汛工作有关人员进岗到位。",
+        "spo_list": [
+            {
+                "subject": "主要领导",
+                "subject-type": "人物",
+                "predicate": "指挥",
+                "object": "本单位防汛抗旱",
+                "object-type": "工作"
+            },
+            {
+                "subject": "主要领导",
+                "subject-type": "人物",
+                "predicate": "指挥",
+                "object": "本学校防汛抗旱",
+                "object-type": "工作"
+            }
+        ]
+    },
+    {
+        "id": 13,
+        "text": "各学校应及时向师生和家长公开大气质量信息。公开内容包括主要污染物、影响范围及趋势、可能持续时间、潜在的危险程度、已采取的应急措施等。",
+        "spo_list": [
+            {
+                "subject": "各学校",
+                "subject-type": "机构",
+                "predicate": "公开",
+                "object": "大气质量信息",
+                "object-type": "信息"
+            }
+        ]
+    },
+    {
+        "id": 14,
+        "text": "（5）未经许可，本关员工不可擅自接受现场记者采访，不得擅自在微博、博客、微信等媒体、网络论坛和朋友圈发布意见和观点。",
+        "spo_list": [
+            {
+                "subject": "本关员工",
+                "subject-type": "人物",
+                "predicate": "实施",
+                "object": "接受现场记者采访",
+                "object-type": "工作"
+            },
+            {
+                "subject": "本关员工",
+                "subject-type": "人物",
+                "predicate": "发布",
+                "object": "意见",
+                "object-type": "信息"
+            },
+            {
+                "subject": "本关员工",
+                "subject-type": "人物",
+                "predicate": "发布",
+                "object": "观点",
+                "object-type": "信息"
+            }
+        ]
+    },
+    {
+        "id": 15,
+        "text": "各隶属海关分别成立本级海关货运口岸监管环节恐怖袭击事件应急指挥部，负责统筹协调和指挥本级海关管辖范围内货运口岸监管环节的恐怖袭击事件应急工作。",
+        "spo_list": [
+            {
+                "subject": "各隶属海关",
+                "subject-type": "机构",
+                "predicate": "成立",
+                "object": "本级海关货运口岸监管环节恐怖袭击事件应急指挥部",
+                "object-type": "机构"
+            },
+            {
+                "subject": "本级海关货运口岸监管环节恐怖袭击事件应急指挥部",
+                "subject-type": "机构",
+                "predicate": "协调",
+                "object": "本级海关管辖范围内货运口岸监管环节的恐怖袭击事件应急工作",
+                "object-type": "工作"
+            },
+            {
+                "subject": "本级海关货运口岸监管环节恐怖袭击事件应急指挥部",
+                "subject-type": "机构",
+                "predicate": "指挥",
+                "object": "本级海关管辖范围内货运口岸监管环节的恐怖袭击事件应急工作",
+                "object-type": "工作"
+            }
+        ]
+    },
+    {
+        "id": 16,
+        "text": "9．缉私局。负责收集恐怖袭击事件情报，协助有关部门开展恐怖袭击事件的侦查和恐怖袭击事件的调查工作等，配合实施现场管制措施。",
+        "spo_list": [
+            {
+                "subject": "缉私局",
+                "subject-type": "机构",
+                "predicate": "开展",
+                "object": "恐怖袭击事件的调查",
+                "object-type": "工作"
+            },
+            {
+                "subject": "缉私局",
+                "subject-type": "机构",
+                "predicate": "收集",
+                "object": "恐怖袭击事件情报",
+                "object-type": "信息"
+            },
+            {
+                "subject": "缉私局",
+                "subject-type": "机构",
+                "predicate": "实施",
+                "object": "现场管制措施",
+                "object-type": "措施"
+            },
+            {
+                "subject": "缉私局",
+                "subject-type": "机构",
+                "predicate": "开展",
+                "object": "恐怖袭击事件的侦查",
+                "object-type": "工作"
+            }
+        ]
+    },
+    {
+        "id": 17,
+        "text": "组建江州海关货运口岸监管环节反恐怖袭击专家组（以下简称专家组），专家组职责是参与制定、修订江州海关相关应急预案、规章制度、应急行动方案；对江州海关货运口岸监管环节恐怖袭击事件应急队伍进行技术指导和培训；必要时参与恐怖袭击事件应对，重点为应急处置和救援、调查评估等工作提出技术支持。",
+        "spo_list": [
+            {
+                "subject": "专家组",
+                "subject-type": "机构",
+                "predicate": "培训",
+                "object": "江州海关货运口岸监管环节恐怖袭击事件应急队伍",
+                "object-type": "方案"
+            },
+            {
+                "subject": "专家组",
+                "subject-type": "机构",
+                "predicate": "支援",
+                "object": "应急处置和救援、调查评估等工作",
+                "object-type": "工作"
+            },
+            {
+                "subject": "专家组",
+                "subject-type": "机构",
+                "predicate": "指导",
+                "object": "江州海关货运口岸监管环节恐怖袭击事件应急队伍",
+                "object-type": "方案"
+            }
+        ]
+    },
+    {
+        "id": 18,
+        "text": "江州海关及各隶属海关要针对各种可能发生的恐怖袭击事件，组织开展预警工作，密切关注国内外特别是属地涉恐事件的信息和动态，跟踪和掌握恐怖袭击事件发展动向。预警信息来源主要包括：",
+        "spo_list": [
+            {
+                "subject": "江州海关",
+                "subject-type": "机构",
+                "predicate": "掌握",
+                "object": "恐怖袭击事件发展动向",
+                "object-type": "信息"
+            },
+            {
+                "subject": "江州海关",
+                "subject-type": "机构",
+                "predicate": "开展",
+                "object": "预警工作",
+                "object-type": "工作"
+            },
+            {
+                "subject": "各隶属海关",
+                "subject-type": "机构",
+                "predicate": "掌握",
+                "object": "恐怖袭击事件发展动向",
+                "object-type": "信息"
+            },
+            {
+                "subject": "江州海关",
+                "subject-type": "机构",
+                "predicate": "关注",
+                "object": "国内外特别是属地涉恐事件的信息",
+                "object-type": "信息"
+            },
+            {
+                "subject": "各隶属海关",
+                "subject-type": "机构",
+                "predicate": "关注",
+                "object": "国内外特别是属地涉恐事件的信息",
+                "object-type": "信息"
+            },
+            {
+                "subject": "各隶属海关",
+                "subject-type": "机构",
+                "predicate": "开展",
+                "object": "预警工作",
+                "object-type": "工作"
+            }
+        ]
+    },
+    {
+        "id": 19,
+        "text": "江州海关及各隶属海关应结合本关区实际情况及面临形势，定期组织开展现场关员反恐技能培训和实操演练，提高关员应对恐怖袭击事件的意识和能力，提升应急工作水平。",
+        "spo_list": [
+            {
+                "subject": "各隶属海关",
+                "subject-type": "机构",
+                "predicate": "开展",
+                "object": "实操演练",
+                "object-type": "工作"
+            },
+            {
+                "subject": "江州海关",
+                "subject-type": "机构",
+                "predicate": "开展",
+                "object": "现场关员反恐技能培训",
+                "object-type": "工作"
+            },
+            {
+                "subject": "江州海关",
+                "subject-type": "机构",
+                "predicate": "开展",
+                "object": "实操演练",
+                "object-type": "工作"
+            },
+            {
+                "subject": "各隶属海关",
+                "subject-type": "机构",
+                "predicate": "开展",
+                "object": "现场关员反恐技能培训",
+                "object-type": "工作"
+            }
+        ]
+    },
+    {
+        "id": 20,
+        "text": "各隶属海关应根据形势变化和实际需要，及时修订和更新本级相关应急预案，并报监管处备案。",
+        "spo_list": [
+            {
+                "subject": "各隶属海关",
+                "subject-type": "机构",
+                "predicate": "更新",
+                "object": "本级相关应急预案",
+                "object-type": "方案"
+            },
+            {
+                "subject": "各隶属海关",
+                "subject-type": "机构",
+                "predicate": "修订",
+                "object": "本级相关应急预案",
+                "object-type": "方案"
+            }
+        ]
+    },
+    {
+        "id": 21,
+        "text": "（1）综合协调组：负责起草重要报告、综合类文件；根据江州海关食品专项指挥部和其他应急工作组的要求，统一向海关总署食品专项指挥部或相关部门报送应急工作的信息和文件；承办江州海关食品专项指挥部交办的其他工作。",
+        "spo_list": [
+            {
+                "subject": "综合协调组",
+                "subject-type": "机构",
+                "predicate": "报送",
+                "object": "应急工作的信息",
+                "object-type": "信息"
+            },
+            {
+                "subject": "综合协调组",
+                "subject-type": "机构",
+                "predicate": "报送",
+                "object": "文件",
+                "object-type": "文件"
+            },
+            {
+                "subject": "综合协调组",
+                "subject-type": "机构",
+                "predicate": "承办",
+                "object": "江州海关食品专项指挥部交办的其他工作",
+                "object-type": "工作"
+            }
+        ]
+    },
+    {
+        "id": 22,
+        "text": "（2）响应降级。当突发事件的影响及危害得到有效控制，且经研判认为事故危害降低到原级别评估标准以下或无进一步扩散趋势的，可由发生地海关自指挥部决定降低应急响应级别，并向上一级应急指挥部报备。",
+        "spo_list": [
+            {
+                "subject": "发生地海关自指挥部",
+                "subject-type": "机构",
+                "predicate": "实施",
+                "object": "降低应急响应级别",
+                "object-type": "措施"
+            }
+        ]
+    },
+    {
+        "id": 23,
+        "text": "快速反应，密切协作。一旦发生重大道路交通事故，立即进入应急状态，启动应急预案，确保发现、报告、指挥、处置等环节紧密衔接，在最短时间内控制事态。各有关部门在区重大道路交通事故应急指挥部的统一领导下，分工负责，互相支持，协调联动，整体作战。",
+        "spo_list": [
+            {
+                "subject": "区重大道路交通事故应急指挥部",
+                "subject-type": "机构",
+                "predicate": "领导",
+                "object": "各有关部门",
+                "object-type": "机构"
+            }
+        ]
+    },
+    {
+        "id": 24,
+        "text": "现场指挥部根据事故现场的实际情况，由相关部门牵头，成立现场工作组，迅速开展应急处置工作。",
+        "spo_list": [
+            {
+                "subject": "相关部门",
+                "subject-type": "机构",
+                "predicate": "成立",
+                "object": "现场工作组",
+                "object-type": "方案"
+            },
+            {
+                "subject": "现场工作组",
+                "subject-type": "方案",
+                "predicate": "开展",
+                "object": "应急处置",
+                "object-type": "工作"
+            }
+        ]
+    },
+    {
+        "id": 25,
+        "text": ".1抢险救援组：负责控险、救援、灭火、破拆、清障、切断污染源等任务。公安分局牵头，成员由公安消防部门、区环境部门、清障公司、事发地功能区、镇乡街相关部门组成。",
+        "spo_list": [
+            {
+                "subject": "抢险救援组",
+                "subject-type": "方案",
+                "predicate": "成员",
+                "object": "清障公司",
+                "object-type": "机构"
+            },
+            {
+                "subject": "抢险救援组",
+                "subject-type": "方案",
+                "predicate": "成员",
+                "object": "镇乡街相关部门",
+                "object-type": "机构"
+            },
+            {
+                "subject": "抢险救援组",
+                "subject-type": "方案",
+                "predicate": "成员",
+                "object": "公安消防部门",
+                "object-type": "机构"
+            },
+            {
+                "subject": "公安分局",
+                "subject-type": "机构",
+                "predicate": "领导",
+                "object": "抢险救援组",
+                "object-type": "方案"
+            },
+            {
+                "subject": "抢险救援组",
+                "subject-type": "方案",
+                "predicate": "成员",
+                "object": "区环境部门",
+                "object-type": "机构"
+            }
+        ]
+    },
+    {
+        "id": 26,
+        "text": "Ⅰ级应急响应：发生Ⅰ级重大道路交通事故，立即启动本预案。总指挥部统一组织、指挥、协调、调度相关应急力量和相关应急资源，实施应急处置。各有关部门立即成立现场工作组，及时赶赴事发现场，按照职责分工，全力以赴，密切配合，共同实施应急处置。",
+        "spo_list": [
+            {
+                "subject": "各有关部门",
+                "subject-type": "机构",
+                "predicate": "实施",
+                "object": "密切配合",
+                "object-type": "工作"
+            },
+            {
+                "subject": "总指挥部",
+                "subject-type": "机构",
+                "predicate": "组织",
+                "object": "相关应急资源",
+                "object-type": "资源"
+            },
+            {
+                "subject": "各有关部门",
+                "subject-type": "机构",
+                "predicate": "成立",
+                "object": "现场工作组",
+                "object-type": "方案"
+            },
+            {
+                "subject": "总指挥部",
+                "subject-type": "机构",
+                "predicate": "实施",
+                "object": "应急处置",
+                "object-type": "工作"
+            },
+            {
+                "subject": "总指挥部",
+                "subject-type": "机构",
+                "predicate": "协调",
+                "object": "相关应急资源",
+                "object-type": "资源"
+            },
+            {
+                "subject": "总指挥部",
+                "subject-type": "机构",
+                "predicate": "协调",
+                "object": "相关应急力量",
+                "object-type": "资源"
+            },
+            {
+                "subject": "总指挥部",
+                "subject-type": "机构",
+                "predicate": "调度",
+                "object": "相关应急资源",
+                "object-type": "资源"
+            },
+            {
+                "subject": "总指挥部",
+                "subject-type": "机构",
+                "predicate": "指挥",
+                "object": "相关应急资源",
+                "object-type": "资源"
+            },
+            {
+                "subject": "各有关部门",
+                "subject-type": "机构",
+                "predicate": "实施",
+                "object": "应急处置",
+                "object-type": "工作"
+            },
+            {
+                "subject": "总指挥部",
+                "subject-type": "机构",
+                "predicate": "组织",
+                "object": "相关应急力量",
+                "object-type": "人物"
+            },
+            {
+                "subject": "总指挥部",
+                "subject-type": "机构",
+                "predicate": "调度",
+                "object": "相关应急力量",
+                "object-type": "资源"
+            },
+            {
+                "subject": "总指挥部",
+                "subject-type": "机构",
+                "predicate": "指挥",
+                "object": "相关应急力量",
+                "object-type": "资源"
+            }
+        ]
+    },
+    {
+        "id": 27,
+        "text": "（1）物资储备：区人民政府要根据实际情况，建立动态鼠疫应急物资储备机制，做好预防治疗和控制鼠疫疫情时所需各类物资的储备，建立救援物资数据库。发生鼠疫疫情时，应根据应急处理工作需要调用储备物资。加强对储备物资的管理，防止储备物资的挪用、储备物资的流散和储备物资的失效失效物品，卫生应急物资使用后要及时予以补充，对失效和过期物品要及时更新。",
+        "spo_list": [
+            {
+                "subject": "区人民政府",
+                "subject-type": "机构",
+                "predicate": "储备",
+                "object": "预防治疗和控制鼠疫疫情时所需各类物资",
+                "object-type": "物资"
+            },
+            {
+                "subject": "区人民政府",
+                "subject-type": "机构",
+                "predicate": "管理",
+                "object": "储备物资",
+                "object-type": "物资"
+            },
+            {
+                "subject": "区人民政府",
+                "subject-type": "机构",
+                "predicate": "建立",
+                "object": "动态鼠疫应急物资储备机制",
+                "object-type": "方案"
+            },
+            {
+                "subject": "区人民政府",
+                "subject-type": "机构",
+                "predicate": "防止",
+                "object": "储备物资的失效",
+                "object-type": "情况"
+            },
+            {
+                "subject": "区人民政府",
+                "subject-type": "机构",
+                "predicate": "补充",
+                "object": "卫生应急物资",
+                "object-type": "物资"
+            },
+            {
+                "subject": "区人民政府",
+                "subject-type": "机构",
+                "predicate": "建立",
+                "object": "救援物资数据库",
+                "object-type": "资源"
+            },
+            {
+                "subject": "区人民政府",
+                "subject-type": "机构",
+                "predicate": "更新",
+                "object": "失效物品",
+                "object-type": "物资"
+            },
+            {
+                "subject": "区人民政府",
+                "subject-type": "机构",
+                "predicate": "防止",
+                "object": "储备物资的挪用",
+                "object-type": "情况"
+            },
+            {
+                "subject": "区人民政府",
+                "subject-type": "机构",
+                "predicate": "防止",
+                "object": "储备物资的流散",
+                "object-type": "情况"
+            }
+        ]
+    },
+    {
+        "id": 28,
+        "text": "市指挥部各成员单位在市指挥部统一领导下开展工作。加强对事故发生地人民政府有关部门工作的督促、指导，积极参与应急救援工作。按照“谁主管、谁负责”和“管行业必须管安全”的原则，各有关成员单位指导管理对象建立健全食品安全事故应急预案或处置方案。",
+        "spo_list": [
+            {
+                "subject": "市指挥部各成员单位",
+                "subject-type": "机构",
+                "predicate": "督促",
+                "object": "事故发生地人民政府有关部门",
+                "object-type": "机构"
+            },
+            {
+                "subject": "市指挥部各成员单位",
+                "subject-type": "机构",
+                "predicate": "参与",
+                "object": "应急救援",
+                "object-type": "工作"
+            },
+            {
+                "subject": "市指挥部",
+                "subject-type": "机构",
+                "predicate": "领导",
+                "object": "市指挥部各成员单位",
+                "object-type": "机构"
+            },
+            {
+                "subject": "各有关成员单位",
+                "subject-type": "机构",
+                "predicate": "指导",
+                "object": "管理对象",
+                "object-type": "机构"
+            },
+            {
+                "subject": "管理对象",
+                "subject-type": "机构",
+                "predicate": "健全",
+                "object": "食品安全事故应急预案或处置方案",
+                "object-type": "方案"
+            },
+            {
+                "subject": "管理对象",
+                "subject-type": "机构",
+                "predicate": "建立",
+                "object": "食品安全事故应急预案或处置方案",
+                "object-type": "方案"
+            },
+            {
+                "subject": "市指挥部各成员单位",
+                "subject-type": "机构",
+                "predicate": "指导",
+                "object": "事故发生地人民政府有关部门",
+                "object-type": "机构"
+            }
+        ]
+    },
+    {
+        "id": 29,
+        "text": "市市场监管委负责市指挥部办公室日常工作；会同市有关部门依法组织对食品安全事故进行分析评估，核定事故级别等；组织对食品安全事故中食品生产加工环节的问题食品及相关产品、食品销售环节的问题食品及相关产品、餐饮服务环节的问题食品及相关产品进行临时控制、调查处理等工作，以及相应环节食品安全事故的预防控制和调查处理工作；负责与保健食品相关的食品安全事故的临时控制、调查处理及相关技术鉴定工作；负责与食盐质量安全监督管理有关的检查和处罚；加强对食品安全事故应急处置相关的重要商品、公共产品价格和收费标准的监管；组织开展对食品安全事故应急处置中相关商品价格的监督检查。",
+        "spo_list": [
+            {
+                "subject": "市有关部门",
+                "subject-type": "机构",
+                "predicate": "处理",
+                "object": "与保健食品相关的食品安全事故",
+                "object-type": "情况"
+            },
+            {
+                "subject": "市有关部门",
+                "subject-type": "机构",
+                "predicate": "调查",
+                "object": "餐饮服务环节的问题食品及相关产品",
+                "object-type": "产品"
+            },
+            {
+                "subject": "市有关部门",
+                "subject-type": "机构",
+                "predicate": "调查",
+                "object": "与保健食品相关的食品安全事故",
+                "object-type": "情况"
+            },
+            {
+                "subject": "市有关部门",
+                "subject-type": "机构",
+                "predicate": "调查",
+                "object": "组织对食品安全事故中食品生产加工环节的问题食品及相关产品",
+                "object-type": "产品"
+            },
+            {
+                "subject": "市有关部门",
+                "subject-type": "机构",
+                "predicate": "调查",
+                "object": "相应环节食品安全事故",
+                "object-type": "情况"
+            },
+            {
+                "subject": "市有关部门",
+                "subject-type": "机构",
+                "predicate": "调查",
+                "object": "食品销售环节的问题食品及相关产品",
+                "object-type": "产品"
+            },
+            {
+                "subject": "市有关部门",
+                "subject-type": "机构",
+                "predicate": "处理",
+                "object": "食品销售环节的问题食品及相关产品",
+                "object-type": "产品"
+            },
+            {
+                "subject": "市有关部门",
+                "subject-type": "机构",
+                "predicate": "处理",
+                "object": "相应环节食品安全事故",
+                "object-type": "情况"
+            },
+            {
+                "subject": "市有关部门",
+                "subject-type": "机构",
+                "predicate": "处理",
+                "object": "组织对食品安全事故中食品生产加工环节的问题食品及相关产品",
+                "object-type": "产品"
+            },
+            {
+                "subject": "市有关部门",
+                "subject-type": "机构",
+                "predicate": "分析",
+                "object": "食品安全事故",
+                "object-type": "情况"
+            },
+            {
+                "subject": "市有关部门",
+                "subject-type": "机构",
+                "predicate": "处理",
+                "object": "餐饮服务环节的问题食品及相关产品",
+                "object-type": "产品"
+            },
+            {
+                "subject": "市有关部门",
+                "subject-type": "机构",
+                "predicate": "控制",
+                "object": "组织对食品安全事故中食品生产加工环节的问题食品及相关产品",
+                "object-type": "产品"
+            },
+            {
+                "subject": "市有关部门",
+                "subject-type": "机构",
+                "predicate": "控制",
+                "object": "相应环节食品安全事故",
+                "object-type": "情况"
+            },
+            {
+                "subject": "市有关部门",
+                "subject-type": "机构",
+                "predicate": "控制",
+                "object": "餐饮服务环节的问题食品及相关产品",
+                "object-type": "产品"
+            },
+            {
+                "subject": "市有关部门",
+                "subject-type": "机构",
+                "predicate": "控制",
+                "object": "与保健食品相关的食品安全事故",
+                "object-type": "情况"
+            },
+            {
+                "subject": "市有关部门",
+                "subject-type": "机构",
+                "predicate": "评估",
+                "object": "食品安全事故",
+                "object-type": "情况"
+            },
+            {
+                "subject": "市有关部门",
+                "subject-type": "机构",
+                "predicate": "核定",
+                "object": "事故级别",
+                "object-type": "情况"
+            },
+            {
+                "subject": "市有关部门",
+                "subject-type": "机构",
+                "predicate": "控制",
+                "object": "食品销售环节的问题食品及相关产品",
+                "object-type": "产品"
+            }
+        ]
+    },
+    {
+        "id": 30,
+        "text": "市委宣传部（市政府新闻办公室）会同市委网信办负责组织、协调食品安全事故的信息发布和食品安全事故的新闻宣传工作，协调有关部门做好新闻媒体舆论、互联网的舆论引导和监管工作。",
+        "spo_list": [
+            {
+                "subject": "市委宣传部",
+                "subject-type": "机构",
+                "predicate": "协调",
+                "object": "有关部门",
+                "object-type": "机构"
+            },
+            {
+                "subject": "有关部门",
+                "subject-type": "机构",
+                "predicate": "引导",
+                "object": "新闻媒体舆论",
+                "object-type": "信息"
+            },
+            {
+                "subject": "市委网信办",
+                "subject-type": "机构",
+                "predicate": "协调",
+                "object": "食品安全事故的新闻宣传工作",
+                "object-type": "工作"
+            },
+            {
+                "subject": "市委网信办",
+                "subject-type": "机构",
+                "predicate": "协调",
+                "object": "食品安全事故的信息发布",
+                "object-type": "工作"
+            },
+            {
+                "subject": "市委网信办",
+                "subject-type": "机构",
+                "predicate": "组织",
+                "object": "食品安全事故的信息发布",
+                "object-type": "工作"
+            },
+            {
+                "subject": "有关部门",
+                "subject-type": "机构",
+                "predicate": "引导",
+                "object": "互联网的舆论",
+                "object-type": "信息"
+            },
+            {
+                "subject": "市委宣传部",
+                "subject-type": "机构",
+                "predicate": "会同",
+                "object": "市委网信办",
+                "object-type": "机构"
+            },
+            {
+                "subject": "有关部门",
+                "subject-type": "机构",
+                "predicate": "监管",
+                "object": "新闻媒体舆论",
+                "object-type": "信息"
+            },
+            {
+                "subject": "有关部门",
+                "subject-type": "机构",
+                "predicate": "监管",
+                "object": "互联网的舆论",
+                "object-type": "信息"
+            },
+            {
+                "subject": "市委网信办",
+                "subject-type": "机构",
+                "predicate": "组织",
+                "object": "食品安全事故的新闻宣传工作",
+                "object-type": "工作"
+            }
+        ]
+    },
+    {
+        "id": 31,
+        "text": "市公安局负责食品安全事故中现场秩序的维护，协调做好交通管制工作，对属于公安机关管辖范围的涉嫌违法犯罪案件进行调查、侦查和处理等。",
+        "spo_list": [
+            {
+                "subject": "市公安局",
+                "subject-type": "机构",
+                "predicate": "维护",
+                "object": "食品安全事故中现场秩序",
+                "object-type": "工作"
+            },
+            {
+                "subject": "市公安局",
+                "subject-type": "机构",
+                "predicate": "协调",
+                "object": "交通管制工作",
+                "object-type": "工作"
+            }
+        ]
+    },
+    {
+        "id": 32,
+        "text": "市司法局负责推动落实“谁执法谁普法”的普法责任制，将应对食品安全事故法律法规和相关政策纳入公民普法重要内容，组织协调有关部门广泛普及应对食品安全事故相关法律法规知识，指导普法责任单位在执法和服务过程中切实履行社会普法责任，开展执法监督。",
+        "spo_list": [
+            {
+                "subject": "市司法局",
+                "subject-type": "机构",
+                "predicate": "实施",
+                "object": "将应对食品安全事故法律法规和相关政策纳入公民普法重要内容",
+                "object-type": "工作"
+            },
+            {
+                "subject": "市司法局",
+                "subject-type": "机构",
+                "predicate": "落实",
+                "object": "“谁执法谁普法”的普法责任制",
+                "object-type": "制度"
+            },
+            {
+                "subject": "市司法局",
+                "subject-type": "机构",
+                "predicate": "开展",
+                "object": "执法监督",
+                "object-type": "工作"
+            },
+            {
+                "subject": "有关部门",
+                "subject-type": "机构",
+                "predicate": "普及",
+                "object": "应对食品安全事故相关法律法规知识",
+                "object-type": "知识"
+            },
+            {
+                "subject": "市司法局",
+                "subject-type": "机构",
+                "predicate": "组织",
+                "object": "有关部门",
+                "object-type": "工作"
+            },
+            {
+                "subject": "市司法局",
+                "subject-type": "机构",
+                "predicate": "指导",
+                "object": "普法责任单位",
+                "object-type": "机构"
+            }
+        ]
+    },
+    {
+        "id": 33,
+        "text": "市场监管部门建立完善本市行政区域内食品安全事故监测防控体系。市场监管部门会同相关部门按照职责分工开展日常食品安全监督检查、抽样检验、不良反应、风险监测、舆情监测等工作，加强对媒体有关食品安全热点信息、媒体有关食品安全敏感舆情信息的跟踪监测。对可能导致食品安全事故的风险隐患信息加强收集、分析和研判，必要时向有关部门和有关地区通报。监测信息的主要内容包括：",
+        "spo_list": [
+            {
+                "subject": "市场监管部门",
+                "subject-type": "机构",
+                "predicate": "监测",
+                "object": "舆情",
+                "object-type": "情况"
+            },
+            {
+                "subject": "相关部门",
+                "subject-type": "机构",
+                "predicate": "通报",
+                "object": "有关地区",
+                "object-type": "机构"
+            },
+            {
+                "subject": "相关部门",
+                "subject-type": "机构",
+                "predicate": "开展",
+                "object": "抽样检验",
+                "object-type": "工作"
+            },
+            {
+                "subject": "市场监管部门",
+                "subject-type": "机构",
+                "predicate": "监测",
+                "object": "媒体有关食品安全敏感舆情信息",
+                "object-type": "信息"
+            },
+            {
+                "subject": "市场监管部门",
+                "subject-type": "机构",
+                "predicate": "监测",
+                "object": "媒体有关食品安全热点信息",
+                "object-type": "信息"
+            },
+            {
+                "subject": "市场监管部门",
+                "subject-type": "机构",
+                "predicate": "跟踪",
+                "object": "媒体有关食品安全敏感舆情信息",
+                "object-type": "信息"
+            },
+            {
+                "subject": "市场监管部门",
+                "subject-type": "机构",
+                "predicate": "通报",
+                "object": "有关地区",
+                "object-type": "机构"
+            },
+            {
+                "subject": "市场监管部门",
+                "subject-type": "机构",
+                "predicate": "收集",
+                "object": "可能导致食品安全事故的风险隐患",
+                "object-type": "信息"
+            },
+            {
+                "subject": "相关部门",
+                "subject-type": "机构",
+                "predicate": "监测",
+                "object": "媒体有关食品安全热点信息",
+                "object-type": "信息"
+            },
+            {
+                "subject": "相关部门",
+                "subject-type": "机构",
+                "predicate": "分析",
+                "object": "可能导致食品安全事故的风险隐患",
+                "object-type": "信息"
+            },
+            {
+                "subject": "相关部门",
+                "subject-type": "机构",
+                "predicate": "收集",
+                "object": "可能导致食品安全事故的风险隐患",
+                "object-type": "信息"
+            },
+            {
+                "subject": "相关部门",
+                "subject-type": "机构",
+                "predicate": "研判",
+                "object": "可能导致食品安全事故的风险隐患",
+                "object-type": "信息"
+            },
+            {
+                "subject": "相关部门",
+                "subject-type": "机构",
+                "predicate": "通报",
+                "object": "有关部门",
+                "object-type": "机构"
+            },
+            {
+                "subject": "市场监管部门",
+                "subject-type": "机构",
+                "predicate": "分析",
+                "object": "可能导致食品安全事故的风险隐患",
+                "object-type": "信息"
+            },
+            {
+                "subject": "市场监管部门",
+                "subject-type": "机构",
+                "predicate": "研判",
+                "object": "可能导致食品安全事故的风险隐患",
+                "object-type": "信息"
+            },
+            {
+                "subject": "相关部门",
+                "subject-type": "机构",
+                "predicate": "监测",
+                "object": "舆情",
+                "object-type": "情况"
+            },
+            {
+                "subject": "相关部门",
+                "subject-type": "机构",
+                "predicate": "监测",
+                "object": "风险",
+                "object-type": "情况"
+            },
+            {
+                "subject": "市场监管部门",
+                "subject-type": "机构",
+                "predicate": "通报",
+                "object": "有关部门",
+                "object-type": "机构"
+            },
+            {
+                "subject": "市场监管部门",
+                "subject-type": "机构",
+                "predicate": "完善",
+                "object": "本市行政区域内食品安全事故监测防控体系",
+                "object-type": "机构"
+            },
+            {
+                "subject": "市场监管部门",
+                "subject-type": "机构",
+                "predicate": "会同",
+                "object": "相关部门",
+                "object-type": "机构"
+            },
+            {
+                "subject": "相关部门",
+                "subject-type": "机构",
+                "predicate": "跟踪",
+                "object": "媒体有关食品安全敏感舆情信息",
+                "object-type": "信息"
+            },
+            {
+                "subject": "市场监管部门",
+                "subject-type": "机构",
+                "predicate": "监测",
+                "object": "风险",
+                "object-type": "情况"
+            },
+            {
+                "subject": "相关部门",
+                "subject-type": "机构",
+                "predicate": "跟踪",
+                "object": "媒体有关食品安全热点信息",
+                "object-type": "信息"
+            },
+            {
+                "subject": "相关部门",
+                "subject-type": "机构",
+                "predicate": "开展",
+                "object": "日常食品安全监督检查",
+                "object-type": "工作"
+            },
+            {
+                "subject": "市场监管部门",
+                "subject-type": "机构",
+                "predicate": "开展",
+                "object": "抽样检验",
+                "object-type": "工作"
+            },
+            {
+                "subject": "市场监管部门",
+                "subject-type": "机构",
+                "predicate": "跟踪",
+                "object": "媒体有关食品安全热点信息",
+                "object-type": "信息"
+            },
+            {
+                "subject": "市场监管部门",
+                "subject-type": "机构",
+                "predicate": "开展",
+                "object": "日常食品安全监督检查",
+                "object-type": "工作"
+            },
+            {
+                "subject": "相关部门",
+                "subject-type": "机构",
+                "predicate": "监测",
+                "object": "媒体有关食品安全敏感舆情信息",
+                "object-type": "信息"
+            }
+        ]
+    },
+    {
+        "id": 34,
+        "text": "（3）流行病学调查。疾病预防控制机构对现场及时开展卫生处理，并按照《中华人民共和国突发事件应对法》、《国家突发公共卫生事件应急预案》、《江州市突发公共卫生事件应急预案》等相关规定对与事件有关的因素开展流行病学调查，有关部门应当予以协助。疾病预防控制机构在完成流行病学调查后，应当在24小时内提交初步流行病学调查报告，并及时通报市场监管部门，在7日内提交最终调查报告。",
+        "spo_list": [
+            {
+                "subject": "疾病预防控制机构",
+                "subject-type": "机构",
+                "predicate": "开展",
+                "object": "卫生处理",
+                "object-type": "工作"
+            },
+            {
+                "subject": "疾病预防控制机构",
+                "subject-type": "机构",
+                "predicate": "开展",
+                "object": "流行病学调查",
+                "object-type": "工作"
+            },
+            {
+                "subject": "疾病预防控制机构",
+                "subject-type": "机构",
+                "predicate": "通报",
+                "object": "市场监管部门",
+                "object-type": "机构"
+            },
+            {
+                "subject": "有关部门",
+                "subject-type": "机构",
+                "predicate": "协助",
+                "object": "疾病预防控制机构",
+                "object-type": "机构"
+            },
+            {
+                "subject": "疾病预防控制机构",
+                "subject-type": "机构",
+                "predicate": "提交",
+                "object": "流行病学",
+                "object-type": "报告"
+            }
+        ]
+    },
+    {
+        "id": 35,
+        "text": "（4）应急检验检测。专业技术机构应当对引发食品安全事故的相关检品及时进行应急检验检测，提交科学的检验检测报告，为制定事件调查和应急处置方案等提供技术支撑；检验合格且确定与食品安全事故无关的，依法予以解除查封扣押或先行登记保存。",
+        "spo_list": [
+            {
+                "subject": "专业技术机构",
+                "subject-type": "机构",
+                "predicate": "解除",
+                "object": "查封扣押或先行登记保存",
+                "object-type": "情况"
+            },
+            {
+                "subject": "专业技术机构",
+                "subject-type": "机构",
+                "predicate": "提交",
+                "object": "科学的检验检测报告",
+                "object-type": "报告"
+            }
+        ]
+    },
+    {
+        "id": 36,
+        "text": "食品安全事故处置工作结束后，市场监管部门组织有关单位及时对食品安全事故应急处置工作进行评估，总结经验教训，分析事件原因和事件影响因素，提出对类似事件的防范建议和类似事件的处置建议，完成总结评估报告，向本级人民政府报告并采取适当方式向有关部门和社会通报。",
+        "spo_list": [
+            {
+                "subject": "市场监管部门",
+                "subject-type": "机构",
+                "predicate": "组织",
+                "object": "有关单位",
+                "object-type": "机构"
+            },
+            {
+                "subject": "市场监管部门",
+                "subject-type": "机构",
+                "predicate": "完成",
+                "object": "总结评估报告",
+                "object-type": "报告"
+            },
+            {
+                "subject": "市场监管部门",
+                "subject-type": "机构",
+                "predicate": "分析",
+                "object": "事件影响因素",
+                "object-type": "原因"
+            },
+            {
+                "subject": "市场监管部门",
+                "subject-type": "机构",
+                "predicate": "通报",
+                "object": "有关部门",
+                "object-type": "机构"
+            },
+            {
+                "subject": "市场监管部门",
+                "subject-type": "机构",
+                "predicate": "总结",
+                "object": "经验教训",
+                "object-type": "经验"
+            },
+            {
+                "subject": "市场监管部门",
+                "subject-type": "机构",
+                "predicate": "报告",
+                "object": "本级人民政府",
+                "object-type": "机构"
+            },
+            {
+                "subject": "市场监管部门",
+                "subject-type": "机构",
+                "predicate": "提出",
+                "object": "类似事件的处置建议",
+                "object-type": "建议"
+            },
+            {
+                "subject": "市场监管部门",
+                "subject-type": "机构",
+                "predicate": "评估",
+                "object": "食品安全事故应急处置",
+                "object-type": "工作"
+            },
+            {
+                "subject": "市场监管部门",
+                "subject-type": "机构",
+                "predicate": "分析",
+                "object": "事件原因",
+                "object-type": "原因"
+            },
+            {
+                "subject": "市场监管部门",
+                "subject-type": "机构",
+                "predicate": "提出",
+                "object": "类似事件的防范建议",
+                "object-type": "建议"
+            }
+        ]
+    },
+    {
+        "id": 37,
+        "text": "江州海关及各隶属海关应根据实际工作需要，做好人力资源保障，建立相对稳定的反恐应急队伍、掌握一定技能的反恐应急队伍。",
+        "spo_list": [
+            {
+                "subject": "江州海关",
+                "subject-type": "机构",
+                "predicate": "建立",
+                "object": "相对稳定的反恐应急队伍",
+                "object-type": "机构"
+            },
+            {
+                "subject": "江州海关",
+                "subject-type": "机构",
+                "predicate": "建立",
+                "object": "掌握一定技能的反恐应急队伍",
+                "object-type": "机构"
+            },
+            {
+                "subject": "各隶属海关",
+                "subject-type": "机构",
+                "predicate": "建立",
+                "object": "相对稳定的反恐应急队伍",
+                "object-type": "机构"
+            },
+            {
+                "subject": "各隶属海关",
+                "subject-type": "机构",
+                "predicate": "建立",
+                "object": "掌握一定技能的反恐应急队伍",
+                "object-type": "机构"
+            }
+        ]
+    },
+    {
+        "id": 38,
+        "text": "企业供应链采购。区商务部门组织有关重点商品流通企业积极组织货源、动用商业库存，缓解供给压力。",
+        "spo_list": [
+            {
+                "subject": "区商务部门",
+                "subject-type": "机构",
+                "predicate": "组织",
+                "object": "有关重点商品流通企业",
+                "object-type": "机构"
+            },
+            {
+                "subject": "有关重点商品流通企业",
+                "subject-type": "机构",
+                "predicate": "组织",
+                "object": "货源",
+                "object-type": "资源"
+            },
+            {
+                "subject": "有关重点商品流通企业",
+                "subject-type": "机构",
+                "predicate": "动用",
+                "object": "商业库存",
+                "object-type": "资源"
+            }
+        ]
+    },
+    {
+        "id": 39,
+        "text": "当发生重大突发事件造成应急供给网点严重损毁，影响应急供给的，事发地人民政府负责迅速组织建立临时供给网点，确保应急供给渠道畅通。",
+        "spo_list": [
+            {
+                "subject": "事发地人民政府",
+                "subject-type": "机构",
+                "predicate": "建立",
+                "object": "临时供给网点",
+                "object-type": "机构"
+            }
+        ]
+    },
+    {
+        "id": 40,
+        "text": "发生突发事件的风险基本消除，生活必需品市场供给趋于正常，经专业机构和专家评估，区指挥部办公室提出应急结束的建议，经区指挥部批准后，结束应急处置工作，并解除供给应急状态。",
+        "spo_list": [
+            {
+                "subject": "区指挥部",
+                "subject-type": "机构",
+                "predicate": "批准",
+                "object": "应急结束的建议",
+                "object-type": "建议"
+            },
+            {
+                "subject": "区指挥部办公室",
+                "subject-type": "机构",
+                "predicate": "提出",
+                "object": "应急结束的建议",
+                "object-type": "建议"
+            }
+        ]
+    },
+    {
+        "id": 41,
+        "text": "区粮食中心、外贸公司、中石油靖林区分公司、中石化靖林区分公司、雀巢矿泉水靖林区公司、新世联华超市等单位要认真落实我市食盐储备任务、食糖储备任务、猪肉储备任务、牛羊肉储备任务、鸡蛋储备任务、蔬菜储备任务、燃油储备任务等生活必需品储备任务，严格监管制度，落实监管责任，确保储备数量合格、质量完好。",
+        "spo_list": [
+            {
+                "subject": "区粮食中心",
+                "subject-type": "机构",
+                "predicate": "落实",
+                "object": "猪肉储备任务",
+                "object-type": "任务"
+            },
+            {
+                "subject": "新世联华超市",
+                "subject-type": "机构",
+                "predicate": "落实",
+                "object": "鸡蛋储备任务",
+                "object-type": "任务"
+            },
+            {
+                "subject": "外贸公司",
+                "subject-type": "机构",
+                "predicate": "实施",
+                "object": "严格监管制度",
+                "object-type": "措施"
+            },
+            {
+                "subject": "新世联华超市",
+                "subject-type": "机构",
+                "predicate": "落实",
+                "object": "牛羊肉储备任务",
+                "object-type": "任务"
+            },
+            {
+                "subject": "中石化靖林区分公司",
+                "subject-type": "机构",
+                "predicate": "落实",
+                "object": "食糖储备任务",
+                "object-type": "任务"
+            },
+            {
+                "subject": "外贸公司",
+                "subject-type": "机构",
+                "predicate": "落实",
+                "object": "食糖储备任务",
+                "object-type": "任务"
+            },
+            {
+                "subject": "新世联华超市",
+                "subject-type": "机构",
+                "predicate": "落实",
+                "object": "蔬菜储备任务",
+                "object-type": "任务"
+            },
+            {
+                "subject": "中石油靖林区分公司",
+                "subject-type": "机构",
+                "predicate": "落实",
+                "object": "猪肉储备任务",
+                "object-type": "任务"
+            },
+            {
+                "subject": "雀巢矿泉水靖林区公司",
+                "subject-type": "机构",
+                "predicate": "落实",
+                "object": "牛羊肉储备任务",
+                "object-type": "任务"
+            },
+            {
+                "subject": "中石油靖林区分公司",
+                "subject-type": "机构",
+                "predicate": "落实",
+                "object": "生活必需品储备任务",
+                "object-type": "任务"
+            },
+            {
+                "subject": "外贸公司",
+                "subject-type": "机构",
+                "predicate": "落实",
+                "object": "生活必需品储备任务",
+                "object-type": "任务"
+            },
+            {
+                "subject": "中石化靖林区分公司",
+                "subject-type": "机构",
+                "predicate": "实施",
+                "object": "严格监管制度",
+                "object-type": "措施"
+            },
+            {
+                "subject": "新世联华超市",
+                "subject-type": "机构",
+                "predicate": "落实",
+                "object": "燃油储备任务",
+                "object-type": "任务"
+            },
+            {
+                "subject": "雀巢矿泉水靖林区公司",
+                "subject-type": "机构",
+                "predicate": "落实",
+                "object": "鸡蛋储备任务",
+                "object-type": "任务"
+            },
+            {
+                "subject": "中石油靖林区分公司",
+                "subject-type": "机构",
+                "predicate": "落实",
+                "object": "监管责任",
+                "object-type": "责任"
+            },
+            {
+                "subject": "中石油靖林区分公司",
+                "subject-type": "机构",
+                "predicate": "落实",
+                "object": "鸡蛋储备任务",
+                "object-type": "任务"
+            },
+            {
+                "subject": "中石油靖林区分公司",
+                "subject-type": "机构",
+                "predicate": "落实",
+                "object": "食糖储备任务",
+                "object-type": "任务"
+            },
+            {
+                "subject": "雀巢矿泉水靖林区公司",
+                "subject-type": "机构",
+                "predicate": "落实",
+                "object": "监管责任",
+                "object-type": "责任"
+            },
+            {
+                "subject": "外贸公司",
+                "subject-type": "机构",
+                "predicate": "落实",
+                "object": "猪肉储备任务",
+                "object-type": "任务"
+            },
+            {
+                "subject": "外贸公司",
+                "subject-type": "机构",
+                "predicate": "落实",
+                "object": "蔬菜储备任务",
+                "object-type": "任务"
+            },
+            {
+                "subject": "区粮食中心",
+                "subject-type": "机构",
+                "predicate": "落实",
+                "object": "食糖储备任务",
+                "object-type": "任务"
+            },
+            {
+                "subject": "新世联华超市",
+                "subject-type": "机构",
+                "predicate": "落实",
+                "object": "食糖储备任务",
+                "object-type": "任务"
+            },
+            {
+                "subject": "雀巢矿泉水靖林区公司",
+                "subject-type": "机构",
+                "predicate": "落实",
+                "object": "燃油储备任务",
+                "object-type": "任务"
+            },
+            {
+                "subject": "中石化靖林区分公司",
+                "subject-type": "机构",
+                "predicate": "落实",
+                "object": "牛羊肉储备任务",
+                "object-type": "任务"
+            },
+            {
+                "subject": "新世联华超市",
+                "subject-type": "机构",
+                "predicate": "落实",
+                "object": "生活必需品储备任务",
+                "object-type": "任务"
+            },
+            {
+                "subject": "雀巢矿泉水靖林区公司",
+                "subject-type": "机构",
+                "predicate": "实施",
+                "object": "严格监管制度",
+                "object-type": "措施"
+            },
+            {
+                "subject": "雀巢矿泉水靖林区公司",
+                "subject-type": "机构",
+                "predicate": "落实",
+                "object": "生活必需品储备任务",
+                "object-type": "任务"
+            },
+            {
+                "subject": "中石油靖林区分公司",
+                "subject-type": "机构",
+                "predicate": "落实",
+                "object": "燃油储备任务",
+                "object-type": "任务"
+            },
+            {
+                "subject": "雀巢矿泉水靖林区公司",
+                "subject-type": "机构",
+                "predicate": "落实",
+                "object": "猪肉储备任务",
+                "object-type": "任务"
+            },
+            {
+                "subject": "中石化靖林区分公司",
+                "subject-type": "机构",
+                "predicate": "落实",
+                "object": "鸡蛋储备任务",
+                "object-type": "任务"
+            },
+            {
+                "subject": "外贸公司",
+                "subject-type": "机构",
+                "predicate": "落实",
+                "object": "监管责任",
+                "object-type": "责任"
+            },
+            {
+                "subject": "外贸公司",
+                "subject-type": "机构",
+                "predicate": "落实",
+                "object": "燃油储备任务",
+                "object-type": "任务"
+            },
+            {
+                "subject": "中石油靖林区分公司",
+                "subject-type": "机构",
+                "predicate": "实施",
+                "object": "严格监管制度",
+                "object-type": "措施"
+            },
+            {
+                "subject": "中石化靖林区分公司",
+                "subject-type": "机构",
+                "predicate": "落实",
+                "object": "监管责任",
+                "object-type": "责任"
+            },
+            {
+                "subject": "区粮食中心",
+                "subject-type": "机构",
+                "predicate": "落实",
+                "object": "食盐储备任务",
+                "object-type": "任务"
+            },
+            {
+                "subject": "雀巢矿泉水靖林区公司",
+                "subject-type": "机构",
+                "predicate": "落实",
+                "object": "蔬菜储备任务",
+                "object-type": "任务"
+            },
+            {
+                "subject": "外贸公司",
+                "subject-type": "机构",
+                "predicate": "落实",
+                "object": "鸡蛋储备任务",
+                "object-type": "任务"
+            },
+            {
+                "subject": "区粮食中心",
+                "subject-type": "机构",
+                "predicate": "落实",
+                "object": "牛羊肉储备任务",
+                "object-type": "任务"
+            },
+            {
+                "subject": "新世联华超市",
+                "subject-type": "机构",
+                "predicate": "落实",
+                "object": "猪肉储备任务",
+                "object-type": "任务"
+            },
+            {
+                "subject": "区粮食中心",
+                "subject-type": "机构",
+                "predicate": "落实",
+                "object": "燃油储备任务",
+                "object-type": "任务"
+            },
+            {
+                "subject": "区粮食中心",
+                "subject-type": "机构",
+                "predicate": "落实",
+                "object": "鸡蛋储备任务",
+                "object-type": "任务"
+            },
+            {
+                "subject": "新世联华超市",
+                "subject-type": "机构",
+                "predicate": "落实",
+                "object": "监管责任",
+                "object-type": "责任"
+            },
+            {
+                "subject": "雀巢矿泉水靖林区公司",
+                "subject-type": "机构",
+                "predicate": "落实",
+                "object": "食糖储备任务",
+                "object-type": "任务"
+            },
+            {
+                "subject": "新世联华超市",
+                "subject-type": "机构",
+                "predicate": "实施",
+                "object": "严格监管制度",
+                "object-type": "措施"
+            },
+            {
+                "subject": "中石化靖林区分公司",
+                "subject-type": "机构",
+                "predicate": "落实",
+                "object": "燃油储备任务",
+                "object-type": "任务"
+            },
+            {
+                "subject": "区粮食中心",
+                "subject-type": "机构",
+                "predicate": "落实",
+                "object": "监管责任",
+                "object-type": "责任"
+            },
+            {
+                "subject": "中石化靖林区分公司",
+                "subject-type": "机构",
+                "predicate": "落实",
+                "object": "蔬菜储备任务",
+                "object-type": "任务"
+            },
+            {
+                "subject": "中石化靖林区分公司",
+                "subject-type": "机构",
+                "predicate": "落实",
+                "object": "猪肉储备任务",
+                "object-type": "任务"
+            },
+            {
+                "subject": "区粮食中心",
+                "subject-type": "机构",
+                "predicate": "落实",
+                "object": "蔬菜储备任务",
+                "object-type": "任务"
+            },
+            {
+                "subject": "区粮食中心",
+                "subject-type": "机构",
+                "predicate": "实施",
+                "object": "严格监管制度",
+                "object-type": "措施"
+            },
+            {
+                "subject": "外贸公司",
+                "subject-type": "机构",
+                "predicate": "落实",
+                "object": "牛羊肉储备任务",
+                "object-type": "任务"
+            },
+            {
+                "subject": "中石油靖林区分公司",
+                "subject-type": "机构",
+                "predicate": "落实",
+                "object": "牛羊肉储备任务",
+                "object-type": "任务"
+            },
+            {
+                "subject": "中石油靖林区分公司",
+                "subject-type": "机构",
+                "predicate": "落实",
+                "object": "蔬菜储备任务",
+                "object-type": "任务"
+            },
+            {
+                "subject": "中石化靖林区分公司",
+                "subject-type": "机构",
+                "predicate": "落实",
+                "object": "生活必需品储备任务",
+                "object-type": "任务"
+            }
+        ]
+    },
+    {
+        "id": 42,
+        "text": "7.2.3区指挥部办公室应结合应急管理工作实践，及时组织修订预案。遇有特殊情况可随时修订。修订后的应急预案应重新办理审查、论证、备案等各项程序。",
+        "spo_list": [
+            {
+                "subject": "区指挥部办公室",
+                "subject-type": "机构",
+                "predicate": "修订",
+                "object": "预案",
+                "object-type": "方案"
+            }
+        ]
+    },
+    {
+        "id": 43,
+        "text": "区供热办：负责组织协调相关单位对因道路桥梁突发事件而毁坏的供热管线进行抢修恢复。",
+        "spo_list": [
+            {
+                "subject": "相关单位",
+                "subject-type": "机构",
+                "predicate": "抢修",
+                "object": "因道路桥梁突发事件而毁坏的供热管线",
+                "object-type": "资源"
+            },
+            {
+                "subject": "区供热办",
+                "subject-type": "机构",
+                "predicate": "协调",
+                "object": "相关单位",
+                "object-type": "机构"
+            },
+            {
+                "subject": "区供热办",
+                "subject-type": "机构",
+                "predicate": "组织",
+                "object": "相关单位",
+                "object-type": "机构"
+            }
+        ]
+    },
+    {
+        "id": 44,
+        "text": "通信部门（移动分公司、联通分公司、电信分公司）：负责公众通信网的通信恢复及相关应急通信保障工作。",
+        "spo_list": [
+            {
+                "subject": "通信部门",
+                "subject-type": "机构",
+                "predicate": "成员",
+                "object": "移动分公司",
+                "object-type": "机构"
+            },
+            {
+                "subject": "通信部门",
+                "subject-type": "机构",
+                "predicate": "成员",
+                "object": "联通分公司",
+                "object-type": "机构"
+            },
+            {
+                "subject": "通信部门",
+                "subject-type": "机构",
+                "predicate": "成员",
+                "object": "电信分公司",
+                "object-type": "机构"
+            }
+        ]
+    },
+    {
+        "id": 45,
+        "text": "2.4.1坚持统一领导、分级响应的原则，根据响应级别依托区道桥指挥部组建或由事发地镇乡人民政府组建现场指挥部。较大以上级别突发事件现场总指挥由区指挥部主要领导担任，一般突发事件现场总指挥由事发地人民政府主要领导担任。现场指挥部全面负责现场应急救援指挥，并及时向区道桥指挥部报告事故及救援情况。",
+        "spo_list": [
+            {
+                "subject": "现场指挥部",
+                "subject-type": "机构",
+                "predicate": "报告",
+                "object": "救援情况",
+                "object-type": "情况"
+            },
+            {
+                "subject": "现场指挥部",
+                "subject-type": "机构",
+                "predicate": "报告",
+                "object": "事故",
+                "object-type": "问题"
+            },
+            {
+                "subject": "事发地人民政府主要领导",
+                "subject-type": "人物",
+                "predicate": "担任",
+                "object": "一般突发事件现场总指挥",
+                "object-type": "职务"
+            },
+            {
+                "subject": "事发地镇乡人民政府",
+                "subject-type": "机构",
+                "predicate": "组建",
+                "object": "现场指挥部",
+                "object-type": "机构"
+            },
+            {
+                "subject": "区指挥部主要领导",
+                "subject-type": "人物",
+                "predicate": "担任",
+                "object": "较大以上级别突发事件现场总指挥",
+                "object-type": "职务"
+            }
+        ]
+    },
+    {
+        "id": 46,
+        "text": "（4）交通部门、公安部门等部门要保证紧急情况下抢险救援车辆的优先安排、调度和放行，确保受伤人员、救援物资和人员能够及时、安全送达；",
+        "spo_list": [
+            {
+                "subject": "交通部门",
+                "subject-type": "机构",
+                "predicate": "调度",
+                "object": "紧急情况下抢险救援车辆",
+                "object-type": "资源"
+            },
+            {
+                "subject": "公安部门",
+                "subject-type": "机构",
+                "predicate": "调度",
+                "object": "紧急情况下抢险救援车辆",
+                "object-type": "资源"
+            },
+            {
+                "subject": "交通部门",
+                "subject-type": "机构",
+                "predicate": "安排",
+                "object": "紧急情况下抢险救援车辆",
+                "object-type": "资源"
+            },
+            {
+                "subject": "公安部门",
+                "subject-type": "机构",
+                "predicate": "安排",
+                "object": "紧急情况下抢险救援车辆",
+                "object-type": "资源"
+            },
+            {
+                "subject": "公安部门",
+                "subject-type": "机构",
+                "predicate": "放行",
+                "object": "紧急情况下抢险救援车辆",
+                "object-type": "资源"
+            },
+            {
+                "subject": "交通部门",
+                "subject-type": "机构",
+                "predicate": "放行",
+                "object": "紧急情况下抢险救援车辆",
+                "object-type": "资源"
+            }
+        ]
+    },
+    {
+        "id": 47,
+        "text": "突发事件发生后，事发地街道办事处和公安渤北分局要迅速在突发事件处置现场周围设立警戒区和警戒哨，做好现场控制、交通管制、疏散救助群众、维护公共秩序等工作。",
+        "spo_list": [
+            {
+                "subject": "公安渤北分局",
+                "subject-type": "机构",
+                "predicate": "维护",
+                "object": "维护公共秩序",
+                "object-type": "秩序"
+            },
+            {
+                "subject": "公安渤北分局",
+                "subject-type": "机构",
+                "predicate": "疏散",
+                "object": "救助群众",
+                "object-type": "人物"
+            },
+            {
+                "subject": "公安渤北分局",
+                "subject-type": "机构",
+                "predicate": "设立",
+                "object": "警戒哨",
+                "object-type": "措施"
+            },
+            {
+                "subject": "事发地街道办事处",
+                "subject-type": "机构",
+                "predicate": "实施",
+                "object": "交通管制",
+                "object-type": "措施"
+            },
+            {
+                "subject": "事发地街道办事处",
+                "subject-type": "机构",
+                "predicate": "设立",
+                "object": "警戒哨",
+                "object-type": "措施"
+            },
+            {
+                "subject": "公安渤北分局",
+                "subject-type": "机构",
+                "predicate": "实施",
+                "object": "现场控制",
+                "object-type": "措施"
+            },
+            {
+                "subject": "事发地街道办事处",
+                "subject-type": "机构",
+                "predicate": "维护",
+                "object": "维护公共秩序",
+                "object-type": "秩序"
+            },
+            {
+                "subject": "公安渤北分局",
+                "subject-type": "机构",
+                "predicate": "设立",
+                "object": "警戒区",
+                "object-type": "区域"
+            },
+            {
+                "subject": "公安渤北分局",
+                "subject-type": "机构",
+                "predicate": "实施",
+                "object": "交通管制",
+                "object-type": "措施"
+            },
+            {
+                "subject": "事发地街道办事处",
+                "subject-type": "机构",
+                "predicate": "设立",
+                "object": "警戒区",
+                "object-type": "区域"
+            },
+            {
+                "subject": "事发地街道办事处",
+                "subject-type": "机构",
+                "predicate": "实施",
+                "object": "现场控制",
+                "object-type": "措施"
+            },
+            {
+                "subject": "事发地街道办事处",
+                "subject-type": "机构",
+                "predicate": "疏散",
+                "object": "救助群众",
+                "object-type": "人物"
+            }
+        ]
+    },
+    {
+        "id": 48,
+        "text": "区人民政府构建全区统一的突发事件应急指挥通信网络系统，形成互通互联的综合应急信息交流平台。相关处置部门要配置计算机指挥终端、专线电话、无线指挥手持电台、卫星电话以及其他有效应急通讯设备，保障指挥机关的通讯、事发现场指挥部的通讯及其重要场所的通讯。",
+        "spo_list": [
+            {
+                "subject": "相关处置部门",
+                "subject-type": "机构",
+                "predicate": "保障",
+                "object": "重要场所的通讯",
+                "object-type": "工作"
+            },
+            {
+                "subject": "相关处置部门",
+                "subject-type": "机构",
+                "predicate": "保障",
+                "object": "指挥机关的通讯",
+                "object-type": "工作"
+            },
+            {
+                "subject": "相关处置部门",
+                "subject-type": "机构",
+                "predicate": "配置",
+                "object": "专线电话",
+                "object-type": "设施"
+            },
+            {
+                "subject": "相关处置部门",
+                "subject-type": "机构",
+                "predicate": "配置",
+                "object": "卫星电话",
+                "object-type": "设施"
+            },
+            {
+                "subject": "相关处置部门",
+                "subject-type": "机构",
+                "predicate": "配置",
+                "object": "计算机指挥终端",
+                "object-type": "设施"
+            },
+            {
+                "subject": "相关处置部门",
+                "subject-type": "机构",
+                "predicate": "配置",
+                "object": "无线指挥手持电台",
+                "object-type": "设施"
+            },
+            {
+                "subject": "相关处置部门",
+                "subject-type": "机构",
+                "predicate": "配置",
+                "object": "其他有效应急通讯设备",
+                "object-type": "设施"
+            },
+            {
+                "subject": "相关处置部门",
+                "subject-type": "机构",
+                "predicate": "保障",
+                "object": "事发现场指挥部的通讯",
+                "object-type": "工作"
+            }
+        ]
+    },
+    {
+        "id": 49,
+        "text": "团区委会同区应急办、区红十字会等有关部门和单位，加强应急志愿者的招募、应急志愿者的组织和应急志愿者的培训，使其掌握应急管理相关法律法规和突发事件应对基本技能，增强现场组织、自救互救及配合专业救援队伍开展工作的能力。",
+        "spo_list": [
+            {
+                "subject": "区应急办",
+                "subject-type": "机构",
+                "predicate": "加强",
+                "object": "应急志愿者的组织",
+                "object-type": "措施"
+            },
+            {
+                "subject": "团区委会",
+                "subject-type": "机构",
+                "predicate": "加强",
+                "object": "应急志愿者的招募",
+                "object-type": "措施"
+            },
+            {
+                "subject": "应急志愿者",
+                "subject-type": "机构",
+                "predicate": "掌握",
+                "object": "突发事件应对基本技能",
+                "object-type": "知识"
+            },
+            {
+                "subject": "区红十字会",
+                "subject-type": "机构",
+                "predicate": "加强",
+                "object": "应急志愿者的招募",
+                "object-type": "措施"
+            },
+            {
+                "subject": "应急志愿者",
+                "subject-type": "机构",
+                "predicate": "增强",
+                "object": "现场组织",
+                "object-type": "能力"
+            },
+            {
+                "subject": "应急志愿者",
+                "subject-type": "机构",
+                "predicate": "增强",
+                "object": "配合专业救援队伍开展工作",
+                "object-type": "能力"
+            },
+            {
+                "subject": "应急志愿者",
+                "subject-type": "机构",
+                "predicate": "增强",
+                "object": "自救互救",
+                "object-type": "能力"
+            },
+            {
+                "subject": "区红十字会",
+                "subject-type": "机构",
+                "predicate": "加强",
+                "object": "应急志愿者的培训",
+                "object-type": "措施"
+            },
+            {
+                "subject": "区应急办",
+                "subject-type": "机构",
+                "predicate": "加强",
+                "object": "应急志愿者的招募",
+                "object-type": "措施"
+            },
+            {
+                "subject": "团区委会",
+                "subject-type": "机构",
+                "predicate": "加强",
+                "object": "应急志愿者的培训",
+                "object-type": "措施"
+            },
+            {
+                "subject": "团区委会",
+                "subject-type": "机构",
+                "predicate": "加强",
+                "object": "应急志愿者的组织",
+                "object-type": "措施"
+            },
+            {
+                "subject": "应急志愿者",
+                "subject-type": "机构",
+                "predicate": "掌握",
+                "object": "应急管理相关法律法规",
+                "object-type": "知识"
+            },
+            {
+                "subject": "区应急办",
+                "subject-type": "机构",
+                "predicate": "加强",
+                "object": "应急志愿者的培训",
+                "object-type": "措施"
+            },
+            {
+                "subject": "区红十字会",
+                "subject-type": "机构",
+                "predicate": "加强",
+                "object": "应急志愿者的组织",
+                "object-type": "措施"
+            }
+        ]
+    },
+    {
+        "id": 50,
+        "text": "公安部门负责维护突发公共事件现场治安秩序，保证现场医疗卫生救援工作的顺利进行；负责维护承担抢救伤病员的医疗救援机构的治安秩序，确保后续医疗救援工作的正常开展。",
+        "spo_list": [
+            {
+                "subject": "公安部门",
+                "subject-type": "机构",
+                "predicate": "保证",
+                "object": "现场医疗卫生救援工作的顺利进行",
+                "object-type": "工作"
+            },
+            {
+                "subject": "公安部门",
+                "subject-type": "机构",
+                "predicate": "维护",
+                "object": "承担抢救伤病员的医疗救援机构的治安秩序",
+                "object-type": "秩序"
+            },
+            {
+                "subject": "公安部门",
+                "subject-type": "机构",
+                "predicate": "保证",
+                "object": "后续医疗救援工作的正常开展",
+                "object-type": "工作"
+            },
+            {
+                "subject": "公安部门",
+                "subject-type": "机构",
+                "predicate": "维护",
+                "object": "突发公共事件现场治安秩序",
+                "object-type": "秩序"
+            }
+        ]
+    },
+    {
+        "id": 51,
+        "text": "区红十字会负责组织群众开展现场自救和现场互救，不断提高全社会的防范意识和灾害防救技能。组织各类群众性志愿者队伍，参与医疗救援工作。依法接受国内外组织的捐赠和个人的捐赠，提供急需的人道主义援助。",
+        "spo_list": [
+            {
+                "subject": "群众",
+                "subject-type": "人物",
+                "predicate": "开展",
+                "object": "现场互救",
+                "object-type": "措施"
+            },
+            {
+                "subject": "区红十字会",
+                "subject-type": "机构",
+                "predicate": "组织",
+                "object": "群众",
+                "object-type": "人物"
+            },
+            {
+                "subject": "区红十字会",
+                "subject-type": "机构",
+                "predicate": "接受",
+                "object": "国内外组织的捐赠",
+                "object-type": "捐赠"
+            },
+            {
+                "subject": "区红十字会",
+                "subject-type": "机构",
+                "predicate": "组织",
+                "object": "各类群众性志愿者队伍",
+                "object-type": "方案"
+            },
+            {
+                "subject": "区红十字会",
+                "subject-type": "机构",
+                "predicate": "接受",
+                "object": "个人的捐赠",
+                "object-type": "捐赠"
+            },
+            {
+                "subject": "区红十字会",
+                "subject-type": "机构",
+                "predicate": "提供",
+                "object": "急需的人道主义援助",
+                "object-type": "支援"
+            },
+            {
+                "subject": "各类群众性志愿者队伍",
+                "subject-type": "方案",
+                "predicate": "参与",
+                "object": "医疗救援",
+                "object-type": "工作"
+            },
+            {
+                "subject": "群众",
+                "subject-type": "人物",
+                "predicate": "开展",
+                "object": "现场自救",
+                "object-type": "措施"
+            }
+        ]
+    },
+    {
+        "id": 52,
+        "text": "区指挥部办公室组织有关专家进行分析论证，经现场检测评价确无危害和风险后，提出终止应急响应的建议，报区指挥部批准宣布应急响应结束。",
+        "spo_list": [
+            {
+                "subject": "区指挥部",
+                "subject-type": "机构",
+                "predicate": "批准",
+                "object": "终止应急响应的建议",
+                "object-type": "建议"
+            },
+            {
+                "subject": "区指挥部办公室",
+                "subject-type": "机构",
+                "predicate": "提出",
+                "object": "终止应急响应的建议",
+                "object-type": "建议"
+            },
+            {
+                "subject": "区指挥部办公室",
+                "subject-type": "机构",
+                "predicate": "宣布",
+                "object": "应急响应结束",
+                "object-type": "信息"
+            },
+            {
+                "subject": "区指挥部办公室",
+                "subject-type": "机构",
+                "predicate": "组织",
+                "object": "有关专家",
+                "object-type": "人物"
+            }
+        ]
+    },
+    {
+        "id": 53,
+        "text": "（三）装备到位，科技先行。各大队建立健全应急物资储备制度，对各类应急物资统筹规划管理和调度使用，确保应急处置、抢险救援、安全防护等各类装备齐全有效。同时，积极推动无人机等现代化装备在应急管理中的应用，进一步提升应急处置实战水平。",
+        "spo_list": [
+            {
+                "subject": "各大队",
+                "subject-type": "机构",
+                "predicate": "健全",
+                "object": "应急物资储备制度",
+                "object-type": "制度"
+            },
+            {
+                "subject": "各大队",
+                "subject-type": "机构",
+                "predicate": "建立",
+                "object": "应急物资储备制度",
+                "object-type": "制度"
+            },
+            {
+                "subject": "各大队",
+                "subject-type": "机构",
+                "predicate": "调度",
+                "object": "各类应急物资",
+                "object-type": "资源"
+            },
+            {
+                "subject": "各大队",
+                "subject-type": "机构",
+                "predicate": "管理",
+                "object": "各类应急物资",
+                "object-type": "资源"
+            }
+        ]
+    },
+    {
+        "id": 54,
+        "text": "与事发企业相关的保险机构根据有关规定和程序及时开展理赔工作；区民政局做好伤亡人员的善后处置工作；发生事件的公共汽车企业配合相关单位做好事故伤亡人员家属的安抚和赔偿工作。",
+        "spo_list": [
+            {
+                "subject": "公共汽车企业",
+                "subject-type": "机构",
+                "predicate": "赔偿",
+                "object": "事故伤亡人员家属",
+                "object-type": "人物"
+            },
+            {
+                "subject": "区民政局",
+                "subject-type": "机构",
+                "predicate": "实施",
+                "object": "伤亡人员的善后处置工作",
+                "object-type": "工作"
+            },
+            {
+                "subject": "公共汽车企业",
+                "subject-type": "机构",
+                "predicate": "安抚",
+                "object": "事故伤亡人员家属",
+                "object-type": "人物"
+            },
+            {
+                "subject": "与事发企业相关的保险机构",
+                "subject-type": "机构",
+                "predicate": "开展",
+                "object": "理赔工作",
+                "object-type": "工作"
+            }
+        ]
+    },
+    {
+        "id": 55,
+        "text": "负责组织医疗卫生机构开展医疗救援工作和医疗救护工作指挥等工作；及时向指挥部通报人员的救治与伤亡情况。",
+        "spo_list": [
+            {
+                "subject": "医疗卫生机构",
+                "subject-type": "机构",
+                "predicate": "开展",
+                "object": "医疗救援工作",
+                "object-type": "工作"
+            },
+            {
+                "subject": "医疗卫生机构",
+                "subject-type": "机构",
+                "predicate": "开展",
+                "object": "医疗救护工作",
+                "object-type": "工作"
+            }
+        ]
+    },
+    {
+        "id": 56,
+        "text": "区有关部门按照本预案的规定履行职责，并制定相应的应急预案。日后，随情况的变化，应及时修订完善本预案。",
+        "spo_list": [
+            {
+                "subject": "区有关部门",
+                "subject-type": "机构",
+                "predicate": "完善",
+                "object": "相应的应急预案",
+                "object-type": "预案"
+            },
+            {
+                "subject": "区有关部门",
+                "subject-type": "机构",
+                "predicate": "制定",
+                "object": "相应的应急预案",
+                "object-type": "预案"
+            },
+            {
+                "subject": "区有关部门",
+                "subject-type": "机构",
+                "predicate": "修订",
+                "object": "相应的应急预案",
+                "object-type": "预案"
+            }
+        ]
+    },
+    {
+        "id": 57,
+        "text": "4.区建设交通局负责根据粮食应急工作的需要，组织、协调有关部门做好应急粮食的运输保障工作。",
+        "spo_list": [
+            {
+                "subject": "区建设交通局",
+                "subject-type": "机构",
+                "predicate": "组织",
+                "object": "有关部门",
+                "object-type": "机构"
+            },
+            {
+                "subject": "区建设交通局",
+                "subject-type": "机构",
+                "predicate": "协调",
+                "object": "有关部门",
+                "object-type": "机构"
+            }
+        ]
+    },
+    {
+        "id": 58,
+        "text": "1.按照“产区保持三个月销量，销区保持六个月销量”的要求，保证我区地方储备粮油规模到位、数量到位。区粮食局要严格制度，严格责任，严格管理，确保我区地方储备粮油质量完好，结构优化，关键时刻调得动、用得上。",
+        "spo_list": [
+            {
+                "subject": "区粮食局",
+                "subject-type": "机构",
+                "predicate": "确保",
+                "object": "我区地方储备粮油质量完好",
+                "object-type": "情况"
+            },
+            {
+                "subject": "区粮食局",
+                "subject-type": "机构",
+                "predicate": "采取",
+                "object": "结构优化",
+                "object-type": "措施"
+            }
+        ]
+    },
+    {
+        "id": 59,
+        "text": "各通信运营企业获得预警信息后，应对预警信息加以分析，按照“早发现、早报告、早处置”的原则及时处置；对可能演变为严重通信事故的情况，及时报告区通信保障应急工作办公室。区通信保障应急工作办公室接到预警信息后，立即进行分析核实，经确认后通知可能受到影响的其他基础通信运营企业，做好预防和应急准备工作。",
+        "spo_list": [
+            {
+                "subject": "区通信保障应急工作办公室",
+                "subject-type": "机构",
+                "predicate": "获取",
+                "object": "预警信息",
+                "object-type": "信息"
+            },
+            {
+                "subject": "可能受到影响的其他基础通信运营企业",
+                "subject-type": "机构",
+                "predicate": "实施",
+                "object": "应急准备",
+                "object-type": "工作"
+            },
+            {
+                "subject": "各通信运营企业",
+                "subject-type": "机构",
+                "predicate": "分析",
+                "object": "预警信息",
+                "object-type": "信息"
+            },
+            {
+                "subject": "各通信运营企业",
+                "subject-type": "机构",
+                "predicate": "报告",
+                "object": "区通信保障应急工作办公室",
+                "object-type": "机构"
+            },
+            {
+                "subject": "可能受到影响的其他基础通信运营企业",
+                "subject-type": "机构",
+                "predicate": "实施",
+                "object": "预防",
+                "object-type": "工作"
+            },
+            {
+                "subject": "区通信保障应急工作办公室",
+                "subject-type": "机构",
+                "predicate": "通知",
+                "object": "可能受到影响的其他基础通信运营企业",
+                "object-type": "机构"
+            }
+        ]
+    },
+    {
+        "id": 60,
+        "text": "区公安局：负责人防工程事故现场治安秩序的维护工作；负责组织协调疏导人防工程事故周边地区交通，保障指挥车辆优先通行、抢险车辆优先通行、救灾车辆优先通行，必要时对事故现场周边地区采取交通管制措施。",
+        "spo_list": [
+            {
+                "subject": "区公安局",
+                "subject-type": "机构",
+                "predicate": "维护",
+                "object": "人防工程事故现场治安秩序",
+                "object-type": "秩序"
+            },
+            {
+                "subject": "区公安局",
+                "subject-type": "机构",
+                "predicate": "保障",
+                "object": "抢险车辆优先通行",
+                "object-type": "工作"
+            },
+            {
+                "subject": "区公安局",
+                "subject-type": "机构",
+                "predicate": "保障",
+                "object": "救灾车辆优先通行",
+                "object-type": "工作"
+            },
+            {
+                "subject": "区公安局",
+                "subject-type": "机构",
+                "predicate": "采取",
+                "object": "交通管制",
+                "object-type": "措施"
+            },
+            {
+                "subject": "区公安局",
+                "subject-type": "机构",
+                "predicate": "保障",
+                "object": "指挥车辆优先通行",
+                "object-type": "工作"
+            },
+            {
+                "subject": "区公安局",
+                "subject-type": "机构",
+                "predicate": "疏导",
+                "object": "人防工程事故周边地区交通",
+                "object-type": "交通"
+            }
+        ]
+    },
+    {
+        "id": 61,
+        "text": "国网江州滨海公司：负责人防工程事故现场公司所辖输配电线路及电力设施的安全，消除事故隐患。",
+        "spo_list": [
+            {
+                "subject": "国网江州滨海公司",
+                "subject-type": "机构",
+                "predicate": "消除",
+                "object": "事故隐患",
+                "object-type": "问题"
+            }
+        ]
+    },
+    {
+        "id": 62,
+        "text": "（5）新闻发布组：由区委宣传部任组长单位，有关部门参加。其职责是在现场指挥部的领导下，负责组织汇总信息，关注事故进展，并根据情况制定新闻发布方案，组织接待记者，及时采用适当方式组织新闻发布。",
+        "spo_list": [
+            {
+                "subject": "新闻发布组",
+                "subject-type": "机构",
+                "predicate": "关注",
+                "object": "事故进展",
+                "object-type": "情况"
+            },
+            {
+                "subject": "新闻发布组",
+                "subject-type": "机构",
+                "predicate": "组织",
+                "object": "新闻发布",
+                "object-type": "工作"
+            },
+            {
+                "subject": "新闻发布组",
+                "subject-type": "机构",
+                "predicate": "组织",
+                "object": "汇总信息",
+                "object-type": "工作"
+            },
+            {
+                "subject": "新闻发布组",
+                "subject-type": "机构",
+                "predicate": "成员",
+                "object": "有关部门",
+                "object-type": "机构"
+            },
+            {
+                "subject": "区委宣传部",
+                "subject-type": "机构",
+                "predicate": "担任",
+                "object": "组长单位",
+                "object-type": "职务"
+            },
+            {
+                "subject": "新闻发布组",
+                "subject-type": "机构",
+                "predicate": "组织",
+                "object": "接待记者",
+                "object-type": "工作"
+            },
+            {
+                "subject": "新闻发布组",
+                "subject-type": "机构",
+                "predicate": "制定",
+                "object": "新闻发布方案",
+                "object-type": "方案"
+            }
+        ]
+    },
+    {
+        "id": 63,
+        "text": "发生特别重大人防工程事故，启动一级响应。区人防应急指挥部总指挥、区人防应急指挥部副总指挥立即赶赴现场，组织区应急救援力量，在国家及市级指挥机构的统一组织、指挥、协调、调度下进行协同处置，执行上级的处置决定。",
+        "spo_list": [
+            {
+                "subject": "区人防应急指挥部副总指挥",
+                "subject-type": "人物",
+                "predicate": "实施",
+                "object": "协同处置",
+                "object-type": "工作"
+            },
+            {
+                "subject": "区人防应急指挥部总指挥",
+                "subject-type": "人物",
+                "predicate": "组织",
+                "object": "区应急救援力量",
+                "object-type": "资源"
+            },
+            {
+                "subject": "区人防应急指挥部总指挥",
+                "subject-type": "人物",
+                "predicate": "实施",
+                "object": "上级的处置决定",
+                "object-type": "措施"
+            },
+            {
+                "subject": "区人防应急指挥部总指挥",
+                "subject-type": "人物",
+                "predicate": "实施",
+                "object": "协同处置",
+                "object-type": "工作"
+            },
+            {
+                "subject": "区人防应急指挥部副总指挥",
+                "subject-type": "人物",
+                "predicate": "实施",
+                "object": "上级的处置决定",
+                "object-type": "措施"
+            },
+            {
+                "subject": "区人防应急指挥部副总指挥",
+                "subject-type": "人物",
+                "predicate": "组织",
+                "object": "区应急救援力量",
+                "object-type": "资源"
+            },
+            {
+                "subject": "区人防应急指挥部总指挥",
+                "subject-type": "人物",
+                "predicate": "实施",
+                "object": "赶赴现场",
+                "object-type": "工作"
+            },
+            {
+                "subject": "区人防应急指挥部副总指挥",
+                "subject-type": "人物",
+                "predicate": "实施",
+                "object": "赶赴现场",
+                "object-type": "工作"
+            }
+        ]
+    },
+    {
+        "id": 64,
+        "text": "发生一般人防工程事故,启动四级响应。由事发地管委会、事发地街道办事处、事发地镇人民政府负责组织应急处置工作。区人防应急指挥部指导或组织区应急救援力量支援事发地进行应急处置。",
+        "spo_list": [
+            {
+                "subject": "事发地管委会",
+                "subject-type": "机构",
+                "predicate": "组织",
+                "object": "应急处置",
+                "object-type": "工作"
+            },
+            {
+                "subject": "事发地镇人民政府",
+                "subject-type": "机构",
+                "predicate": "组织",
+                "object": "应急处置",
+                "object-type": "工作"
+            },
+            {
+                "subject": "区人防应急指挥部",
+                "subject-type": "机构",
+                "predicate": "组织",
+                "object": "区应急救援力量",
+                "object-type": "资源"
+            },
+            {
+                "subject": "事发地街道办事处",
+                "subject-type": "机构",
+                "predicate": "组织",
+                "object": "应急处置",
+                "object-type": "工作"
+            }
+        ]
+    },
+    {
+        "id": 65,
+        "text": "一般人防工程事故的调查评估，由区人民政府相关部门组织开展，调查结果报区人民政府；较大及较大以上级别的人防工程事故，区人民政府相关部门应做好事故调查评估的配合工作。",
+        "spo_list": [
+            {
+                "subject": "区人民政府相关部门",
+                "subject-type": "机构",
+                "predicate": "开展",
+                "object": "一般人防工程事故的调查评估",
+                "object-type": "工作"
+            },
+            {
+                "subject": "区人民政府相关部门",
+                "subject-type": "机构",
+                "predicate": "组织",
+                "object": "一般人防工程事故的调查评估",
+                "object-type": "工作"
+            },
+            {
+                "subject": "区人民政府相关部门",
+                "subject-type": "机构",
+                "predicate": "配合",
+                "object": "事故调查评估",
+                "object-type": "工作"
+            },
+            {
+                "subject": "区人民政府相关部门",
+                "subject-type": "机构",
+                "predicate": "报告",
+                "object": "区人民政府",
+                "object-type": "机构"
+            }
+        ]
+    },
+    {
+        "id": 66,
+        "text": "区人防应急指挥部办公室应充分利用新闻媒体和信息发布平台等形式，开展人防工程事故应急相关知识的普及教育。",
+        "spo_list": [
+            {
+                "subject": "区人防应急指挥部办公室",
+                "subject-type": "机构",
+                "predicate": "利用",
+                "object": "新闻媒体",
+                "object-type": "机构"
+            },
+            {
+                "subject": "区人防应急指挥部办公室",
+                "subject-type": "机构",
+                "predicate": "利用",
+                "object": "信息发布平台",
+                "object-type": "机构"
+            },
+            {
+                "subject": "区人防应急指挥部办公室",
+                "subject-type": "机构",
+                "predicate": "开展",
+                "object": "人防工程事故应急相关知识的普及教育",
+                "object-type": "工作"
+            }
+        ]
+    },
+    {
+        "id": 67,
+        "text": "组长由现场应急指挥部副指挥担任。成员由建交、公安、信访、卫生、消防、运输行业等相关单位的负责人组成。负责突发事件中伤员抢救、灭火、爆炸物的破拆、危险品的处置、隐患消除以及公路水路通行能力恢复等工作。",
+        "spo_list": [
+            {
+                "subject": "现场应急指挥部副指挥",
+                "subject-type": "人物",
+                "predicate": "担任",
+                "object": "组长",
+                "object-type": "职务"
+            }
+        ]
+    },
+    {
+        "id": 68,
+        "text": "（5）根据统筹车辆过程中出现的新情况、新变化，应急现场指挥机构及时向区统筹车辆领导小组提出行动建议并调整统筹车辆行动方案、统筹车辆行动计划，确保区统筹车辆应急预案顺利实施。",
+        "spo_list": [
+            {
+                "subject": "应急现场指挥机构",
+                "subject-type": "机构",
+                "predicate": "调整",
+                "object": "统筹车辆行动计划",
+                "object-type": "方案"
+            },
+            {
+                "subject": "应急现场指挥机构",
+                "subject-type": "机构",
+                "predicate": "提出",
+                "object": "行动",
+                "object-type": "意见"
+            },
+            {
+                "subject": "应急现场指挥机构",
+                "subject-type": "机构",
+                "predicate": "调整",
+                "object": "统筹车辆行动方案",
+                "object-type": "方案"
+            },
+            {
+                "subject": "应急现场指挥机构",
+                "subject-type": "机构",
+                "predicate": "确保",
+                "object": "区统筹车辆应急预案顺利实施",
+                "object-type": "工作"
+            }
+        ]
+    },
+    {
+        "id": 69,
+        "text": "区安全监管局：负责配合重特大道路突发事故的应急救援、重特大桥涵突发事故的应急救援工作；主持重特大事故调查评估；负责协调道路、桥涵突发事故中涉及道路突发事故中涉及危险化学品泄漏等现场处置工作。",
+        "spo_list": [
+            {
+                "subject": "区安全监管局",
+                "subject-type": "机构",
+                "predicate": "主持",
+                "object": "重特大事故调查评估",
+                "object-type": "工作"
+            },
+            {
+                "subject": "区安全监管局",
+                "subject-type": "机构",
+                "predicate": "配合",
+                "object": "重特大桥涵突发事故的应急救援",
+                "object-type": "工作"
+            },
+            {
+                "subject": "区安全监管局",
+                "subject-type": "机构",
+                "predicate": "配合",
+                "object": "重特大道路突发事故的应急救援",
+                "object-type": "工作"
+            },
+            {
+                "subject": "区安全监管局",
+                "subject-type": "机构",
+                "predicate": "协调",
+                "object": "桥涵突发事故中涉及危险化学品泄漏等现场处置",
+                "object-type": "工作"
+            },
+            {
+                "subject": "区安全监管局",
+                "subject-type": "机构",
+                "predicate": "协调",
+                "object": "道路突发事故中涉及危险化学品泄漏等现场处置",
+                "object-type": "工作"
+            }
+        ]
+    },
+    {
+        "id": 70,
+        "text": "区文广电局：负责道路、桥涵突发事故应急处置及抢险救援中发布重要信息、新闻及引导舆论工作。",
+        "spo_list": [
+            {
+                "subject": "区文广电局",
+                "subject-type": "机构",
+                "predicate": "引导",
+                "object": "舆论",
+                "object-type": "信息"
+            },
+            {
+                "subject": "区文广电局",
+                "subject-type": "机构",
+                "predicate": "发布",
+                "object": "重要信息",
+                "object-type": "信息"
+            },
+            {
+                "subject": "区文广电局",
+                "subject-type": "机构",
+                "predicate": "发布",
+                "object": "新闻",
+                "object-type": "信息"
+            }
+        ]
+    },
+    {
+        "id": 71,
+        "text": "道路突发事故现场、桥涵突发事故发生后，道路、桥涵养护管理单位应立即报告道路、桥涵上级主管部门；由道路、桥涵上级主管部门迅速核实情况后，立即报告区指挥部；区指挥部立即启动长凌区道路突发事故应急预案、长凌区桥涵突发事故应急预案，通知成员单位赶赴道路、桥涵突发事故现场，并发布预警信息。同时，区指挥部迅速组织、安排专业单位进行抢险、抢修和现场处置，严格控制事态发展，以减少人员伤亡和财产损失；若发生一、二级事故，区指挥部应立即报告区委、区政府，并向市交通运输委报告。",
+        "spo_list": [
+            {
+                "subject": "桥涵上级主管部门",
+                "subject-type": "机构",
+                "predicate": "核实",
+                "object": "迅速核实情况",
+                "object-type": "情况"
+            },
+            {
+                "subject": "区指挥部",
+                "subject-type": "机构",
+                "predicate": "启动",
+                "object": "长凌区道路突发事故应急预案",
+                "object-type": "方案"
+            },
+            {
+                "subject": "区指挥部",
+                "subject-type": "机构",
+                "predicate": "调度",
+                "object": "成员单位",
+                "object-type": "机构"
+            },
+            {
+                "subject": "道路上级主管部门",
+                "subject-type": "机构",
+                "predicate": "报告",
+                "object": "区指挥部",
+                "object-type": "机构"
+            },
+            {
+                "subject": "成员单位",
+                "subject-type": "机构",
+                "predicate": "赶赴",
+                "object": "道路突发事故现场",
+                "object-type": "区域"
+            },
+            {
+                "subject": "区指挥部",
+                "subject-type": "机构",
+                "predicate": "发布",
+                "object": "预警信息",
+                "object-type": "信息"
+            },
+            {
+                "subject": "桥涵上级主管部门",
+                "subject-type": "机构",
+                "predicate": "报告",
+                "object": "区指挥部",
+                "object-type": "机构"
+            },
+            {
+                "subject": "区指挥部",
+                "subject-type": "机构",
+                "predicate": "报告",
+                "object": "区委",
+                "object-type": "机构"
+            },
+            {
+                "subject": "专业单位",
+                "subject-type": "机构",
+                "predicate": "实施",
+                "object": "现场处置",
+                "object-type": "措施"
+            },
+            {
+                "subject": "区指挥部",
+                "subject-type": "机构",
+                "predicate": "报告",
+                "object": "市交通运输委",
+                "object-type": "机构"
+            },
+            {
+                "subject": "区指挥部",
+                "subject-type": "机构",
+                "predicate": "启动",
+                "object": "长凌区桥涵突发事故应急预案",
+                "object-type": "方案"
+            },
+            {
+                "subject": "区指挥部",
+                "subject-type": "机构",
+                "predicate": "报告",
+                "object": "区政府",
+                "object-type": "机构"
+            },
+            {
+                "subject": "区指挥部",
+                "subject-type": "机构",
+                "predicate": "组织",
+                "object": "专业单位",
+                "object-type": "机构"
+            },
+            {
+                "subject": "专业单位",
+                "subject-type": "机构",
+                "predicate": "实施",
+                "object": "抢险",
+                "object-type": "措施"
+            },
+            {
+                "subject": "道路上级主管部门",
+                "subject-type": "机构",
+                "predicate": "核实",
+                "object": "迅速核实情况",
+                "object-type": "情况"
+            },
+            {
+                "subject": "道路养护管理单位",
+                "subject-type": "机构",
+                "predicate": "报告",
+                "object": "道路上级主管部门",
+                "object-type": "机构"
+            },
+            {
+                "subject": "专业单位",
+                "subject-type": "机构",
+                "predicate": "实施",
+                "object": "抢修",
+                "object-type": "措施"
+            },
+            {
+                "subject": "桥涵养护管理单位",
+                "subject-type": "机构",
+                "predicate": "报告",
+                "object": "桥涵上级主管部门",
+                "object-type": "机构"
+            }
+        ]
+    },
+    {
+        "id": 72,
+        "text": "公安靖林分局负责派专人保护现场，维持现场秩序，为事件调查创造条件。参与处置人员要按照规定继续保护现场，必要时对事件现场进行录像或对事件现场进行拍照，为事件调查、分析提供直接证据。事故调查结束后，立即组织清理事故现场。",
+        "spo_list": [
+            {
+                "subject": "公安靖林分局",
+                "subject-type": "机构",
+                "predicate": "维持",
+                "object": "现场秩序",
+                "object-type": "秩序"
+            },
+            {
+                "subject": "参与处置人员",
+                "subject-type": "人物",
+                "predicate": "实施",
+                "object": "对事件现场进行录像",
+                "object-type": "工作"
+            },
+            {
+                "subject": "公安靖林分局",
+                "subject-type": "机构",
+                "predicate": "组织",
+                "object": "清理事故现场",
+                "object-type": "工作"
+            },
+            {
+                "subject": "公安靖林分局",
+                "subject-type": "机构",
+                "predicate": "派遣",
+                "object": "专人",
+                "object-type": "人物"
+            },
+            {
+                "subject": "专人",
+                "subject-type": "人物",
+                "predicate": "保护",
+                "object": "现场",
+                "object-type": "区域"
+            },
+            {
+                "subject": "参与处置人员",
+                "subject-type": "人物",
+                "predicate": "保护",
+                "object": "现场",
+                "object-type": "区域"
+            },
+            {
+                "subject": "参与处置人员",
+                "subject-type": "人物",
+                "predicate": "实施",
+                "object": "对事件现场进行拍照",
+                "object-type": "工作"
+            }
+        ]
+    },
+    {
+        "id": 73,
+        "text": "3.3.1事故发生后，事故单位首先组织职工开展自救、互救，拨打报警电话，并迅速向区政府总值班室、区指挥部报告。",
+        "spo_list": [
+            {
+                "subject": "事故单位",
+                "subject-type": "机构",
+                "predicate": "报告",
+                "object": "区指挥部",
+                "object-type": "机构"
+            },
+            {
+                "subject": "职工",
+                "subject-type": "人物",
+                "predicate": "开展",
+                "object": "互救",
+                "object-type": "行为"
+            },
+            {
+                "subject": "职工",
+                "subject-type": "人物",
+                "predicate": "开展",
+                "object": "自救",
+                "object-type": "行为"
+            },
+            {
+                "subject": "事故单位",
+                "subject-type": "机构",
+                "predicate": "报告",
+                "object": "区政府总值班室",
+                "object-type": "机构"
+            },
+            {
+                "subject": "事故单位",
+                "subject-type": "机构",
+                "predicate": "组织",
+                "object": "职工",
+                "object-type": "人物"
+            },
+            {
+                "subject": "职工",
+                "subject-type": "人物",
+                "predicate": "拨打",
+                "object": "报警电话",
+                "object-type": "电话"
+            }
+        ]
+    },
+    {
+        "id": 74,
+        "text": "区指挥部办公室及相关单位负责指导建设工程安全事故应急救援的教育和培训工作，指导建设工程施工企业组织有关人员进行专业培训，完善应急预案，定期组织应急演练。增强企业职工预防建设工程安全事故的常识和防范意识，提高防范和应急处置能力。区指挥部办公室指导并督促相关单位开展本预案的培训工作，不断提高应急处置能力和水平，定期组织区专业抢险救援队伍进行应急演练，不断提高协调处置和现场救援能力。应急预案的演练每两年至少举行1次，日常救援演练由企业结合日常施工作业自行组织实施，原则上每半年演练1次。",
+        "spo_list": [
+            {
+                "subject": "相关单位",
+                "subject-type": "机构",
+                "predicate": "开展",
+                "object": "本预案的培训工作",
+                "object-type": "工作"
+            },
+            {
+                "subject": "建设工程施工企业",
+                "subject-type": "机构",
+                "predicate": "组织",
+                "object": "应急演练",
+                "object-type": "行为"
+            },
+            {
+                "subject": "区指挥部办公室",
+                "subject-type": "机构",
+                "predicate": "指导",
+                "object": "相关单位",
+                "object-type": "机构"
+            },
+            {
+                "subject": "区指挥部办公室",
+                "subject-type": "机构",
+                "predicate": "组织",
+                "object": "区专业抢险救援队伍",
+                "object-type": "方案"
+            },
+            {
+                "subject": "区指挥部办公室及相关单位",
+                "subject-type": "机构",
+                "predicate": "指导",
+                "object": "建设工程施工企业",
+                "object-type": "机构"
+            },
+            {
+                "subject": "建设工程施工企业",
+                "subject-type": "机构",
+                "predicate": "组织",
+                "object": "有关人员进行专业培训",
+                "object-type": "工作"
+            },
+            {
+                "subject": "区指挥部办公室",
+                "subject-type": "机构",
+                "predicate": "督促",
+                "object": "相关单位",
+                "object-type": "机构"
+            },
+            {
+                "subject": "建设工程施工企业",
+                "subject-type": "机构",
+                "predicate": "完善",
+                "object": "应急预案",
+                "object-type": "方案"
+            }
+        ]
+    },
+    {
+        "id": 75,
+        "text": "8.2.2各成员单位按照本预案确定的职责，制定本部门建设工程安全事故应急预案和本部门建设工程安全事故应急保障预案，并报区指挥部办公室备案。",
+        "spo_list": [
+            {
+                "subject": "各成员单位",
+                "subject-type": "机构",
+                "predicate": "制定",
+                "object": "本部门建设工程安全事故应急保障预案",
+                "object-type": "方案"
+            },
+            {
+                "subject": "各成员单位",
+                "subject-type": "机构",
+                "predicate": "制定",
+                "object": "本部门建设工程安全事故应急预案",
+                "object-type": "方案"
+            },
+            {
+                "subject": "各成员单位",
+                "subject-type": "机构",
+                "predicate": "上报",
+                "object": "区指挥部办公室",
+                "object-type": "机构"
+            }
+        ]
+    },
+    {
+        "id": 76,
+        "text": "2.2.2区指挥部办公室的主要职责是：负责区指挥部日常工作，起草区指挥部有关文件，组织落实区指挥部各项工作部署；组织修订火灾事故应急预案，并组织开展消防安全宣传工作和开展消防安全培训工作；组织落实火灾事故应急队伍建设管理和落实火灾事故应急物资装备建设管理工作；研究确定火灾事故应急响应等级；承担着防范化解重大安全风险、应对处置各类灾害事故的职责；承办区指挥部交办的其他工作。",
+        "spo_list": [
+            {
+                "subject": "区指挥部办公室",
+                "subject-type": "机构",
+                "predicate": "起草",
+                "object": "指挥部有关文件",
+                "object-type": "文件"
+            },
+            {
+                "subject": "区指挥部办公室",
+                "subject-type": "机构",
+                "predicate": "组织",
+                "object": "落实火灾事故应急队伍建设管理",
+                "object-type": "工作"
+            },
+            {
+                "subject": "区指挥部办公室",
+                "subject-type": "机构",
+                "predicate": "组织",
+                "object": "开展消防安全宣传工作",
+                "object-type": "工作"
+            },
+            {
+                "subject": "区指挥部办公室",
+                "subject-type": "机构",
+                "predicate": "研究",
+                "object": "火灾事故应急响应等级",
+                "object-type": "问题"
+            },
+            {
+                "subject": "区指挥部办公室",
+                "subject-type": "机构",
+                "predicate": "组织",
+                "object": "修订火灾事故应急预案",
+                "object-type": "方案"
+            },
+            {
+                "subject": "区指挥部办公室",
+                "subject-type": "机构",
+                "predicate": "组织",
+                "object": "落实火灾事故应急物资装备建设管理",
+                "object-type": "工作"
+            },
+            {
+                "subject": "区指挥部办公室",
+                "subject-type": "机构",
+                "predicate": "承办",
+                "object": "区指挥部交办的其他工作",
+                "object-type": "工作"
+            },
+            {
+                "subject": "区指挥部办公室",
+                "subject-type": "机构",
+                "predicate": "组织",
+                "object": "落实区指挥部各项工作部署",
+                "object-type": "工作"
+            },
+            {
+                "subject": "区指挥部办公室",
+                "subject-type": "机构",
+                "predicate": "组织",
+                "object": "开展消防安全培训工作",
+                "object-type": "工作"
+            }
+        ]
+    },
+    {
+        "id": 77,
+        "text": "区应急局：承担区日常工作，组织、监督、全区火灾应急管理工作落实情况；协助组织特别重大灾害、特别重大灾害应急处置工作；负责统一协调区火灾应急队伍和物资的调拨；依法统一发布灾情处置情况和应急处置情况；参加重特大火灾事故调查工作，参与安全生产事故引发的火灾救援协调、安全生产事故引发的火灾救援指导和安全生产事故引发的火灾救援善后评估工作。",
+        "spo_list": [
+            {
+                "subject": "区应急局",
+                "subject-type": "机构",
+                "predicate": "参与",
+                "object": "安全生产事故引发的火灾救援指导",
+                "object-type": "工作"
+            },
+            {
+                "subject": "区应急局",
+                "subject-type": "机构",
+                "predicate": "参加",
+                "object": "重特大火灾事故调查工作",
+                "object-type": "工作"
+            },
+            {
+                "subject": "区应急局",
+                "subject-type": "机构",
+                "predicate": "组织",
+                "object": "重大灾害应急处置工作",
+                "object-type": "工作"
+            },
+            {
+                "subject": "区应急局",
+                "subject-type": "机构",
+                "predicate": "承担",
+                "object": "区日常工作",
+                "object-type": "工作"
+            },
+            {
+                "subject": "区应急局",
+                "subject-type": "机构",
+                "predicate": "组织",
+                "object": "特别重大灾害应急处置工作",
+                "object-type": "工作"
+            },
+            {
+                "subject": "区应急局",
+                "subject-type": "机构",
+                "predicate": "发布",
+                "object": "灾情处置情况",
+                "object-type": "情况"
+            },
+            {
+                "subject": "区应急局",
+                "subject-type": "机构",
+                "predicate": "参与",
+                "object": "安全生产事故引发的火灾救援善后评估",
+                "object-type": "工作"
+            },
+            {
+                "subject": "区应急局",
+                "subject-type": "机构",
+                "predicate": "发布",
+                "object": "应急处置情况",
+                "object-type": "情况"
+            },
+            {
+                "subject": "区应急局",
+                "subject-type": "机构",
+                "predicate": "监督",
+                "object": "全区火灾应急管理工作落实情况",
+                "object-type": "情况"
+            },
+            {
+                "subject": "区应急局",
+                "subject-type": "机构",
+                "predicate": "参与",
+                "object": "安全生产事故引发的火灾救援协调",
+                "object-type": "工作"
+            }
+        ]
+    },
+    {
+        "id": 78,
+        "text": "区委宣传部：负责把握火灾事故宣传工作导向，协调新闻媒体对火灾应急处置工作的相关情况进行对外宣传报道。",
+        "spo_list": [
+            {
+                "subject": "区委宣传部",
+                "subject-type": "机构",
+                "predicate": "协调",
+                "object": "新闻媒体",
+                "object-type": "机构"
+            }
+        ]
+    },
+    {
+        "id": 79,
+        "text": "(9)人员转移避险和对转移避险人员临时安置。当建设工程安全事故对周边建设工程物、构筑物安全造成影响时，区指挥部会同事发单位根据实际情况组织将危险建设工程物内的人员转移到安全区域避险，必要时对转移避险人员实施临时安置。",
+        "spo_list": [
+            {
+                "subject": "区指挥部会同事发单位",
+                "subject-type": "机构",
+                "predicate": "实施",
+                "object": "对转移避险人员临时安置",
+                "object-type": "工作"
+            },
+            {
+                "subject": "区指挥部会同事发单位",
+                "subject-type": "机构",
+                "predicate": "组织",
+                "object": "将危险建设工程物内的人员转移到安全区域避险",
+                "object-type": "工作"
+            }
+        ]
+    },
+    {
+        "id": 80,
+        "text": "区指挥部各成员单位应确定1名应急联络员(科级)，根据突发事件应急救援工作形势，区指挥部办公室适时召开应急联络员会议，原则上每年召开1至2次。",
+        "spo_list": [
+            {
+                "subject": "区指挥部办公室",
+                "subject-type": "机构",
+                "predicate": "召开",
+                "object": "应急联络员会议",
+                "object-type": "会议"
+            },
+            {
+                "subject": "区指挥部各成员单位",
+                "subject-type": "机构",
+                "predicate": "确定",
+                "object": "1名应急联络员",
+                "object-type": "人物"
+            }
+        ]
+    },
+    {
+        "id": 81,
+        "text": "进入Ⅳ级以及受委托的高级别响应后，区特种设备专家领导小组立即要求区人民政府启动应急预案，积极组织应急工作，属地管委会的应急部门、街、属地镇的应急部门应按照预案及时就近调度相关应急救援力量组织实施应急救援。",
+        "spo_list": [
+            {
+                "subject": "属地镇的应急部门",
+                "subject-type": "机构",
+                "predicate": "实施",
+                "object": "应急救援",
+                "object-type": "工作"
+            },
+            {
+                "subject": "属地街的应急部门",
+                "subject-type": "机构",
+                "predicate": "实施",
+                "object": "应急救援",
+                "object-type": "工作"
+            },
+            {
+                "subject": "属地管委会的应急部门",
+                "subject-type": "机构",
+                "predicate": "实施",
+                "object": "应急救援",
+                "object-type": "工作"
+            }
+        ]
+    },
+    {
+        "id": 82,
+        "text": "3.对事故危害情况的初始评估。特种设备事故现场指挥领导小组应当尽快对事故发生的基本情况做出初始评估，包括事故范围及事故危害扩展的趋势以及人员伤亡和财产损失情况等。",
+        "spo_list": [
+            {
+                "subject": "特种设备事故现场指挥领导小组",
+                "subject-type": "人物",
+                "predicate": "评估",
+                "object": "事故危害扩展的趋势",
+                "object-type": "情况"
+            },
+            {
+                "subject": "特种设备事故现场指挥领导小组",
+                "subject-type": "人物",
+                "predicate": "评估",
+                "object": "人员伤亡",
+                "object-type": "情况"
+            },
+            {
+                "subject": "特种设备事故现场指挥领导小组",
+                "subject-type": "人物",
+                "predicate": "评估",
+                "object": "财产损失情况",
+                "object-type": "情况"
+            },
+            {
+                "subject": "特种设备事故现场指挥领导小组",
+                "subject-type": "人物",
+                "predicate": "评估",
+                "object": "事故发生的基本情况",
+                "object-type": "情况"
+            },
+            {
+                "subject": "特种设备事故现场指挥领导小组",
+                "subject-type": "人物",
+                "predicate": "评估",
+                "object": "事故范围",
+                "object-type": "情况"
+            }
+        ]
+    },
+    {
+        "id": 83,
+        "text": "事发地卫生行政主管部门根据事故类型，组织有关医疗救护机构按照专业规程进行现场救治、防疫等工作。",
+        "spo_list": [
+            {
+                "subject": "有关医疗救护机构",
+                "subject-type": "机构",
+                "predicate": "实施",
+                "object": "防疫",
+                "object-type": "工作"
+            },
+            {
+                "subject": "事发地卫生行政主管部门",
+                "subject-type": "机构",
+                "predicate": "组织",
+                "object": "有关医疗救护机构",
+                "object-type": "机构"
+            },
+            {
+                "subject": "有关医疗救护机构",
+                "subject-type": "机构",
+                "predicate": "实施",
+                "object": "现场救治",
+                "object-type": "工作"
+            },
+            {
+                "subject": "事发地卫生行政主管部门",
+                "subject-type": "机构",
+                "predicate": "评估",
+                "object": "事故类型",
+                "object-type": "情况"
+            }
+        ]
+    },
+    {
+        "id": 84,
+        "text": "区供热指挥部下设集中供热突发事件应急指挥部办公室（以下简称区供热指挥部办公室）,设在区建委。办公室主任由区建委分管副主任担任。",
+        "spo_list": [
+            {
+                "subject": "区建委分管副主任",
+                "subject-type": "人物",
+                "predicate": "担任",
+                "object": "办公室主任",
+                "object-type": "职务"
+            }
+        ]
+    },
+    {
+        "id": 85,
+        "text": "区供热指挥部办公室的主要职责是：负责区供热指挥部日常工作，起草区供热指挥部有关文件，组织落实区供热指挥部各项工作部署；组织较大集中供热突发事件的应对工作；组织编制、修订葡萄园区集中供热突发事件应急预案及编制葡萄园区集中供热突发事件应急预案及应急保障预案，指导供热企业应急预案编制，并组织宣传教育、培训和演练；组织实施集中供热突发事件的先期处置和应急响应工作；组织行政区域内人员的疏散工作、行政区域内人员的安置工作、行政区域内人员的生活保障工作和行政区域内人员社会稳定工作等。组织建设、管理供热应急物资专家组和建设专家组和应急指挥平台；监督管理供热应急队伍、物资和管理供热应急设备采购；承办区供热指挥部和区政府交办的其他工作。",
+        "spo_list": [
+            {
+                "subject": "区供热指挥部办公室",
+                "subject-type": "机构",
+                "predicate": "监督",
+                "object": "管理供热应急物资",
+                "object-type": "工作"
+            },
+            {
+                "subject": "区供热指挥部办公室",
+                "subject-type": "机构",
+                "predicate": "落实",
+                "object": "区供热指挥部各项工作部署",
+                "object-type": "工作"
+            },
+            {
+                "subject": "区供热指挥部办公室",
+                "subject-type": "机构",
+                "predicate": "组织",
+                "object": "行政区域内人员的疏散工作",
+                "object-type": "工作"
+            },
+            {
+                "subject": "区供热指挥部办公室",
+                "subject-type": "机构",
+                "predicate": "组织",
+                "object": "行政区域内人员社会稳定工作",
+                "object-type": "工作"
+            },
+            {
+                "subject": "区供热指挥部办公室",
+                "subject-type": "机构",
+                "predicate": "组织",
+                "object": "行政区域内人员的安置工作",
+                "object-type": "工作"
+            },
+            {
+                "subject": "区供热指挥部办公室",
+                "subject-type": "机构",
+                "predicate": "组织",
+                "object": "建设专家组和应急指挥平台",
+                "object-type": "工作"
+            },
+            {
+                "subject": "区供热指挥部办公室",
+                "subject-type": "机构",
+                "predicate": "组织",
+                "object": "修订葡萄园区集中供热突发事件应急预案及应急保障预案",
+                "object-type": "工作"
+            },
+            {
+                "subject": "区供热指挥部办公室",
+                "subject-type": "机构",
+                "predicate": "监督",
+                "object": "管理供热应急设备采购",
+                "object-type": "工作"
+            },
+            {
+                "subject": "区供热指挥部办公室",
+                "subject-type": "机构",
+                "predicate": "组织",
+                "object": "宣传教育",
+                "object-type": "工作"
+            },
+            {
+                "subject": "区供热指挥部办公室",
+                "subject-type": "机构",
+                "predicate": "组织",
+                "object": "行政区域内人员的生活保障工作",
+                "object-type": "工作"
+            },
+            {
+                "subject": "区供热指挥部办公室",
+                "subject-type": "机构",
+                "predicate": "承办",
+                "object": "区供热指挥部和区政府交办的其他工作",
+                "object-type": "工作"
+            },
+            {
+                "subject": "区供热指挥部办公室",
+                "subject-type": "机构",
+                "predicate": "组织",
+                "object": "培训",
+                "object-type": "工作"
+            },
+            {
+                "subject": "区供热指挥部办公室",
+                "subject-type": "机构",
+                "predicate": "组织",
+                "object": "较大集中供热突发事件的应对工作",
+                "object-type": "工作"
+            },
+            {
+                "subject": "区供热指挥部办公室",
+                "subject-type": "机构",
+                "predicate": "指导",
+                "object": "供热企业应急预案编制",
+                "object-type": "工作"
+            },
+            {
+                "subject": "区供热指挥部办公室",
+                "subject-type": "机构",
+                "predicate": "监督",
+                "object": "管理供热应急队伍",
+                "object-type": "工作"
+            },
+            {
+                "subject": "区供热指挥部办公室",
+                "subject-type": "机构",
+                "predicate": "组织",
+                "object": "实施集中供热突发事件的先期处置和应急响应工作",
+                "object-type": "工作"
+            },
+            {
+                "subject": "区供热指挥部办公室",
+                "subject-type": "机构",
+                "predicate": "组织",
+                "object": "编制葡萄园区集中供热突发事件应急预案及应急保障预案",
+                "object-type": "工作"
+            },
+            {
+                "subject": "区供热指挥部办公室",
+                "subject-type": "机构",
+                "predicate": "组织",
+                "object": "管理专家组和应急指挥平台",
+                "object-type": "工作"
+            },
+            {
+                "subject": "区供热指挥部办公室",
+                "subject-type": "机构",
+                "predicate": "组织",
+                "object": "演练",
+                "object-type": "工作"
+            }
+        ]
+    },
+    {
+        "id": 86,
+        "text": "江州海关将不定期对本级及隶属海关预案进行检查评估，及时总结预案实施过程中发现的问题和不足，提出科学、合理的改进建议。",
+        "spo_list": [
+            {
+                "subject": "江州海关",
+                "subject-type": "机构",
+                "predicate": "评估",
+                "object": "本级及隶属海关预案",
+                "object-type": "预案"
+            }
+        ]
+    },
+    {
+        "id": 87,
+        "text": "学校、教育后勤保障服务中心和综合素质科应认真做好或积极协调有关部门做好受到传染病突发公共卫生事件损害的相关人员的善后工作。",
+        "spo_list": [
+            {
+                "subject": "学校",
+                "subject-type": "机构",
+                "predicate": "协调",
+                "object": "有关部门",
+                "object-type": "机构"
+            },
+            {
+                "subject": "教育后勤保障服务中心",
+                "subject-type": "机构",
+                "predicate": "协调",
+                "object": "有关部门",
+                "object-type": "机构"
+            },
+            {
+                "subject": "综合素质科",
+                "subject-type": "机构",
+                "predicate": "协调",
+                "object": "有关部门",
+                "object-type": "机构"
+            }
+        ]
+    },
+    {
+        "id": 88,
+        "text": "区鼠疫防控工作领导小组，根据工作需要，组建鼠疫防治专家组，由区疾病预防控制中心专家、医疗机构专家、卫生监督所专家等有关机构的专家组成。负责医疗救治、疫情的技术咨询指导、督导检查和评估。",
+        "spo_list": [
+            {
+                "subject": "鼠疫防治专家组",
+                "subject-type": "机构",
+                "predicate": "成员",
+                "object": "卫生监督所专家",
+                "object-type": "机构"
+            },
+            {
+                "subject": "鼠疫防治专家组",
+                "subject-type": "机构",
+                "predicate": "成员",
+                "object": "区疾病预防控制中心专家",
+                "object-type": "机构"
+            },
+            {
+                "subject": "鼠疫防治专家组",
+                "subject-type": "机构",
+                "predicate": "成员",
+                "object": "医疗机构专家",
+                "object-type": "机构"
+            }
+        ]
+    },
+    {
+        "id": 89,
+        "text": "国家及市卫生健康委根据报告的鼠疫疫情危害性和紧急程度，及时发布、调整和解除预警信息。预警信息包括鼠疫型别、预警级别、起始时间、警示事项、应采取的措施和发布机关等。区卫生健康委根据上级发布的预警级别做好相应应急处置工作。",
+        "spo_list": [
+            {
+                "subject": "国家及市卫生健康委",
+                "subject-type": "机构",
+                "predicate": "解除",
+                "object": "预警信息",
+                "object-type": "信息"
+            },
+            {
+                "subject": "国家及市卫生健康委",
+                "subject-type": "机构",
+                "predicate": "发布",
+                "object": "预警信息",
+                "object-type": "信息"
+            },
+            {
+                "subject": "国家及市卫生健康委",
+                "subject-type": "机构",
+                "predicate": "调整",
+                "object": "预警信息",
+                "object-type": "信息"
+            }
+        ]
+    },
+    {
+        "id": 90,
+        "text": "1.5.5考试泄密、违规事件。包括由教育部门组织的区级及以上统一考试中,在命题管理和试卷印制、运送、包管等环节出现的泄密事件,以及在考试实施、评卷组织管理过程中发生的违规事件。",
+        "spo_list": [
+            {
+                "subject": "教育部门",
+                "subject-type": "机构",
+                "predicate": "组织",
+                "object": "区级及以上统一考试",
+                "object-type": "工作"
+            }
+        ]
+    },
+    {
+        "id": 91,
+        "text": "区教育局组织力量对特别重大、重大突发公共事件开展损害核定、征用物资补偿、重建能力和可利用资源等做出评估,协助区政府及有关部门制定补偿标准和事后恢复计划并迅速组织实施。一般突发公共事件的相关善后处置、较大突发公共事件的相关善后处置工作,由事发地学校在区教育局领导下进行。",
+        "spo_list": [
+            {
+                "subject": "区政府",
+                "subject-type": "机构",
+                "predicate": "制定",
+                "object": "补偿标准",
+                "object-type": "标准"
+            },
+            {
+                "subject": "区教育局",
+                "subject-type": "机构",
+                "predicate": "领导",
+                "object": "事发地学校",
+                "object-type": "机构"
+            },
+            {
+                "subject": "有关部门",
+                "subject-type": "机构",
+                "predicate": "制定",
+                "object": "事后恢复计划",
+                "object-type": "计划"
+            },
+            {
+                "subject": "区教育局",
+                "subject-type": "机构",
+                "predicate": "协助",
+                "object": "区政府",
+                "object-type": "机构"
+            },
+            {
+                "subject": "事发地学校",
+                "subject-type": "机构",
+                "predicate": "实施",
+                "object": "较大突发公共事件的相关善后处置",
+                "object-type": "工作"
+            },
+            {
+                "subject": "区教育局",
+                "subject-type": "机构",
+                "predicate": "协助",
+                "object": "有关部门",
+                "object-type": "机构"
+            },
+            {
+                "subject": "事发地学校",
+                "subject-type": "机构",
+                "predicate": "实施",
+                "object": "一般突发公共事件的相关善后处置",
+                "object-type": "工作"
+            },
+            {
+                "subject": "区政府",
+                "subject-type": "机构",
+                "predicate": "制定",
+                "object": "事后恢复计划",
+                "object-type": "计划"
+            },
+            {
+                "subject": "有关部门",
+                "subject-type": "机构",
+                "predicate": "制定",
+                "object": "补偿标准",
+                "object-type": "标准"
+            }
+        ]
+    },
+    {
+        "id": 92,
+        "text": "重大、特别重大突发公共事件由区教育局应急领导小组成立事件原因调查组,组织专家调查分析事故发生的原因和事故发展趋势,预测事故后果。同时对责任事故责令事发地学校追究相关责任人责任。",
+        "spo_list": [
+            {
+                "subject": "区教育局应急领导小组",
+                "subject-type": "机构",
+                "predicate": "成立",
+                "object": "事件原因调查组",
+                "object-type": "机构"
+            },
+            {
+                "subject": "区教育局应急领导小组",
+                "subject-type": "机构",
+                "predicate": "组织",
+                "object": "专家",
+                "object-type": "人物"
+            },
+            {
+                "subject": "专家",
+                "subject-type": "人物",
+                "predicate": "预测",
+                "object": "事故后果",
+                "object-type": "情况"
+            },
+            {
+                "subject": "专家",
+                "subject-type": "人物",
+                "predicate": "分析",
+                "object": "事故发生的原因",
+                "object-type": "情况"
+            },
+            {
+                "subject": "专家",
+                "subject-type": "人物",
+                "predicate": "调查",
+                "object": "事故发展趋势",
+                "object-type": "情况"
+            },
+            {
+                "subject": "专家",
+                "subject-type": "人物",
+                "predicate": "分析",
+                "object": "事故发展趋势",
+                "object-type": "情况"
+            },
+            {
+                "subject": "专家",
+                "subject-type": "人物",
+                "predicate": "调查",
+                "object": "事故发生的原因",
+                "object-type": "情况"
+            }
+        ]
+    },
+    {
+        "id": 93,
+        "text": "Ⅳ级（一般）突发事件得到有效处置后，由现场指挥部根据突发事件处置情况决定终止预案，向江州海关指挥部报告，并向总署食品专项指挥部报备。",
+        "spo_list": [
+            {
+                "subject": "现场指挥部",
+                "subject-type": "机构",
+                "predicate": "报告",
+                "object": "江州海关指挥部",
+                "object-type": "机构"
+            }
+        ]
+    },
+    {
+        "id": 94,
+        "text": "（1）有关国家或地区政府主管部门和国际相关组织宣布解除重大动物疫情或者疑似重大动物疫情并经我国确认。",
+        "spo_list": [
+            {
+                "subject": "国际相关组织",
+                "subject-type": "机构",
+                "predicate": "宣布",
+                "object": "解除疑似重大动物疫情",
+                "object-type": "信息"
+            },
+            {
+                "subject": "政府主管部门",
+                "subject-type": "机构",
+                "predicate": "宣布",
+                "object": "解除疑似重大动物疫情",
+                "object-type": "信息"
+            },
+            {
+                "subject": "国际相关组织",
+                "subject-type": "机构",
+                "predicate": "宣布",
+                "object": "解除重大动物疫情",
+                "object-type": "信息"
+            },
+            {
+                "subject": "政府主管部门",
+                "subject-type": "机构",
+                "predicate": "宣布",
+                "object": "解除重大动物疫情",
+                "object-type": "信息"
+            }
+        ]
+    },
+    {
+        "id": 95,
+        "text": "应急指挥部负责统一领导本级突发事件的应急处置工作，发布指挥调度命令，确定突发事件处置的各项重大决策；负责组织、协调、开展应急处置行动，制定防止次生、衍生事件发生的措施与应对方案；调整、终止应急响应和处置行动；发布相关信息、新闻、相关公告，及时向上级单位报告应急工作情况；负责与外部相关部门的沟通协调配合；制定其他必要的应急处置行动方案并组织实施。",
+        "spo_list": [
+            {
+                "subject": "应急指挥部",
+                "subject-type": "机构",
+                "predicate": "发布",
+                "object": "相关信息",
+                "object-type": "信息"
+            },
+            {
+                "subject": "应急指挥部",
+                "subject-type": "机构",
+                "predicate": "终止",
+                "object": "应急响应",
+                "object-type": "响应"
+            },
+            {
+                "subject": "应急指挥部",
+                "subject-type": "机构",
+                "predicate": "沟通",
+                "object": "外部相关部门",
+                "object-type": "机构"
+            },
+            {
+                "subject": "应急指挥部",
+                "subject-type": "机构",
+                "predicate": "制定",
+                "object": "应对方案",
+                "object-type": "方案"
+            },
+            {
+                "subject": "应急指挥部",
+                "subject-type": "机构",
+                "predicate": "组织",
+                "object": "应急处置行动",
+                "object-type": "行动"
+            },
+            {
+                "subject": "应急指挥部",
+                "subject-type": "机构",
+                "predicate": "协调",
+                "object": "应急处置行动",
+                "object-type": "行动"
+            },
+            {
+                "subject": "应急指挥部",
+                "subject-type": "机构",
+                "predicate": "组织",
+                "object": "其他必要的应急处置行动方案",
+                "object-type": "方案"
+            },
+            {
+                "subject": "应急指挥部",
+                "subject-type": "机构",
+                "predicate": "制定",
+                "object": "防止次生、衍生事件发生的措施",
+                "object-type": "措施"
+            },
+            {
+                "subject": "应急指挥部",
+                "subject-type": "机构",
+                "predicate": "配合",
+                "object": "外部相关部门",
+                "object-type": "机构"
+            },
+            {
+                "subject": "应急指挥部",
+                "subject-type": "机构",
+                "predicate": "制定",
+                "object": "其他必要的应急处置行动方案",
+                "object-type": "方案"
+            },
+            {
+                "subject": "应急指挥部",
+                "subject-type": "机构",
+                "predicate": "终止",
+                "object": "处置行动",
+                "object-type": "行动"
+            },
+            {
+                "subject": "应急指挥部",
+                "subject-type": "机构",
+                "predicate": "发布",
+                "object": "指挥调度命令",
+                "object-type": "命令"
+            },
+            {
+                "subject": "应急指挥部",
+                "subject-type": "机构",
+                "predicate": "开展",
+                "object": "应急处置行动",
+                "object-type": "行动"
+            },
+            {
+                "subject": "应急指挥部",
+                "subject-type": "机构",
+                "predicate": "协调",
+                "object": "外部相关部门",
+                "object-type": "机构"
+            },
+            {
+                "subject": "应急指挥部",
+                "subject-type": "机构",
+                "predicate": "报告",
+                "object": "应急工作情况",
+                "object-type": "工作"
+            },
+            {
+                "subject": "应急指挥部",
+                "subject-type": "机构",
+                "predicate": "确定",
+                "object": "突发事件处置的各项重大决策",
+                "object-type": "决策"
+            },
+            {
+                "subject": "应急指挥部",
+                "subject-type": "机构",
+                "predicate": "实施",
+                "object": "其他必要的应急处置行动方案",
+                "object-type": "方案"
+            },
+            {
+                "subject": "应急指挥部",
+                "subject-type": "机构",
+                "predicate": "领导",
+                "object": "突发事件的应急处置工作",
+                "object-type": "工作"
+            },
+            {
+                "subject": "应急指挥部",
+                "subject-type": "机构",
+                "predicate": "发布",
+                "object": "相关公告",
+                "object-type": "公告"
+            }
+        ]
+    },
+    {
+        "id": 96,
+        "text": "（4）食品处：根据业务分工负责提供进出境重大植物疫情突发事件监测技术支持、进出境重大植物疫情突发事件预警技术支持、进出境重大植物疫情突发事件研判技术支持、进出境重大植物疫情突发事件处置技术支持的技术支持。",
+        "spo_list": [
+            {
+                "subject": "食品处",
+                "subject-type": "机构",
+                "predicate": "提供",
+                "object": "进出境重大植物疫情突发事件监测技术支持",
+                "object-type": "支持"
+            },
+            {
+                "subject": "食品处",
+                "subject-type": "机构",
+                "predicate": "提供",
+                "object": "进出境重大植物疫情突发事件预警技术支持",
+                "object-type": "支持"
+            },
+            {
+                "subject": "食品处",
+                "subject-type": "机构",
+                "predicate": "提供",
+                "object": "进出境重大植物疫情突发事件研判技术支持",
+                "object-type": "支持"
+            },
+            {
+                "subject": "食品处",
+                "subject-type": "机构",
+                "predicate": "提供",
+                "object": "进出境重大植物疫情突发事件处置技术支持",
+                "object-type": "支持"
+            }
+        ]
+    },
+    {
+        "id": 97,
+        "text": "确认发生重大动物疫情后，应急处置参照重大动物疫情（I级）应急响应进行。对超出本区人民政府处置能力或上级人民政府认为有必要直接处置的，由上级人民政府启动相应级疫情应急响应机制。",
+        "spo_list": [
+            {
+                "subject": "上级人民政府",
+                "subject-type": "机构",
+                "predicate": "启动",
+                "object": "相应级疫情应急响应机制",
+                "object-type": "机制"
+            }
+        ]
+    },
+    {
+        "id": 98,
+        "text": "区重大动物疫病防治指挥部在市人民政府重大动物疫病防治指挥部的统一指挥下，按照要求认真履行职责，落实有关控制措施，具体组织实施突发重大动物疫情应急处理工作。依法设置临时动物防疫监督检查站查堵疫源；限制或停止动物及其产品交易、扑杀染疫或相关动物；封锁被动物疫源污染的公共饮用水源等；按国家规定做好信息发布工作；组织乡镇、街道、社区、及居委会、村委会开展群防群控。",
+        "spo_list": [
+            {
+                "subject": "区重大动物疫病防治指挥部",
+                "subject-type": "机构",
+                "predicate": "组织",
+                "object": "村委会",
+                "object-type": "机构"
+            },
+            {
+                "subject": "街道",
+                "subject-type": "机构",
+                "predicate": "开展",
+                "object": "群防群控",
+                "object-type": "工作"
+            },
+            {
+                "subject": "乡镇",
+                "subject-type": "机构",
+                "predicate": "开展",
+                "object": "群防群控",
+                "object-type": "工作"
+            },
+            {
+                "subject": "区重大动物疫病防治指挥部",
+                "subject-type": "机构",
+                "predicate": "组织",
+                "object": "街道",
+                "object-type": "机构"
+            },
+            {
+                "subject": "区重大动物疫病防治指挥部",
+                "subject-type": "机构",
+                "predicate": "落实",
+                "object": "有关控制措施",
+                "object-type": "措施"
+            },
+            {
+                "subject": "区重大动物疫病防治指挥部",
+                "subject-type": "机构",
+                "predicate": "组织",
+                "object": "居委会",
+                "object-type": "机构"
+            },
+            {
+                "subject": "及居委会",
+                "subject-type": "机构",
+                "predicate": "开展",
+                "object": "群防群控",
+                "object-type": "工作"
+            },
+            {
+                "subject": "区重大动物疫病防治指挥部",
+                "subject-type": "机构",
+                "predicate": "设置",
+                "object": "临时动物防疫监督检查站",
+                "object-type": "机构"
+            },
+            {
+                "subject": "区重大动物疫病防治指挥部",
+                "subject-type": "机构",
+                "predicate": "实施",
+                "object": "突发重大动物疫情应急处理工作",
+                "object-type": "工作"
+            },
+            {
+                "subject": "区重大动物疫病防治指挥部",
+                "subject-type": "机构",
+                "predicate": "组织",
+                "object": "社区",
+                "object-type": "机构"
+            },
+            {
+                "subject": "市人民政府重大动物疫病防治指挥部",
+                "subject-type": "机构",
+                "predicate": "指挥",
+                "object": "区重大动物疫病防治指挥部",
+                "object-type": "机构"
+            },
+            {
+                "subject": "社区",
+                "subject-type": "机构",
+                "predicate": "开展",
+                "object": "群防群控",
+                "object-type": "工作"
+            },
+            {
+                "subject": "区重大动物疫病防治指挥部",
+                "subject-type": "机构",
+                "predicate": "组织",
+                "object": "乡镇",
+                "object-type": "机构"
+            },
+            {
+                "subject": "村委会",
+                "subject-type": "机构",
+                "predicate": "开展",
+                "object": "群防群控",
+                "object-type": "工作"
+            },
+            {
+                "subject": "区重大动物疫病防治指挥部",
+                "subject-type": "机构",
+                "predicate": "发布",
+                "object": "信息",
+                "object-type": "信息"
+            }
+        ]
+    },
+    {
+        "id": 99,
+        "text": "6.2社会公众的宣传教育各镇乡人民政府和各指挥部成员单位要充分利用广播、影视、报刊、手册等多种形式对社会公众广泛开展重大动物疫情应急知识的普及教育，宣传动物防疫科普知识，指导群众以科学的行为和方式对待重大动物疫情。要充分发挥有关社会团体在普及动物防疫知识、科普知识方面的作用。7各类具体工作方案的制定区畜牧中心根据本预案，制定各种不同重大动物疫病应急工作方案和技术措施，并根据形势发展要求，及时进行更新、修订和补充。区指挥部成员单位根据本预案的规定，制定本部门职责范围内的具体工作方案，报区人民政府备案。各镇乡人民政府根据有关法律法规的规定，参照本预案并结合本地区实际情况，组织制定本地区突发重大动物疫情应急预案，并报区畜牧中心和区人民政府备案。",
+        "spo_list": [
+            {
+                "subject": "各镇乡人民政府",
+                "subject-type": "机构",
+                "predicate": "宣传",
+                "object": "动物防疫科普知识",
+                "object-type": "信息"
+            },
+            {
+                "subject": "区指挥部成员单位",
+                "subject-type": "机构",
+                "predicate": "制定",
+                "object": "本部门职责范围内的具体工作方案",
+                "object-type": "方案"
+            },
+            {
+                "subject": "各镇乡人民政府",
+                "subject-type": "机构",
+                "predicate": "制定",
+                "object": "本地区突发重大动物疫情应急预案",
+                "object-type": "方案"
+            },
+            {
+                "subject": "各指挥部成员单位",
+                "subject-type": "机构",
+                "predicate": "宣传",
+                "object": "动物防疫科普知识",
+                "object-type": "信息"
+            },
+            {
+                "subject": "区畜牧中心",
+                "subject-type": "机构",
+                "predicate": "补充",
+                "object": "各种不同重大动物疫病应急工作方案",
+                "object-type": "方案"
+            },
+            {
+                "subject": "区畜牧中心",
+                "subject-type": "机构",
+                "predicate": "修订",
+                "object": "各种不同重大动物疫病应急工作方案",
+                "object-type": "方案"
+            },
+            {
+                "subject": "区畜牧中心",
+                "subject-type": "机构",
+                "predicate": "制定",
+                "object": "技术措施",
+                "object-type": "措施"
+            },
+            {
+                "subject": "各指挥部成员单位",
+                "subject-type": "机构",
+                "predicate": "开展",
+                "object": "重大动物疫情应急知识的普及教育",
+                "object-type": "工作"
+            },
+            {
+                "subject": "各镇乡人民政府",
+                "subject-type": "机构",
+                "predicate": "开展",
+                "object": "重大动物疫情应急知识的普及教育",
+                "object-type": "工作"
+            },
+            {
+                "subject": "区畜牧中心",
+                "subject-type": "机构",
+                "predicate": "更新",
+                "object": "各种不同重大动物疫病应急工作方案",
+                "object-type": "方案"
+            },
+            {
+                "subject": "区畜牧中心",
+                "subject-type": "机构",
+                "predicate": "制定",
+                "object": "各种不同重大动物疫病应急工作方案",
+                "object-type": "方案"
+            }
+        ]
+    }
+]
