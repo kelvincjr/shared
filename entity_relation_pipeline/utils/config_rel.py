@@ -20,7 +20,7 @@ else:
 class ConfigRel:
     def __init__(self,
                  lr=0.001,
-                 epochs=20,
+                 epochs=100,
                  vocab_size=16116,  # 22000,
                  embedding_dim=100,
                  hidden_dim_lstm=64,
@@ -45,7 +45,7 @@ class ConfigRel:
         self.num_token_type = len(self.token_types)
         self.vocab_file = '../data/vocab.txt'
         self.max_seq_length = 256
-        self.num_sample = 1480
+        self.num_sample = 200000#1480 
         
         self.dropout_embedding = 0.1  # 从0.2到0.1
         self.dropout_lstm = 0.1

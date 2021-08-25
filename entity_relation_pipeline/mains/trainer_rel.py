@@ -190,16 +190,25 @@ class Trainer:
         print('STARTING PREDICTING...')
         self.model.train(False)
         pbar = tqdm(enumerate(self.test_dataset), total=len(self.test_dataset))
+        pred_rels = list()
+        #pred_rels = dict()
         for i, data_item in pbar:
             output = self.model(data_item['sentence_cls'], attention_mask=data_item['mask_tokens'])
             logits = output[0]
             _, pred_rel = torch.max(logits.data, 1)
+            pred_rels.extend(pred_rel)
+            #pred_rels[data_item['text']] = pred_rel
         self.model.train(True)
         # rel_pred = [[] for _ in range(len(pred_rel))]
         rel_pred = []
-        for i in range(len(pred_rel)):
+        for i in range(len(pred_rels)):
             # for item in pred_rel[i]:
-            rel_pred.append(self.id2rel[int(pred_rel[i])])
+            rel_pred.append(self.id2rel[int(pred_rels[i])])
+        '''
+        rel_pred = {}
+        for key in pred_rels.keys():
+            rel_pred[key] = self.id2rel[int(pred_rels[key])]
+        '''
         return rel_pred
 
 
@@ -243,7 +252,7 @@ if __name__ == '__main__':
     # neptune.create_experiment('rel_train')
     print("Run EntityRelationExtraction REL BERT ...")
     config = ConfigRel()
-    model = BertForSequenceClassification.from_pretrained('/kaggle/working', num_labels=config.num_relations)
+    model = BertForSequenceClassification.from_pretrained('/opt/kelvin/python/knowledge_graph/ai_contest/working', num_labels=config.num_relations)
     data_processor = DataPreparationRel(config)
     train_loader, dev_loader, test_loader = data_processor.get_train_dev_data(
     '../data/fixed_train.json',

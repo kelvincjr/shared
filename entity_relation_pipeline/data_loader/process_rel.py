@@ -60,19 +60,20 @@ class DataPreparationRel:
 
                     else:
                         relation = []
-                    # sentence_cls = '$'.join([subject, object, text.replace(subject, '#'*len(subject)).replace(object, '#'*len(object))])
-                    sentence_cls = ''.join([subject, object, text])
+                    sentence_cls = '$'.join([subject, object, text.replace(subject, '#'*len(subject)).replace(object, '#'*len(object))])
+                    # sentence_cls = ''.join([subject, object, text])
                     # sentence_cls = text
                     item = {'sentence_cls': sentence_cls, 'relation': relation, 'text': text,
                             'subject': subject, 'object': object}  # 'position_s': position_s, 'position_o': position_o}
                     data.append(item)
-                    # 添加负样本
-                    sentence_neg = '$'.join([object, subject, text])
-                    # sentence_neg = '$'.join(
-                    #     [object, subject, text.replace(subject, '#' * len(subject)).replace(object, '#' * len(object))])
-                    item_neg = {'sentence_cls': sentence_neg, 'relation': 'N', 'text': text,
-                                 'subject': object, 'object': subject}
-                    data.append(item_neg)
+                    if not is_test:
+                        # 添加负样本
+                        sentence_neg = '$'.join([object, subject, text])
+                        # sentence_neg = '$'.join(
+                        #     [object, subject, text.replace(subject, '#' * len(subject)).replace(object, '#' * len(object))])
+                        item_neg = {'sentence_cls': sentence_neg, 'relation': 'N', 'text': text,
+                                     'subject': object, 'object': subject}
+                        data.append(item_neg)
         
         dataset = Dataset(data, self.config)
         if is_test:
@@ -81,7 +82,8 @@ class DataPreparationRel:
             dataset=dataset,
             batch_size=self.config.batch_size,
             collate_fn=dataset.collate_fn,
-            shuffle=True,
+            #shuffle=True,
+            shuffle=False,
             drop_last=True
         )
         
@@ -117,7 +119,7 @@ class Dataset(torch.utils.data.Dataset):
         self.rel2id = {}
         for i, rel in enumerate(self.config.relations):
             self.rel2id[rel] = i
-        vocab_file = '/kaggle/working/vocab.txt'
+        vocab_file = '/opt/kelvin/python/knowledge_graph/ai_contest/working/vocab.txt'
         self.bert_tokenizer = BertTokenizer.from_pretrained(vocab_file)
 
         # vocab_file = '../data/vec.txt'
@@ -188,7 +190,8 @@ class Dataset(torch.utils.data.Dataset):
         sentence_cls, mask_tokens = merge(sentence_cls)
         sentence_cls = sentence_cls.to(torch.int64)
         mask_tokens = mask_tokens.to(torch.int64)
-        relation = relation.to(torch.int64)
+        if not self.is_test:
+            relation = relation.to(torch.int64)
         # position_s, _ = merge(item_info['position_s'])
         # position_o, _ = merge(item_info['position_o'])
         if USE_CUDA:
