@@ -61,6 +61,8 @@ class DataPreparationRel:
                     else:
                         relation = []
                     sentence_cls = '$'.join([subject, object, text.replace(subject, '#'*len(subject)).replace(object, '#'*len(object))])
+                    if len(sentence_cls) >= 512:
+                        sentence_cls = sentence_cls[:512]
                     # sentence_cls = ''.join([subject, object, text])
                     # sentence_cls = text
                     item = {'sentence_cls': sentence_cls, 'relation': relation, 'text': text,
