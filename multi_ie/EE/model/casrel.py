@@ -172,7 +172,7 @@ class ERENet(nn.Module):
                 s_ends = np.average(np.array(s_ends), axis=0)
                 answer_list.append(np.concatenate((s_starts, s_ends), axis=0))
 
-            sub_tensor = torch.tensor(answer_list, dtype=torch.float32).unsqueeze(1)  #.cuda()
+            sub_tensor = torch.tensor(answer_list, dtype=torch.float32).unsqueeze(1).cpu().numpy()  #.cuda()
             att_weight = self.additive_attention(argument_represent, sub_tensor, attention_mask).unsqueeze(2)
             context_encoder = argument_represent * att_weight
             context_encoder = torch.cat([context_encoder, argument_represent], dim=2)
