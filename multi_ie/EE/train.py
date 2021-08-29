@@ -34,13 +34,12 @@ class Trainer(object):
         self.model = encoder
         self.model.to(self.device)
 
-        '''
         logging.info('total gpu num is {}'.format(self.n_gpu))
         if self.n_gpu > 1:
             self.model = nn.DataParallel(self.model.cuda(), device_ids=[0, 1])
         else:
             self.model = nn.DataParallel(self.model.cuda())
-        '''
+        
         self.resume(output_dir) 
         
         self.adversarial_train = FGM(self.model)
