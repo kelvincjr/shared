@@ -1,5 +1,5 @@
 data_in_dir = './DuEE'
-data_out_dir = './data4bert'
+data_out_dir = './flyai_data'
 
 train_mode = "train"
 
@@ -32,7 +32,7 @@ eval_config = {
 }
 
 bert_config = {
-    "data_home": "./data4bert",
+    "data_home": "./flyai_data",
     "bert_path": "/kaggle/working", # chinese-bert-wwm-ext-hit, nezha-base-www, 
     "hyper_parameters": {
         "lr": 5e-5,

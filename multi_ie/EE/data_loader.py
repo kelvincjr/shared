@@ -149,8 +149,10 @@ class Reader(object):
                     sub_ent_list.append(subject_name)
                     obj_category = spo['object-type']
                     object_name = spo['object']
-                    sub_start = original_text.find(subject_name)
-                    obj_start = original_text.find(object_name)
+                    sub_start = spo['subject-start']
+                    obj_start = spo['object-start']
+                    if sub_start == -1 or obj_start == -1:
+                        continue
                     relation = spo['predicate'] + "_" + obj_category
                     spo_list.append((subject_name, relation, object_name))
                     so_ind_list.append((sub_start, obj_start))
@@ -159,6 +161,7 @@ class Reader(object):
             for gold_answer, so_ind in zip(spo_list, so_ind_list):
                 s, p, o, s_start_ind, o_start_ind = (*gold_answer, *so_ind)
 
+                #print('s {}, p {}, o {}'.format(s, p, o))
                 # 去掉首尾不可见字符
                 s_start_ind = s_start_ind + re.search(r'[^\s]', s).span()[0]
                 o_start_ind = o_start_ind + re.search(r'[^\s]', o).span()[0]
