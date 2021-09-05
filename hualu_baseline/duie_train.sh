@@ -1,5 +1,5 @@
 python -u run.py \
-	--max_len=150 \
+	--max_len=256 \
 	--model_name_or_path=/opt/kelvin/python/knowledge_graph/ai_contest/working \
 	--per_gpu_train_batch_size=16 \
 	--per_gpu_eval_batch_size=16 \

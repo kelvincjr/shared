@@ -23,7 +23,7 @@ class DuIEDataset(Dataset):
         examples = []
 
         id2predicate, predicate2id, n = {0: "O", 1: "I"}, {"O": 0, "I": 1}, 2
-        with open('emergency_data/train/schema.csv') as f:
+        with open('flyai_data/schema.csv') as f:
             predicate2type = {}
             line_count = 0
             for l in f:
@@ -44,6 +44,7 @@ class DuIEDataset(Dataset):
                 line_count += 1
         label_map = predicate2id
         print('label_map len: ', len(label_map))
+        print(label_map)
 
         D = []
         with open(json_path, encoding='utf-8') as f:
@@ -57,6 +58,26 @@ class DuIEDataset(Dataset):
                         sub_mention = spo['subject']
                         obj_category = spo['object-type']
                         obj_mention = spo['object']
+                        sub_start = spo['subject-start']
+                        obj_start = spo['object-start']
+                        predicate = spo['predicate']
+                        predicate = sub_category+"_"+predicate+"_"+obj_category
+                        d['spo_list'].append(
+                            (sub_mention, predicate, obj_mention, sub_start, obj_start)
+                        )
+                D.append(d)
+        '''
+        if json_path.endswith('labeled.json'):
+            with open("emergency_data/train2/labeled.json", encoding='utf-8') as f:
+                #l = f.readlines()
+                data_list = json.load(f)
+                for data in tqdm(data_list):
+                    d = {'text': data['text'], 'spo_list': []}
+                    for spo in data['spo_list']:
+                        sub_category = spo['subject-type']
+                        sub_mention = spo['subject']
+                        obj_category = spo['object-type']
+                        obj_mention = spo['object']
                         #sub_start = text.find(sub_mention)
                         #obj_start = text.find(obj_mention)
                         predicate = spo['predicate']
@@ -64,11 +85,13 @@ class DuIEDataset(Dataset):
                         d['spo_list'].append(
                             (sub_mention, predicate, obj_mention)
                         )
-                D.append(d)
-        
+                    D.append(d)
+        '''
         examples = []
         tokenized_examples = []
         num_labels = 2 * (len(label_map.keys()) - 2) + 2
+
+        print('num_labels {}'.format(num_labels))
 
         #limit = math.ceil(len(lines)*0.1)
         #random.shuffle(lines)
@@ -101,10 +124,34 @@ class DuIEDataset(Dataset):
                 subject_tokens_len = len(subject_tokens)
                 object_tokens_len = len(object_tokens)
 
+                sub_start = spo[3]
+                obj_start = spo[4]
+                index = sub_start
+                if index >= args.max_len:
+                    print('index {}, max_len {}'.format(index, args.max_len))
+                    import sys
+                    sys.exit()
+                index += 1
+                labels[index][label_subject] = 1
+                for i in range(subject_tokens_len - 1):
+                    labels[index + i + 1][1] = 1
+
+                index = obj_start
+                if index != -1:
+                    if index >= args.max_len:
+                        print('index {}, max_len {}'.format(index, args.max_len))
+                        import sys
+                        sys.exit()
+                    index += 1
+                    labels[index][label_object] = 1
+                    for i in range(object_tokens_len - 1):
+                        labels[index + i + 1][1] = 1
+
                 # assign token label
                 # there are situations where s entity and o entity might overlap, e.g. xyz established xyz corporation
                 # to prevent single token from being labeled into two different entity
                 # we tag the longer entity first, then match the shorter entity within the rest text
+                '''
                 forbidden_index = None
                 if subject_tokens_len > object_tokens_len:
                     for index in range(seq_len - subject_tokens_len + 1):
@@ -151,6 +198,7 @@ class DuIEDataset(Dataset):
                                 for i in range(subject_tokens_len - 1):
                                     labels[index + i + 1][1] = 1
                                 break
+                '''
             for i in range(seq_len):
                 if labels[i] == [0] * num_labels:
                     labels[i][0] = 1
