@@ -104,9 +104,9 @@ def evaluate(args, eval_iter, model, mode, id2predicate):
             id2spo['predicate'][id_] = real_predicate
             id2spo['subject_type'][id_] = subject_type
             id2spo['object_type'][id_] = object_type
-            id2spo['predicate'][id_+61] = real_predicate
-            id2spo['subject_type'][id_+61] = subject_type
-            id2spo['object_type'][id_+61] = object_type
+            id2spo['predicate'][id_+59] = real_predicate
+            id2spo['subject_type'][id_+59] = subject_type
+            id2spo['object_type'][id_+59] = object_type
 
     probs_all = []
     seq_len_all = [x["seq_len"] for x in eval_iter.dataset.tokenized_examples]

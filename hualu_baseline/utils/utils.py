@@ -163,8 +163,8 @@ def decoding(example_all,
         logits = logits[1:seq_len - 2 + 1]  # slice between [CLS] and [SEP] to get valid logits
         import copy
         origin_logits = copy.deepcopy(logits)
-        logits[logits >= 0.8] = 1
-        logits[logits < 0.8] = 0
+        logits[logits >= 0.5] = 1
+        logits[logits < 0.5] = 0
     
         offset_mapping = offset_mapping[1:seq_len - 2 + 1]
         predictions = []
@@ -176,7 +176,7 @@ def decoding(example_all,
         text_raw = example['text']
         complex_relation_label = [8, 10, 26, 32, 46]
         complex_relation_affi_label = [9, 11, 27, 28, 29, 33, 47]
-        '''
+        
         if i == 0:
             token_labels = list()
             token_count = 0
@@ -188,7 +188,7 @@ def decoding(example_all,
                 print("token: {}, token_logit: {}".format(text_raw[token_count], token_logit))
                 print('origin logit: ', origin_logits[token_count])
                 token_count += 1
-        '''
+    
         # flatten predictions then retrival all valid subject id
         flatten_predictions = []
         for layer_1 in predictions:
@@ -199,11 +199,11 @@ def decoding(example_all,
             if 1 < cls_label <= 310 and (cls_label + 309) in flatten_predictions:
                 subject_id_list.append(cls_label)
         subject_id_list = list(set(subject_id_list))
-        '''
+        
         if i == 0: 
             print('flatten_predictions: ', flatten_predictions)
             print('subject_id_list: ', subject_id_list)
-        '''
+        
         # fetch all valid spo by subject id
         spo_list = []
         for id_ in subject_id_list:
