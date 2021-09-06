@@ -196,7 +196,7 @@ def decoding(example_all,
                 flatten_predictions.append(layer_2[0])
         subject_id_list = []
         for cls_label in list(set(flatten_predictions)):
-            if 1 < cls_label <= 60 and (cls_label + 59) in flatten_predictions:
+            if 1 < cls_label <= 310 and (cls_label + 309) in flatten_predictions:
                 subject_id_list.append(cls_label)
         subject_id_list = list(set(subject_id_list))
         
@@ -212,7 +212,7 @@ def decoding(example_all,
                                        predictions,
                                        offset_mapping)
             objects = find_entity(text_raw,
-                                      id_ + 59,
+                                      id_ + 309,
                                       predictions,
                                       offset_mapping)
             for subject_ in subjects:
