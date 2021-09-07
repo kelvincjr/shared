@@ -36,7 +36,7 @@ class MyDataset(Dataset):
         for key in self.relation2idx:
             self.idx2relation[self.relation2idx[key]] = key
         # model_name = "bert-base-multilingual-cased"
-        model_name = '/opt/kelvin/python/knowledge_graph/ai_contest/working'
+        model_name = '/kaggle/working'
         self.tokenizer = BertTokenizer.from_pretrained(model_name)
 
     def __len__(self):

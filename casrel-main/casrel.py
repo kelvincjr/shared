@@ -12,7 +12,7 @@ class CasRel(nn.Module):
         super(CasRel, self).__init__()
         self.config = config
         self.bert_dim = 768
-        model_name = '/opt/kelvin/python/knowledge_graph/ai_contest/working'
+        model_name = '/kaggle/working'
         # model_name = "bert-base-multilingual-cased"
         self.bert_encoder = BertModel.from_pretrained(model_name)
         self.sub_start_tageer = nn.Linear(self.bert_dim, 1)
