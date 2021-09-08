@@ -34,7 +34,7 @@ def evaluate():
     r.close()
 
 if __name__ == '__main__':
-    config = {'mode': 'train', 'batch_size': 20, 'epoch': 40, 'relation_types': 53, 'sub_weight': 1, 'obj_weight': 1}
+    config = {'mode': 'train', 'batch_size': 20, 'epoch': 10, 'relation_types': 53, 'sub_weight': 1, 'obj_weight': 1}
     path = 'data/CMeIE_train.json'
     data = MyDataset(path, config)
     dataloader = DataLoader(data, batch_size=config['batch_size'], shuffle=True, collate_fn=collate_fn)
