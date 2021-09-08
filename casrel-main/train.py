@@ -19,6 +19,20 @@ def get_loss(pred, gold, mask):
     loss = torch.sum(loss*mask)/torch.sum(mask)
     return loss
 
+def evaluate():
+    import os
+    r = os.popen(
+        'python3 ./test.py')
+    result = r.read()
+    print("test", result)
+    r.close()
+
+    r = os.popen(
+        'python3 ./evaluate.py')
+    result = r.read()
+    print("f1", result)
+    r.close()
+
 if __name__ == '__main__':
     config = {'mode': 'train', 'batch_size': 20, 'epoch': 40, 'relation_types': 53, 'sub_weight': 1, 'obj_weight': 1}
     path = 'data/CMeIE_train.json'
@@ -55,3 +69,4 @@ if __name__ == '__main__':
         time_end = time.perf_counter()
         torch.save(model.state_dict(), 'params.pkl')
         print("successfully saved! time used = %fs."% (time_end-time_start))
+        evaluate()
