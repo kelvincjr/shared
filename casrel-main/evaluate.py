@@ -4,26 +4,24 @@ import codecs
 #from config import *
 
 def evaluate():
-    pred_path = "flyai_data/fixed_dev_res.json"   # prediction file
-    gold_path = "flyai_data/fixed_dev.json"   # gold file
+    pred_path = "data/CMeIE_dev_res.json"   # prediction file
+    gold_path = "data/CMeIE_dev.json"   # gold file
     res_path = 'eval_dev.json'
     pred_file = codecs.open(pred_path, 'r', encoding='utf-8')
     gold_file = codecs.open(gold_path, 'r', encoding='utf-8')
     res_file = codecs.open(res_path, 'w', encoding='utf-8')
     pred_data = pred_file.readlines()
     pred_data = [json.loads(i) for i in pred_data]
-    #gold_data = gold_file.readlines()
-    #gold_data = [json.loads(i) for i in gold_data]
-    gold_data = []
-    gold_data.extend(json.load(gold_file))
+    gold_data = gold_file.readlines()
+    gold_data = [json.loads(i) for i in gold_data]
     data = zip(pred_data, gold_data)
     correct_num = 0
     pred_num = 0
     gold_num = 0
     for pred, gold in data:
-       pred_spo = [(i['predicate'], i['subject'], i['subject_type'], i['object'], i['object_type']) for i in pred['spo_list']]
+       pred_spo = [(i['predicate'], i['subject'], i['subject_type'], i['object']['@value'], i['object_type']['@value']) for i in pred['spo_list']]
        pred_spo = set(pred_spo)
-       gold_spo = [(i['predicate'], i['subject'], i['subject-type'], i['object'], i['object-type']) for i in gold['spo_list']]
+       gold_spo = [(i['predicate'], i['subject'], i['subject_type'], i['object']['@value'], i['object_type']['@value']) for i in gold['spo_list']]
        gold_spo = set(gold_spo)
        correct_num +=  len(pred_spo & gold_spo)
        pred_num += len(pred_spo)

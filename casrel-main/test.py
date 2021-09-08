@@ -47,17 +47,17 @@ def get_list(start, end, text, h_bar=0.5, t_bar=0.5):
     return res
 
 def get_text(path):
-    data = []
     with open(path, 'r', encoding='utf-8') as f:
-        data.extend(json.load(f))
+        data = f.readlines()
+    data = [json.loads(i) for i in data]
     return data
 
 
 if __name__ == '__main__':
-    config = {'mode': 'test', 'batch_size': 1, 'relation_types': 59}
-    path = 'flyai_data/fixed_dev.json'
-    schemas_path = 'flyai_data/schemas.json'
-    res_path = 'flyai_data/fixed_dev_res.json'
+    config = {'mode': 'test', 'batch_size': 1, 'relation_types': 53}
+    path = 'data/CMeIE_dev.json'
+    schemas_path = 'data/53_schemas.json'
+    res_path = 'data/CMeIE_dev_res.json'
     res_file = codecs.open(res_path, 'w', encoding='utf-8')
     raw_data = get_text(path)
     re2sub, re2obj = trans_schemas(schemas_path)
@@ -84,12 +84,10 @@ if __name__ == '__main__':
                             entry = {}
                             entry['Combined'] = '。' in text[sub['end']: obj['start']] or '。' in text[obj['end']: sub['start']]
                             entry['subject'] = sub['text']
-                            relation = data.idx2relation[i]
-                            relation = relation.split('_')[1]
-                            entry['predicate'] = relation  #data.idx2relation[i]
-                            entry['object'] = obj['text']
+                            entry['predicate'] = data.idx2relation[i]
+                            entry['object'] = {'@value': obj['text']}
                             entry['subject_type'] = re2sub[data.idx2relation[i]]
-                            entry['object_type'] = re2obj[data.idx2relation[i]]
+                            entry['object_type'] = {'@value': re2obj[data.idx2relation[i]]}
                             spo_list.append(entry)
             res = {}
             res['text'] = text

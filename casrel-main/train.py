@@ -19,24 +19,9 @@ def get_loss(pred, gold, mask):
     loss = torch.sum(loss*mask)/torch.sum(mask)
     return loss
 
-def evaluate():
-    import os
-    r = os.popen(
-        'python3 ./test.py')
-    result = r.read()
-    print("test", result)
-    r.close()
-
-    r = os.popen(
-        'python3 ./evaluate.py')
-    result = r.read()
-    print("f1", result)
-    r.close()
-
-
 if __name__ == '__main__':
-    config = {'mode': 'train', 'batch_size': 16, 'epoch': 10, 'relation_types': 59, 'sub_weight': 1, 'obj_weight': 1}
-    path = 'flyai_data/fixed_train.json'
+    config = {'mode': 'train', 'batch_size': 20, 'epoch': 40, 'relation_types': 53, 'sub_weight': 1, 'obj_weight': 1}
+    path = 'data/CMeIE_train.json'
     data = MyDataset(path, config)
     dataloader = DataLoader(data, batch_size=config['batch_size'], shuffle=True, collate_fn=collate_fn)
     model = CasRel(config).to(device)
@@ -46,9 +31,8 @@ if __name__ == '__main__':
     loss_recorder = 0
     for epoch_index in range(config['epoch']):
         time_start = time.perf_counter()
-        print('========= start training, epoch: {} ==========='.format(epoch_index))
-        epoch_iterator = tqdm(iter(dataloader), desc="Iteration", position=0, leave=True, ncols=80)
-        for batch_index, (sample, sub_start, sub_end, relation_start, relation_end, mask, sub_start_single, sub_end_single) in enumerate(epoch_iterator):
+        print('start training, epoch: {}'.format(epoch_index))
+        for batch_index, (sample, sub_start, sub_end, relation_start, relation_end, mask, sub_start_single, sub_end_single) in tqdm(enumerate(iter(dataloader))):
             batch_data = dict()
             batch_data['token_ids'] = sample
             batch_data['mask'] = mask
@@ -71,4 +55,3 @@ if __name__ == '__main__':
         time_end = time.perf_counter()
         torch.save(model.state_dict(), 'params.pkl')
         print("successfully saved! time used = %fs."% (time_end-time_start))
-        evaluate()
