@@ -180,18 +180,13 @@ def del_duplicate(spo_list, alias_dict):
     for spo in spo_list:
         if not is_spo_in_list(spo, normalized_spo_list, alias_dict):
             normalized_spo_list.append(spo)
-        #else:
-            #print('del_duplicate item: ', spo)
     return normalized_spo_list
 
 
 def is_spo_in_list(target_spo, golden_spo_list, alias_dict):
     """target spo是否在golden_spo_list中"""
-    #print('target_spo: ', target_spo)
     if target_spo in golden_spo_list:
-        #print('============= exit 1 =============')
         return True
-    '''
     target_s = target_spo["subject"]
     target_p = target_spo["predicate"]
     target_o = target_spo["object"]
@@ -205,9 +200,7 @@ def is_spo_in_list(target_spo, golden_spo_list, alias_dict):
             continue
         #if s in target_s_alias_set and _is_equal_o(o, target_o, alias_dict):
         if s == target_o:
-            print('============= exit 2 =============')
             return True
-    '''
     return False
 
 
@@ -245,20 +238,14 @@ def calc_pr(predict_filename, alias_filename, golden_filename):
         ret_info['errorCode'] = ret_code
         ret_info['errorMsg'] = CODE_INFO[ret_code]
         return ret_info
-    print('================ after load_test_dataset, len: {} ==============='.format(len(golden_dict)))
-    for sent, spo_result in golden_dict.items():
-        print('len of test spo_result: ', len(spo_result))
-        break
+    #print('================ after load_test_dataset, len: {} ==============='.format(len(golden_dict)))
     #load predict result
     ret_code, predict_result = load_predict_result(predict_filename)
     if ret_code != SUCCESS:
         ret_info['errorCode'] = ret_code
         ret_info['errorMsg'] = CODE_INFO[ret_code]
         return ret_info
-    print('================ after load_predict_result, len: {} ==============='.format(len(predict_result)))
-    for sent, spo_result in predict_result.items():
-        print('len of pred spo_result: ', len(spo_result))
-        break
+    #print('================ after load_predict_result, len: {} ==============='.format(len(predict_result)))
     #evaluation
     correct_sum, predict_sum, recall_sum, recall_correct_sum = 0.0, 0.0, 0.0, 0.0
     for sent in golden_dict:
@@ -267,15 +254,9 @@ def calc_pr(predict_filename, alias_filename, golden_filename):
         normalized_predict_spo = del_duplicate(predict_spo_list, alias_dict)
         recall_sum += len(golden_spo_list)
         predict_sum += len(normalized_predict_spo)
-        #print('------- check accuracy ---------')
-        #print('len of golden_spo_list: ', len(golden_spo_list))
-        #print('golden_spo_list: ', golden_spo_list)
         for spo in normalized_predict_spo:
             if is_spo_in_list(spo, golden_spo_list, alias_dict):
                 correct_sum += 1
-            #else:
-                #print('wrong spo: ', spo)
-        #print('------- check recall ---------')
         for golden_spo in golden_spo_list:
             if is_spo_in_list(golden_spo, predict_spo_list, alias_dict):
                 recall_correct_sum += 1

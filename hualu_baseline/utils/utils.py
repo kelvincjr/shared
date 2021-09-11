@@ -142,9 +142,11 @@ def find_entity(text_raw,
                     j += 1
                 else:
                     break
-            entity = ''.join(text_raw[offset_mapping[i][0]:
-                                      offset_mapping[i + j][1]])
-            entity_list.append(entity)
+            #print('id_ {}, i {}, offset_mapping {}, {}'.format(id_, i, offset_mapping[i][0], offset_mapping[i + j][1]))
+            #entity = ''.join(text_raw[offset_mapping[i][0]:
+                                      #offset_mapping[i + j][1]])
+            entity = ''.join(text_raw[i:i + j + 1])
+            entity_list.append((entity, i))
     return list(set(entity_list))
 
 
@@ -157,6 +159,11 @@ def decoding(example_all,
     """
     model output logits -> formatted spo (as in data set file)
     """
+    single_spo_ids = {}
+    for id_, object_type in id2spo['object_type'].items():
+        if object_type == "":
+            single_spo_ids[id_] = id_
+
     formatted_outputs = []
     for (i, (example, logits, seq_len, offset_mapping)) in \
             enumerate(zip(example_all, logits_all, seq_len_all, offset_mapping_all)):
@@ -174,8 +181,6 @@ def decoding(example_all,
         # format predictions into example-style output
         formatted_instance = {}
         text_raw = example['text']
-        complex_relation_label = [8, 10, 26, 32, 46]
-        complex_relation_affi_label = [9, 11, 27, 28, 29, 33, 47]
         
         if i == 0:
             token_labels = list()
@@ -186,9 +191,9 @@ def decoding(example_all,
             for token in logits:
                 token_logit = np.argwhere(token == 1).tolist()
                 print("token: {}, token_logit: {}".format(text_raw[token_count], token_logit))
-                print('origin logit: ', origin_logits[token_count])
+                #print('offset_mapping: ', offset_mapping[token_count])
                 token_count += 1
-    
+
         # flatten predictions then retrival all valid subject id
         flatten_predictions = []
         for layer_1 in predictions:
@@ -198,12 +203,14 @@ def decoding(example_all,
         for cls_label in list(set(flatten_predictions)):
             if 1 < cls_label <= 60 and (cls_label + 59) in flatten_predictions:
                 subject_id_list.append(cls_label)
+            elif cls_label in single_spo_ids:
+                subject_id_list.append(cls_label)
         subject_id_list = list(set(subject_id_list))
-        
+
         if i == 0: 
             print('flatten_predictions: ', flatten_predictions)
             print('subject_id_list: ', subject_id_list)
-        
+
         # fetch all valid spo by subject id
         spo_list = []
         for id_ in subject_id_list:
@@ -211,19 +218,33 @@ def decoding(example_all,
                                        id_,
                                        predictions,
                                        offset_mapping)
+            #print('id {}, subjects: {}'.format(id_, subjects))
             objects = find_entity(text_raw,
                                       id_ + 59,
                                       predictions,
                                       offset_mapping)
-            for subject_ in subjects:
-                for object_ in objects:
+            #print('objects: ', objects)
+            if id_ in single_spo_ids:
+                for subject_, sub_ind in subjects:
                     spo_list.append({
-                        "predicate": id2spo['predicate'][id_],
-                        "object_type": id2spo['object_type'][id_],
-                        'subject_type': id2spo['subject_type'][id_],
-                        "object": object_,
-                        "subject": subject_
-                    })
+                            "predicate": id2spo['predicate'][id_],
+                            "object_type": id2spo['object_type'][id_],
+                            'subject_type': id2spo['subject_type'][id_],
+                            "object": "",
+                            "subject": subject_
+                        })
+            else:
+                for subject_, sub_ind in subjects:
+                    for object_, obj_ind in objects:
+                        if abs((sub_ind - obj_ind)) >= 15:
+                            continue 
+                        spo_list.append({
+                            "predicate": id2spo['predicate'][id_],
+                            "object_type": id2spo['object_type'][id_],
+                            'subject_type': id2spo['subject_type'][id_],
+                            "object": object_,
+                            "subject": subject_
+                        })
             
         formatted_instance['text'] = example['text']
         formatted_instance['spo_list'] = spo_list

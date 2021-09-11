@@ -18,6 +18,24 @@ from torch.utils.data import Dataset
 
 from utils.finetuning_argparse import get_argparse
 
+def fine_grade_tokenize(raw_text, tokenizer):
+    """
+    序列标注任务 BERT 分词器可能会导致标注偏移，
+    用 char-level 来 tokenize
+    """
+    tokens = []
+
+    for _ch in raw_text:
+        if _ch in [' ', '\t', '\n']:
+            tokens.append('[BLANK]')
+        else:
+            if not len(tokenizer.tokenize(_ch)):
+                tokens.append('[INV]')
+            else:
+                tokens.append(_ch)
+
+    return tokens
+
 class DuIEDataset(Dataset):
     def __init__(self, args, json_path, tokenizer):
         examples = []
@@ -103,8 +121,19 @@ class DuIEDataset(Dataset):
             spo_list = example['spo_list'] if "spo_list" in example.keys() else []
 
             text_raw = example['text']
+            
+            pre_tokens = fine_grade_tokenize(text_raw, tokenizer)
+            assert len(pre_tokens) == len(text_raw)
 
-            #
+            tokenized_example = tokenizer.encode_plus(
+                pre_tokens,
+                max_length=args.max_len,
+                padding="max_length",
+                is_pretokenized=True,
+                truncation=True,
+                return_offsets_mapping=True
+            )
+            '''
             tokenized_example = tokenizer.encode_plus(
                 text_raw,
                 max_length=args.max_len,
@@ -112,9 +141,11 @@ class DuIEDataset(Dataset):
                 truncation=True,
                 return_offsets_mapping=True
             )
+            '''
             #
             seq_len = sum(tokenized_example["attention_mask"])
             tokens = tokenized_example["input_ids"]
+            print('tokens: ', tokens)
             labels = [[0] * num_labels for i in range(args.max_len)]
             for spo in spo_list:
                 label_subject = label_map[spo[1]]
@@ -215,12 +246,13 @@ class DuIEDataset(Dataset):
                 print("text_raw len {}, seq_len: {}".format(len(text_raw), seq_len))
                 print("spo_list: ", spo_list)
                 print('tokens: ', tokens)
+                offset_mapping = tokenized_example['offset_mapping']
                 import numpy as np
                 for token_label in labels[1:seq_len - 1]:
                     token_label_arr = np.array(token_label)
                     arg_label = np.argwhere(token_label_arr == 1).tolist()
                     token_labels.append(arg_label)
-                    print("token: {}, token_label: {}".format(text_raw[token_count], arg_label))
+                    print("token: {}, token_label: {}, offset_mapping: {}".format(text_raw[token_count], arg_label, offset_mapping[token_count]))
                     token_count += 1
                 print_first = False
 
