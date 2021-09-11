@@ -145,7 +145,7 @@ class DuIEDataset(Dataset):
             #
             seq_len = sum(tokenized_example["attention_mask"])
             tokens = tokenized_example["input_ids"]
-            print('tokens: ', tokens)
+            #print('tokens: ', tokens)
             labels = [[0] * num_labels for i in range(args.max_len)]
             for spo in spo_list:
                 label_subject = label_map[spo[1]]
