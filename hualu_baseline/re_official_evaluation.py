@@ -245,20 +245,20 @@ def calc_pr(predict_filename, alias_filename, golden_filename):
         ret_info['errorCode'] = ret_code
         ret_info['errorMsg'] = CODE_INFO[ret_code]
         return ret_info
-    print('================ after load_test_dataset, len: {} ==============='.format(len(golden_dict)))
-    for sent, spo_result in golden_dict.items():
-        print('len of test spo_result: ', len(spo_result))
-        break
+    #print('================ after load_test_dataset, len: {} ==============='.format(len(golden_dict)))
+    #for sent, spo_result in golden_dict.items():
+        #print('len of test spo_result: ', len(spo_result))
+        #break
     #load predict result
     ret_code, predict_result = load_predict_result(predict_filename)
     if ret_code != SUCCESS:
         ret_info['errorCode'] = ret_code
         ret_info['errorMsg'] = CODE_INFO[ret_code]
         return ret_info
-    print('================ after load_predict_result, len: {} ==============='.format(len(predict_result)))
-    for sent, spo_result in predict_result.items():
-        print('len of pred spo_result: ', len(spo_result))
-        break
+    #print('================ after load_predict_result, len: {} ==============='.format(len(predict_result)))
+    #for sent, spo_result in predict_result.items():
+        #print('len of pred spo_result: ', len(spo_result))
+        #break
     #evaluation
     correct_sum, predict_sum, recall_sum, recall_correct_sum = 0.0, 0.0, 0.0, 0.0
     for sent in golden_dict:
