@@ -170,17 +170,17 @@ class Trainer(object):
         else:
             p_ids, input_ids, segment_ids, attention_mask = batch
             eval_file = self.eval_file_choice[chosen]
-            qids, subject_pred, po_pred = self.model(q_ids=p_ids,
+            qids, sub_pred, po_pred = self.model(q_ids=p_ids,
                                                      passage_ids=input_ids,
                                                      segment_ids=segment_ids,
                                                      attention_mask=attention_mask,
                                                      eval_file=eval_file, is_eval=eval
             )
             # qids:(all_subject_length); subject_pred:(all_subject_ids, 2); po_pred:(all_subject_length, seq_len, class_num, 2);
-            print('================ subject_pred ===============')
-            print(subject_pred)
+            #print('================ subject_pred ===============')
+            #print(subject_pred)
             self.convert_spo_contour(qids,
-                                    subject_pred,
+                                     sub_pred,
                                      po_pred,
                                      eval_file,
                                      answer_dict, 
@@ -331,36 +331,46 @@ class Trainer(object):
         pred_score = 1e-12
         all_pred_num = 1e-12
         all_gold_num = 1e-12
-
+        correct_sum = 1e-12
+        recall_correct_sum = 1e-12
         for key, value in answer_dict.items():
             triple_preds, triple_golds = value
     
             triple_golds = set(triple_golds)
             triple_preds = set(triple_preds)
 
-            print("======================= triple_preds {} =====================".format(key))
-            print(triple_preds)
-            print("======================= triple_golds {} =====================".format(key))
-            print(triple_golds)
+            #print("======================= triple_preds {} =====================".format(key))
+            #print('len(triple_preds): ', len(triple_preds))
+            #print("======================= triple_golds {} =====================".format(key))
+            #print('len(triple_golds): ', len(triple_golds))
 
             all_pred_num += len(triple_preds)
             all_gold_num += len(triple_golds)
+
+            for pred_triple in triple_preds:
+                for gold_triple in triple_golds:
+                    if pred_triple[0] == gold_triple[0] and pred_triple[1] == gold_triple[1] and pred_triple[2] == gold_triple[2]:
+                        recall_correct_sum += 1
+                        break
+            
             for gold_triple in triple_golds:
-                max_score = 0
                 for pred_triple in triple_preds:
-                    if pred_triple[0] == gold_triple[1]:
-                        score = Trainer.evaluate_word(pred_triple[1], gold_triple[2])
-                        if score > max_score:
-                            max_score = score
-                pred_score += max_score
-                print('triple: {}, max_score: {}'.format(gold_triple, max_score))
-            #import sys
-            #sys.exit()
+                    if pred_triple[0] == gold_triple[0] and pred_triple[1] == gold_triple[1] and pred_triple[2] == gold_triple[2]:
+                        correct_sum += 1
+                        break
 
-        precision = pred_score / all_pred_num
-        recall = pred_score / all_gold_num
-        f1 = 2 * precision * recall / (precision + recall)
+        precision = correct_sum / all_pred_num if all_pred_num > 0 else 0.0
+        recall = recall_correct_sum / all_gold_num if all_gold_num > 0 else 0.0
+        f1 = 2 * precision * recall / (precision + recall) \
+                if precision + recall > 0 else 0.0
+        precision = round(precision, 4)
+        recall = round(recall, 4)
+        f1 = round(f1, 4)
 
+        sys.stderr.write('correct spo num = {}\n'.format(correct_sum))
+        sys.stderr.write('submitted spo num = {}\n'.format(all_pred_num))
+        sys.stderr.write('golden set spo num = {}\n'.format(all_gold_num))
+        sys.stderr.write('submitted recall spo num = {}\n'.format(recall_correct_sum))
         print('============================================')
         print("{}/f1: {}, \tPrecision: {},\tRecall: {} ".format(chosen, f1 * 100, precision * 100,
                                                                 recall * 100))
@@ -368,10 +378,12 @@ class Trainer(object):
 
     def convert_spo_contour(self, qids, sub_preds, po_preds, eval_file, answer_dict, use_bert=False):
 
-        for qid, sub_pred, po_pred in zip(qids.data.cpu().numpy(), sub_preds, 
+        for qid, subject, po_pred in zip(qids.data.cpu().numpy(), sub_preds.data.cpu().numpy(), 
                                          po_preds.data.cpu().numpy()):
+            subject =tuple(subject.tolist())
             if qid == -1:
                 continue
+
             tokens = eval_file[qid.item()].bert_tokens
             token_ids = eval_file[qid.item()].token_ids
             id = eval_file[qid.item()].id
@@ -382,10 +394,7 @@ class Trainer(object):
             # (seq_len, class_num)
             start = np.where(po_pred[:, :, 0] > config.eval_config["obj_threshold_start"])
             end = np.where(po_pred[:, :, 1] > config.eval_config["obj_threshold_end"])
-
-            print('sub_pred shape {}'.format(len(sub_pred)))
-            print('po_pred shape {}'.format(po_pred.shape))
-
+            
             spoes = []
             for _start, predicate1 in zip(*start):
                 if _start > len(tokens) - 2 or _start == 0:
@@ -394,37 +403,38 @@ class Trainer(object):
                     if _start <= _end <= len(tokens) - 2 and predicate1 == predicate2:
                         spoes.append((predicate1, (_start, _end)))
                         break
-            print('len of spoes {}'.format(len(spoes)))
-            po_predict = []
-            sub_predict = []
+            
+            print('subject, len of spoes {}'.format(subject, len(spoes)))
+            spo_predict = []
             for p, o in spoes:
                 try:
-                    po_predict.append((self.id2rel[p],
+                    spo_predict.append((
+                                    text[text_char_span[subject[0]][0] : text_char_span[subject[1]][-1]],
+                                    self.id2rel[p],
                                     text[text_char_span[o[0]][0] : text_char_span[o[1]][-1]])
                     )
                 except:
                     raise ValueError(text_char_span, o, text)
 
-            for sub_start, sub_end in sub_pred:
-                sub_predict.append(text[sub_start-1:sub_end])
-
             if id not in answer_dict:
                 print('erro in answer_dict ')
             else:
-                answer_dict[id][0].extend(po_predict)
+                answer_dict[id][0].extend(spo_predict)
                 if gold_answer:
                     if not answer_dict[id][1]:
                         answer_dict[id][1].extend(gold_answer)
             
+            '''
             print("=============== text ==================")
             print(text)
-            print("=============== sub_predict ==================")
-            print(sub_predict)
+            print("=============== subject ==================")
+            print(subject)
             print("=============== po_predict ==================")
             print(po_predict)
             print("=============== gold_answer ==================")
             print(gold_answer)
             import sys
             sys.exit()
+            '''
             
             
