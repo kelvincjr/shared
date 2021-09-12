@@ -268,24 +268,17 @@ class SPODataset(Dataset):
                     subject_labels = np.zeros((len(token_ids), 2), dtype=np.float32)
                     # 对应的object标签
                     object_labels = np.zeros((len(token_ids), self.predict_num, 2), dtype=np.float32)
-                    
-                    subject_ids = random.choice(list(spoes.keys()))
                     for s, po in spoes.items():
                         subject_labels[s[0], 0] = 1
                         subject_labels[s[1], 1] = 1
-                        #for o in po:
-                            #object_labels[o[0], o[2], 0] = 1
-                            #object_labels[o[1], o[2], 1] = 1
-                    for o in spoes.get(subject_ids, []):
-                        object_labels[o[0], o[2], 0] = 1
-                        object_labels[o[1], o[2], 1] = 1
-
+                        for o in po:
+                            object_labels[o[0], o[2], 0] = 1
+                            object_labels[o[1], o[2], 1] = 1
                     batch_token_ids.append(token_ids)
                     batch_attention_mask.append(attention_masks)
                     batch_segment_ids.append(segment_ids)
                     batch_subject_labels.append(subject_labels)
                     batch_object_labels.append(object_labels)
-                    batch_subject_ids.append(subject_ids)
                 else:
                     batch_token_ids.append(token_ids)
                     batch_segment_ids.append(segment_ids)
@@ -301,11 +294,11 @@ class SPODataset(Dataset):
                 batch_token_ids = torch.tensor(batch_token_ids, dtype=torch.long)
                 batch_segment_ids = torch.tensor(batch_segment_ids, dtype=torch.long)
                 batch_attention_mask = torch.tensor(batch_attention_mask, dtype=torch.long)
-                batch_subject_ids = torch.tensor(batch_subject_ids, dtype=torch.long)
+                # batch_subject_ids = torch.tensor(batch_subject_ids, dtype=torch.long)
                 batch_subject_labels = torch.tensor(batch_subject_labels, dtype=torch.float32)
                 batch_object_labels = torch.tensor(batch_object_labels, dtype=torch.float32)
 
-                return batch_token_ids, batch_segment_ids, batch_attention_mask, batch_subject_ids, batch_subject_labels, batch_object_labels
+                return batch_token_ids, batch_segment_ids, batch_attention_mask, batch_subject_labels, batch_object_labels
 
         return partial(collate)
 

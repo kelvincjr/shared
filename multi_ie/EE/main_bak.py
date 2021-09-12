@@ -20,7 +20,7 @@ else:
 from data_loader import Reader, Feature
 from train import Trainer
 from utils.data_util import NewBertTokenizer
-from model.multi_pointer_net import ERENet
+from model.casrel import ERENet
 
 def build_dataset(fold:int, reader:Reader, train_max_len:int, dev_max_len:int, tokenizer, train_batch_size:int, dev_batch_size:int, rel2id:dict):
 
@@ -87,8 +87,7 @@ def main():
                     tag.append(predicate_type + "_" + object_type)
                 line_count += 1
     tag = list(set(tag))
-    #rel2id = {tag: id for id, tag in enumerate(tag)}
-    rel2id = {'属性_': 0, '属性_检查手段': 1, '属性_阴性表现': 2, '属性_器官组织': 3, '属性_指代': 4, '属性_期象': 5, '属性_疾病': 6, '属性_累及部位': 7, '属性_阳性表现': 8, '属性_异常现象': 9, '属性_属性': 10}
+    rel2id = {tag: id for id, tag in enumerate(tag)}
     print('rel2id len: ', len(rel2id))
     print(rel2id)
 

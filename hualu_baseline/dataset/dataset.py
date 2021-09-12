@@ -124,7 +124,6 @@ class DuIEDataset(Dataset):
             
             pre_tokens = fine_grade_tokenize(text_raw, tokenizer)
             assert len(pre_tokens) == len(text_raw)
-
             tokenized_example = tokenizer.encode_plus(
                 pre_tokens,
                 max_length=args.max_len,
@@ -150,11 +149,20 @@ class DuIEDataset(Dataset):
             for spo in spo_list:
                 label_subject = label_map[spo[1]]
                 label_object = label_subject + len(label_map) - 2
+                
+                sub_pre_tokens = fine_grade_tokenize(spo[0], tokenizer)
+                assert len(sub_pre_tokens) == len(spo[0])
+                obj_pre_tokens = fine_grade_tokenize(spo[2], tokenizer)
+                assert len(obj_pre_tokens) == len(spo[2])
+
+                subject_tokens = tokenizer.encode_plus(sub_pre_tokens, is_pretokenized=True, add_special_tokens=False)["input_ids"]
+                object_tokens = tokenizer.encode_plus(obj_pre_tokens, is_pretokenized=True, add_special_tokens=False)["input_ids"]
+                '''
                 subject_tokens = tokenizer.encode_plus(spo[0], add_special_tokens=False)["input_ids"]
                 object_tokens = tokenizer.encode_plus(spo[2], add_special_tokens=False)["input_ids"]
                 subject_tokens_len = len(subject_tokens)
                 object_tokens_len = len(object_tokens)
-
+                '''
                 sub_start = spo[3]
                 obj_start = spo[4]
                 index = sub_start

@@ -274,11 +274,13 @@ def calc_pr(predict_filename, alias_filename, golden_filename):
             if is_spo_in_list(spo, golden_spo_list, alias_dict):
                 correct_sum += 1
             #else:
-                #print('wrong spo: ', spo)
+                #print('wrong pred spo: ', spo)
         #print('------- check recall ---------')
         for golden_spo in golden_spo_list:
             if is_spo_in_list(golden_spo, predict_spo_list, alias_dict):
                 recall_correct_sum += 1
+            #else:
+                #print('missing spo: ', golden_spo)
     sys.stderr.write('correct spo num = {}\n'.format(correct_sum))
     sys.stderr.write('submitted spo num = {}\n'.format(predict_sum))
     sys.stderr.write('golden set spo num = {}\n'.format(recall_sum))

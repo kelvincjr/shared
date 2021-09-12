@@ -35,11 +35,10 @@ class Trainer(object):
         self.model.to(self.device)
 
         logging.info('total gpu num is {}'.format(self.n_gpu))
-        if torch.cuda.is_available():
-            if self.n_gpu > 1:
-                self.model = nn.DataParallel(self.model.cuda(), device_ids=[0, 1])
-            else:
-                self.model = nn.DataParallel(self.model.cuda())
+        if self.n_gpu > 1:
+            self.model = nn.DataParallel(self.model.cuda(), device_ids=[0, 1])
+        else:
+            self.model = nn.DataParallel(self.model.cuda())
         
         self.resume(output_dir) 
         
@@ -116,7 +115,6 @@ class Trainer(object):
         if os.path.exists(resume_model_file):
             logging.info("=> loading checkpoint '{}'".format(resume_model_file))
             checkpoint = torch.load(resume_model_file, map_location='cpu')
-            print('=========== checkpoint load done ============')
             if hasattr(self.model, 'module'):
                 self.model.module.load_state_dict(checkpoint)
             else:
@@ -130,12 +128,11 @@ class Trainer(object):
 
         batch = tuple(t.to(self.device) for t in batch)
         if not eval:
-            input_ids, segment_ids, attention_mask, subject_ids, subject_labels, object_labels = batch
+            input_ids, segment_ids, attention_mask, subject_labels, object_labels = batch
 
             loss = self.model(passage_ids=input_ids,
                               segment_ids=segment_ids,
                               attention_mask=attention_mask,
-                              subject_ids=subject_ids,
                               subject_labels=subject_labels,
                               object_labels=object_labels)
 
@@ -149,7 +146,6 @@ class Trainer(object):
             loss_adv =self.model(passage_ids=input_ids, 
                                  segment_ids=segment_ids,
                                  attention_mask=attention_mask,
-                                 subject_ids=subject_ids,
                                  subject_labels=subject_labels, 
                                  object_labels=object_labels)
             
@@ -177,10 +173,7 @@ class Trainer(object):
                                                      eval_file=eval_file, is_eval=eval
             )
             # qids:(all_subject_length); subject_pred:(all_subject_ids, 2); po_pred:(all_subject_length, seq_len, class_num, 2);
-            print('================ subject_pred ===============')
-            print(subject_pred)
             self.convert_spo_contour(qids,
-                                    subject_pred,
                                      po_pred,
                                      eval_file,
                                      answer_dict, 
@@ -334,14 +327,9 @@ class Trainer(object):
 
         for key, value in answer_dict.items():
             triple_preds, triple_golds = value
-    
+
             triple_golds = set(triple_golds)
             triple_preds = set(triple_preds)
-
-            print("======================= triple_preds {} =====================".format(key))
-            print(triple_preds)
-            print("======================= triple_golds {} =====================".format(key))
-            print(triple_golds)
 
             all_pred_num += len(triple_preds)
             all_gold_num += len(triple_golds)
@@ -353,9 +341,6 @@ class Trainer(object):
                         if score > max_score:
                             max_score = score
                 pred_score += max_score
-                print('triple: {}, max_score: {}'.format(gold_triple, max_score))
-            #import sys
-            #sys.exit()
 
         precision = pred_score / all_pred_num
         recall = pred_score / all_gold_num
@@ -366,9 +351,9 @@ class Trainer(object):
                                                                 recall * 100))
         return {'f1': f1, "recall": recall, "precision": precision}
 
-    def convert_spo_contour(self, qids, sub_preds, po_preds, eval_file, answer_dict, use_bert=False):
+    def convert_spo_contour(self, qids, po_preds, eval_file, answer_dict, use_bert=False):
 
-        for qid, sub_pred, po_pred in zip(qids.data.cpu().numpy(), sub_preds, 
+        for qid, po_pred in zip(qids.data.cpu().numpy(),
                                          po_preds.data.cpu().numpy()):
             if qid == -1:
                 continue
@@ -383,9 +368,6 @@ class Trainer(object):
             start = np.where(po_pred[:, :, 0] > config.eval_config["obj_threshold_start"])
             end = np.where(po_pred[:, :, 1] > config.eval_config["obj_threshold_end"])
 
-            print('sub_pred shape {}'.format(len(sub_pred)))
-            print('po_pred shape {}'.format(po_pred.shape))
-
             spoes = []
             for _start, predicate1 in zip(*start):
                 if _start > len(tokens) - 2 or _start == 0:
@@ -394,9 +376,7 @@ class Trainer(object):
                     if _start <= _end <= len(tokens) - 2 and predicate1 == predicate2:
                         spoes.append((predicate1, (_start, _end)))
                         break
-            print('len of spoes {}'.format(len(spoes)))
             po_predict = []
-            sub_predict = []
             for p, o in spoes:
                 try:
                     po_predict.append((self.id2rel[p],
@@ -405,9 +385,6 @@ class Trainer(object):
                 except:
                     raise ValueError(text_char_span, o, text)
 
-            for sub_start, sub_end in sub_pred:
-                sub_predict.append(text[sub_start-1:sub_end])
-
             if id not in answer_dict:
                 print('erro in answer_dict ')
             else:
@@ -415,16 +392,3 @@ class Trainer(object):
                 if gold_answer:
                     if not answer_dict[id][1]:
                         answer_dict[id][1].extend(gold_answer)
-            
-            print("=============== text ==================")
-            print(text)
-            print("=============== sub_predict ==================")
-            print(sub_predict)
-            print("=============== po_predict ==================")
-            print(po_predict)
-            print("=============== gold_answer ==================")
-            print(gold_answer)
-            import sys
-            sys.exit()
-            
-            

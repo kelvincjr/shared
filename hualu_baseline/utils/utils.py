@@ -230,18 +230,39 @@ def decoding(example_all,
                             "predicate": id2spo['predicate'][id_],
                             "object_type": id2spo['object_type'][id_],
                             'subject_type': id2spo['subject_type'][id_],
+                            "subject_start": sub_ind,
+                            "object_start": -1,
                             "object": "",
                             "subject": subject_
                         })
             else:
                 for subject_, sub_ind in subjects:
                     for object_, obj_ind in objects:
-                        if abs((sub_ind - obj_ind)) >= 15:
-                            continue 
+                        #if abs((sub_ind - obj_ind)) >= 15:
+                            #continue 
+                        if sub_ind > obj_ind:
+                            pass_ = True
+                            for ind in range(sub_ind - obj_ind):
+                                if text_raw[obj_ind + ind] == '。' or text_raw[obj_ind + ind] == '，':
+                                    pass_ = False
+                                    break
+                            if not pass_:
+                                continue
+                        else:
+                            pass_ = True
+                            for ind in range(obj_ind - sub_ind):
+                                if text_raw[sub_ind + ind] == '。' or text_raw[sub_ind + ind] == '，':
+                                    pass_ = False
+                                    break
+                            if not pass_:
+                                continue
+
                         spo_list.append({
                             "predicate": id2spo['predicate'][id_],
                             "object_type": id2spo['object_type'][id_],
                             'subject_type': id2spo['subject_type'][id_],
+                            "subject_start": sub_ind,
+                            "object_start": obj_ind,
                             "object": object_,
                             "subject": subject_
                         })
