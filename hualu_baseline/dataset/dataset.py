@@ -157,12 +157,12 @@ class DuIEDataset(Dataset):
 
                 subject_tokens = tokenizer.encode_plus(sub_pre_tokens, is_pretokenized=True, add_special_tokens=False)["input_ids"]
                 object_tokens = tokenizer.encode_plus(obj_pre_tokens, is_pretokenized=True, add_special_tokens=False)["input_ids"]
-                '''
-                subject_tokens = tokenizer.encode_plus(spo[0], add_special_tokens=False)["input_ids"]
-                object_tokens = tokenizer.encode_plus(spo[2], add_special_tokens=False)["input_ids"]
+                
+                #subject_tokens = tokenizer.encode_plus(spo[0], add_special_tokens=False)["input_ids"]
+                #object_tokens = tokenizer.encode_plus(spo[2], add_special_tokens=False)["input_ids"]
                 subject_tokens_len = len(subject_tokens)
                 object_tokens_len = len(object_tokens)
-                '''
+
                 sub_start = spo[3]
                 obj_start = spo[4]
                 index = sub_start
