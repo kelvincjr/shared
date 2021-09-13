@@ -186,6 +186,12 @@ class Reader(object):
                         spoes[s] = []
                     spoes[s].append(o)
 
+            '''
+            if len(spoes) == 0:
+                print('text: {}'.format(original_text))
+                import sys
+                sys.exit(0)
+            '''
             examples.append(
                 Example(
                     p_id=p_id,
@@ -269,7 +275,10 @@ class SPODataset(Dataset):
                     # 对应的object标签
                     object_labels = np.zeros((len(token_ids), self.predict_num, 2), dtype=np.float32)
                     
-                    subject_ids = random.choice(list(spoes.keys()))
+                    subject_ids = []
+                    if len(spoes) > 0:
+                        subject_ids = random.choice(list(spoes.keys()))
+                        
                     for s, po in spoes.items():
                         subject_labels[s[0], 0] = 1
                         subject_labels[s[1], 1] = 1
