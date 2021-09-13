@@ -144,18 +144,18 @@ class Reader(object):
                     so_ind_list.append((spo["trigger_start_index"], argument["argument_start_index"]))
             '''
             for spo in data_json['spo_list']:
-                    sub_category = spo['subject-type']
-                    subject_name = spo['subject']
-                    sub_ent_list.append(subject_name)
-                    obj_category = spo['object-type']
-                    object_name = spo['object']
-                    sub_start = spo['subject-start']
-                    obj_start = spo['object-start']
-                    if sub_start == -1 or obj_start == -1:
-                        continue
-                    relation = spo['predicate'] + "_" + obj_category
-                    spo_list.append((subject_name, relation, object_name))
-                    so_ind_list.append((sub_start, obj_start))
+                sub_category = spo['subject-type']
+                subject_name = spo['subject']
+                sub_ent_list.append(subject_name)
+                obj_category = spo['object-type']
+                object_name = spo['object']
+                sub_start = spo['subject-start']
+                obj_start = spo['object-start']
+                if sub_start == -1 or obj_start == -1:
+                    continue
+                relation = spo['predicate'] + "_" + obj_category
+                spo_list.append((subject_name, relation, object_name))
+                so_ind_list.append((sub_start, obj_start))
 
             spoes = {}
             for gold_answer, so_ind in zip(spo_list, so_ind_list):
@@ -186,12 +186,9 @@ class Reader(object):
                         spoes[s] = []
                     spoes[s].append(o)
 
-            '''
             if len(spoes) == 0:
-                print('text: {}'.format(original_text))
-                import sys
-                sys.exit(0)
-            '''
+                continue
+
             examples.append(
                 Example(
                     p_id=p_id,
@@ -275,10 +272,8 @@ class SPODataset(Dataset):
                     # 对应的object标签
                     object_labels = np.zeros((len(token_ids), self.predict_num, 2), dtype=np.float32)
                     
-                    subject_ids = []
-                    if len(spoes) > 0:
-                        subject_ids = random.choice(list(spoes.keys()))
-                        
+                    subject_ids = random.choice(list(spoes.keys()))
+
                     for s, po in spoes.items():
                         subject_labels[s[0], 0] = 1
                         subject_labels[s[1], 1] = 1
