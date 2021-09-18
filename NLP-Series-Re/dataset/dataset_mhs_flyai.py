@@ -39,7 +39,8 @@ def read_examples(args, json_file):
                 text_raw = text_raw.replace('◆', '')
                 tokens, tok_to_orig_start_index, tok_to_orig_end_index = covert_to_tokens(text_raw,
                                                                                           args.tokenizer,
-                                                                                          return_orig_index=True)
+                                                                                         return_orig_index=True)
+                assert len(tokens) == len(text_raw)
                 tokens = ["[CLS]"] + tokens + ["[SEP]"]
                 sub_po_dict, sub_ent_list, spo_list = dict(), list(), list()
                 spoes = {}
@@ -59,16 +60,14 @@ def read_examples(args, json_file):
                     subject_entity_label = args.s2id[spo["subject-type"]]
                     sub_ent_list.append(spo['subject'])
                         
-                    #subject_start, object_start = search_spo_index(tokens, subject_sub_tokens, object_sub_tokens)
-                    subject_start = spo['subject-start']
-                    object_start = spo['object-start']
+                    subject_start, object_start = search_spo_index(tokens, subject_sub_tokens, object_sub_tokens)
+                    #subject_start = spo['subject-start']
+                    #object_start = spo['object-start']
                     ###########################################
-                    '''
                     if subject_start == -1:
                         subject_start = search(subject_sub_tokens, tokens)
                     if object_start == -1:
                         object_start = search(object_sub_tokens, tokens)
-                    '''
                     ###########################################
 
                     if subject_start != -1 and object_start != -1:
