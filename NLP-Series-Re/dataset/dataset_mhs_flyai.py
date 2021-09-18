@@ -40,7 +40,7 @@ def read_examples(args, json_file):
                 tokens, tok_to_orig_start_index, tok_to_orig_end_index = covert_to_tokens(text_raw,
                                                                                           args.tokenizer,
                                                                                          return_orig_index=True)
-                assert len(tokens) == len(text_raw)
+                #assert len(tokens) == len(text_raw)
                 tokens = ["[CLS]"] + tokens + ["[SEP]"]
                 sub_po_dict, sub_ent_list, spo_list = dict(), list(), list()
                 spoes = {}
