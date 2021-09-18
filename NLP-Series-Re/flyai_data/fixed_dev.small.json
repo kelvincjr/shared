@@ -1,0 +1,323 @@
+[
+    {
+        "id": 3500,
+        "text": "两侧中耳乳突CT冠状位及轴状位扫描双侧乳突蜂房气化较差，密度增高，鼓室、鼓窦清晰，双侧鼓膜增厚。双侧听小骨链清晰完整。双侧内听道对称，未见扩大或骨质破坏。双侧耳蜗、半规管未见明显异常。右侧颈静脉球高于耳蜗水平。考虑双侧中耳乳突炎。双侧内耳HRCT未见明显异常，请结合临床。",
+        "spo_list": [
+            {
+                "subject": "两侧中耳乳突",
+                "subject-type": "器官组织",
+                "subject-start": 0,
+                "predicate": "属性",
+                "object": "",
+                "object-type": "",
+                "object-start": -1
+            },
+            {
+                "subject": "CT冠状位及轴状位扫描",
+                "subject-type": "检查手段",
+                "subject-start": 6,
+                "predicate": "属性",
+                "object": "两侧中耳乳突",
+                "object-type": "器官组织",
+                "object-start": 0
+            },
+            {
+                "subject": "双侧乳突蜂房",
+                "subject-type": "器官组织",
+                "subject-start": 17,
+                "predicate": "属性",
+                "object": "",
+                "object-type": "",
+                "object-start": -1
+            },
+            {
+                "subject": "气化",
+                "subject-type": "属性",
+                "subject-start": 23,
+                "predicate": "属性",
+                "object": "双侧乳突蜂房",
+                "object-type": "器官组织",
+                "object-start": 17
+            },
+            {
+                "subject": "差",
+                "subject-type": "阳性表现",
+                "subject-start": 26,
+                "predicate": "属性",
+                "object": "气化",
+                "object-type": "属性",
+                "object-start": 23
+            },
+            {
+                "subject": "密度",
+                "subject-type": "属性",
+                "subject-start": 28,
+                "predicate": "属性",
+                "object": "双侧乳突蜂房",
+                "object-type": "器官组织",
+                "object-start": 17
+            },
+            {
+                "subject": "增高",
+                "subject-type": "阳性表现",
+                "subject-start": 30,
+                "predicate": "属性",
+                "object": "密度",
+                "object-type": "属性",
+                "object-start": 28
+            },
+            {
+                "subject": "鼓室",
+                "subject-type": "器官组织",
+                "subject-start": 33,
+                "predicate": "属性",
+                "object": "",
+                "object-type": "",
+                "object-start": -1
+            },
+            {
+                "subject": "鼓窦",
+                "subject-type": "器官组织",
+                "subject-start": 36,
+                "predicate": "属性",
+                "object": "",
+                "object-type": "",
+                "object-start": -1
+            },
+            {
+                "subject": "清晰",
+                "subject-type": "阴性表现",
+                "subject-start": 38,
+                "predicate": "属性",
+                "object": "鼓室",
+                "object-type": "器官组织",
+                "object-start": 33
+            },
+            {
+                "subject": "清晰",
+                "subject-type": "阴性表现",
+                "subject-start": 38,
+                "predicate": "属性",
+                "object": "鼓窦",
+                "object-type": "器官组织",
+                "object-start": 36
+            },
+            {
+                "subject": "双侧鼓膜",
+                "subject-type": "器官组织",
+                "subject-start": 41,
+                "predicate": "属性",
+                "object": "",
+                "object-type": "",
+                "object-start": -1
+            },
+            {
+                "subject": "增厚",
+                "subject-type": "阳性表现",
+                "subject-start": 45,
+                "predicate": "属性",
+                "object": "双侧鼓膜",
+                "object-type": "器官组织",
+                "object-start": 41
+            },
+            {
+                "subject": "双侧听小骨链",
+                "subject-type": "器官组织",
+                "subject-start": 48,
+                "predicate": "属性",
+                "object": "",
+                "object-type": "",
+                "object-start": -1
+            },
+            {
+                "subject": "清晰",
+                "subject-type": "阴性表现",
+                "subject-start": 54,
+                "predicate": "属性",
+                "object": "双侧听小骨链",
+                "object-type": "器官组织",
+                "object-start": 48
+            },
+            {
+                "subject": "完整",
+                "subject-type": "阴性表现",
+                "subject-start": 56,
+                "predicate": "属性",
+                "object": "双侧听小骨链",
+                "object-type": "器官组织",
+                "object-start": 48
+            },
+            {
+                "subject": "双侧内听道",
+                "subject-type": "器官组织",
+                "subject-start": 59,
+                "predicate": "属性",
+                "object": "",
+                "object-type": "",
+                "object-start": -1
+            },
+            {
+                "subject": "对称",
+                "subject-type": "阴性表现",
+                "subject-start": 64,
+                "predicate": "属性",
+                "object": "双侧内听道",
+                "object-type": "器官组织",
+                "object-start": 59
+            },
+            {
+                "subject": "未见",
+                "subject-type": "否定描述",
+                "subject-start": 67,
+                "predicate": "属性",
+                "object": "扩大",
+                "object-type": "阳性表现",
+                "object-start": 69
+            },
+            {
+                "subject": "未见",
+                "subject-type": "否定描述",
+                "subject-start": 67,
+                "predicate": "属性",
+                "object": "破坏",
+                "object-type": "阳性表现",
+                "object-start": 74
+            },
+            {
+                "subject": "扩大",
+                "subject-type": "阳性表现",
+                "subject-start": 69,
+                "predicate": "属性",
+                "object": "双侧内听道",
+                "object-type": "器官组织",
+                "object-start": 59
+            },
+            {
+                "subject": "骨质",
+                "subject-type": "器官组织",
+                "subject-start": 72,
+                "predicate": "属性",
+                "object": "",
+                "object-type": "",
+                "object-start": -1
+            },
+            {
+                "subject": "破坏",
+                "subject-type": "阳性表现",
+                "subject-start": 74,
+                "predicate": "属性",
+                "object": "骨质",
+                "object-type": "器官组织",
+                "object-start": 72
+            },
+            {
+                "subject": "双侧耳蜗、半规管",
+                "subject-type": "器官组织",
+                "subject-start": 77,
+                "predicate": "属性",
+                "object": "异常",
+                "object-type": "异常现象",
+                "object-start": 89
+            },
+            {
+                "subject": "未见",
+                "subject-type": "否定描述",
+                "subject-start": 85,
+                "predicate": "属性",
+                "object": "异常",
+                "object-type": "异常现象",
+                "object-start": 89
+            },
+            {
+                "subject": "明显",
+                "subject-type": "修饰描述",
+                "subject-start": 87,
+                "predicate": "属性",
+                "object": "异常",
+                "object-type": "异常现象",
+                "object-start": 89
+            },
+            {
+                "subject": "异常",
+                "subject-type": "异常现象",
+                "subject-start": 89,
+                "predicate": "属性",
+                "object": "",
+                "object-type": "",
+                "object-start": -1
+            },
+            {
+                "subject": "右侧颈静脉球",
+                "subject-type": "器官组织",
+                "subject-start": 92,
+                "predicate": "属性",
+                "object": "",
+                "object-type": "",
+                "object-start": -1
+            },
+            {
+                "subject": "耳蜗",
+                "subject-type": "器官组织",
+                "subject-start": 100,
+                "predicate": "属性",
+                "object": "",
+                "object-type": "",
+                "object-start": -1
+            },
+            {
+                "subject": "双侧中耳乳突炎",
+                "subject-type": "疾病",
+                "subject-start": 107,
+                "predicate": "属性",
+                "object": "",
+                "object-type": "",
+                "object-start": -1
+            },
+            {
+                "subject": "双侧内耳",
+                "subject-type": "器官组织",
+                "subject-start": 115,
+                "predicate": "属性",
+                "object": "异常",
+                "object-type": "异常现象",
+                "object-start": 127
+            },
+            {
+                "subject": "HRCT",
+                "subject-type": "检查手段",
+                "subject-start": 119,
+                "predicate": "属性",
+                "object": "双侧内耳",
+                "object-type": "器官组织",
+                "object-start": 115
+            },
+            {
+                "subject": "未见",
+                "subject-type": "否定描述",
+                "subject-start": 123,
+                "predicate": "属性",
+                "object": "异常",
+                "object-type": "异常现象",
+                "object-start": 127
+            },
+            {
+                "subject": "明显",
+                "subject-type": "修饰描述",
+                "subject-start": 125,
+                "predicate": "属性",
+                "object": "异常",
+                "object-type": "异常现象",
+                "object-start": 127
+            },
+            {
+                "subject": "异常",
+                "subject-type": "异常现象",
+                "subject-start": 127,
+                "predicate": "属性",
+                "object": "",
+                "object-type": "",
+                "object-start": -1
+            }
+        ]
+    }
+]
