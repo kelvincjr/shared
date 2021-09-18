@@ -60,8 +60,8 @@ def read_examples(args, json_file):
                     sub_ent_list.append(spo['subject'])
                         
                     #subject_start, object_start = search_spo_index(tokens, subject_sub_tokens, object_sub_tokens)
-                    sub_start = spo['subject-start']
-                    obj_start = spo['object-start']
+                    subject_start = spo['subject-start']
+                    object_start = spo['object-start']
                     ###########################################
                     '''
                     if subject_start == -1:
