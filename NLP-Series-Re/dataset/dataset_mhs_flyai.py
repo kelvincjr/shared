@@ -19,6 +19,30 @@ from tqdm import tqdm
 from dataset.data_utils import covert_to_tokens, search_spo_index, search, Example, sequence_padding, save, load
 from utils.utils import logger
 
+def fine_grade_tokenize(raw_text, tokenizer, return_orig_index=True):
+    """
+    序列标注任务 BERT 分词器可能会导致标注偏移，
+    用 char-level 来 tokenize
+    """
+    tokens = []
+    tok_to_orig_start_index = []
+    tok_to_orig_end_index = []
+    cur_pos = 0
+    for _ch in raw_text:
+        if _ch in [' ', '\t', '\n']:
+            tokens.append('[BLANK]')
+        else:
+            if not len(tokenizer.tokenize(_ch)):
+                tokens.append('[INV]')
+            else:
+                tokens.append(_ch)
+        tok_to_orig_start_index.append(cur_pos)
+        tok_to_orig_end_index.append(cur_pos)
+        cur_pos += 1
+
+    if return_orig_index:
+        return tokens, tok_to_orig_start_index, tok_to_orig_end_index
+    return tokens
 
 def read_examples(args, json_file):
     examples_file = os.path.join(args.cache_data, os.path.splitext(os.path.split(json_file)[1])[0] + ".pkl")
@@ -37,10 +61,9 @@ def read_examples(args, json_file):
                 text_raw = src_data['text']
                 text_raw = text_raw.replace('®', '')
                 text_raw = text_raw.replace('◆', '')
-                tokens, tok_to_orig_start_index, tok_to_orig_end_index = covert_to_tokens(text_raw,
-                                                                                          args.tokenizer,
-                                                                                         return_orig_index=True)
-                #assert len(tokens) == len(text_raw)
+                #tokens, tok_to_orig_start_index, tok_to_orig_end_index = covert_to_tokens(text_raw, args.tokenizer, return_orig_index=True)
+                tokens, tok_to_orig_start_index, tok_to_orig_end_index = fine_grade_tokenize(text_raw, args.tokenizer, return_orig_index=True)
+                assert len(tokens) == len(text_raw)
                 tokens = ["[CLS]"] + tokens + ["[SEP]"]
                 sub_po_dict, sub_ent_list, spo_list = dict(), list(), list()
                 spoes = {}
@@ -51,26 +74,30 @@ def read_examples(args, json_file):
                     pred_key = spo["subject-type"] + "_" + spo['predicate'] + "_" + spo["object-type"]
                     predicate_label = args.spo_conf[pred_key]
 
-                    subject_sub_tokens = covert_to_tokens(spo['subject'],
-                                                                  args.tokenizer,
-                                                                  return_orig_index=False)
-                    object_sub_tokens = covert_to_tokens(spo['object'],
-                                                                 args.tokenizer,
-                                                                 return_orig_index=False)
+                    #subject_sub_tokens = covert_to_tokens(spo['subject'], args.tokenizer, return_orig_index=False)
+                    #object_sub_tokens = covert_to_tokens(spo['object'], args.tokenizer, return_orig_index=False)
+                    
+                    subject_sub_tokens = fine_grade_tokenize(spo['subject'], args.tokenizer, return_orig_index=False)
+                    object_sub_tokens = fine_grade_tokenize(spo['object'], args.tokenizer, return_orig_index=False)
+                    
                     subject_entity_label = args.s2id[spo["subject-type"]]
                     sub_ent_list.append(spo['subject'])
                         
-                    subject_start, object_start = search_spo_index(tokens, subject_sub_tokens, object_sub_tokens)
-                    #subject_start = spo['subject-start']
-                    #object_start = spo['object-start']
+                    #subject_start, object_start = search_spo_index(tokens, subject_sub_tokens, object_sub_tokens)
+                    subject_start = spo['subject-start']
+                    object_start = spo['object-start']
                     ###########################################
+                    '''
                     if subject_start == -1:
                         subject_start = search(subject_sub_tokens, tokens)
                     if object_start == -1:
                         object_start = search(object_sub_tokens, tokens)
+                    '''
                     ###########################################
 
                     if subject_start != -1 and object_start != -1:
+                        subject_start += 1
+                        object_start += 1
                         s = (subject_start,
                                  subject_start + len(subject_sub_tokens) - 1,
                                  subject_entity_label)
@@ -157,6 +184,41 @@ class mhs_DuIEDataset(Dataset):
                                 subject_labels[o[1], 1, o[2]] = 1
                             if o[1] <= self.max_len - 1 and s[1] <= self.max_len - 1:
                                 object_labels[s[1], o[1], o[3]] = 1
+
+                    if example.context.startswith('胸廓对称，气管居中') and example.context.endswith('随诊。'):
+                        token_labels = list()
+                        token_count = 0
+                        print("text_raw: ", example.context)
+                        print("spo_list: ", example.gold_answer)
+                        print("spoes: ", example.spoes)
+                        print('tokens: ', token_ids)
+                        print('=============== subject_labels ===============')
+                        for token_label in subject_labels[1:-1]:
+                            token_label_arr = np.array(token_label)
+                            token_label_arr_0 = token_label_arr[0]
+                            token_label_arr_1 = token_label_arr[1]
+                            arg_label_0 = np.argwhere(token_label_arr_0 == 1).tolist()
+                            arg_label_1 = np.argwhere(token_label_arr_1 == 1).tolist()
+                            #token_labels.append(arg_label)
+                            print("token: {}, subject_label_0: {}, subject_label_1: {}".format(example.context[token_count], arg_label_0, arg_label_1))
+                            token_count += 1
+
+                        x_token_count = 0
+                        print('=============== object_labels ===============')
+                        print('len of object_labels[1:-1]: ', len(object_labels[1:-1]))
+                        print('len of object_labels[1:-1][0]: ', len(object_labels[1:-1][0]))
+                        for layer2_token_label in object_labels[1:-1]:
+                            x_token = example.context[x_token_count]
+                            y_token_count = 0
+                            for token_label in layer2_token_label[1:-1]:
+                                token_label_arr = np.array(token_label)
+                                arg_label = np.argwhere(token_label_arr == 1).tolist()
+                                #token_labels.append(arg_label)
+                                y_token = example.context[y_token_count]
+                                if len(arg_label) > 0:
+                                    print("x_token: {}, y_token: {}, token_label: {}".format(x_token, y_token, arg_label))
+                                y_token_count += 1
+                            x_token_count += 1
 
                     batch_token_ids.append(token_ids)
                     batch_subject_type_ids.append(subject_type_ids)

@@ -152,6 +152,11 @@ def main():
     args.R_num = len(args.rel2id)
     args.E_num = len(args.s2id)
 
+    print('======================================')
+    print('args.rel2id: ', args.rel2id)
+    print('======================================')
+    print('args.s2id: ', args.s2id)
+
     # tokenizer
     args.tokenizer = BertTokenizer.from_pretrained(args.model_name_or_path, do_lower_case=True)
 
