@@ -185,7 +185,7 @@ class mhs_DuIEDataset(Dataset):
                             if o[1] <= self.max_len - 1 and s[1] <= self.max_len - 1:
                                 object_labels[s[1], o[1], o[3]] = 1
 
-                    if example.context.startswith('胸廓对称，气管居中') and example.context.endswith('随诊。'):
+                    if p_ids[0] == 0 or p_ids[0] == 3500:
                         token_labels = list()
                         token_count = 0
                         print("text_raw: ", example.context)
