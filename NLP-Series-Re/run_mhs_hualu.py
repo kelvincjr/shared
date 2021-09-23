@@ -17,7 +17,7 @@ from transformers import BertTokenizer
 from config.mpn import spo_config
 from dataset.dataset_mhs_hualu import mhs_DuIEDataset, read_examples
 from models.model_mhs import model_mhs
-from run_evaluation_flyai import convert2ressult, run_evaluate, convert_spo_contour2
+from run_evaluation_hualu import convert2ressult, run_evaluate, convert_spo_contour2
 from utils.bert_optimizaation import BertAdam
 from utils.finetuning_argparse import get_argparse
 from utils.utils import seed_everything, ProgressBar, init_logger, logger, write_prediction_results

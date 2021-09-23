@@ -85,8 +85,8 @@ def read_examples(args, json_file):
                 ###########################################
                 
                 if subject_start != -1 and object_start != -1:
-                    subject_start += 1
-                    object_start += 1
+                    #subject_start += 1
+                    #object_start += 1
                     s = (subject_start,
                                  subject_start + len(subject_sub_tokens) - 1,
                                  subject_entity_label)
@@ -155,7 +155,6 @@ class mhs_DuIEDataset(Dataset):
                                                   is_split_into_words=False,
                                                   max_length=self.max_len,
                                                   truncation=True)  # TODO
-
                 if self.is_train:
                     # subject标签
                     subject_type_ids = np.zeros(len(token_ids), dtype=np.long)  # [L]
@@ -175,8 +174,8 @@ class mhs_DuIEDataset(Dataset):
                                 subject_labels[o[1], 1, o[2]] = 1
                             if o[1] <= self.max_len - 1 and s[1] <= self.max_len - 1:
                                 object_labels[s[1], o[1], o[3]] = 1
-
-                    if p_ids[0] == 0 or p_ids[0] == 3500:
+                    print('=============== before print, pid {}==============='.format(p_ids[0]))
+                    if p_ids[0] == 0:
                         token_labels = list()
                         token_count = 0
                         print("text_raw: ", example.context)
