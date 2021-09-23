@@ -174,8 +174,7 @@ class mhs_DuIEDataset(Dataset):
                                 subject_labels[o[1], 1, o[2]] = 1
                             if o[1] <= self.max_len - 1 and s[1] <= self.max_len - 1:
                                 object_labels[s[1], o[1], o[3]] = 1
-                    print('=============== before print, pid {}==============='.format(p_ids[0]))
-                    if p_ids[0] == 0:
+                    if p_ids[0] == 1:
                         token_labels = list()
                         token_count = 0
                         print("text_raw: ", example.context)
