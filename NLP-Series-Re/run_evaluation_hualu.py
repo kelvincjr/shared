@@ -65,15 +65,14 @@ def convert_spo_contour2(qids, end_list, subjects_str, output_logits, eval_file,
 
         tok_to_orig_start_index = eval_file[qid].tok_to_orig_start_index
         tok_to_orig_end_index = eval_file[qid].tok_to_orig_end_index
-
+        '''
         print('subjects: ', subjects)
         for subject in subjects:
             answer_dict[qid][0].append(
                 context[tok_to_orig_start_index[subject[0] - 1]:tok_to_orig_end_index[subject[1] - 1] + 1])
 
         print('answer_dict[qid][0]: ', answer_dict[qid][0])
-        import sys
-        sys.exit()
+        '''
         spoes = answer_dict[qid][2]
 
         s_e_o = np.where(output_logit > 0.5)
@@ -92,7 +91,7 @@ def convert_spo_contour2(qids, end_list, subjects_str, output_logits, eval_file,
                     spoes[s].append((o[0], o[1], predicate.item()))
                 else:
                     spoes[s] = [(o[0], o[1], predicate.item())]
-
+        '''
         for subject in subjects:
             sub_ent = context[tok_to_orig_start_index[subject[0] - 1]:tok_to_orig_end_index[subject[1] - 1] + 1]
             sub_type_ind = subject[2]
@@ -106,7 +105,7 @@ def convert_spo_contour2(qids, end_list, subjects_str, output_logits, eval_file,
                     "subject_type": str(sub_type_ind),
                     "subject_start": tok_to_orig_start_index[subject[0] - 1]
                 })
-
+        '''
         '''
         print('context: ', context)
         for subject in subjects:
@@ -127,14 +126,6 @@ def convert_spo_contour2(qids, end_list, subjects_str, output_logits, eval_file,
         '''
 
 def convert2ressult(args, eval_file, answer_dict):
-
-    sub_pos_counter = None
-    obj_pos_counter = None
-    import pickle
-    with open('flyai_data/sub_pos_counter.pkl', 'rb') as f:
-        sub_pos_counter = pickle.load(f)
-    with open('flyai_data/obj_pos_counter.pkl', 'rb') as f:
-        obj_pos_counter = pickle.load(f)
 
     for qid in answer_dict.keys():
         spoes = answer_dict[qid][2]
@@ -178,133 +169,6 @@ def convert2ressult(args, eval_file, answer_dict):
                     "subject_start": tok_to_orig_start_index[s[0] - 1]
                 })
         answer_dict[qid][1].extend(po_predict)
-
-        sub_conds = defaultdict(dict)
-        obj_direct = defaultdict(dict)
-        sub_direct = defaultdict(dict)
-        text_raw = context
-        pass_spo_list = []
-        for spo_item in answer_dict[qid][1]:
-            pass_cond = 0
-            sub_ind = spo_item['subject_start']
-            obj_ind = spo_item['object_start']
-
-            subject_ = spo_item['subject']
-            object_ = spo_item['object']
-
-            if obj_ind == -1:
-                pass_spo_list.append(spo_item)
-                continue
-
-            if sub_ind > obj_ind:
-                pass_ = True
-                for ind in range(sub_ind - obj_ind):
-                    #if text_raw[obj_ind + ind] == '。' or text_raw[obj_ind + ind] == '，':
-                    if text_raw[obj_ind + ind] == '。' or text_raw[obj_ind + ind] == '？':
-                        pass_ = False
-                        break
-                    if text_raw[obj_ind + ind] == '，' and (sub_ind - obj_ind) >= 20:
-                        pass_ = False
-                        break
-                    if text_raw[obj_ind + ind] == '，':
-                        pass_cond = 1
-
-                if not pass_:
-                    continue
-            else:
-                pass_ = True
-                for ind in range(obj_ind - sub_ind):
-                    #if text_raw[sub_ind + ind] == '。' or text_raw[sub_ind + ind] == '，':
-                    if text_raw[sub_ind + ind] == '。' or text_raw[sub_ind + ind] == '？':
-                        pass_ = False
-                        break
-                    if text_raw[sub_ind + ind] == '，' and (obj_ind - sub_ind) >= 20:
-                        pass_ = False
-                        break
-                    if text_raw[sub_ind + ind] == '，':
-                        pass_cond = 1
-                if not pass_:
-                    continue
-
-            sub_conds[subject_+"_"+str(sub_ind)][object_+"_"+str(obj_ind)] = pass_cond
-            pass_spo_list.append(spo_item)
-
-            if sub_ind > obj_ind:
-                obj_direct[object_][0] = 1
-                sub_direct[subject_][1] = 1
-            else:
-                obj_direct[object_][1] = 1
-                sub_direct[subject_][0] = 1
-
-        submit_spo_list = []
-        filter_spo_list = []
-        for spo in pass_spo_list:
-            if spo['subject']+"_"+str(spo['subject_start']) in sub_conds:
-                spec_cond = False
-                #print('=========== in sub_conds, subject: {}'.format(spo['subject']))
-                for obj, cond in sub_conds[spo['subject']+"_"+str(spo['subject_start'])].items():
-                    if cond == 1:
-                        #print('{}, {} cond == 1'.format(spo['subject'], obj))
-                        spec_cond = True
-                        break
-                if spec_cond:
-                    #print('spec cond, subject: {}, len sub_conds: {}'.format(spo['subject'], len(sub_conds[spo['subject']])))
-                    if len(sub_conds[spo['subject']+"_"+str(spo['subject_start'])]) == 1:
-                        submit_spo_list.append(spo)
-                        continue
-                    elif spo['object']+"_"+str(spo['object_start']) in sub_conds[spo['subject']+"_"+str(spo['subject_start'])] and sub_conds[spo['subject']+"_"+str(spo['subject_start'])][spo['object']+"_"+str(spo['object_start'])] == 1:
-                        filter_spo_list.append(spo)
-                        continue
-
-            #print('======== subject {}, object {} 2========='.format(spo['subject'], spo['object']))
-            if spo['object'] in obj_direct: # and spo['subject'] in sub_direct:
-                if len(obj_direct[spo['object']]) > 1: # or len(sub_direct[spo['subject']]) > 1:
-
-                    sub_0_count = -1
-                    sub_1_count = -1
-                    if spo['subject']+"_0" in sub_pos_counter:
-                        sub_0_count = sub_pos_counter[spo['subject']+"_0"]
-                    if spo['subject']+"_1" in sub_pos_counter:
-                        sub_1_count = sub_pos_counter[spo['subject']+"_1"]
-
-                    obj_0_count = -1
-                    obj_1_count = -1
-                    if spo['object']+"_0" in obj_pos_counter:
-                        obj_0_count = obj_pos_counter[spo['object']+"_0"]
-                    if spo['object']+"_1" in obj_pos_counter:
-                        obj_1_count = obj_pos_counter[spo['object']+"_1"]
-
-                    #print('=== obj {}, obj_0_count {}, obj_1_count {}, len obj_direct: {}'.format(spo['object'], obj_0_count, obj_1_count, len(obj_direct[spo['object']])))
-                        
-                    if len(obj_direct[spo['object']]) > 1:
-                        if spo['object_start'] != -1 and spo['subject_start'] < spo['object_start']:
-                            if obj_1_count != -1 and obj_1_count > obj_0_count:
-                                submit_spo_list.append(spo)
-
-                        if spo['object_start'] != -1 and spo['subject_start'] >= spo['object_start']:
-                            if obj_0_count != -1 and obj_1_count < obj_0_count:
-                                submit_spo_list.append(spo)
-                    '''
-                    elif len(sub_direct[spo['subject']]) > 1:
-                        #print('=== obj {}, obj_0_count {}, obj_1_count {}'.format(spo['object'], obj_0_count, obj_1_count))
-                        if spo['subject_start'] != -1 and spo['subject_start'] < spo['object_start']:
-                            if sub_0_count != -1 and sub_0_count > sub_1_count:
-                                submit_spo_list.append(spo)
-
-                        if spo['subject_start'] != -1 and spo['subject_start'] >= spo['object_start']:
-                            if sub_1_count != -1 and sub_0_count < sub_1_count:
-                                submit_spo_list.append(spo)
-                    '''
-                else:
-                    submit_spo_list.append(spo)
-            else:
-                submit_spo_list.append(spo)
-
-            if spo not in submit_spo_list:
-                filter_spo_list.append(spo)
-
-        answer_dict[qid][1].clear()
-        answer_dict[qid][1].extend(submit_spo_list)
 
 
 def run_evaluate(eval_file, answer_dict, chosen):
