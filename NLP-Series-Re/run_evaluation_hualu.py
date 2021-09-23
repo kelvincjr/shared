@@ -65,18 +65,17 @@ def convert_spo_contour2(qids, end_list, subjects_str, output_logits, eval_file,
 
         tok_to_orig_start_index = eval_file[qid].tok_to_orig_start_index
         tok_to_orig_end_index = eval_file[qid].tok_to_orig_end_index
-        '''
-        print('subjects: ', subjects)
+        
+        #print('subjects: ', subjects)
         for subject in subjects:
             answer_dict[qid][0].append(
                 context[tok_to_orig_start_index[subject[0] - 1]:tok_to_orig_end_index[subject[1] - 1] + 1])
 
-        print('answer_dict[qid][0]: ', answer_dict[qid][0])
-        '''
+        #print('answer_dict[qid][0]: ', answer_dict[qid][0])
+        
         spoes = answer_dict[qid][2]
 
         s_e_o = np.where(output_logit > 0.5)
-        entities = {}
         for i in range(len(s_e_o[0])):
             s_end = s_e_o[0][i]
             o_end = s_e_o[1][i]
@@ -132,15 +131,6 @@ def convert2ressult(args, eval_file, answer_dict):
         context = eval_file[qid].context
         tok_to_orig_start_index = eval_file[qid].tok_to_orig_start_index
         tok_to_orig_end_index = eval_file[qid].tok_to_orig_end_index
-
-        for item in answer_dict[qid][1]:
-            sub_type_ind = int(item["subject_type"])
-            sub_type = ''
-            for key, ind in args.s2id.items():
-                if ind == sub_type_ind:
-                    sub_type = key
-                    break
-            item["subject_type"] = sub_type
 
         po_predict = []
         for s, po in spoes.items():
