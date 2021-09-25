@@ -16,12 +16,12 @@ from torch.utils.data import DataLoader
 from transformers import AdamW
 from transformers import BertTokenizerFast
 
-from dataset.dataset import DuIEDataset
-from dataset.dataset import collate_fn
+from dataset.dataset_hualu import DuIEDataset
+from dataset.dataset_hualu import collate_fn
 from models.model import DuIE_model
 from utils.adversarial import FGM
 from utils.finetuning_argparse import get_argparse
-from utils.utils import seed_everything, ProgressBar, init_logger, logger, decoding, write_prediction_results, \
+from utils.utils_hualu import seed_everything, ProgressBar, init_logger, logger, decoding, write_prediction_results, \
     get_precision_recall_f1
 
 class BCELossForDuIE(nn.Module):

@@ -246,7 +246,7 @@ def write_prediction_results(formatted_outputs, file_path):
 
 def get_precision_recall_f1(golden_file, predict_file):
     r = os.popen(
-        'python3 ./re_official_evaluation.py --golden_file={} --predict_file={}'.
+        'python3 ./re_official_evaluation_hualu.py --golden_file={} --predict_file={}'.
             format(golden_file, predict_file))
     result = r.read()
     print("test", result)

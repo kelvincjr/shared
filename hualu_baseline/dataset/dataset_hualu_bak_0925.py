@@ -65,27 +65,7 @@ class DuIEDataset(Dataset):
                             (sub_mention, predicate, obj_mention)
                         )
                 D.append(d)
-        '''
-        if json_path.endswith('labeled.json'):
-            with open("emergency_data/train2/labeled.json", encoding='utf-8') as f:
-                #l = f.readlines()
-                data_list = json.load(f)
-                for data in tqdm(data_list):
-                    d = {'text': data['text'], 'spo_list': []}
-                    for spo in data['spo_list']:
-                        sub_category = spo['subject-type']
-                        sub_mention = spo['subject']
-                        obj_category = spo['object-type']
-                        obj_mention = spo['object']
-                        #sub_start = text.find(sub_mention)
-                        #obj_start = text.find(obj_mention)
-                        predicate = spo['predicate']
-                        predicate = sub_category+"_"+predicate+"_"+obj_category
-                        d['spo_list'].append(
-                            (sub_mention, predicate, obj_mention)
-                        )
-                    D.append(d)
-        '''
+        
         examples = []
         tokenized_examples = []
         num_labels = 2 * (len(label_map.keys()) - 2) + 2
@@ -102,17 +82,6 @@ class DuIEDataset(Dataset):
             text_raw = example['text']
 
             #
-            pre_tokens = fine_grade_tokenize(text_raw, tokenizer)
-            assert len(pre_tokens) == len(text_raw)
-            tokenized_example = tokenizer.encode_plus(
-                pre_tokens,
-                max_length=args.max_len,
-                padding="max_length",
-                is_pretokenized=True,
-                truncation=True,
-                return_offsets_mapping=True
-            )
-            '''
             tokenized_example = tokenizer.encode_plus(
                 text_raw,
                 max_length=args.max_len,
@@ -120,7 +89,6 @@ class DuIEDataset(Dataset):
                 truncation=True,
                 return_offsets_mapping=True
             )
-            '''
             #
             seq_len = sum(tokenized_example["attention_mask"])
             tokens = tokenized_example["input_ids"]
@@ -128,16 +96,8 @@ class DuIEDataset(Dataset):
             for spo in spo_list:
                 label_subject = label_map[spo[1]]
                 label_object = label_subject + len(label_map) - 2
-                #subject_tokens = tokenizer.encode_plus(spo[0], add_special_tokens=False)["input_ids"]
-                #object_tokens = tokenizer.encode_plus(spo[2], add_special_tokens=False)["input_ids"]
-                sub_pre_tokens = fine_grade_tokenize(spo[0], tokenizer)
-                assert len(sub_pre_tokens) == len(spo[0])
-                obj_pre_tokens = fine_grade_tokenize(spo[2], tokenizer)
-                assert len(obj_pre_tokens) == len(spo[2])
-
-                subject_tokens = tokenizer.encode_plus(sub_pre_tokens, is_pretokenized=True, add_special_tokens=False)["input_ids"]
-                object_tokens = tokenizer.encode_plus(obj_pre_tokens, is_pretokenized=True, add_special_tokens=False)["input_ids"]
-                
+                subject_tokens = tokenizer.encode_plus(spo[0], add_special_tokens=False)["input_ids"]
+                object_tokens = tokenizer.encode_plus(spo[2], add_special_tokens=False)["input_ids"]
                 subject_tokens_len = len(subject_tokens)
                 object_tokens_len = len(object_tokens)
 
