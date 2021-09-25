@@ -18,6 +18,24 @@ from torch.utils.data import Dataset
 
 from utils.finetuning_argparse import get_argparse
 
+def fine_grade_tokenize(raw_text, tokenizer):
+    """
+    序列标注任务 BERT 分词器可能会导致标注偏移，
+    用 char-level 来 tokenize
+    """
+    tokens = []
+
+    for _ch in raw_text:
+        if _ch in [' ', '\t', '\n']:
+            tokens.append('[BLANK]')
+        else:
+            if not len(tokenizer.tokenize(_ch)):
+                tokens.append('[INV]')
+            else:
+                tokens.append(_ch)
+
+    return tokens
+
 class DuIEDataset(Dataset):
     def __init__(self, args, json_path, tokenizer):
         examples = []
