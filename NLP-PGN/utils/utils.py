@@ -178,7 +178,8 @@ def add2heap(heap, item, k):
         heapq.heappushpop(heap, item)
 
 def replace_oovs(in_tensor, vocab):
-    oov_token = torch.full(in_tensor.shape, vocab.UNK).long().to(config.DEVICE)
+    #oov_token = torch.full(in_tensor.shape, vocab.UNK).long().to(config.DEVICE)
+    oov_token = torch.full(in_tensor.shape, vocab.UNK, dtype=torch.long).to(config.DEVICE)
     out_tensor = torch.where(in_tensor > len(vocab) - 1, oov_token, in_tensor)
     return out_tensor
 
