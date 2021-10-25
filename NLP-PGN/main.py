@@ -34,6 +34,7 @@ def train(train_iter, model, v, teacher_forcing):
     pbar_batch = ProgressBar(n_total=len(train_iter), desc="Traing_batch")
     batch_loss = 0
     batch_losses = []
+    DEVICE = config.DEVICE
     for batch, data in enumerate(train_iter):
         x, y, x_len, y_len, oov, len_oovs = data
         if config.is_cuda:
