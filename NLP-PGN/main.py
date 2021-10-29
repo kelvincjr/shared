@@ -120,6 +120,7 @@ def main():
 
     #
     model = PGN(vocab)
+    model.load_state_dict(torch.load(os.path.join(config.output_dir, "best_model.pkl"), map_location='cpu'))    
     model.to(DEVICE)
 
     #
