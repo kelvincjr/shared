@@ -13,6 +13,8 @@ import pathlib
 
 import torch
 import jieba
+from tqdm import tqdm
+import codecs
 
 abs_path = pathlib.Path(__file__).parent.absolute()
 sys.path.append(sys.path.append(abs_path))
@@ -297,13 +299,34 @@ if __name__ == "__main__":
     pred = Predict()
     print('vocab_size: ', len(pred.vocab))
     # Randomly pick a sample in test set to predict.
+    data_list = []
     with open(config.test_data_path, 'r') as test:
-        picked = random.choice(list(test))
-        source, ref = picked.strip().split('<sep>')
+        #picked = random.choice(list(test))
+        #source, ref = picked.strip().split('<sep>')
+        for data in list(test):
+            data_list.append(data.strip())
 
-    print('source: ', source, '\n')
-    greedy_prediction = pred.predict(source.split(),  beam_search=False)
-    print('greedy: ', greedy_prediction, '\n')
-    beam_prediction = pred.predict(source.split(),  beam_search=True)
-    print('beam: ', beam_prediction, '\n')
-    print('ref: ', ref, '\n')
+    results = []
+    id_ = 25001
+    count = 0
+    for source in tqdm(data_list):
+        #print('source: ', source, '\n')
+        greedy_prediction = pred.predict(source.split(),  beam_search=False)
+        #print('greedy: ', greedy_prediction, '\n')
+        #beam_prediction = pred.predict(source.split(),  beam_search=True)
+        #print('beam: ', beam_prediction, '\n')
+        #print('ref: ', ref, '\n')
+        pred_ret = greedy_prediction.replace(' ', '').strip()
+        results.append((id_, pred_ret))
+        id_ += 1
+        #count += 1
+        #if (count % 10) == 0:
+            #print("num {} records are processed".format(count))
+            #break
+
+    output_csv = 'output/submit.csv'
+    with codecs.open(output_csv, 'w', 'utf-8') as f:
+        f.write("id|ret"+'\n')
+        for id_, pred_ret in results: 
+            f.write("{}|{}\n".format(id_, pred_ret))
+
