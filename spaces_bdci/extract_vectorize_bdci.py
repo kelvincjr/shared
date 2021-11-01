@@ -54,7 +54,7 @@ def predict(texts):
     """
     batch_token_ids, batch_segment_ids = [], []
     for text in texts:
-        token_ids, segment_ids = tokenizer.encode(text, max_length=512)
+        token_ids, segment_ids = tokenizer.encode(text, maxlen=512)
         batch_token_ids.append(token_ids)
         batch_segment_ids.append(segment_ids)
     batch_token_ids = sequence_padding(batch_token_ids)
