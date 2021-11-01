@@ -1,0 +1,44 @@
+Metadata-Version: 2.1
+Name: Keras
+Version: 2.3.1
+Summary: Deep Learning for humans
+Home-page: https://github.com/keras-team/keras
+Author: Francois Chollet
+Author-email: francois.chollet@gmail.com
+License: MIT
+Download-URL: https://github.com/keras-team/keras/tarball/2.3.0
+Description: 
+        Keras is a high-level neural networks API,
+        written in Python and capable of running on top of
+        TensorFlow, CNTK, or Theano.
+        
+        Use Keras if you need a deep learning library that:
+        
+        - Allows for easy and fast prototyping
+          (through user friendliness, modularity, and extensibility).
+        - Supports both convolutional networks and recurrent networks,
+          as well as combinations of the two.
+        - Runs seamlessly on CPU and GPU.
+        
+        Read the documentation at: https://keras.io/
+        
+        For a detailed overview of what makes Keras special, see:
+        https://keras.io/why-use-keras/
+        
+        Keras is compatible with Python 2.7-3.6
+        and is distributed under the MIT license.
+        
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Education
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Topic :: Software Development :: Libraries
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Provides-Extra: visualize
+Provides-Extra: tests

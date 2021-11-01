@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  <link rel="canonical" href="http://keras.io/examples/lstm_text_generation/">
+  <link rel="shortcut icon" href="../../img/favicon.ico">
+  <title>LSTM for text generation - Keras Documentation</title>
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Source+Sans+Pro:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "LSTM for text generation";
+    var mkdocs_page_input_path = "examples/lstm_text_generation.md";
+    var mkdocs_page_url = "/examples/lstm_text_generation/";
+  </script>
+  
+  <script src="../../js/jquery-2.1.1.min.js" defer></script>
+  <script src="../../js/modernizr-2.8.3.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script> 
+  
+  <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-61785484-1', 'keras.io');
+      ga('send', 'pageview');
+  </script>
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <a href="">
+        <div class="keras-logo">
+          <img src="/img/keras-logo-small.jpg" class="keras-logo-img">
+          Keras Documentation
+        </div>
+      </a>
+
+      <div class="wy-side-nav-search">
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../..">Home</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../../why-use-keras/">Why use Keras</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Getting started</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../../getting-started/sequential-model-guide/">Guide to the Sequential model</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../getting-started/functional-api-guide/">Guide to the Functional API</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../getting-started/faq/">FAQ</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Models</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../../models/about-keras-models/">About Keras models</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../models/sequential/">Sequential</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../models/model/">Model (functional API)</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Layers</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../../layers/about-keras-layers/">About Keras layers</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../layers/core/">Core Layers</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../layers/convolutional/">Convolutional Layers</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../layers/pooling/">Pooling Layers</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../layers/local/">Locally-connected Layers</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../layers/recurrent/">Recurrent Layers</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../layers/embeddings/">Embedding Layers</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../layers/merge/">Merge Layers</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../layers/advanced-activations/">Advanced Activations Layers</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../layers/normalization/">Normalization Layers</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../layers/noise/">Noise layers</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../layers/wrappers/">Layer wrappers</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../layers/writing-your-own-keras-layers/">Writing your own Keras layers</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Preprocessing</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../../preprocessing/sequence/">Sequence Preprocessing</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../preprocessing/text/">Text Preprocessing</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../preprocessing/image/">Image Preprocessing</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../../losses/">Losses</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../../metrics/">Metrics</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../../optimizers/">Optimizers</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../../activations/">Activations</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../../callbacks/">Callbacks</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../../datasets/">Datasets</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../../applications/">Applications</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../../backend/">Backend</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../../initializers/">Initializers</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../../regularizers/">Regularizers</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../../constraints/">Constraints</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../../visualization/">Visualization</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../../scikit-learn-api/">Scikit-learn API</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../../utils/">Utils</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../../contributing/">Contributing</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Examples</span></p>
+                <ul class="current">
+                    <li class="toctree-l1"><a class="reference internal" href="../addition_rnn/">Addition RNN</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../antirectifier/">Custom layer - antirectifier</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../babi_rnn/">Baby RNN</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../babi_memnn/">Baby MemNN</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../cifar10_cnn/">CIFAR-10 CNN</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../cifar10_resnet/">CIFAR-10 ResNet</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../conv_filter_visualization/">Convolution filter visualization</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../conv_lstm/">Convolutional LSTM</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../deep_dream/">Deep Dream</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../image_ocr/">Image OCR</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../imdb_bidirectional_lstm/">Bidirectional LSTM</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../imdb_cnn/">1D CNN for text classification</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../imdb_cnn_lstm/">Sentiment classification CNN-LSTM</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../imdb_fasttext/">Fasttext for text classification</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../imdb_lstm/">Sentiment classification LSTM</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../lstm_seq2seq/">Sequence to sequence - training</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../lstm_seq2seq_restore/">Sequence to sequence - prediction</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../lstm_stateful/">Stateful LSTM</a>
+                    </li>
+                    <li class="toctree-l1 current"><a class="reference internal current" href="./">LSTM for text generation</a>
+    <ul class="current">
+    </ul>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../mnist_acgan/">Auxiliary Classifier GAN</a>
+                    </li>
+                </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../..">Keras Documentation</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../..">Docs</a> &raquo;</li>
+    
+      
+        
+          <li>Examples &raquo;</li>
+        
+      
+    
+    <li>LSTM for text generation</li>
+    <li class="wy-breadcrumbs-aside">
+      
+        <a href="https://github.com/keras-team/keras/tree/master/docs"
+          class="icon icon-github"> Edit on GitHub</a>
+      
+    </li>
+  </ul>
+  
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="example-script-to-generate-text-from-nietzsches-writings">Example script to generate text from Nietzsche's writings.</h1>
+<p>At least 20 epochs are required before the generated text
+starts sounding coherent.</p>
+<p>It is recommended to run this script on GPU, as recurrent
+networks are quite computationally intensive.</p>
+<p>If you try this script on new data, make sure your corpus
+has at least ~100k characters. ~1M is better.</p>
+<pre><code class="python">from __future__ import print_function
+from keras.callbacks import LambdaCallback
+from keras.models import Sequential
+from keras.layers import Dense
+from keras.layers import LSTM
+from keras.optimizers import RMSprop
+from keras.utils.data_utils import get_file
+import numpy as np
+import random
+import sys
+import io
+
+path = get_file(
+    'nietzsche.txt',
+    origin='https://s3.amazonaws.com/text-datasets/nietzsche.txt')
+with io.open(path, encoding='utf-8') as f:
+    text = f.read().lower()
+print('corpus length:', len(text))
+
+chars = sorted(list(set(text)))
+print('total chars:', len(chars))
+char_indices = dict((c, i) for i, c in enumerate(chars))
+indices_char = dict((i, c) for i, c in enumerate(chars))
+
+# cut the text in semi-redundant sequences of maxlen characters
+maxlen = 40
+step = 3
+sentences = []
+next_chars = []
+for i in range(0, len(text) - maxlen, step):
+    sentences.append(text[i: i + maxlen])
+    next_chars.append(text[i + maxlen])
+print('nb sequences:', len(sentences))
+
+print('Vectorization...')
+x = np.zeros((len(sentences), maxlen, len(chars)), dtype=np.bool)
+y = np.zeros((len(sentences), len(chars)), dtype=np.bool)
+for i, sentence in enumerate(sentences):
+    for t, char in enumerate(sentence):
+        x[i, t, char_indices[char]] = 1
+    y[i, char_indices[next_chars[i]]] = 1
+
+
+# build the model: a single LSTM
+print('Build model...')
+model = Sequential()
+model.add(LSTM(128, input_shape=(maxlen, len(chars))))
+model.add(Dense(len(chars), activation='softmax'))
+
+optimizer = RMSprop(learning_rate=0.01)
+model.compile(loss='categorical_crossentropy', optimizer=optimizer)
+
+
+def sample(preds, temperature=1.0):
+    # helper function to sample an index from a probability array
+    preds = np.asarray(preds).astype('float64')
+    preds = np.log(preds) / temperature
+    exp_preds = np.exp(preds)
+    preds = exp_preds / np.sum(exp_preds)
+    probas = np.random.multinomial(1, preds, 1)
+    return np.argmax(probas)
+
+
+def on_epoch_end(epoch, _):
+    # Function invoked at end of each epoch. Prints generated text.
+    print()
+    print('----- Generating text after Epoch: %d' % epoch)
+
+    start_index = random.randint(0, len(text) - maxlen - 1)
+    for diversity in [0.2, 0.5, 1.0, 1.2]:
+        print('----- diversity:', diversity)
+
+        generated = ''
+        sentence = text[start_index: start_index + maxlen]
+        generated += sentence
+        print('----- Generating with seed: &quot;' + sentence + '&quot;')
+        sys.stdout.write(generated)
+
+        for i in range(400):
+            x_pred = np.zeros((1, maxlen, len(chars)))
+            for t, char in enumerate(sentence):
+                x_pred[0, t, char_indices[char]] = 1.
+
+            preds = model.predict(x_pred, verbose=0)[0]
+            next_index = sample(preds, diversity)
+            next_char = indices_char[next_index]
+
+            sentence = sentence[1:] + next_char
+
+            sys.stdout.write(next_char)
+            sys.stdout.flush()
+        print()
+
+print_callback = LambdaCallback(on_epoch_end=on_epoch_end)
+
+model.fit(x, y,
+          batch_size=128,
+          epochs=60,
+          callbacks=[print_callback])
+</code></pre>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../mnist_acgan/" class="btn btn-neutral float-right" title="Auxiliary Classifier GAN">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../lstm_stateful/" class="btn btn-neutral" title="Stateful LSTM"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+      
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="versions">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+          <a href="http://github.com/keras-team/keras/" class="fa fa-github" style="float: left; color: #fcfcfc"> GitHub</a>
+      
+      
+        <span><a href="../lstm_stateful/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../mnist_acgan/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+    <script>var base_url = '../..';</script>
+    <script src="../../js/theme.js" defer></script>
+      <script src="../../search/main.js" defer></script>
+    <script type="text/javascript" defer>
+        window.onload = function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        };
+    </script>
+
+</body>
+</html>
