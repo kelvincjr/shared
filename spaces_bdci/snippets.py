@@ -42,7 +42,7 @@ nezha_checkpoint_path = '/kaggle/input/nezha_base/bert_model.ckpt'
 nezha_dict_path = '/kaggle/input/nezha_base/vocab.txt'
 
 # 将数据划分N份，一份作为验证集
-num_folds = 1 #15
+num_folds = 15
 
 # 指标名
 metric_keys = ['main', 'rouge-1', 'rouge-2', 'rouge-l']
