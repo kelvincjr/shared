@@ -17,8 +17,8 @@ from snippets import *
 # 配置信息
 input_size = 768
 hidden_size = 384
-epochs = 20
-batch_size = 64
+epochs = 1
+batch_size = 16
 threshold = 0.2
 data_extract_json = data_json[:-4] + '_extract.json'
 data_extract_npy = data_json[:-4] + '_extract.npy'
