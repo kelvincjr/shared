@@ -24,8 +24,8 @@ threshold = 0.2
 data_extract_json = data_json[:-4] + '_extract.json'
 data_extract_npy = data_json[:-4] + '_extract.npy'
 
-num_of_split = 3
-num_of_train_records = 20000
+num_of_split = 4
+num_of_train_records = 15000
 
 if len(sys.argv) == 1:
     fold = 0
