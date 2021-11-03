@@ -10,6 +10,7 @@ from bert4keras.backend import keras, K
 from bert4keras.layers import LayerNormalization
 from bert4keras.optimizers import Adam
 from bert4keras.snippets import open
+from bert4keras.snippets import sequence_padding, DataGenerator
 from keras.layers import *
 from keras.models import Model
 from snippets import *
@@ -22,6 +23,9 @@ batch_size = 64
 threshold = 0.2
 data_extract_json = data_json[:-4] + '_extract.json'
 data_extract_npy = data_json[:-4] + '_extract.npy'
+
+num_of_split = 3
+num_of_train_records = 20000
 
 if len(sys.argv) == 1:
     fold = 0
@@ -127,6 +131,7 @@ model.summary()
 def evaluate(data, data_x, threshold=0.2):
     """验证集评估
     """
+    print('===== evaluate, data_x shape {} ====='.format(data_x.shape))
     y_pred = model.predict(data_x)[:, :, 0]
     total_metrics = {k: 0.0 for k in metric_keys}
     for d, yp in tqdm(zip(data, y_pred), desc=u'评估中'):
@@ -146,6 +151,13 @@ class Evaluator(keras.callbacks.Callback):
         self.best_metric = 0.0
 
     def on_epoch_end(self, epoch, logs=None):
+        valid_data = load_data(data_extract_json+"_"+str(num_of_split))
+        valid_x = np.load(data_extract_npy+"_"+str(num_of_split))
+        valid_y = np.zeros_like(valid_x[..., :1])
+        for i, d in enumerate(valid_data):
+            for j in d[1]:
+                valid_y[i, j] = 1
+
         metrics = evaluate(valid_data, valid_x, threshold + 0.1)
         if metrics['main'] >= self.best_metric:  # 保存最优
             self.best_metric = metrics['main']
@@ -153,13 +165,70 @@ class Evaluator(keras.callbacks.Callback):
         metrics['best'] = self.best_metric
         print(metrics)
 
+        del valid_y
+        del valid_x
+        del valid_data
 
+class data_generator(DataGenerator):
+    """数据生成器
+    """
+    def __iter__(self, random=False):
+        for i in range(num_of_split - 1):
+            data = load_data(data_extract_json+"_"+str(i+1))
+            data_x = np.load(data_extract_npy+"_"+str(i+1))
+            data_y = np.zeros_like(data_x[..., :1])
+            for i, d in enumerate(data):
+                for j in d[1]:
+                    data_y[i, j] = 1
+
+            #train_data = data_split(data, fold, num_folds, 'train')
+            #valid_data = data_split(data, fold, num_folds, 'valid')
+            #train_x = data_split(data_x, fold, num_folds, 'train')
+            #valid_x = data_split(data_x, fold, num_folds, 'valid')
+            #train_y = data_split(data_y, fold, num_folds, 'train')
+            #valid_y = data_split(data_y, fold, num_folds, 'valid')
+
+            count = 0
+            start_ind = 0
+            is_end = False
+            for index in range(len(data)):
+                count += 1
+                if index == len(data) -1:
+                    is_end = True
+                if count == self.batch_size or is_end:
+                    yield data_x[start_ind:start_ind+count,:,:],data_y[start_ind:start_ind+count,:,:]
+                    start_ind += count
+                    count = 0
+            #del train_y
+            #del valid_y
+            #del train_x
+            #del valid_x
+            #del train_data
+            #del valid_data
+            del data_x
+            del data_y
+            del data
+            '''
+            batch_data_x, batch_data_y = [], []
+            for index in range(len(data)):
+                one_data_x = data_x[index]
+                one_data_y = data_y[index]
+                batch_data_x.append(one_data_x)
+                batch_data_y.append(one_data_y)
+                if len(batch_data_x) == self.batch_size or is_end:
+                    yield batch_data_x,batch_data_y
+                    batch_data_x, batch_data_y = [], []
+            '''
+
+'''
 if __name__ == '__main__':
 
     # 加载数据
     data = load_data(data_extract_json)
     data_x = np.load(data_extract_npy)
+    print('===== data_x shape {}====='.format(data_x.shape))
     data_y = np.zeros_like(data_x[..., :1])
+    print('===== data_y shape {}====='.format(data_y.shape))
 
     for i, d in enumerate(data):
         for j in d[1]:
@@ -174,7 +243,7 @@ if __name__ == '__main__':
 
     # 启动训练
     evaluator = Evaluator()
-
+    print('===== train_x shape {} ======'.format(train_x.shape))
     model.fit(
         train_x,
         train_y,
@@ -186,3 +255,21 @@ if __name__ == '__main__':
 else:
 
     model.load_weights('weights/extract_model.%s.weights' % fold)
+'''
+
+if __name__ == '__main__':
+    # 启动训练
+    train_generator = data_generator(None, batch_size)
+    evaluator = Evaluator()
+    
+    train_data_size = num_of_train_records
+    steps = train_data_size // batch_size
+    if train_data_size % batch_size != 0:
+        steps += 1
+
+    model.fit_generator(
+        train_generator.forfit(),
+        steps_per_epoch=steps,
+        epochs=epochs,
+        callbacks=[evaluator]
+    )
