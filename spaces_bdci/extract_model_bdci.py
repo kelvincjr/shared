@@ -26,6 +26,8 @@ data_extract_npy = data_json[:-4] + '_extract.npy'
 
 num_of_split = 4
 num_of_train_records = 15000
+#num_of_split = 4
+#num_of_train_records = 300
 
 if len(sys.argv) == 1:
     fold = 0
@@ -127,7 +129,7 @@ model.compile(
 )
 model.summary()
 
-
+'''
 def evaluate(data, data_x, threshold=0.2):
     """验证集评估
     """
@@ -142,8 +144,9 @@ def evaluate(data, data_x, threshold=0.2):
         for k, v in metrics.items():
             total_metrics[k] += v
     return {k: v / len(data) for k, v in total_metrics.items()}
+'''
 
-
+'''
 class Evaluator(keras.callbacks.Callback):
     """训练回调
     """
@@ -168,6 +171,37 @@ class Evaluator(keras.callbacks.Callback):
         del valid_y
         del valid_x
         del valid_data
+'''
+def evaluate(valid_generator, threshold=0.2):
+    """验证集评估
+    """
+    total_metrics = {k: 0.0 for k in metric_keys}
+    total_len = 0
+    for data, data_x, data_y in valid_generator:
+        y_pred = model.predict(data_x)[:, :, 0]
+        for d, yp in tqdm(zip(data, y_pred), desc=u'评估中'):
+            yp = yp[:len(d[0])]
+            yp = np.where(yp > threshold)[0]
+            pred_summary = ''.join([d[0][i] for i in yp])
+            metrics = compute_metrics(pred_summary, d[2], 'char')
+            for k, v in metrics.items():
+                total_metrics[k] += v
+                total_len += 1
+    return {k: v / total_len for k, v in total_metrics.items()}
+
+class Evaluator(keras.callbacks.Callback):
+    """训练回调
+    """
+    def __init__(self):
+        self.best_metric = 0.0
+
+    def on_epoch_end(self, epoch, logs=None):
+        metrics = evaluate(valid_generator, threshold + 0.1)
+        if metrics['main'] >= self.best_metric:  # 保存最优
+            self.best_metric = metrics['main']
+            model.save_weights('weights/extract_model.%s.weights' % fold)
+        metrics['best'] = self.best_metric
+        print(metrics)
 
 class data_generator(DataGenerator):
     """数据生成器
@@ -219,6 +253,33 @@ class data_generator(DataGenerator):
                     yield batch_data_x,batch_data_y
                     batch_data_x, batch_data_y = [], []
             '''
+class test_generator(DataGenerator):
+    """数据生成器
+    """
+    def __iter__(self, random=False):
+        data = load_data(data_extract_json+"_"+str(num_of_split))
+        data_x = np.load(data_extract_npy+"_"+str(num_of_split))
+        data_y = np.zeros_like(data_x[..., :1])
+        for i, d in enumerate(data):
+            for j in d[1]:
+                data_y[i, j] = 1
+
+         
+        count = 0
+        start_ind = 0
+        is_end = False
+        for index in range(len(data)):
+            count += 1
+            if index == len(data) -1:
+                is_end = True
+            if count == self.batch_size or is_end:
+                yield data[start_ind:start_ind+count],data_x[start_ind:start_ind+count,:,:],data_y[start_ind:start_ind+count,:,:]
+                start_ind += count
+                count = 0
+        
+        del data_x
+        del data_y
+        del data
 
 '''
 if __name__ == '__main__':
@@ -256,10 +317,11 @@ else:
 
     model.load_weights('weights/extract_model.%s.weights' % fold)
 '''
+train_generator = data_generator(None, batch_size)
+valid_generator = test_generator(None, batch_size)
 
 if __name__ == '__main__':
     # 启动训练
-    train_generator = data_generator(None, batch_size)
     evaluator = Evaluator()
     
     train_data_size = num_of_train_records
