@@ -15,6 +15,15 @@ from keras.layers import *
 from keras.models import Model
 from snippets import *
 
+import os,signal
+import psutil
+def mem_info_print():
+    pid = os.getpid()
+    p = psutil.Process(pid)
+    mem_info = p.memory_full_info()
+    memory = mem_info.uss / 1024. / 1024.
+    print('Memory used: {:.2f} MB'.format(memory))
+
 # 配置信息
 input_size = 768
 hidden_size = 384
@@ -24,10 +33,10 @@ threshold = 0.2
 data_extract_json = data_json[:-4] + '_extract.json'
 data_extract_npy = data_json[:-4] + '_extract.npy'
 
-num_of_split = 4
-num_of_train_records = 15000
-#num_of_split = 4
-#num_of_train_records = 300
+num_of_split = 5
+num_of_train_records = 20000
+#num_of_split = 3
+#num_of_train_records = 200
 
 if len(sys.argv) == 1:
     fold = 0
@@ -207,13 +216,19 @@ class data_generator(DataGenerator):
     """数据生成器
     """
     def __iter__(self, random=False):
-        for i in range(num_of_split - 1):
-            data = load_data(data_extract_json+"_"+str(i+1))
-            data_x = np.load(data_extract_npy+"_"+str(i+1))
+        for split_index in range(num_of_split - 1):
+            print('\n===== before train load_data {}====='.format(split_index))
+            mem_info_print()
+            print('\n')
+            data = load_data(data_extract_json+"_"+str(split_index+1))
+            data_x = np.load(data_extract_npy+"_"+str(split_index+1))
             data_y = np.zeros_like(data_x[..., :1])
             for i, d in enumerate(data):
                 for j in d[1]:
                     data_y[i, j] = 1
+            print('\n===== after train load_data {} ====='.format(split_index))
+            mem_info_print()
+            print('\n')
 
             #train_data = data_split(data, fold, num_folds, 'train')
             #valid_data = data_split(data, fold, num_folds, 'valid')
@@ -239,9 +254,12 @@ class data_generator(DataGenerator):
             #del valid_x
             #del train_data
             #del valid_data
-            del data_x
             del data_y
+            del data_x
             del data
+            print('\n===== after train del {}====='.format(split_index))
+            mem_info_print()
+            print('\n')
             '''
             batch_data_x, batch_data_y = [], []
             for index in range(len(data)):
@@ -257,13 +275,18 @@ class test_generator(DataGenerator):
     """数据生成器
     """
     def __iter__(self, random=False):
+        print('\n===== before test load_data =====')
+        mem_info_print()
+        print('\n')
         data = load_data(data_extract_json+"_"+str(num_of_split))
         data_x = np.load(data_extract_npy+"_"+str(num_of_split))
         data_y = np.zeros_like(data_x[..., :1])
         for i, d in enumerate(data):
             for j in d[1]:
                 data_y[i, j] = 1
-
+        print('\n===== after test load_data =====')
+        mem_info_print()
+        print('\n')
          
         count = 0
         start_ind = 0
@@ -277,9 +300,12 @@ class test_generator(DataGenerator):
                 start_ind += count
                 count = 0
         
-        del data_x
         del data_y
+        del data_x
         del data
+        print('\n===== after test del =====')
+        mem_info_print()
+        print('\n')
 
 '''
 if __name__ == '__main__':
@@ -333,5 +359,6 @@ if __name__ == '__main__':
         train_generator.forfit(),
         steps_per_epoch=steps,
         epochs=epochs,
-        callbacks=[evaluator]
+        callbacks=[evaluator],
+        workers=0
     )
