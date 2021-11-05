@@ -196,6 +196,8 @@ def evaluate(valid_generator, threshold=0.2):
             for k, v in metrics.items():
                 total_metrics[k] += v
                 total_len += 1
+            del pred_summary
+            del metrics
     return {k: v / total_len for k, v in total_metrics.items()}
 
 class Evaluator(keras.callbacks.Callback):
