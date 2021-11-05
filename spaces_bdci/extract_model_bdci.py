@@ -245,9 +245,9 @@ class data_generator(DataGenerator):
                 count += 1
                 if index == (len(data) -1):
                     is_end = True
-                print('split_index {}, count {}'.format(split_index, count))
+                #print('split_index {}, count {}'.format(split_index, count))
                 if count == self.batch_size or is_end:
-                    print('***** split_index{}, count {} *****'.format(split_index, count))
+                    #print('***** split_index{}, count {} *****'.format(split_index, count))
                     yield data_x[start_ind:start_ind+count,:,:],data_y[start_ind:start_ind+count,:,:]
                     start_ind += count
                     count = 0
