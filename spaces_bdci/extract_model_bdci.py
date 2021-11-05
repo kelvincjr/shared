@@ -35,8 +35,8 @@ data_extract_npy = data_json[:-4] + '_extract.npy'
 
 num_of_split = 6
 split_size = 5000
-#num_of_split = 5
-#num_of_train_records = 400
+#num_of_split = 6
+#split_size = 100
 
 if len(sys.argv) == 1:
     fold = 0
@@ -248,7 +248,12 @@ class data_generator(DataGenerator):
                 #print('split_index {}, count {}'.format(split_index, count))
                 if count == self.batch_size or is_end:
                     #print('***** split_index{}, count {} *****'.format(split_index, count))
-                    yield data_x[start_ind:start_ind+count,:,:],data_y[start_ind:start_ind+count,:,:]
+                    #yield data_x[start_ind:start_ind+count,:,:],data_y[start_ind:start_ind+count,:,:]
+                    a = data_x[start_ind:start_ind+count,:,:].copy()
+                    b = data_y[start_ind:start_ind+count,:,:].copy()
+                    yield a,b
+                    del b
+                    del a
                     start_ind += count
                     count = 0
             #del train_y
@@ -299,7 +304,16 @@ class test_generator(DataGenerator):
             if index == len(data) -1:
                 is_end = True
             if count == self.batch_size or is_end:
-                yield data[start_ind:start_ind+count],data_x[start_ind:start_ind+count,:,:],data_y[start_ind:start_ind+count,:,:]
+                #yield data[start_ind:start_ind+count],data_x[start_ind:start_ind+count,:,:],data_y[start_ind:start_ind+count,:,:]
+                a = data[start_ind:start_ind+count].copy()
+                b = data_x[start_ind:start_ind+count,:,:].copy()
+                c = data_y[start_ind:start_ind+count,:,:].copy()
+                yield a,b,c
+                del c
+                del b
+                del a
+                #else:
+                    #yield data[start_ind:start_ind+count],data_x[start_ind:start_ind+count,:,:],data_y[start_ind:start_ind+count,:,:]
                 start_ind += count
                 count = 0
         
@@ -350,6 +364,8 @@ train_generator = data_generator(None, batch_size)
 valid_generator = test_generator(None, batch_size)
 
 if __name__ == '__main__':
+    #valid_generator.__iter__()
+    
     # 启动训练
     evaluator = Evaluator()
     
@@ -367,3 +383,4 @@ if __name__ == '__main__':
         callbacks=[evaluator],
         workers=0
     )
+    
