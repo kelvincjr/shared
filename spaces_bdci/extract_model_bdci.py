@@ -33,10 +33,10 @@ threshold = 0.2
 data_extract_json = data_json[:-4] + '_extract.json'
 data_extract_npy = data_json[:-4] + '_extract.npy'
 
-num_of_split = 5
-num_of_train_records = 20000
-#num_of_split = 3
-#num_of_train_records = 200
+num_of_split = 6
+split_size = 5000
+#num_of_split = 5
+#num_of_train_records = 400
 
 if len(sys.argv) == 1:
     fold = 0
@@ -220,6 +220,7 @@ class data_generator(DataGenerator):
             print('\n===== before train load_data {}====='.format(split_index))
             mem_info_print()
             print('\n')
+
             data = load_data(data_extract_json+"_"+str(split_index+1))
             data_x = np.load(data_extract_npy+"_"+str(split_index+1))
             data_y = np.zeros_like(data_x[..., :1])
@@ -242,9 +243,11 @@ class data_generator(DataGenerator):
             is_end = False
             for index in range(len(data)):
                 count += 1
-                if index == len(data) -1:
+                if index == (len(data) -1):
                     is_end = True
+                print('split_index {}, count {}'.format(split_index, count))
                 if count == self.batch_size or is_end:
+                    print('***** split_index{}, count {} *****'.format(split_index, count))
                     yield data_x[start_ind:start_ind+count,:,:],data_y[start_ind:start_ind+count,:,:]
                     start_ind += count
                     count = 0
@@ -350,10 +353,12 @@ if __name__ == '__main__':
     # 启动训练
     evaluator = Evaluator()
     
-    train_data_size = num_of_train_records
-    steps = train_data_size // batch_size
-    if train_data_size % batch_size != 0:
-        steps += 1
+    steps = 0
+    for i in range(num_of_split - 2):
+        steps += split_size // batch_size
+        if split_size % batch_size != 0:
+            steps += 1
+    steps += 1
 
     model.fit_generator(
         train_generator.forfit(),
