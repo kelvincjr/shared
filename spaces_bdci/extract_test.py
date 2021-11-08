@@ -4,12 +4,19 @@ import extract_vectorize_bdci as vectorize
 import extract_model_bdci as extract
 from snippets import *
 
-def predict(text):
+def predict(text, labels):
     # 抽取
     texts = convert.text_split(text)
     vecs = vectorize.predict(texts)
     extract.model.load_weights('weights/extract_model.%s.weights' %  0)
     preds = extract.model.predict(vecs[None])[0, :, 0]
+    sent_num = 0
+    for pred in preds:
+    	label = 0
+    	if sent_num in labels:
+    		label = 1
+    	print('sent_num {}, pred {}, label {}'.format(sent_num, pred, label))
+    	sent_num += 1
     preds = np.where(preds > extract.threshold)[0]
     summary = ''.join([texts[i] for i in preds])
     return summary
@@ -24,7 +31,7 @@ if __name__ == '__main__':
     total_metrics = {k: 0.0 for k in metric_keys}
     for d in tqdm(valid_data):
         text = '\n'.join(d[0])
-        summary = predict(text)
+        summary = predict(text, d[1])
         print(summary)
         metrics = compute_metrics(summary, d[2])
         for k, v in metrics.items():
