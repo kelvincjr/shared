@@ -28,7 +28,7 @@ def mem_info_print():
 input_size = 768
 hidden_size = 384
 epochs = 5 #20
-batch_size = 64
+batch_size = 32 #64
 threshold = 0.2
 data_extract_json = data_json[:-4] + '_extract.json'
 data_extract_npy = data_json[:-4] + '_extract.npy'
@@ -367,6 +367,20 @@ valid_generator = test_generator(None, batch_size)
 
 if __name__ == '__main__':
     #valid_generator.__iter__()
+    '''
+    data = load_data(data_extract_json+"_"+str(1))
+    data_x = np.load(data_extract_npy+"_"+str(1))
+    data_y = np.zeros_like(data_x[..., :1])
+    print('=== data_x shape {} ==='.format(data_x.shape))
+    print('=== data_y shape {} ==='.format(data_y.shape))
+    for i, d in enumerate(data):
+        for j in d[1]:
+            data_y[i, j] = 1
+    for i in range(len(data[0][0])):
+        print('text: [{}], label: [{}]'.format(data[0][0][i], data_y[0][i]))
+    import sys
+    sys.exit(0)
+    '''
     
     # 启动训练
     evaluator = Evaluator()
