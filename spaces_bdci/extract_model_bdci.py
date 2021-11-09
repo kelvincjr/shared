@@ -27,7 +27,7 @@ def mem_info_print():
 # 配置信息
 input_size = 768
 hidden_size = 384
-epochs = 20
+epochs = 5 #20
 batch_size = 64
 threshold = 0.2
 data_extract_json = data_json[:-4] + '_extract.json'
