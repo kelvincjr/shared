@@ -47,7 +47,7 @@ def extract_matching(texts, summaries, start_i=0, start_j=0):
     i = np.argmax([len(s) for s in summaries])
     #j = np.argmax([compute_main_metric(t, summaries[i], 'char') for t in texts])
     metric_array = np.array([compute_main_metric(t, summaries[i], 'char') for t in texts])
-    j_top3 = heapq.nlargest(3, range(len(metric_array)), metric_array.take)
+    j_top3 = heapq.nlargest(2, range(len(metric_array)), metric_array.take)
     j = j_top3[0]
     #========== debug ============
     '''
@@ -72,7 +72,7 @@ def extract_flow(inputs):
     """
     text, summary = inputs
     texts = text_split(text, True)  # 取后maxlen句
-    summaries = text_split(summary, False)
+    summaries = summary_split(summary, False)
     mapping = extract_matching(texts, summaries)
     labels = sorted(set([i[1] for i in mapping]))
     labels = [int(label) for label in labels]
@@ -184,12 +184,15 @@ if __name__ == '__main__':
         for item in summaries:
             print('summary: {}'.format(item))
         print('==================== labels {} ============================'.format(labels))
-        if count > 1:
+        for ind in labels:
+            print('label text: {}'.format(texts[ind]))
+        if total_count > 1:
             break
     print('max_ts_num: [{}], avg_ts_num: [{}], ts_num_128; [{}], ts_num_256: [{}]'.format(max_ts_num, (total_ts_num)/total_count, ts_num_128, ts_num_256))
     import sys
     sys.exit(0)
     '''
+    
     data = convert(data)
 
     if os.path.exists(data_random_order_json):
