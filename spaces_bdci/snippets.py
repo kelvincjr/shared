@@ -79,6 +79,13 @@ def data_split(data, fold, num_folds, mode):
 def compute_rouge(source, target, unit='word'):
     """计算rouge-1、rouge-2、rouge-l
     """
+    source = source.replace(' ', '').replace('坐席】', '').replace('客户】', '').replace('【', '')
+    target = target.replace(' ', '').replace('坐席】', '').replace('客户】', '').replace('【', '')
+    import re
+    zz = re.compile(u'[\n。；：，]')
+    source = zz.sub('', source)
+    target = zz.sub('', target)
+    
     if unit == 'word':
         source = jieba.cut(source, HMM=False)
         target = jieba.cut(target, HMM=False)
