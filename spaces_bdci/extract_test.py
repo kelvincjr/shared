@@ -11,7 +11,7 @@ def text_split_test(text, limited=True):
     #texts = text_segmentate(text, 1, u'\n。；：，')
     texts = text_segmentate(text, 1, u'\n')
     if limited:
-        texts = texts[-maxlen:]
+        texts = texts[-convert.maxlen:]
     return texts
 
 def predict(text, labels):
