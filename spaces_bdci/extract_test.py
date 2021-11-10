@@ -2,6 +2,7 @@ import numpy as np
 import extract_convert_bdci as convert
 import extract_vectorize_bdci as vectorize
 import extract_model_bdci as extract
+from bert4keras.snippets import text_segmentate
 from snippets import *
 
 def text_split_test(text, limited=True):
