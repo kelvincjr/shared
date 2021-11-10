@@ -34,7 +34,7 @@ data_extract_json = data_json[:-4] + '_extract.json'
 data_extract_npy = data_json[:-4] + '_extract.npy'
 
 num_of_split = 3
-split_size = 10000
+split_size = 5000
 #num_of_split = 6
 #split_size = 100
 
