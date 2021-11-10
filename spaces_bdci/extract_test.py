@@ -4,6 +4,15 @@ import extract_vectorize_bdci as vectorize
 import extract_model_bdci as extract
 from snippets import *
 
+def text_split(text, limited=True):
+    """将长句按照标点分割为多个子句。
+    """
+    #texts = text_segmentate(text, 1, u'\n。；：，')
+    texts = text_segmentate(text, 1, u'\n')
+    if limited:
+        texts = texts[-maxlen:]
+    return texts
+
 def predict(text, labels):
     # 抽取
     texts = convert.text_split(text)
@@ -11,6 +20,7 @@ def predict(text, labels):
     extract.model.load_weights('weights/extract_model.%s.weights' %  0)
     preds = extract.model.predict(vecs[None])[0, :, 0]
     sent_num = 0
+    print('=== pred_num: {}, label_num: {}'.format(len(preds), len(labels)))
     for pred in preds:
     	label = 0
     	if sent_num in labels:
