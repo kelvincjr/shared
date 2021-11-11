@@ -28,7 +28,7 @@ def predict(text, labels):
     		label = 1
     	print('sent_num {}, pred {}, label {}'.format(sent_num, pred, label))
     	sent_num += 1
-    preds = np.where(preds > extract.threshold + 1)[0]
+    preds = np.where(preds > extract.threshold + 0.1)[0]
     summary = ''.join([texts[i] for i in preds])
     return summary
 
