@@ -21,12 +21,12 @@ def predict(text, labels):
     extract.model.load_weights('weights/extract_model.%s.weights' %  0)
     preds = extract.model.predict(vecs[None])[0, :, 0]
     sent_num = 0
-    print('=== pred_num: {}, label_num: {}'.format(len(preds), len(labels)))
+    #print('=== pred_num: {}, label_num: {}'.format(len(preds), len(labels)))
     for pred in preds:
     	label = 0
     	if sent_num in labels:
     		label = 1
-    	print('sent_num {}, pred {}, label {}'.format(sent_num, pred, label))
+    	#print('sent_num {}, pred {}, label {}'.format(sent_num, pred, label))
     	sent_num += 1
     preds = np.where(preds > extract.threshold)[0]
     summary = ''.join([texts[i] for i in preds])
@@ -40,13 +40,26 @@ if __name__ == '__main__':
     data = extract.load_data(extract.data_extract_json)
     valid_data = data #data_split(data, fold, num_folds, 'valid')
     total_metrics = {k: 0.0 for k in metric_keys}
-    for d in tqdm(valid_data):
+    results = []
+    for d in tqdm(valid_data, desc=u'转换中'):
         text = '\n'.join(d[0])
-        summary = predict(text, d[1])
-        print(summary)
-        metrics = compute_metrics(summary, d[2])
+        pred_summary = predict(text, d[1])
+        label_summary = ''.join([d[0][i] for i in d[1]])
+        #print(summary)
+        metrics = compute_metrics(pred_summary, d[2])
         for k, v in metrics.items():
             total_metrics[k] += v
+        result = {
+            'source_1': pred_summary,
+            'source_2': label_summary,
+            'target': d[2],
+        }
+        results.append(result)
+
+    F = open('bdci_datasets/fixed_train_dataset.json', 'w', encoding='utf-8')
+    for d in results:
+        F.write(json.dumps(d, ensure_ascii=False) + '\n')
 
     metrics = {k: v / len(valid_data) for k, v in total_metrics.items()}
     print(metrics)
+
