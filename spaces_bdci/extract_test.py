@@ -15,6 +15,23 @@ def text_split_test(text, limited=True):
         texts = texts[-convert.maxlen:]
     return texts
 
+def load_test_data(filename):
+    """加载数据
+    返回：[(text, summary)]
+    """
+    D = []
+    with open(filename, 'rt', encoding='utf-8') as f:
+        for i, line in enumerate(f):
+            if i == 0:
+                continue
+            parts = line.strip().split('|')
+            id_ = parts[0]
+            content = parts[1]
+            abstract = ""
+            D.append((content, abstract))
+    return D
+
+
 def predict(text, labels):
     # 抽取
     texts = text_split_test(text)
@@ -33,7 +50,7 @@ def predict(text, labels):
     summary = ''.join([texts[i] for i in preds])
     return summary
 
-
+'''
 if __name__ == '__main__':
 
     from tqdm import tqdm
@@ -63,4 +80,22 @@ if __name__ == '__main__':
 
     metrics = {k: v / len(valid_data) for k, v in total_metrics.items()}
     print(metrics)
+'''
+
+if __name__ == '__main__':
+	data = load_test_data('./bdci_datasets/test_dataset.csv')
+	results = []
+    for d in tqdm(data, desc=u'转换中'):
+        text = d[0]
+        pred_summary = predict(text, [])
+        result = {
+            'source_1': pred_summary,
+            'source_2': "",
+            'target': "",
+        }
+        results.append(result)
+
+    F = open('bdci_datasets/fixed_test_dataset.json', 'w', encoding='utf-8')
+    for d in results:
+        F.write(json.dumps(d, ensure_ascii=False) + '\n')
 
