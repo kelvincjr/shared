@@ -85,17 +85,17 @@ if __name__ == '__main__':
 if __name__ == '__main__':
 	data = load_test_data('./bdci_datasets/test_dataset.csv')
 	results = []
-    for d in tqdm(data, desc=u'转换中'):
-        text = d[0]
-        pred_summary = predict(text, [])
-        result = {
-            'source_1': pred_summary,
-            'source_2': "",
-            'target': "",
-        }
-        results.append(result)
+	for d in tqdm(data, desc=u'转换中'):
+		text = d[0]
+		pred_summary = predict(text, [])
+		result = {
+			'source_1': pred_summary,
+			'source_2': "",
+			'target': "",
+		}
+		results.append(result)
 
-    F = open('bdci_datasets/fixed_test_dataset.json', 'w', encoding='utf-8')
-    for d in results:
-        F.write(json.dumps(d, ensure_ascii=False) + '\n')
+	F = open('bdci_datasets/fixed_test_dataset.json', 'w', encoding='utf-8')
+	for d in results:
+		F.write(json.dumps(d, ensure_ascii=False) + '\n')
 
