@@ -1,5 +1,6 @@
 import json
 import numpy as np
+from tqdm import tqdm
 import extract_convert_bdci as convert
 import extract_vectorize_bdci as vectorize
 import extract_model_bdci as extract
