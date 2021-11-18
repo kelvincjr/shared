@@ -51,7 +51,7 @@ fine_tune = False
 scheduled_sampling = False
 weight_tying = False
 max_grad_norm = 2.0
-is_cuda = False
+is_cuda = True
 DEVICE = torch.device("cuda" if is_cuda else "cpu")
 LAMBDA = 1
 output_dir = "./output"
@@ -75,7 +75,7 @@ else:
 
 
 # Beam search
-beam_size: int = 2 #3
+beam_size: int = 3
 alpha = 0.2
 beta = 0.2
 gamma = 0.6
