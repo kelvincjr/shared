@@ -138,12 +138,12 @@ class Trainer:
                 pred_result.append(self.tokenizer.decode(output[i], skip_special_tokens=True))
         
         id_ = 25001
-	    output_csv = 'save/submit.csv'
-	    with codecs.open(output_csv, 'w', 'utf-8') as f:
-	        f.write("id|ret"+'\n')
-	        for pred_ret in pred_result: 
-	            f.write("{}|{}\n".format(id_, pred_ret))
-	            id_ += 1
+        output_csv = 'save/submit.csv'
+        with codecs.open(output_csv, 'w', 'utf-8') as f:
+        	f.write("id|ret"+'\n')
+        	for pred_ret in pred_result: 
+        		f.write("{}|{}\n".format(id_, pred_ret))
+        		id_ += 1
 
     def train(self):
         min_loss = float('inf')
