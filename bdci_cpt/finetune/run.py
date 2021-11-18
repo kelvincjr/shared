@@ -29,4 +29,7 @@ if __name__ == '__main__':
     tokenizer = BertTokenizer.from_pretrained(args.model)
     model = CPTForConditionalGeneration.from_pretrained(args.model, cache_dir='/kaggle/working/')
     trainer = Trainer(model=model, tokenizer=tokenizer, args=args)
-    trainer.train()
+    if args.task_type == 'train':
+    	trainer.train()
+    elif if args.task_type == 'test':
+    	trainer.test()

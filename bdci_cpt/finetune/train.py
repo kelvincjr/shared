@@ -1,5 +1,6 @@
 import math
 import os.path
+from tqdm import tqdm
 
 import torch.cuda
 from torch.optim import AdamW
@@ -123,6 +124,27 @@ class Trainer:
         res = split_evaluate(target, pred_result)
         return sum(i for i in res.values())
 
+    @torch.no_grad()
+    def test_epoch(self, dataloader):
+        self.model.eval()
+        self.model.to(self.device)
+        pred_result = []
+        target = []
+        for batch in tqdm(dataloader):
+            for k in batch.keys():
+                batch[k] = batch[k].to(self.device)
+            output = self.model.generate(input_ids=batch['input_ids'], attention_mask=batch['attention_mask'])
+            for i in range(self.batch_size):
+                pred_result.append(self.tokenizer.decode(output[i], skip_special_tokens=True))
+        
+        id_ = 25001
+	    output_csv = 'save/submit.csv'
+	    with codecs.open(output_csv, 'w', 'utf-8') as f:
+	        f.write("id|ret"+'\n')
+	        for pred_ret in pred_result: 
+	            f.write("{}|{}\n".format(id_, pred_ret))
+	            id_ += 1
+
     def train(self):
         min_loss = float('inf')
         max_score = float('-inf')
@@ -144,4 +166,4 @@ class Trainer:
     def test(self):
         if self.args.state_dict is not None:
             self.model.load_state_dict(self.args.state_dict['model'])
-        return self.eval_epoch(self.test_dataloader)
+        return self.test_epoch(self.test_dataloader)
