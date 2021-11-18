@@ -311,7 +311,7 @@ if __name__ == "__main__":
     count = 0
     for source in tqdm(data_list):
         #print('source: ', source, '\n')
-        greedy_prediction = pred.predict(source.split(),  beam_search=False)
+        greedy_prediction = pred.predict(source.split(),  beam_search=True)
         #print('greedy: ', greedy_prediction, '\n')
         #beam_prediction = pred.predict(source.split(),  beam_search=True)
         #print('beam: ', beam_prediction, '\n')
