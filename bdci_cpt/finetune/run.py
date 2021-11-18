@@ -31,5 +31,5 @@ if __name__ == '__main__':
     trainer = Trainer(model=model, tokenizer=tokenizer, args=args)
     if args.task_type == 'train':
     	trainer.train()
-    elif if args.task_type == 'test':
+    elif args.task_type == 'test':
     	trainer.test()
