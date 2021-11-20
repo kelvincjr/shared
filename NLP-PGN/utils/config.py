@@ -29,7 +29,7 @@ max_tgt_len: int = 256 #100  # exclusive of special tokens such as EOS
 truncate_src: bool = True
 truncate_tgt: bool = True
 min_dec_steps: int = 30
-max_dec_steps: int = 100
+max_dec_steps: int = 60 #100
 enc_rnn_dropout: float = 0.5
 enc_attn: bool = True
 dec_attn: bool = True
@@ -75,7 +75,7 @@ else:
 
 
 # Beam search
-beam_size: int = 2#3
+beam_size: int = 3
 alpha = 0.2
 beta = 0.2
 gamma = 0.6
