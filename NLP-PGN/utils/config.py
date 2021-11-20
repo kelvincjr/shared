@@ -75,7 +75,7 @@ else:
 
 
 # Beam search
-beam_size: int = 3
+beam_size: int = 2#3
 alpha = 0.2
 beta = 0.2
 gamma = 0.6
