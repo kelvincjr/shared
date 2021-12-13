@@ -22,7 +22,7 @@ from rouge import Rouge
 # 基本参数
 maxlen = 512
 batch_size = 2
-epochs = 2
+epochs = 6
 
 # bert配置
 #config_path = '/opt/kelvin/python/knowledge_graph/baiduee/model/chinese_roberta_wwm_ext_L-12_H-768_A-12/bert_config.json'
@@ -52,8 +52,8 @@ def load_data(filename):
 train_data = load_data('./data/train_with_summ.txt')
 valid_data = load_data('./data/train_without_summ.txt')
 random.shuffle(train_data)
-train_data = train_data[:16000]
-valid_data = valid_data[:100]
+#train_data = train_data[:16000]
+valid_data = valid_data[:1000]
 
 # 加载并精简词表，建立分词器
 token_dict, keep_tokens = load_vocab(
