@@ -167,11 +167,12 @@ class Evaluator(keras.callbacks.Callback):
                 rouge_1 += scores[0]['rouge-1']['f']
                 rouge_2 += scores[0]['rouge-2']['f']
                 rouge_l += scores[0]['rouge-l']['f']
-                bleu += sentence_bleu(
-                    references=[title.split(' ')],
-                    hypothesis=pred_title.split(' ') #,
+                bleu = 0
+                #bleu += sentence_bleu(
+                    #references=[title.split(' ')],
+                    #hypothesis=pred_title.split(' ') #,
                     #smoothing_function=self.smooth
-                )
+                #)
         rouge_1 /= total
         rouge_2 /= total
         rouge_l /= total
