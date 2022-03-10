@@ -252,7 +252,7 @@ if __name__ == "__main__":
     batch_size = 48
     # 束宽度
     beam_width = 1
-    device = 'cpu'
+    device = 'gpu'
     label_smooth = 0.0
     # 学习率
     learning_rate = 2e-05
