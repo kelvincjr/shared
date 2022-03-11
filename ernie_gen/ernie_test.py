@@ -313,7 +313,7 @@ if __name__ == "__main__":
     output_dir = './tmp/'
     save_dir = None
     # 多少步保存一次模型
-    save_steps = 3000
+    save_steps = 1200
     # 使用随机噪声
     use_random_noice = False
     # 激活层比例
