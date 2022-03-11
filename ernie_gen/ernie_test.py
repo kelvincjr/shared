@@ -26,6 +26,7 @@ from encode import convert_example, after_padding
 from decode import post_process, beam_search_infilling
 from model import StackModel
 
+'''
 def read(data_path):
     count = 0
     f = json.load(open(data_path))
@@ -39,11 +40,52 @@ def read_dev(data_path):
 	print('===== dev data len {} ====='.format(len(f)))
 	for line in f:
 		yield {'tokens': "\x02".join(list(line[0])), 'labels': "\x02".join(list(line[1]))}
+'''
+def text_segmentate(text, maxlen, seps='\n', strips=None):
+    """将文本按照标点符号划分为若干个短句
+    """
+    text = text.strip().strip(strips)
+    if seps and len(text) > maxlen:
+        pieces = text.split(seps[0])
+        text, texts = '', []
+        for i, p in enumerate(pieces):
+            if text and p and len(text) + len(p) > maxlen - 1:
+                texts.extend(text_segmentate(text, maxlen, seps[1:], strips))
+                text = ''
+            if i + 1 == len(pieces):
+                text = text + p
+            else:
+                text = text + p + seps[0]
+        if text:
+            texts.extend(text_segmentate(text, maxlen, seps[1:], strips))
+        return texts
+    else:
+        return [text]
+
+def read(data_path):
+    count = 0
+    f = open(data_path, encoding='utf-8')
+    lines = f.readlines()
+    print('===== train data len {} ====='.format(len(lines)))
+    for line in lines:
+    	sents = text_segmentate(line.strip(), 1, u'，。')
+    	for i in range(len(sents) - 1):
+    		yield {'tokens': sents[i], 'labels': sents[i+1]}
+
+def read_dev(data_path):
+	count = 0
+	f = open(data_path, encoding='utf-8')
+	lines = f.readlines()
+	print('===== dev data len {} ====='.format(len(lines)))
+	for line in lines:
+		sents = text_segmentate(line.strip(), 1, u'，。')
+		for i in range(len(sents) - 1):
+			yield {'tokens': sents[i], 'labels': sents[i+1]}
 
 # 第一个参数我们把读取数据集的方法给穿进去 ，第二个参数是数据集的地址，因为bml存在版本容量上限，这里面我们选用的是一个只包含一万
 # 段文本生成的数据集
-map_ds = load_dataset(read, data_path='data/dev_data.json', lazy=False)
-dev_ds = load_dataset(read_dev, data_path='data/dev_data.json', lazy=False)
+map_ds = load_dataset(read, data_path='test_data/train_data.csv', lazy=False)
+dev_ds = load_dataset(read_dev, data_path='test_data/dev_data.csv', lazy=False)
 print('===== load_dataset done =====')
 #sys.exit(0)
 
