@@ -405,9 +405,9 @@ if __name__ == "__main__":
     # 日志条数
     logging_steps = 100
     # 输入最大长度
-    max_decode_len = 128 #64
+    max_decode_len = 64
     # 输出最大长度
-    max_encode_len = 128 #64
+    max_encode_len = 64
     # 基础版本模型选型
     model_name_or_path = 'ernie-1.0'
     noise_prob = 0.0
