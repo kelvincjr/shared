@@ -151,6 +151,109 @@ def evaluate(model, data_loader, tokenizer, rouge1, rouge2, attn_id,
 
     model.train()
 
+def test(model_save_path):
+    paddle.set_device(device)
+    if paddle.distributed.get_world_size() > 1:
+        paddle.distributed.init_parallel_env()
+
+    model = ErnieForGeneration.from_pretrained(model_save_path)
+    tokenizer = ErnieTokenizer.from_pretrained(model_save_path)
+
+    train_dataset, dev_dataset = map_ds, dev_ds
+    attn_id = tokenizer.vocab['[ATTN]'] if '[ATTN]' in tokenizer.vocab else tokenizer.vocab['[MASK]']
+    tgt_type_id = model.sent_emb.weight.shape[0] - 1
+
+    rouge1 = Rouge1()
+    rouge2 = Rouge2()
+
+    trans_func = convert_example(
+        tokenizer=tokenizer,
+        attn_id=attn_id,
+        tgt_type_id=tgt_type_id,
+        max_encode_len=max_encode_len,
+        max_decode_len=max_decode_len,
+        noise_prob=noise_prob,
+        use_random_noice=use_random_noice)
+
+    train_dataset = train_dataset.map(trans_func)
+    train_batch_sampler = paddle.io.DistributedBatchSampler(
+        train_dataset, batch_size=batch_size, shuffle=True)
+    batchify_fn = lambda samples, fn=Tuple(
+        Pad(axis=0, pad_val=tokenizer.pad_token_id),  # src_ids
+        Pad(axis=0, pad_val=tokenizer.pad_token_id),  # src_pids
+        Pad(axis=0, pad_val=tokenizer.pad_token_type_id),  # src_tids
+        Pad(axis=0, pad_val=tokenizer.pad_token_id),  # tgt_ids
+        Pad(axis=0, pad_val=tokenizer.pad_token_id),  # tgt_pids
+        Pad(axis=0, pad_val=tokenizer.pad_token_type_id),  # tgt_tids
+        Pad(axis=0, pad_val=tokenizer.pad_token_id),  # attn_ids
+        Pad(axis=0, pad_val=tokenizer.pad_token_id),  # tgt_labels
+    ): after_padding(fn(samples))
+    train_data_loader = DataLoader(
+        dataset=train_dataset,
+        batch_sampler=train_batch_sampler,
+        collate_fn=batchify_fn,
+        num_workers=0,
+        return_list=True)
+
+    dev_dataset = dev_dataset.map(trans_func)
+    dev_data_loader = DataLoader(
+        dataset=dev_dataset,
+        batch_size=batch_size,
+        collate_fn=batchify_fn,
+        num_workers=0,
+        return_list=True)
+
+    model.eval()
+
+    vocab = tokenizer.vocab
+    eos_id = vocab[tokenizer.sep_token]
+    sos_id = vocab[tokenizer.cls_token]
+    pad_id = vocab[tokenizer.pad_token]
+    unk_id = vocab[tokenizer.unk_token]
+    vocab_size = len(vocab)
+    evaluated_sentences_ids = []
+    reference_sentences_ids = []
+    logger.info("Testing...")
+    for data in tqdm(dev_data_loader):
+        (src_ids, src_tids, src_pids, _, _, _, _, _, _, _, _,
+         raw_tgt_labels) = data  # never use target when infer
+        # Use greedy_search_infilling or beam_search_infilling to get predictions
+        output_ids = beam_search_infilling(
+            model,
+            src_ids,
+            src_tids,
+            eos_id=eos_id,
+            sos_id=sos_id,
+            attn_id=attn_id,
+            pad_id=pad_id,
+            unk_id=unk_id,
+            vocab_size=vocab_size,
+            max_decode_len=max_decode_len,
+            max_encode_len=max_encode_len,
+            beam_width=beam_width,
+            length_penalty=length_penalty,
+            tgt_type_id=tgt_type_id)
+
+        for ids in output_ids.tolist():
+            if eos_id in ids:
+                ids = ids[:ids.index(eos_id)]
+            evaluated_sentences_ids.append(ids)
+
+        for ids in raw_tgt_labels.numpy().tolist():
+            ids = ids[:ids.index(eos_id)]
+            reference_sentences_ids.append(ids)
+
+    evaluated_sentences = []
+    reference_sentences = []
+    for ids in reference_sentences_ids[:5]:
+        reference_sentences.append(''.join(
+            map(post_process, vocab.to_tokens(ids))))
+    for ids in evaluated_sentences_ids[:5]:
+        evaluated_sentences.append(''.join(
+            map(post_process, vocab.to_tokens(ids))))
+    logger.debug(reference_sentences)
+    logger.debug(evaluated_sentences)
+
 def train():
     paddle.set_device(device)
     if paddle.distributed.get_world_size() > 1:
@@ -300,11 +403,11 @@ if __name__ == "__main__":
     learning_rate = 2e-05
     length_penalty = 1.0
     # 日志条数
-    logging_steps = 1
+    logging_steps = 100
     # 输入最大长度
-    max_decode_len = 64
+    max_decode_len = 128 #64
     # 输出最大长度
-    max_encode_len = 64
+    max_encode_len = 128 #64
     # 基础版本模型选型
     model_name_or_path = 'ernie-1.0'
     noise_prob = 0.0
@@ -313,7 +416,7 @@ if __name__ == "__main__":
     output_dir = './tmp/'
     save_dir = None
     # 多少步保存一次模型
-    save_steps = 1200
+    save_steps = 3000
     # 使用随机噪声
     use_random_noice = False
     # 激活层比例
