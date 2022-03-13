@@ -275,7 +275,11 @@ def train():
         model_state = paddle.load(init_checkpoint)
         model.set_state_dict(model_state)
 
-    return 
+    model.save_pretrained(output_export_dir)
+    tokenizer.save_pretrained(output_export_dir)
+    print('===== model save done =====')
+    return
+
     train_dataset, dev_dataset = map_ds, dev_ds
     attn_id = tokenizer.vocab[
         '[ATTN]'] if '[ATTN]' in tokenizer.vocab else tokenizer.vocab['[MASK]']
@@ -411,6 +415,7 @@ if __name__ == "__main__":
     max_encode_len = 64
     # 基础版本模型选型
     model_name_or_path = 'ernie-1.0'
+    #model_name_or_path = '/data/kelvin/python/knowledge_graph/ai_contest/df_textgen/ernie-gen/model'
     noise_prob = 0.0
     num_epochs = 12
     # 模型文件输出地址
