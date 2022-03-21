@@ -23,7 +23,7 @@ from rouge import Rouge
 # 基本参数
 maxlen = 128
 batch_size = 16
-epochs = 30
+epochs = 10
 
 # bert配置
 #config_path = '/opt/kelvin/python/knowledge_graph/baiduee/model/chinese_roberta_wwm_ext_L-12_H-768_A-12/bert_config.json'
