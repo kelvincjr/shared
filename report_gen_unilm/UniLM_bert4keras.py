@@ -73,12 +73,16 @@ def load_data(filename):
 train_data = load_data('test_data/train_data.csv')
 valid_data = load_data('test_data/dev_data.csv')
 random.shuffle(train_data)
-print('train_data first 50: ')
+print('train_data first 10: ')
 for i in range(10):
     print('next sent: {}, cur sent: {}'.format(train_data[i][0], train_data[i][1]))
+
+print('valid_data first 10: ')
+for i in range(10):
+    print('next sent: {}, cur sent: {}'.format(valid_data[i][0], valid_data[i][1]))
 #sys.exit(0)
-#train_data = train_data[:1800]
-#valid_data = train_data[:200]
+train_data = train_data[:1800]
+valid_data = valid_data[:200]
 
 # 加载并精简词表，建立分词器
 token_dict, keep_tokens = load_vocab(
