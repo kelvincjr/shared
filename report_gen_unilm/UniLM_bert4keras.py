@@ -23,7 +23,7 @@ from rouge import Rouge
 # 基本参数
 maxlen = 128
 batch_size = 16
-epochs = 1
+epochs = 10
 
 # bert配置
 #config_path = '/opt/kelvin/python/knowledge_graph/baiduee/model/chinese_roberta_wwm_ext_L-12_H-768_A-12/bert_config.json'
@@ -72,6 +72,10 @@ def load_data(filename):
 # 加载数据集
 train_data = load_data('test_data/train_data.csv')
 valid_data = load_data('test_data/dev_data.csv')
+print('===== before deduplicate, train_data len: {}, valid_data len: {}'.format(len(train_data), len(valid_data)))
+train_data = list(set(train_data))
+valid_data = list(set(valid_data))
+print('===== before deduplicate, train_data len: {}, valid_data len: {}'.format(len(train_data), len(valid_data)))
 random.shuffle(train_data)
 random.shuffle(valid_data)
 print('train_data first 10: ')
@@ -164,8 +168,10 @@ autotitle = AutoTitle(start_id=None, end_id=tokenizer._token_end_id, maxlen=64)
 
 
 def just_show():
-    s1 = u'2020年08月09日08点15分'
-    s2 = u'于当天5时43分许行驶至127公里500米处时'
+    #s1 = u'2020年08月09日08点15分'
+    #s2 = u'于当天5时43分许行驶至127公里500米处时'
+    s1 = u'[TIME]在[AL]'
+    s2 = u'[AO]发生一起建筑施工行业高处坠落事故'
     for s in [s1, s2]:
         print(u'预测下一句:', autotitle.generate(s))
     print()
