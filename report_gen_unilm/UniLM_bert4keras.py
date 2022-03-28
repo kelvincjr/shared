@@ -18,7 +18,7 @@ from bert4keras.snippets import sequence_padding, open
 from bert4keras.snippets import DataGenerator, AutoRegressiveDecoder
 from keras.models import Model
 from rouge import Rouge
-#from nltk.translate.bleu_score import sentence_bleu, SmoothingFunction
+from nltk.translate.bleu_score import sentence_bleu, SmoothingFunction
 
 # 基本参数
 maxlen = 128
@@ -206,11 +206,11 @@ class Evaluator(keras.callbacks.Callback):
                 rouge_2 += scores[0]['rouge-2']['f']
                 rouge_l += scores[0]['rouge-l']['f']
                 bleu = 0
-                #bleu += sentence_bleu(
-                    #references=[title.split(' ')],
-                    #hypothesis=pred_title.split(' ') #,
-                    #smoothing_function=self.smooth
-                #)
+                bleu += sentence_bleu(
+                    references=[title.split(' ')],
+                    hypothesis=pred_title.split(' '),
+                    smoothing_function=self.smooth
+                )
         rouge_1 /= total
         rouge_2 /= total
         rouge_l /= total
