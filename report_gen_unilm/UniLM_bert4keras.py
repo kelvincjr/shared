@@ -181,7 +181,7 @@ class Evaluator(keras.callbacks.Callback):
     """
     def __init__(self):
         self.rouge = Rouge()
-        #self.smooth = SmoothingFunction().method1
+        self.smooth = SmoothingFunction().method1
         self.best_bleu = 0.
 
     def on_epoch_end(self, epoch, logs=None):
