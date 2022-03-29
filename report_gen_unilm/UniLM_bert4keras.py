@@ -186,8 +186,11 @@ class Evaluator(keras.callbacks.Callback):
 
     def on_epoch_end(self, epoch, logs=None):
         metrics = self.evaluate(valid_data)  # 评测模型
-        if metrics['bleu'] > self.best_bleu:
-            self.best_bleu = metrics['bleu']
+        #if metrics['bleu'] > self.best_bleu:
+            #self.best_bleu = metrics['bleu']
+        if metrics['rouge-1'] > self.best_bleu:
+            self.best_bleu = metrics['rouge-1']
+            print('===== best_model save done =====')
             model.save_weights('./tmp/best_model.weights')  # 保存模型
         metrics['best_bleu'] = self.best_bleu
         print('valid_data:', metrics)
