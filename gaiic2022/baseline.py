@@ -94,6 +94,8 @@ dev_data_df = pd.DataFrame(datalist[-400:])
 dev_data_df['label'] = dev_data_df['label'].apply(lambda x: str(x))
 print('===== dataframe init done =====')
 
+print('===== label_set =====')
+print(label_set)
 ner_train_dataset = Dataset(train_data_df, categories=label_set)
 print('===== cat2id =====')
 print(ner_train_dataset.cat2id)
