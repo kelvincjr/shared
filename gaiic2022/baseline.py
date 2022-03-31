@@ -94,12 +94,15 @@ dev_data_df = pd.DataFrame(datalist[-400:])
 dev_data_df['label'] = dev_data_df['label'].apply(lambda x: str(x))
 print('===== dataframe init done =====')
 
+#cat2id_set = ['O', '37', '24', '22', '38', '6', '14', '42', '8', '20', '35', '47', '40', '46', '17', '4', '33', '48', '51', '3', '29', '15', '21', '11', '13', '23', '12', '54', '50', '52', '28', '18', '2', '34', '10', '49', '44', '26', '32', '7', '5', '39', '36', '30', '16', '25', '31', '43', '19', '53', '41', '9', '1']
+#label_set = list(set(cat2id_set))
+#label_set.sort(key=cat2id_set.index)
 print('===== label_set =====')
 print(label_set)
 ner_train_dataset = Dataset(train_data_df, categories=label_set)
 print('===== cat2id =====')
 print(ner_train_dataset.cat2id)
-sys.exit(0)
+#sys.exit(0)
 ner_dev_dataset = Dataset(dev_data_df, categories=ner_train_dataset.categories)
 print('===== dataset init done =====')
 
@@ -120,9 +123,8 @@ dl_module = GlobalPointerBert.from_pretrained(model_path, config=config)
 optimizer = get_default_model_optimizer(dl_module)
 model = Task(dl_module, optimizer, 'gpce', cuda_device=0)
 
-'''
 # 设置运行次数
-num_epoches = 5
+num_epoches = 4
 batch_size = 16
 
 print('===== start to train =====')
@@ -134,10 +136,10 @@ model.fit(ner_train_dataset,
          )
 
 torch.save(model.module.state_dict(), './model_save.pth')
-'''
+print('===== model save done =====')
 
-model.module.load_state_dict(torch.load('./model_save/model_save.pth', map_location='cpu'))
-print('===== model load done =====')
+#model.module.load_state_dict(torch.load('./model_save/model_save.pth', map_location='cpu'))
+#print('===== model load done =====')
 
 #predict
 import json
@@ -285,7 +287,7 @@ with open(data_path + 'sample_per_line_preliminary_A.txt', 'r', encoding='utf-8'
         predict_results.append([_line, label])
 
 print('===== start to save result =====')
-with open(data_path + 'gobal_pointer_baseline.txt', 'w', encoding='utf-8') as f:
+with open(data_path + 'submit_result.txt', 'w', encoding='utf-8') as f:
     for _result in predict_results:
         for word, tag in zip(_result[0], _result[1]):
             if word == '\n':
