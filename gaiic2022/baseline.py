@@ -5,8 +5,10 @@ import os
 import jieba
 import torch
 import pickle
+import time
 import torch.nn as nn
 import torch.optim as optim
+from torch.utils.data import DataLoader
 import pandas as pd
 import sys
 #sys.path.insert(0, "../typing_extensions-4.1.1/src")
@@ -25,8 +27,79 @@ from ark_nlp.model.ner.global_pointer_bert import Tokenizer
 import os
 from ark_nlp.factory.utils.conlleval import get_entity_bio
 
+#set_seed(42)
+
 #data_path = '/data/kelvin/python/knowledge_graph/ai_contest/gaiic2022/baseline/baseline/data/'
 data_path = './data/'
+
+class AttackTask(Task):
+    
+    def _on_train_begin(
+        self, 
+        train_data, 
+        validation_data, 
+        batch_size,
+        lr, 
+        params, 
+        shuffle,
+        train_to_device_cols=None,
+        **kwargs
+    ):
+        
+        if self.class_num == None:
+            self.class_num = train_data.class_num  
+        
+        if train_to_device_cols == None:
+            self.train_to_device_cols = train_data.to_device_cols
+        else:
+            self.train_to_device_cols = train_to_device_cols
+
+        train_generator = DataLoader(train_data, batch_size=batch_size, shuffle=True, collate_fn=self._train_collate_fn)
+        self.train_generator_lenth = len(train_generator)
+            
+        self.optimizer = get_optimizer(self.optimizer, self.module, lr, params)
+        self.optimizer.zero_grad()
+        
+        self.module.train()
+        
+        self.fgm = FGM(self.module)
+        
+        self._on_train_begin_record(**kwargs)
+        
+        return train_generator
+    
+    def _on_backward(
+        self, 
+        inputs, 
+        logits, 
+        loss, 
+        gradient_accumulation_steps=1,
+        grad_clip=None,
+        **kwargs
+    ):
+                
+        # 如果GPU数量大于1
+        if self.n_gpu > 1:
+            loss = loss.mean()
+        # 如果使用了梯度累积，除以累积的轮数
+        if gradient_accumulation_steps > 1:
+            loss = loss / gradient_accumulation_steps
+            
+        loss.backward() 
+        
+        self.fgm.attack()
+        logits = self.module(**inputs)
+        attck_loss = self._get_train_loss(inputs, logits, **kwargs)
+        attck_loss.backward()
+        self.fgm.restore() 
+        
+        if grad_clip != None:
+            torch.nn.utils.clip_grad_norm_(self.module.parameters(), grad_clip)
+        
+        self._on_backward_record(**kwargs)
+        
+        return loss
+
 datalist = []
 max_len = 0
 len_count_32 = 0
@@ -86,20 +159,18 @@ print('===== data preprocess done, datalist len: {}, len_count_32: {}, len_count
 
 # 这里随意分割了一下看指标，建议实际使用sklearn分割或者交叉验证
 
-train_data_df = pd.DataFrame(datalist[:-400])
-#train_data_df = pd.DataFrame(datalist[:100])
+#train_data_df = pd.DataFrame(datalist[:-400])
+train_data_df = pd.DataFrame(datalist[:-2000])
 train_data_df['label'] = train_data_df['label'].apply(lambda x: str(x))
 
-dev_data_df = pd.DataFrame(datalist[-400:])
+dev_data_df = pd.DataFrame(datalist[-2000:])
 dev_data_df['label'] = dev_data_df['label'].apply(lambda x: str(x))
 print('===== dataframe init done =====')
 
-#cat2id_set = ['O', '37', '24', '22', '38', '6', '14', '42', '8', '20', '35', '47', '40', '46', '17', '4', '33', '48', '51', '3', '29', '15', '21', '11', '13', '23', '12', '54', '50', '52', '28', '18', '2', '34', '10', '49', '44', '26', '32', '7', '5', '39', '36', '30', '16', '25', '31', '43', '19', '53', '41', '9', '1']
-#label_set = list(set(cat2id_set))
-#label_set.sort(key=cat2id_set.index)
-print('===== label_set =====')
-print(label_set)
-ner_train_dataset = Dataset(train_data_df, categories=label_set)
+label_list = sorted(list(label_set))
+print('===== label_list =====')
+print(label_list)
+ner_train_dataset = Dataset(train_data_df, categories=label_list)
 print('===== cat2id =====')
 print(ner_train_dataset.cat2id)
 #sys.exit(0)
@@ -108,7 +179,8 @@ print('===== dataset init done =====')
 
 #tokenizer = Tokenizer(vocab='hfl/chinese-bert-wwm', max_seq_len=128)
 #model_path = '/opt/kelvin/python/knowledge_graph/ai_contest/gaiic2022/baseline/model/bert_model'
-model_path = 'hfl/chinese-bert-wwm'
+#model_path = 'hfl/chinese-bert-wwm'
+model_path = 'peterchou/nezha-chinese-base'
 tokenizer = Tokenizer(vocab=model_path, max_seq_len=128)
 print('===== tokenizer init done =====')
 
@@ -121,10 +193,138 @@ config = GlobalPointerBertConfig.from_pretrained(model_path, num_labels=len(ner_
 torch.cuda.empty_cache()
 dl_module = GlobalPointerBert.from_pretrained(model_path, config=config)
 optimizer = get_default_model_optimizer(dl_module)
-model = Task(dl_module, optimizer, 'gpce', cuda_device=0)
+
+
+from torch.utils.data import DataLoader
+from ark_nlp.factory.optimizer import get_optimizer
+from ark_nlp.factory.utils.attack import FGM, PGD
+
+
+class AttackTask(Task):
+    
+    def _on_train_begin(
+        self,
+        train_data,
+        validation_data,
+        batch_size,
+        lr,
+        params,
+        shuffle,
+        num_workers=0,
+        train_to_device_cols=None,
+        **kwargs
+    ):
+        print('===== AttackTask =====')
+        if hasattr(train_data, 'id2cat'):
+            self.id2cat = train_data.id2cat
+            self.cat2id = {v_: k_ for k_, v_ in train_data.id2cat.items()}
+
+        # 在初始化时会有class_num参数，若在初始化时不指定，则在训练阶段从训练集获取信息
+        if self.class_num is None:
+            if hasattr(train_data, 'class_num'):
+                self.class_num = train_data.class_num
+            else:
+                warnings.warn("The class_num is None.")
+
+        if train_to_device_cols is None:
+            self.train_to_device_cols = train_data.to_device_cols
+        else:
+            self.train_to_device_cols = train_to_device_cols
+
+        train_generator = DataLoader(
+            train_data,
+            batch_size=batch_size,
+            shuffle=True,
+            num_workers=num_workers,
+            collate_fn=self._train_collate_fn
+        )
+        self.train_generator_lenth = len(train_generator)
+
+        self.optimizer = get_optimizer(self.optimizer, self.module, lr, params)
+        self.optimizer.zero_grad()
+
+        self.module.train()
+        
+        self.fgm = FGM(self.module)
+
+        self._on_train_begin_record(**kwargs)
+
+        return train_generator
+    
+    def _on_backward(
+        self,
+        inputs,
+        outputs,
+        logits,
+        loss,
+        gradient_accumulation_steps=1,
+        **kwargs
+    ):
+
+        # 如果GPU数量大于1
+        if self.n_gpu > 1:
+            loss = loss.mean()
+        # 如果使用了梯度累积，除以累积的轮数
+        if gradient_accumulation_steps > 1:
+            loss = loss / gradient_accumulation_steps
+
+        loss.backward()
+        
+        self.fgm.attack()
+        logits = self.module(**inputs)
+        _, attck_loss = self._get_train_loss(inputs, logits, **kwargs)
+        attck_loss.backward()
+        self.fgm.restore() 
+        
+        self._on_backward_record(loss, **kwargs)
+
+        return loss
+
+    def _on_step_end(
+        self,
+        step,
+        inputs,
+        outputs,
+        loss,
+        verbose=True,
+        show_step=100,
+        **kwargs
+    ):
+
+        if verbose and (step + 1) % show_step == 0:
+            print('[{}/{}],train loss is:{:.6f}'.format(
+                step,
+                self.train_generator_lenth,
+                self.logs['epoch_loss'] / self.logs['epoch_step']))
+
+        self._on_step_end_record(**kwargs)
+
+    def _on_evaluate_end(
+        self,
+        evaluate_save=True,
+        save_module_path=None,
+        **kwargs
+    ):
+
+        if evaluate_save:
+            if save_module_path is None:
+                prefix = './model_save/' + str(self.module.__class__.__name__) + '_'
+                save_module_path = time.strftime(prefix + '%m%d_%H:%M:%S.pth')
+
+            torch.save(self.module.state_dict(), save_module_path)
+
+        self._on_evaluate_end_record()
+
+        if self.ema_decay:
+            self.ema.restore(self.module.parameters())
+
+
+#model = Task(dl_module, optimizer, 'gpce', cuda_device=0)
+#model = AttackTask(dl_module, 'adamw', 'lsce', cuda_device=0, ema_decay=0.995)
+model = AttackTask(dl_module, optimizer, 'gpce', cuda_device=0)
 
 # 设置运行次数
-num_epoches = 4
+num_epoches = 5
 batch_size = 16
 
 print('===== start to train =====')
