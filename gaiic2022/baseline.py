@@ -32,74 +32,6 @@ from ark_nlp.factory.utils.conlleval import get_entity_bio
 #data_path = '/data/kelvin/python/knowledge_graph/ai_contest/gaiic2022/baseline/baseline/data/'
 data_path = './data/'
 
-class AttackTask(Task):
-    
-    def _on_train_begin(
-        self, 
-        train_data, 
-        validation_data, 
-        batch_size,
-        lr, 
-        params, 
-        shuffle,
-        train_to_device_cols=None,
-        **kwargs
-    ):
-        
-        if self.class_num == None:
-            self.class_num = train_data.class_num  
-        
-        if train_to_device_cols == None:
-            self.train_to_device_cols = train_data.to_device_cols
-        else:
-            self.train_to_device_cols = train_to_device_cols
-
-        train_generator = DataLoader(train_data, batch_size=batch_size, shuffle=True, collate_fn=self._train_collate_fn)
-        self.train_generator_lenth = len(train_generator)
-            
-        self.optimizer = get_optimizer(self.optimizer, self.module, lr, params)
-        self.optimizer.zero_grad()
-        
-        self.module.train()
-        
-        self.fgm = FGM(self.module)
-        
-        self._on_train_begin_record(**kwargs)
-        
-        return train_generator
-    
-    def _on_backward(
-        self, 
-        inputs, 
-        logits, 
-        loss, 
-        gradient_accumulation_steps=1,
-        grad_clip=None,
-        **kwargs
-    ):
-                
-        # 如果GPU数量大于1
-        if self.n_gpu > 1:
-            loss = loss.mean()
-        # 如果使用了梯度累积，除以累积的轮数
-        if gradient_accumulation_steps > 1:
-            loss = loss / gradient_accumulation_steps
-            
-        loss.backward() 
-        
-        self.fgm.attack()
-        logits = self.module(**inputs)
-        attck_loss = self._get_train_loss(inputs, logits, **kwargs)
-        attck_loss.backward()
-        self.fgm.restore() 
-        
-        if grad_clip != None:
-            torch.nn.utils.clip_grad_norm_(self.module.parameters(), grad_clip)
-        
-        self._on_backward_record(**kwargs)
-        
-        return loss
-
 datalist = []
 max_len = 0
 len_count_32 = 0
@@ -160,10 +92,10 @@ print('===== data preprocess done, datalist len: {}, len_count_32: {}, len_count
 # 这里随意分割了一下看指标，建议实际使用sklearn分割或者交叉验证
 
 #train_data_df = pd.DataFrame(datalist[:-400])
-train_data_df = pd.DataFrame(datalist[:-2000])
+train_data_df = pd.DataFrame(datalist[:-400])
 train_data_df['label'] = train_data_df['label'].apply(lambda x: str(x))
 
-dev_data_df = pd.DataFrame(datalist[-2000:])
+dev_data_df = pd.DataFrame(datalist[-400:])
 dev_data_df['label'] = dev_data_df['label'].apply(lambda x: str(x))
 print('===== dataframe init done =====')
 
@@ -179,8 +111,8 @@ print('===== dataset init done =====')
 
 #tokenizer = Tokenizer(vocab='hfl/chinese-bert-wwm', max_seq_len=128)
 #model_path = '/opt/kelvin/python/knowledge_graph/ai_contest/gaiic2022/baseline/model/bert_model'
-#model_path = 'hfl/chinese-bert-wwm'
-model_path = 'peterchou/nezha-chinese-base'
+model_path = 'hfl/chinese-bert-wwm'
+#model_path = 'peterchou/nezha-chinese-base'
 tokenizer = Tokenizer(vocab=model_path, max_seq_len=128)
 print('===== tokenizer init done =====')
 
@@ -279,7 +211,7 @@ class AttackTask(Task):
         self._on_backward_record(loss, **kwargs)
 
         return loss
-
+    '''
     def _on_step_end(
         self,
         step,
@@ -298,7 +230,7 @@ class AttackTask(Task):
                 self.logs['epoch_loss'] / self.logs['epoch_step']))
 
         self._on_step_end_record(**kwargs)
-
+    '''
     def _on_evaluate_end(
         self,
         evaluate_save=True,
