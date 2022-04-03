@@ -111,7 +111,8 @@ print('===== dataset init done =====')
 
 #tokenizer = Tokenizer(vocab='hfl/chinese-bert-wwm', max_seq_len=128)
 #model_path = '/opt/kelvin/python/knowledge_graph/ai_contest/gaiic2022/baseline/model/bert_model'
-model_path = 'hfl/chinese-bert-wwm'
+#model_path = 'hfl/chinese-bert-wwm'
+model_path = 'hfl/chinese-macbert-large'
 #model_path = 'peterchou/nezha-chinese-base'
 tokenizer = Tokenizer(vocab=model_path, max_seq_len=128)
 print('===== tokenizer init done =====')
@@ -251,12 +252,12 @@ class AttackTask(Task):
             self.ema.restore(self.module.parameters())
 
 
-#model = Task(dl_module, optimizer, 'gpce', cuda_device=0)
+model = Task(dl_module, optimizer, 'gpce', cuda_device=0)
 #model = AttackTask(dl_module, 'adamw', 'lsce', cuda_device=0, ema_decay=0.995)
-model = AttackTask(dl_module, optimizer, 'gpce', cuda_device=0)
+#model = AttackTask(dl_module, optimizer, 'gpce', cuda_device=0)
 
 # 设置运行次数
-num_epoches = 5
+num_epoches = 10
 batch_size = 16
 
 print('===== start to train =====')
