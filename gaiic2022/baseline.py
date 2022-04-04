@@ -254,9 +254,9 @@ class AttackTask(Task):
             self.ema.restore(self.module.parameters())
 
 
-model = Task(dl_module, optimizer, 'gpce', cuda_device=0)
+#model = Task(dl_module, optimizer, 'gpce', cuda_device=0)
 #model = AttackTask(dl_module, 'adamw', 'lsce', cuda_device=0, ema_decay=0.995)
-#model = AttackTask(dl_module, optimizer, 'gpce', cuda_device=0)
+model = AttackTask(dl_module, optimizer, 'gpce', cuda_device=0)
 
 # 设置运行次数
 num_epoches = 5
