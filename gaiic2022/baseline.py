@@ -17,6 +17,7 @@ import sys
 #sys.path.insert(0, "../transformers-4.17.0/src")
 #sys.path.insert(0, '/data/kelvin/python/knowledge_graph/ai_contest/gaiic2022/baseline/ark-nlp-0.0.7')
 #sys.path.insert(0, '/data/kelvin/python/knowledge_graph/ai_contest/gaiic2022/baseline/ark-nlp-main')
+from ark_nlp.factory.utils.seed import set_seed 
 from ark_nlp.model.ner.global_pointer_bert import GlobalPointerBert
 from ark_nlp.model.ner.global_pointer_bert import GlobalPointerBertConfig
 from ark_nlp.model.ner.global_pointer_bert import Dataset
@@ -27,7 +28,7 @@ from ark_nlp.model.ner.global_pointer_bert import Tokenizer
 import os
 from ark_nlp.factory.utils.conlleval import get_entity_bio
 
-#set_seed(42)
+set_seed(42)
 
 #data_path = '/data/kelvin/python/knowledge_graph/ai_contest/gaiic2022/baseline/baseline/data/'
 data_path = './data/'
@@ -111,8 +112,9 @@ print('===== dataset init done =====')
 
 #tokenizer = Tokenizer(vocab='hfl/chinese-bert-wwm', max_seq_len=128)
 #model_path = '/opt/kelvin/python/knowledge_graph/ai_contest/gaiic2022/baseline/model/bert_model'
-#model_path = 'hfl/chinese-bert-wwm'
-model_path = 'hfl/chinese-macbert-large'
+model_path = 'hfl/chinese-bert-wwm'
+#model_path = 'hfl/chinese-macbert-large'
+#model_path = 'nghuyong/ernie-1.0'
 #model_path = 'peterchou/nezha-chinese-base'
 tokenizer = Tokenizer(vocab=model_path, max_seq_len=128)
 print('===== tokenizer init done =====')
