@@ -112,7 +112,7 @@ print('===== dataset init done =====')
 
 #tokenizer = Tokenizer(vocab='hfl/chinese-bert-wwm', max_seq_len=128)
 #model_path = '/opt/kelvin/python/knowledge_graph/ai_contest/gaiic2022/baseline/model/bert_model'
-model_path = 'hfl/chinese-bert-wwm'
+#model_path = 'hfl/chinese-bert-wwm'
 #model_path = 'hfl/chinese-macbert-large'
 #model_path = 'nghuyong/ernie-1.0'
 #model_path = 'peterchou/nezha-chinese-base'
