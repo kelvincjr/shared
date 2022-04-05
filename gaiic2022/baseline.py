@@ -116,6 +116,7 @@ model_path = 'hfl/chinese-bert-wwm'
 #model_path = 'hfl/chinese-macbert-large'
 #model_path = 'nghuyong/ernie-1.0'
 #model_path = 'peterchou/nezha-chinese-base'
+model_path = 'junnyu/uer_large'
 tokenizer = Tokenizer(vocab=model_path, max_seq_len=128)
 print('===== tokenizer init done =====')
 
