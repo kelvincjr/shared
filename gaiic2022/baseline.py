@@ -16,7 +16,7 @@ import sys
 #sys.path.insert(0, "../tokenizers-0.11.1/py_src/")
 #sys.path.insert(0, "../transformers-4.17.0/src")
 #sys.path.insert(0, '/data/kelvin/python/knowledge_graph/ai_contest/gaiic2022/baseline/ark-nlp-0.0.7')
-sys.path.insert(0, '/data/kelvin/python/knowledge_graph/ai_contest/gaiic2022/baseline/ark-nlp-main')
+#sys.path.insert(0, '/data/kelvin/python/knowledge_graph/ai_contest/gaiic2022/baseline/ark-nlp-main')
 from ark_nlp.factory.utils.seed import set_seed 
 from ark_nlp.model.ner.global_pointer_bert import GlobalPointerBert
 from ark_nlp.model.ner.global_pointer_bert import GlobalPointerBertConfig
@@ -30,8 +30,8 @@ from ark_nlp.factory.utils.conlleval import get_entity_bio
 
 set_seed(42)
 
-data_path = '/data/kelvin/python/knowledge_graph/ai_contest/gaiic2022/baseline/baseline/data/'
-#data_path = './data/'
+#data_path = '/data/kelvin/python/knowledge_graph/ai_contest/gaiic2022/baseline/baseline/data/'
+data_path = './data/'
 
 datalist = []
 max_len = 0
