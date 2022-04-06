@@ -111,7 +111,7 @@ ner_dev_dataset = Dataset(dev_data_df, categories=ner_train_dataset.categories)
 print('===== dataset init done =====')
 
 #tokenizer = Tokenizer(vocab='hfl/chinese-bert-wwm', max_seq_len=128)
-#model_path = '../../model/bert'
+#model_path = '../../model/jd_bert'
 #model_path = '../bert-base/'
 model_path = './bert-base/'
 #model_path = 'hfl/chinese-bert-wwm'
@@ -262,8 +262,8 @@ class AttackTask(Task):
 model = AttackTask(dl_module, optimizer, 'gpce', cuda_device=0)
 
 # 设置运行次数
-num_epoches = 1
-batch_size = 8 #16
+num_epoches = 5
+batch_size = 16 #16
 
 print('===== start to train =====')
 model.fit(ner_train_dataset, 
