@@ -263,7 +263,7 @@ model = AttackTask(dl_module, optimizer, 'gpce', cuda_device=0)
 
 # 设置运行次数
 num_epoches = 5
-batch_size = 16
+batch_size = 8 #16
 
 print('===== start to train =====')
 model.fit(ner_train_dataset, 
