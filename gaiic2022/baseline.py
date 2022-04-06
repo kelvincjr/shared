@@ -92,8 +92,8 @@ print('===== data preprocess done, datalist len: {}, len_count_32: {}, len_count
 
 # 这里随意分割了一下看指标，建议实际使用sklearn分割或者交叉验证
 
-train_data_df = pd.DataFrame(datalist[:100])
-#train_data_df = pd.DataFrame(datalist[:-400])
+#train_data_df = pd.DataFrame(datalist[:100])
+train_data_df = pd.DataFrame(datalist[:-400])
 train_data_df['label'] = train_data_df['label'].apply(lambda x: str(x))
 
 dev_data_df = pd.DataFrame(datalist[-400:])
