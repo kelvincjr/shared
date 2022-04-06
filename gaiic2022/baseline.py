@@ -92,8 +92,8 @@ print('===== data preprocess done, datalist len: {}, len_count_32: {}, len_count
 
 # 这里随意分割了一下看指标，建议实际使用sklearn分割或者交叉验证
 
-#train_data_df = pd.DataFrame(datalist[:100])
-train_data_df = pd.DataFrame(datalist[:-400])
+train_data_df = pd.DataFrame(datalist[:100])
+#train_data_df = pd.DataFrame(datalist[:-400])
 train_data_df['label'] = train_data_df['label'].apply(lambda x: str(x))
 
 dev_data_df = pd.DataFrame(datalist[-400:])
@@ -111,13 +111,14 @@ ner_dev_dataset = Dataset(dev_data_df, categories=ner_train_dataset.categories)
 print('===== dataset init done =====')
 
 #tokenizer = Tokenizer(vocab='hfl/chinese-bert-wwm', max_seq_len=128)
-#model_path = '/opt/kelvin/python/knowledge_graph/ai_contest/gaiic2022/baseline/model/bert_model'
-#model_path = '../bert-large/'
+#model_path = '../../model/bert'
+#model_path = '../bert-base/'
+model_path = './bert-base/'
 #model_path = 'hfl/chinese-bert-wwm'
 #model_path = 'hfl/chinese-macbert-large'
 #model_path = 'nghuyong/ernie-1.0'
 #model_path = 'peterchou/nezha-chinese-base'
-model_path = 'uer/chinese_roberta_L-12_H-768'
+#model_path = 'uer/chinese_roberta_L-12_H-768'
 tokenizer = Tokenizer(vocab=model_path, max_seq_len=128)
 print('===== tokenizer init done =====')
 
