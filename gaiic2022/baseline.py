@@ -262,7 +262,7 @@ class AttackTask(Task):
 model = AttackTask(dl_module, optimizer, 'gpce', cuda_device=0)
 
 # 设置运行次数
-num_epoches = 5
+num_epoches = 1
 batch_size = 8 #16
 
 print('===== start to train =====')
