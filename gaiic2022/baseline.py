@@ -96,6 +96,7 @@ print('===== data preprocess done, datalist len: {}, len_count_32: {}, len_count
 train_data_df = pd.DataFrame(datalist[:-400])
 train_data_df['label'] = train_data_df['label'].apply(lambda x: str(x))
 
+#dev_data_df = pd.DataFrame(datalist[-100:])
 dev_data_df = pd.DataFrame(datalist[-400:])
 dev_data_df['label'] = dev_data_df['label'].apply(lambda x: str(x))
 print('===== dataframe init done =====')
@@ -113,12 +114,13 @@ print('===== dataset init done =====')
 #tokenizer = Tokenizer(vocab='hfl/chinese-bert-wwm', max_seq_len=128)
 #model_path = '../../model/jd_bert'
 #model_path = '../bert-base/'
-model_path = './bert-base/'
+#model_path = './bert-base/'
 #model_path = 'hfl/chinese-bert-wwm'
 #model_path = 'hfl/chinese-macbert-large'
 #model_path = 'nghuyong/ernie-1.0'
 #model_path = 'peterchou/nezha-chinese-base'
 #model_path = 'uer/chinese_roberta_L-12_H-768'
+model_path = 'hfl/chinese-roberta-wwm-ext'
 tokenizer = Tokenizer(vocab=model_path, max_seq_len=128)
 print('===== tokenizer init done =====')
 
@@ -183,7 +185,8 @@ class AttackTask(Task):
 
         self.module.train()
         
-        self.fgm = FGM(self.module)
+        self.fgm = PGD(self.module)
+        #self.fgm = FGM(self.module)
 
         self._on_train_begin_record(**kwargs)
 
