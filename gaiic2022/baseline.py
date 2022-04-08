@@ -118,9 +118,10 @@ print('===== dataset init done =====')
 #model_path = 'hfl/chinese-bert-wwm'
 #model_path = 'hfl/chinese-macbert-large'
 #model_path = 'nghuyong/ernie-1.0'
+model_path = 'junnyu/uer_large'
 #model_path = 'peterchou/nezha-chinese-base'
 #model_path = 'uer/chinese_roberta_L-12_H-768'
-model_path = 'hfl/chinese-roberta-wwm-ext'
+#model_path = 'hfl/chinese-roberta-wwm-ext'
 tokenizer = Tokenizer(vocab=model_path, max_seq_len=128)
 print('===== tokenizer init done =====')
 
@@ -185,8 +186,8 @@ class AttackTask(Task):
 
         self.module.train()
         
-        self.fgm = PGD(self.module)
-        #self.fgm = FGM(self.module)
+        #self.fgm = PGD(self.module)
+        self.fgm = FGM(self.module)
 
         self._on_train_begin_record(**kwargs)
 
@@ -266,7 +267,7 @@ model = AttackTask(dl_module, optimizer, 'gpce', cuda_device=0)
 
 # 设置运行次数
 num_epoches = 5
-batch_size = 16 #16
+batch_size = 8 #16
 
 print('===== start to train =====')
 model.fit(ner_train_dataset, 
