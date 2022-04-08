@@ -11,11 +11,6 @@ import torch.optim as optim
 from torch.utils.data import DataLoader
 import pandas as pd
 import sys
-#sys.path.insert(0, "../typing_extensions-4.1.1/src")
-#sys.path.insert(0, "../huggingface_hub-0.2.0/src")
-#sys.path.insert(0, "../tokenizers-0.11.1/py_src/")
-#sys.path.insert(0, "../transformers-4.17.0/src")
-#sys.path.insert(0, '/data/kelvin/python/knowledge_graph/ai_contest/gaiic2022/baseline/ark-nlp-0.0.7')
 #sys.path.insert(0, '/data/kelvin/python/knowledge_graph/ai_contest/gaiic2022/baseline/ark-nlp-main')
 from ark_nlp.factory.utils.seed import set_seed 
 from ark_nlp.model.ner.global_pointer_bert import GlobalPointerBert
@@ -32,6 +27,15 @@ set_seed(42)
 
 #data_path = '/data/kelvin/python/knowledge_graph/ai_contest/gaiic2022/baseline/baseline/data/'
 data_path = './data/'
+
+#from NEZHA.modeling_nezha import NeZhaModel
+#from NEZHA.configuration_nezha import NeZhaConfig
+
+#from ark_nlp.nn.base.nezha import NeZhaModel
+#from ark_nlp.nn.configuration.configuration_nezha import NeZhaConfig
+
+#nezha_bert = NeZhaModel.from_pretrained('peterchou/nezha-chinese-base')
+#sys.exit(0)
 
 datalist = []
 max_len = 0
@@ -267,7 +271,7 @@ model = AttackTask(dl_module, optimizer, 'gpce', cuda_device=0)
 
 # 设置运行次数
 num_epoches = 5
-batch_size = 8 #16
+batch_size = 4 #16
 
 print('===== start to train =====')
 model.fit(ner_train_dataset, 
