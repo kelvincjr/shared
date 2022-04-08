@@ -12,6 +12,7 @@ from torch.utils.data import DataLoader
 import pandas as pd
 import sys
 #sys.path.insert(0, '/data/kelvin/python/knowledge_graph/ai_contest/gaiic2022/baseline/ark-nlp-main')
+sys.path.insert(0, './ark-nlp-main')
 from ark_nlp.factory.utils.seed import set_seed 
 from ark_nlp.model.ner.global_pointer_bert import GlobalPointerBert
 from ark_nlp.model.ner.global_pointer_bert import GlobalPointerBertConfig
@@ -122,8 +123,8 @@ print('===== dataset init done =====')
 #model_path = 'hfl/chinese-bert-wwm'
 #model_path = 'hfl/chinese-macbert-large'
 #model_path = 'nghuyong/ernie-1.0'
-model_path = 'junnyu/uer_large'
-#model_path = 'peterchou/nezha-chinese-base'
+#model_path = 'junnyu/uer_large'
+model_path = 'peterchou/nezha-chinese-base'
 #model_path = 'uer/chinese_roberta_L-12_H-768'
 #model_path = 'hfl/chinese-roberta-wwm-ext'
 tokenizer = Tokenizer(vocab=model_path, max_seq_len=128)
@@ -142,8 +143,12 @@ optimizer = get_default_model_optimizer(dl_module)
 
 from torch.utils.data import DataLoader
 from ark_nlp.factory.optimizer import get_optimizer
+from ark_nlp.factory.lr_scheduler import get_default_linear_schedule_with_warmup
 from ark_nlp.factory.utils.attack import FGM, PGD
 
+# 设置运行次数
+num_epoches = 5
+batch_size = 16 #16
 
 class AttackTask(Task):
     
@@ -188,6 +193,8 @@ class AttackTask(Task):
         self.optimizer = get_optimizer(self.optimizer, self.module, lr, params)
         self.optimizer.zero_grad()
 
+        self.scheduler = get_default_linear_schedule_with_warmup(self.optimizer, num_epoches * self.train_generator_lenth)
+
         self.module.train()
         
         #self.fgm = PGD(self.module)
@@ -221,6 +228,10 @@ class AttackTask(Task):
         _, attck_loss = self._get_train_loss(inputs, logits, **kwargs)
         attck_loss.backward()
         self.fgm.restore() 
+
+        self.optimizer.step()
+        self.scheduler.step()
+        self.optimizer.zero_grad()
         
         self._on_backward_record(loss, **kwargs)
 
@@ -268,10 +279,6 @@ class AttackTask(Task):
 #model = Task(dl_module, optimizer, 'gpce', cuda_device=0)
 #model = AttackTask(dl_module, 'adamw', 'lsce', cuda_device=0, ema_decay=0.995)
 model = AttackTask(dl_module, optimizer, 'gpce', cuda_device=0)
-
-# 设置运行次数
-num_epoches = 5
-batch_size = 4 #16
 
 print('===== start to train =====')
 model.fit(ner_train_dataset, 
