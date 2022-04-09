@@ -27,9 +27,9 @@ class GlobalPointerBert(BertForTokenClassification):
 
         self.num_labels = config.num_labels
 
-        self.bert = BertModel(config)
-        #print('===== NeZhaModel =====')
-        #self.bert = NeZhaModel(config)
+        #self.bert = BertModel(config)
+        print('===== NeZhaModel =====')
+        self.bert = NeZhaModel(config)
 
         for param in self.bert.parameters():
             param.requires_grad = encoder_trained
@@ -49,7 +49,7 @@ class GlobalPointerBert(BertForTokenClassification):
         token_type_ids=None,
         **kwargs
     ):
-        
+        '''
         outputs = self.bert(
             input_ids,
             attention_mask=attention_mask,
@@ -66,8 +66,8 @@ class GlobalPointerBert(BertForTokenClassification):
             attention_mask=attention_mask,
             token_type_ids=token_type_ids
         )
+
         sequence_output = outputs[0]
-        '''
 
         logits = self.global_pointer(sequence_output, mask=attention_mask)
 
