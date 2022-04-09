@@ -295,6 +295,19 @@ def build_model(model_path, tokenizer, ner_train_dataset, ner_dev_dataset, num_e
             # 清空梯度
             self.optimizer.zero_grad()
 
+            self._on_optimize_record(inputs, outputs, logits, loss, **kwargs)
+
+        def _on_optimize_record(
+            self,
+            inputs,
+            outputs,
+            logits,
+            loss,
+            **kwargs
+        ):
+            self.logs['global_step'] += 1
+            self.logs['epoch_step'] += 1
+
         def _on_evaluate_end(
             self,
             evaluate_save=True,
