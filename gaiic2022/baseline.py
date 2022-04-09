@@ -60,6 +60,7 @@ def get_argparse():
     parser.add_argument("--weight_decay", default=0.01, type=float, help="Weight decay if we apply some.")
     parser.add_argument("--adam_epsilon", default=1e-8, type=float, help="Epsilon for Adam optimizer.")
     parser.add_argument("--seed", type=int, default=42, help="random seed for initialization")
+    parser.add_argument("--eval_size", type=int, default=400, help="eval set size")
     parser.add_argument("--output_dir", default="./model_save", type=str, help="保存模型的路径")
     
     return parser
@@ -123,13 +124,13 @@ def get_raw_data():
     print('===== data preprocess done, datalist len: {}, len_count_32: {}, len_count_64: {}, max_len: {} ====='.format(len(datalist), len_count_32, len_count_64, max_len))
     return datalist, label_set
 
-def prepare_dataset(datalist, label_set):
+def prepare_dataset(datalist, label_set, eval_size):
     #train_data_df = pd.DataFrame(datalist[:100])
-    train_data_df = pd.DataFrame(datalist[:-2000])
+    train_data_df = pd.DataFrame(datalist[:-eval_size])
     train_data_df['label'] = train_data_df['label'].apply(lambda x: str(x))
 
     #dev_data_df = pd.DataFrame(datalist[-100:])
-    dev_data_df = pd.DataFrame(datalist[-2000:])
+    dev_data_df = pd.DataFrame(datalist[-eval_size:])
     dev_data_df['label'] = dev_data_df['label'].apply(lambda x: str(x))
     print('===== dataframe init done =====')
 
@@ -506,7 +507,7 @@ if __name__ == "__main__":
     args = get_argparse().parse_args()
     print(json.dumps(vars(args), sort_keys=True, indent=4, separators=(', ', ': '), ensure_ascii=False))
     datalist, label_set = get_raw_data()
-    ner_train_dataset, ner_dev_dataset = prepare_dataset(datalist, label_set)
+    ner_train_dataset, ner_dev_dataset = prepare_dataset(datalist, label_set, args.eval_size)
 
     num_epoches = args.num_train_epochs
     batch_size = args.per_gpu_train_batch_size
