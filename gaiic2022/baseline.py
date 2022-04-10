@@ -53,7 +53,7 @@ def get_argparse():
 
     # 训练的参数
     parser.add_argument("--model_name_or_path", default="hfl/chinese-bert-wwm", type=str, help="预训练模型的路径")
-    parser.add_argument("--num_train_epochs", default=5, type=float, help="训练轮数")
+    parser.add_argument("--num_train_epochs", default=5, type=int, help="训练轮数")
     parser.add_argument("--early_stop", default=8, type=int, help="早停")
     parser.add_argument("--learning_rate", default=1e-5, type=float, help="transformer层学习率")
     parser.add_argument("--linear_learning_rate", default=1e-3, type=float, help="linear层学习率")
