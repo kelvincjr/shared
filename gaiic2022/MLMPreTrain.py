@@ -140,7 +140,7 @@ if __name__ == "__main__":
                     max_len = len(arr)
     print('size of training_texts: {}, max_len: {}, len_512_count: {}'.format(len(training_texts), max_len, len_512_count))
     config = MLMConfig()
-    config.trainingConfig(max_len=max_len, batch_size=16, epoch=5, learning_rate=2e-5, weight_decay=0, device=device)
+    config.trainingConfig(max_len=max_len, batch_size=16, epoch=1, learning_rate=2e-5, weight_decay=0, device=device)
     config.ioConfig('hfl/chinese-bert-wwm', './model_save/FinetuneEmbeddingModel')
     tokenizer = BertTokenizer.from_pretrained(config.from_path)
     train_dataset = MLMDataset(training_texts, tokenizer, config)
