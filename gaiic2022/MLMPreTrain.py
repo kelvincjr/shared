@@ -113,12 +113,15 @@ def train(model, config, dataloader):
             model.zero_grad()
             batch_loss = loss.item()
             training_loss += batch_loss
+            if ids%10 == 0:
+                break
             if ids%1000 == 0:
                 print('batch training loss: ', batch_loss)
         print("Epoch Training loss: ", training_loss)
 
     print('===== start to save mlm model =====')
-    torch.save(model.module.state_dict(), './model_save/pretrained_model.bin')
+    #torch.save(model.module.state_dict(), './model_save/pretrained_model.bin')
+    model.save_pretrained('./model_save/pretrained_model')
     print('===== mlm model save done =====')
 
     return 0
@@ -150,6 +153,7 @@ if __name__ == "__main__":
     train_dataset = MLMDataset(training_texts, tokenizer, config)
     train_dataloader = DataLoader(train_dataset, batch_size=config.batch_size,  shuffle=True, num_workers=0)
 
+    #bert_model = BertForMaskedLM.from_pretrained('./model_save/pretrained_model')
     bert_model = BertForMaskedLM.from_pretrained(config.from_path)
     bert_model.to(device)
     train(bert_model, config, train_dataloader)
