@@ -113,8 +113,6 @@ def train(model, config, dataloader):
             model.zero_grad()
             batch_loss = loss.item()
             training_loss += batch_loss
-            if ids%10 == 0:
-                break
             if ids%1000 == 0:
                 print('batch training loss: ', batch_loss)
         print("Epoch Training loss: ", training_loss)
