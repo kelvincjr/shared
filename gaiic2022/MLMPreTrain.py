@@ -117,6 +117,10 @@ def train(model, config, dataloader):
                 print('batch training loss: ', batch_loss)
         print("Epoch Training loss: ", training_loss)
 
+    print('===== start to save mlm model =====')
+    torch.save(model.module.state_dict(), './model_save/pretrained_model.bin')
+    print('===== mlm model save done =====')
+
     return 0
 
 
