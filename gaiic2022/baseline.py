@@ -63,6 +63,9 @@ def get_argparse():
     parser.add_argument("--eval_size", type=int, default=400, help="eval set size")
     parser.add_argument("--output_dir", default="./model_save", type=str, help="保存模型的路径")
     
+    # 模式
+    parser.add_argument("--mode", default="train", type=str, help="模型训练模式")
+    
     return parser
 
 def get_raw_data():
@@ -346,8 +349,8 @@ def train(model, ner_train_dataset, ner_dev_dataset, num_epoches, batch_size):
     torch.save(model.module.state_dict(), './model_save.pth')
     print('===== model save done =====')
 
-def load_model(model):
-    model.module.load_state_dict(torch.load('./model_save/model_save.pth', map_location='cpu'))
+def load_model(model, model_path):
+    model.module.load_state_dict(torch.load(model_path, map_location='cpu'))
     print('===== model load done =====')
     return model
 
@@ -515,6 +518,9 @@ if __name__ == "__main__":
     tk_model_path = 'hfl/chinese-bert-wwm'
     tokenizer = convert_to_ids(tk_model_path, ner_train_dataset, ner_dev_dataset)
     model = build_model(model_path, tokenizer, ner_train_dataset, ner_dev_dataset, num_epoches, batch_size)
-    train(model, ner_train_dataset, ner_dev_dataset, num_epoches, batch_size)
-
+    if args.mode == 'train':
+        train(model, ner_train_dataset, ner_dev_dataset, num_epoches, batch_size)
+    elif args.mode == 'test':
+        model = load_model(model, './model_save/best_model.pth')
+        
     predict(model, tokenizer, ner_train_dataset, ner_dev_dataset)
