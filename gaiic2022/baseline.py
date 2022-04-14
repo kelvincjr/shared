@@ -228,8 +228,8 @@ def build_model(model_path, tokenizer, ner_train_dataset, ner_dev_dataset, num_e
 
             self.module.train()
             
-            #self.fgm = PGD(self.module)
-            self.fgm = FGM(self.module)
+            self.fgm = PGD(self.module)
+            #self.fgm = FGM(self.module)
 
             self._on_train_begin_record(**kwargs)
 
