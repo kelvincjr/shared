@@ -499,11 +499,17 @@ def predict(model, tokenizer, ner_train_dataset, ner_dev_dataset):
                 sample_entity_count += 1
                 sample_score += _preditc['score']
 
-            sample_score = (sample_score / sample_entity_count)
+            if sample_entity_count > 0:
+                sample_score = (sample_score / sample_entity_count)
             predict_results.append([_line, label, sample_score])
 
     sorted_result = sorted(predict_results.items(), reverse=True, key=lambda values: values[2])
-    for _result in sorted_result[:100]:
+    print('===== head 50 records =====')
+    for _result in sorted_result[:50]:
+        print('score: {}, line: {}'.format(_result[2], _result[0]))
+
+    print('===== tail 50 records =====')
+    for _result in sorted_result[-50:]:
         print('score: {}, line: {}'.format(_result[2], _result[0]))
 
     print('===== start to save result =====')
