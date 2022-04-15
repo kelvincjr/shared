@@ -13,8 +13,8 @@ import pandas as pd
 import json
 import numpy as np
 import sys
-#sys.path.insert(0, '/data/kelvin/python/knowledge_graph/ai_contest/gaiic2022/baseline/ark-nlp-main')
-sys.path.insert(0, './ark-nlp-main')
+sys.path.insert(0, '/data/kelvin/python/knowledge_graph/ai_contest/gaiic2022/baseline/ark-nlp-main')
+#sys.path.insert(0, './ark-nlp-main')
 from ark_nlp.factory.utils.seed import set_seed 
 from ark_nlp.model.ner.global_pointer_bert import GlobalPointerBert
 from ark_nlp.model.ner.global_pointer_bert import GlobalPointerBertConfig
@@ -30,8 +30,8 @@ from ark_nlp.factory.utils.conlleval import get_entity_bio
 
 set_seed(42)
 
-#data_path = '/data/kelvin/python/knowledge_graph/ai_contest/gaiic2022/baseline/baseline/data/'
-data_path = './data/'
+data_path = '/data/kelvin/python/knowledge_graph/ai_contest/gaiic2022/baseline/baseline/data/'
+#data_path = './data/'
 
 #from NEZHA.modeling_nezha import NeZhaModel
 #from NEZHA.configuration_nezha import NeZhaConfig
@@ -128,12 +128,12 @@ def get_raw_data():
     return datalist, label_set
 
 def prepare_dataset(datalist, label_set, eval_size):
-    #train_data_df = pd.DataFrame(datalist[:100])
-    train_data_df = pd.DataFrame(datalist[:-eval_size])
+    train_data_df = pd.DataFrame(datalist[:100])
+    #train_data_df = pd.DataFrame(datalist[:-eval_size])
     train_data_df['label'] = train_data_df['label'].apply(lambda x: str(x))
 
-    #dev_data_df = pd.DataFrame(datalist[-100:])
-    dev_data_df = pd.DataFrame(datalist[-eval_size:])
+    dev_data_df = pd.DataFrame(datalist[-100:])
+    #dev_data_df = pd.DataFrame(datalist[-eval_size:])
     dev_data_df['label'] = dev_data_df['label'].apply(lambda x: str(x))
     print('===== dataframe init done =====')
 
@@ -503,7 +503,7 @@ def predict(model, tokenizer, ner_train_dataset, ner_dev_dataset):
                 sample_score = (sample_score / sample_entity_count)
             predict_results.append([_line, label, sample_score])
 
-    sorted_result = sorted(predict_results.items(), reverse=True, key=lambda values: values[2])
+    sorted_result = sorted(predict_results, reverse=True, key=lambda values: values[2])
     print('===== head 50 records =====')
     for _result in sorted_result[:50]:
         print('score: {}, line: {}'.format(_result[2], _result[0]))
