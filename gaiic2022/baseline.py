@@ -95,7 +95,7 @@ def get_raw_data():
                     
                 if text == '':
                     continue
-                
+
                 datalist.append({
                     'text': text,
                     'label': entity_labels
@@ -228,8 +228,8 @@ def build_model(model_path, tokenizer, ner_train_dataset, ner_dev_dataset, num_e
 
             self.module.train()
             
-            self.fgm = PGD(self.module)
-            #self.fgm = FGM(self.module)
+            #self.fgm = PGD(self.module)
+            self.fgm = FGM(self.module)
 
             self._on_train_begin_record(**kwargs)
 
@@ -461,7 +461,8 @@ def predict(model, tokenizer, ner_train_dataset, ner_dev_dataset):
                         "start_idx": token_mapping[start-1][0],
                         "end_idx": token_mapping[end-1][-1],
                         "entity": text[token_mapping[start-1][0]: token_mapping[end-1][-1]+1],
-                        "type": self.id2cat[category]
+                        "type": self.id2cat[category],
+                        "score": scores[category][start][end]
                     }
 
                     if entitie_['entity'] == '':
@@ -482,6 +483,8 @@ def predict(model, tokenizer, ner_train_dataset, ner_dev_dataset):
         lines = f.readlines()
         for _line in tqdm(lines):
             label = len(_line) * ['O']
+            sample_score = 0.0
+            sample_entity_count = 0
             for _preditc in ner_predictor_instance.predict_one_sample(_line[:-1]):
                 if 'I' in label[_preditc['start_idx']]:
                     continue
@@ -493,7 +496,15 @@ def predict(model, tokenizer, ner_train_dataset, ner_dev_dataset):
                 label[_preditc['start_idx']] = 'B-' +  _preditc['type']
                 label[_preditc['start_idx']+1: _preditc['end_idx']+1] = (_preditc['end_idx'] - _preditc['start_idx']) * [('I-' +  _preditc['type'])]
                 
-            predict_results.append([_line, label])
+                sample_entity_count += 1
+                sample_score += _preditc['score']
+
+            sample_score = (sample_score / sample_entity_count)
+            predict_results.append([_line, label, sample_score])
+
+    sorted_result = sorted(predict_results.items(), reverse=True, key=lambda values: values[2])
+    for _result in sorted_result[:100]:
+        print('score: {}, line: {}'.format(_result[2], _result[0]))
 
     print('===== start to save result =====')
     with open(data_path + 'submit_result.txt', 'w', encoding='utf-8') as f:
