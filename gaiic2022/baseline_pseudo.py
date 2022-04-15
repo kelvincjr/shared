@@ -523,7 +523,7 @@ def predict(model, tokenizer, ner_train_dataset, ner_dev_dataset):
             f.write('\n')
     '''
     with open(data_path + 'submit_result_pseudo.txt', 'w', encoding='utf-8') as f:
-        for _result in sorted_result[:20000]:
+        for _result in sorted_result[:100000]:
             for word, tag in zip(_result[0], _result[1]):
                 if word == '\n':
                     continue
