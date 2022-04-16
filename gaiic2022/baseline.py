@@ -512,7 +512,7 @@ if __name__ == "__main__":
     print(json.dumps(vars(args), sort_keys=True, indent=4, separators=(', ', ': '), ensure_ascii=False))
     if args.pseudo_mode == 'yes':
         datalist, pseudo_label_set = get_raw_data('train_pseudo.txt')
-        datalist = datalist[:20000]
+        #datalist = datalist[:20000]
         raw_datalist, label_set = get_raw_data('train.txt')
         datalist.extend(raw_datalist)
     else:
