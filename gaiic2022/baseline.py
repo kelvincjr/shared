@@ -65,15 +65,16 @@ def get_argparse():
     
     # 模式
     parser.add_argument("--mode", default="train", type=str, help="模型训练模式")
+    parser.add_argument("--pseudo_mode", default="no", type=str, help="伪标签模式")
     
     return parser
 
-def get_raw_data():
+def get_raw_data(filename):
     datalist = []
     max_len = 0
     len_count_32 = 0
     len_count_64 = 0
-    with open(data_path + 'train.txt', 'r', encoding='utf-8') as f:
+    with open(data_path + filename, 'r', encoding='utf-8') as f:
         lines = f.readlines()
         lines.append('\n')
         
@@ -95,7 +96,7 @@ def get_raw_data():
                     
                 if text == '':
                     continue
-
+                
                 datalist.append({
                     'text': text,
                     'label': entity_labels
@@ -461,8 +462,7 @@ def predict(model, tokenizer, ner_train_dataset, ner_dev_dataset):
                         "start_idx": token_mapping[start-1][0],
                         "end_idx": token_mapping[end-1][-1],
                         "entity": text[token_mapping[start-1][0]: token_mapping[end-1][-1]+1],
-                        "type": self.id2cat[category],
-                        "score": scores[category][start][end]
+                        "type": self.id2cat[category]
                     }
 
                     if entitie_['entity'] == '':
@@ -483,8 +483,6 @@ def predict(model, tokenizer, ner_train_dataset, ner_dev_dataset):
         lines = f.readlines()
         for _line in tqdm(lines):
             label = len(_line) * ['O']
-            sample_score = 0.0
-            sample_entity_count = 0
             for _preditc in ner_predictor_instance.predict_one_sample(_line[:-1]):
                 if 'I' in label[_preditc['start_idx']]:
                     continue
@@ -496,21 +494,7 @@ def predict(model, tokenizer, ner_train_dataset, ner_dev_dataset):
                 label[_preditc['start_idx']] = 'B-' +  _preditc['type']
                 label[_preditc['start_idx']+1: _preditc['end_idx']+1] = (_preditc['end_idx'] - _preditc['start_idx']) * [('I-' +  _preditc['type'])]
                 
-                sample_entity_count += 1
-                sample_score += _preditc['score']
-
-            if sample_entity_count > 0:
-                sample_score = (sample_score / sample_entity_count)
-            predict_results.append([_line, label, sample_score])
-
-    sorted_result = sorted(predict_results, reverse=True, key=lambda values: values[2])
-    print('===== head 50 records =====')
-    for _result in sorted_result[:50]:
-        print('score: {}, line: {}'.format(_result[2], _result[0]))
-
-    print('===== tail 50 records =====')
-    for _result in sorted_result[-50:]:
-        print('score: {}, line: {}'.format(_result[2], _result[0]))
+            predict_results.append([_line, label])
 
     print('===== start to save result =====')
     with open(data_path + 'submit_result.txt', 'w', encoding='utf-8') as f:
@@ -526,7 +510,13 @@ def predict(model, tokenizer, ner_train_dataset, ner_dev_dataset):
 if __name__ == "__main__":
     args = get_argparse().parse_args()
     print(json.dumps(vars(args), sort_keys=True, indent=4, separators=(', ', ': '), ensure_ascii=False))
-    datalist, label_set = get_raw_data()
+    if args.pseudo_mode == 'yes':
+        datalist, pseudo_label_set = get_raw_data('train_pseudo.txt')
+        datalist = datalist[:20000]
+        raw_datalist, label_set = get_raw_data('train.txt')
+        datalist.extend(raw_datalist)
+    else:
+        datalist, label_set = get_raw_data('train.txt')
     ner_train_dataset, ner_dev_dataset = prepare_dataset(datalist, label_set, args.eval_size)
 
     num_epoches = args.num_train_epochs

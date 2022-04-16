@@ -65,15 +65,16 @@ def get_argparse():
     
     # 模式
     parser.add_argument("--mode", default="train", type=str, help="模型训练模式")
+    parser.add_argument("--pseudo_mode", default="no", type=str, help="伪标签模式")
     
     return parser
 
-def get_raw_data():
+def get_raw_data(filename):
     datalist = []
     max_len = 0
     len_count_32 = 0
     len_count_64 = 0
-    with open(data_path + 'train.txt', 'r', encoding='utf-8') as f:
+    with open(data_path + filename, 'r', encoding='utf-8') as f:
         lines = f.readlines()
         lines.append('\n')
         
@@ -535,7 +536,13 @@ def predict(model, tokenizer, ner_train_dataset, ner_dev_dataset):
 if __name__ == "__main__":
     args = get_argparse().parse_args()
     print(json.dumps(vars(args), sort_keys=True, indent=4, separators=(', ', ': '), ensure_ascii=False))
-    datalist, label_set = get_raw_data()
+    if args.pseudo_mode == 'yes':
+        datalist, pseudo_label_set = get_raw_data('train_pseudo.txt')
+        datalist = datalist[:20000]
+        raw_datalist, label_set = get_raw_data('train.txt')
+        datalist.extend(raw_datalist)
+    else:
+        datalist, label_set = get_raw_data('train.txt')
     ner_train_dataset, ner_dev_dataset = prepare_dataset(datalist, label_set, args.eval_size)
 
     num_epoches = args.num_train_epochs
