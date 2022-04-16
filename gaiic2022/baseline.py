@@ -551,7 +551,7 @@ if __name__ == "__main__":
     else:
         datalist, label_set = get_raw_data('train.txt')
 
-    if kfold == 100:
+    if args.kfold == 100:
         ner_train_dataset, ner_dev_dataset = prepare_dataset(datalist, label_set, args.eval_size)
     else:
         ner_train_dataset, ner_dev_dataset = prepare_dataset_kfold(datalist, label_set, args.eval_size, kfold=args.kfold)
