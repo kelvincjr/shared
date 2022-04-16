@@ -550,8 +550,11 @@ if __name__ == "__main__":
         datalist.extend(raw_datalist)
     else:
         datalist, label_set = get_raw_data('train.txt')
-    #ner_train_dataset, ner_dev_dataset = prepare_dataset(datalist, label_set, args.eval_size)
-    ner_train_dataset, ner_dev_dataset = prepare_dataset_kfold(datalist, label_set, args.eval_size, kfold=args.kfold)
+
+    if kfold == 100:
+        ner_train_dataset, ner_dev_dataset = prepare_dataset(datalist, label_set, args.eval_size)
+    else:
+        ner_train_dataset, ner_dev_dataset = prepare_dataset_kfold(datalist, label_set, args.eval_size, kfold=args.kfold)
     num_epoches = args.num_train_epochs
     batch_size = args.per_gpu_train_batch_size
     model_path = args.model_name_or_path
