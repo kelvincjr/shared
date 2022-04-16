@@ -115,7 +115,11 @@ def train(model, config, dataloader):
             training_loss += batch_loss
             if ids%1000 == 0:
                 print('batch training loss: ', batch_loss)
-        print("Epoch Training loss: ", training_loss)
+            if (ids == 30000) or (ids == 60000):
+                print('===== start to save mlm model, epoch {}, ids {} ====='.format(epoch, ids))
+                model.save_pretrained('./model_save/pretrained_model_{}_{}'.format(epoch, ids))
+
+        print("Epoch {} Training loss: ".format(epoch), training_loss)
 
     print('===== start to save mlm model =====')
     #torch.save(model.module.state_dict(), './model_save/pretrained_model.bin')
@@ -145,14 +149,14 @@ if __name__ == "__main__":
                     max_len = len(arr)
     print('size of training_texts: {}, max_len: {}, len_512_count: {}'.format(len(training_texts), max_len, len_512_count))
     config = MLMConfig()
-    config.trainingConfig(max_len=max_len, batch_size=16, epoch=1, learning_rate=2e-5, weight_decay=0, device=device)
+    config.trainingConfig(max_len=max_len, batch_size=16, epoch=2, learning_rate=2e-5, weight_decay=0, device=device)
     config.ioConfig('hfl/chinese-bert-wwm', './model_save/FinetuneEmbeddingModel')
     tokenizer = BertTokenizer.from_pretrained(config.from_path)
     train_dataset = MLMDataset(training_texts, tokenizer, config)
-    train_dataloader = DataLoader(train_dataset, batch_size=config.batch_size,  shuffle=True, num_workers=0)
+    train_dataloader = DataLoader(train_dataset, batch_size=config.batch_size,  shuffle=False, num_workers=0)
 
-    bert_model = BertForMaskedLM.from_pretrained('./pretrained_bert')
-    #bert_model = BertForMaskedLM.from_pretrained(config.from_path)
+    #bert_model = BertForMaskedLM.from_pretrained('./pretrained_bert')
+    bert_model = BertForMaskedLM.from_pretrained(config.from_path)
     bert_model.to(device)
     train(bert_model, config, train_dataloader)
 
