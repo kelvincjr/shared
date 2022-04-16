@@ -49,7 +49,8 @@ class GlobalPointerBert(BertForTokenClassification):
         lexicon_embeddings = pickle.load(open(embedding_cache_path, 'rb'))
         #np_emb = torch.from_numpy(lexicon_embeddings)
         self.lexicon_embedding_layer = torch.nn.Embedding.from_pretrained(torch.from_numpy(lexicon_embeddings))
-
+        print('===== soft lexicon init done =====')
+        
     def soft_lexicon(self, ids, weights, sequence_output, max_seq_len=128, word_enhance_dim=4, max_lexicon_len=4, embedding_dim=300):
         ids_tensor = ids #torch.tensor([ids], dtype=torch.long)
         weights_tensor = weights #torch.tensor([weights], dtype=torch.long)
@@ -100,9 +101,10 @@ class GlobalPointerBert(BertForTokenClassification):
         sequence_output = outputs[0]
         '''
 
-        self.soft_lexicon(soft_ids, soft_weights, sequence_output)
+        lexicon_output = self.soft_lexicon(soft_ids, soft_weights, sequence_output)
 
-        logits = self.global_pointer(sequence_output, mask=attention_mask)
+        #logits = self.global_pointer(sequence_output, mask=attention_mask)
+        logits = self.global_pointer(lexicon_output, mask=attention_mask)
 
         return logits
 
