@@ -152,17 +152,18 @@ def prepare_dataset(datalist, label_set, eval_size):
 
 def prepare_dataset_kfold(datalist, label_set, eval_size, kfold):
     print('===== prepare_dataset, kfold {} ====='.format(kfold))
-    #train_data_df = pd.DataFrame(datalist[:100])
+    #train_data_all_df = pd.DataFrame(datalist[:100])
     train_data_all_df = pd.DataFrame(datalist)
     train_data_all_df['label'] = train_data_all_df['label'].apply(lambda x: str(x))
 
     #dev_data_df = pd.DataFrame(datalist[-100:])
     #dev_data_df = pd.DataFrame(datalist[-eval_size:])
     #dev_data_df['label'] = dev_data_df['label'].apply(lambda x: str(x))
-
+    from sklearn.model_selection import KFold
     from sklearn.model_selection import StratifiedKFold
-    skf = StratifiedKFold(n_splits=5, shuffle=False, random_state=1996)
-    for i, (trn_idx, val_idx) in enumerate(skf.split(train_data_all_df, train_data_all_df['label'])):
+    #skf = StratifiedKFold(n_splits=5, shuffle=False) #, random_state=1996)
+    kf = KFold(n_splits=5, shuffle=False)
+    for i, (trn_idx, val_idx) in enumerate(kf.split(train_data_all_df)):
         if i < kfold:
             continue
         train_data_df = train_data_all_df.iloc[trn_idx].reset_index(drop=True)
@@ -551,7 +552,7 @@ if __name__ == "__main__":
         datalist, label_set = get_raw_data('train.txt')
     #ner_train_dataset, ner_dev_dataset = prepare_dataset(datalist, label_set, args.eval_size)
     ner_train_dataset, ner_dev_dataset = prepare_dataset_kfold(datalist, label_set, args.eval_size, kfold=args.kfold)
-
+    sys.exit(0)
     num_epoches = args.num_train_epochs
     batch_size = args.per_gpu_train_batch_size
     model_path = args.model_name_or_path
