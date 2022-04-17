@@ -104,7 +104,7 @@ class GlobalPointerBert(BertForTokenClassification):
         '''
 
         lexicon_output = self.soft_lexicon(soft_ids, soft_weights, sequence_output)
-
+        lexicon_output = lexicon_output.to(torch.float32)
         #logits = self.global_pointer(sequence_output, mask=attention_mask)
         logits = self.global_pointer(lexicon_output, mask=attention_mask)
 
