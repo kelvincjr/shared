@@ -34,10 +34,12 @@ class GlobalPointerBert(BertForTokenClassification):
         for param in self.bert.parameters():
             param.requires_grad = encoder_trained
 
+        word_enhance_dim=4
+        embedding_dim=300
         self.global_pointer = GlobalPointer(
             self.num_labels,
             head_size,
-            config.hidden_size
+            config.hidden_size + word_enhance_dim*embedding_dim
         )
 
         self.init_weights()
@@ -50,7 +52,7 @@ class GlobalPointerBert(BertForTokenClassification):
         #np_emb = torch.from_numpy(lexicon_embeddings)
         self.lexicon_embedding_layer = torch.nn.Embedding.from_pretrained(torch.from_numpy(lexicon_embeddings))
         print('===== soft lexicon init done =====')
-        
+
     def soft_lexicon(self, ids, weights, sequence_output, max_seq_len=128, word_enhance_dim=4, max_lexicon_len=4, embedding_dim=300):
         ids_tensor = ids #torch.tensor([ids], dtype=torch.long)
         weights_tensor = weights #torch.tensor([weights], dtype=torch.long)
