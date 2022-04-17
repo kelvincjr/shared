@@ -13,7 +13,7 @@ import pandas as pd
 import json
 import numpy as np
 import sys
-#sys.path.insert(0, '/data/kelvin/python/knowledge_graph/ai_contest/gaiic2022/baseline/ark-nlp-main')
+#sys.path.insert(0, '/data/kelvin/python/knowledge_graph/ai_contest/gaiic2022/baseline/ark-nlp-main-softlexicon')
 sys.path.insert(0, './ark-nlp-main')
 from ark_nlp.factory.utils.seed import set_seed 
 from ark_nlp.model.ner.global_pointer_bert import GlobalPointerBert
@@ -388,124 +388,265 @@ def load_model(model, model_path):
     print('===== model load done =====')
     return model
 
-def predict(model, tokenizer, ner_train_dataset, ner_dev_dataset):
-    # ark-nlp提供该函数：from ark_nlp.model.ner.global_pointer_bert import Predictor
-    # 这里主要是为了可以比较清晰地看到解码过程，所以将代码copy到这
-    class GlobalPointerNERPredictor(object):
+# ark-nlp提供该函数：from ark_nlp.model.ner.global_pointer_bert import Predictor
+# 这里主要是为了可以比较清晰地看到解码过程，所以将代码copy到这
+class GlobalPointerNERPredictor(object):
+    """
+    GlobalPointer命名实体识别的预测器
+
+    Args:
+        module: 深度学习模型
+        tokernizer: 分词器
+        cat2id (:obj:`dict`): 标签映射
+    """  # noqa: ignore flake8"
+
+    def __init__(
+        self,
+        module,
+        tokernizer,
+        cat2id
+    ):
+        self.module = module
+        self.module.task = 'TokenLevel'
+
+        self.cat2id = cat2id
+        self.tokenizer = tokernizer
+        self.device = list(self.module.parameters())[0].device
+
+        self.id2cat = {}
+        for cat_, idx_ in self.cat2id.items():
+            self.id2cat[idx_] = cat_
+
+    def _convert_to_transfomer_ids(
+        self,
+        text
+    ):
+
+        tokens = self.tokenizer.tokenize(text)
+        token_mapping = self.tokenizer.get_token_mapping(text, tokens)
+
+        input_ids = self.tokenizer.sequence_to_ids(tokens)
+        input_ids, input_mask, segment_ids = input_ids
+
+        zero = [0 for i in range(self.tokenizer.max_seq_len)]
+        span_mask = [input_mask for i in range(sum(input_mask))]
+        span_mask.extend([zero for i in range(sum(input_mask), self.tokenizer.max_seq_len)])
+        span_mask = np.array(span_mask)
+
+        features = {
+            'input_ids': input_ids,
+            'attention_mask': input_mask,
+            'token_type_ids': segment_ids,
+            'span_mask': span_mask
+        }
+
+        return features, token_mapping
+
+    def _get_input_ids(
+        self,
+        text
+    ):
+        if self.tokenizer.tokenizer_type == 'vanilla':
+            return self._convert_to_vanilla_ids(text)
+        elif self.tokenizer.tokenizer_type == 'transfomer':
+            return self._convert_to_transfomer_ids(text)
+        elif self.tokenizer.tokenizer_type == 'customized':
+            return self._convert_to_customized_ids(text)
+        else:
+            raise ValueError("The tokenizer type does not exist")
+
+    def _get_module_one_sample_inputs(
+        self,
+        features
+    ):
+        return {col: torch.Tensor(features[col]).type(torch.long).unsqueeze(0).to(self.device) for col in features}
+
+    def predict_one_sample(
+        self,
+        text='',
+        threshold=0
+    ):
         """
-        GlobalPointer命名实体识别的预测器
+        单样本预测
 
         Args:
-            module: 深度学习模型
-            tokernizer: 分词器
-            cat2id (:obj:`dict`): 标签映射
+            text (:obj:`string`): 输入文本
+            threshold (:obj:`float`, optional, defaults to 0): 预测的阈值
         """  # noqa: ignore flake8"
 
-        def __init__(
-            self,
-            module,
-            tokernizer,
-            cat2id
-        ):
-            self.module = module
-            self.module.task = 'TokenLevel'
+        features, token_mapping = self._get_input_ids(text)
+        self.module.eval()
 
-            self.cat2id = cat2id
-            self.tokenizer = tokernizer
-            self.device = list(self.module.parameters())[0].device
-
-            self.id2cat = {}
-            for cat_, idx_ in self.cat2id.items():
-                self.id2cat[idx_] = cat_
-
-        def _convert_to_transfomer_ids(
-            self,
-            text
-        ):
-
-            tokens = self.tokenizer.tokenize(text)
-            token_mapping = self.tokenizer.get_token_mapping(text, tokens)
-
-            input_ids = self.tokenizer.sequence_to_ids(tokens)
-            input_ids, input_mask, segment_ids = input_ids
-
-            zero = [0 for i in range(self.tokenizer.max_seq_len)]
-            span_mask = [input_mask for i in range(sum(input_mask))]
-            span_mask.extend([zero for i in range(sum(input_mask), self.tokenizer.max_seq_len)])
-            span_mask = np.array(span_mask)
-
-            features = {
-                'input_ids': input_ids,
-                'attention_mask': input_mask,
-                'token_type_ids': segment_ids,
-                'span_mask': span_mask
-            }
-
-            return features, token_mapping
-
-        def _get_input_ids(
-            self,
-            text
-        ):
-            if self.tokenizer.tokenizer_type == 'vanilla':
-                return self._convert_to_vanilla_ids(text)
-            elif self.tokenizer.tokenizer_type == 'transfomer':
-                return self._convert_to_transfomer_ids(text)
-            elif self.tokenizer.tokenizer_type == 'customized':
-                return self._convert_to_customized_ids(text)
-            else:
-                raise ValueError("The tokenizer type does not exist")
-
-        def _get_module_one_sample_inputs(
-            self,
-            features
-        ):
-            return {col: torch.Tensor(features[col]).type(torch.long).unsqueeze(0).to(self.device) for col in features}
-
-        def predict_one_sample(
-            self,
-            text='',
-            threshold=0
-        ):
-            """
-            单样本预测
-
-            Args:
-                text (:obj:`string`): 输入文本
-                threshold (:obj:`float`, optional, defaults to 0): 预测的阈值
-            """  # noqa: ignore flake8"
-
-            features, token_mapping = self._get_input_ids(text)
-            self.module.eval()
-
-            with torch.no_grad():
-                inputs = self._get_module_one_sample_inputs(features)
-                scores = self.module(**inputs)[0].cpu()
+        with torch.no_grad():
+            inputs = self._get_module_one_sample_inputs(features)
+            scores = self.module(**inputs)[0].cpu()
                 
-            scores[:, [0, -1]] -= np.inf
-            scores[:, :, [0, -1]] -= np.inf
+        scores[:, [0, -1]] -= np.inf
+        scores[:, :, [0, -1]] -= np.inf
 
-            entities = []
+        entities = []
 
-            for category, start, end in zip(*np.where(scores > threshold)):
-                if end-1 > token_mapping[-1][-1]:
-                    break
-                if token_mapping[start-1][0] <= token_mapping[end-1][-1]:
-                    entitie_ = {
-                        "start_idx": token_mapping[start-1][0],
-                        "end_idx": token_mapping[end-1][-1],
-                        "entity": text[token_mapping[start-1][0]: token_mapping[end-1][-1]+1],
-                        "type": self.id2cat[category]
-                    }
+        for category, start, end in zip(*np.where(scores > threshold)):
+            if end-1 > token_mapping[-1][-1]:
+                break
+            if token_mapping[start-1][0] <= token_mapping[end-1][-1]:
+                entitie_ = {
+                    "start_idx": token_mapping[start-1][0],
+                    "end_idx": token_mapping[end-1][-1],
+                    "entity": text[token_mapping[start-1][0]: token_mapping[end-1][-1]+1],
+                    "type": self.id2cat[category]
+                }
 
-                    if entitie_['entity'] == '':
-                        continue
+                if entitie_['entity'] == '':
+                    continue
 
-                    entities.append(entitie_)
+                entities.append(entitie_)
 
-            return entities
+        return entities
 
-    ner_predictor_instance = GlobalPointerNERPredictor(model.module, tokenizer, ner_train_dataset.cat2id)
+class GlobalPointerNERPredictor_softlexicon(object):
+    """
+    GlobalPointer命名实体识别的预测器
+
+    Args:
+        module: 深度学习模型
+        tokernizer: 分词器
+        cat2id (:obj:`dict`): 标签映射
+    """  # noqa: ignore flake8"
+
+    def __init__(
+        self,
+        module,
+        tokernizer,
+        cat2id
+    ):
+        self.module = module
+        self.module.task = 'TokenLevel'
+
+        self.cat2id = cat2id
+        self.tokenizer = tokernizer
+        self.device = list(self.module.parameters())[0].device
+
+        self.id2cat = {}
+        for cat_, idx_ in self.cat2id.items():
+            self.id2cat[idx_] = cat_
+
+    def _convert_to_transfomer_ids(
+        self,
+        text
+    ):
+        #soft_lexicon
+        import pickle
+        lexicon_id_weight_path = '/kaggle/working/vocab_data/lexicon_id_weight_list.pkl'
+        #lexicon_id_weight_path = '/opt/kelvin/python/knowledge_graph/ai_contest/gaiic2022/baseline/baseline/vocab_data/lexicon_id_weight_list.pkl'
+        lexicon_id_weight_dict = pickle.load(open(lexicon_id_weight_path, 'rb'))
+
+        tokens = self.tokenizer.tokenize(text)
+        token_mapping = self.tokenizer.get_token_mapping(text, tokens)
+
+        input_ids = self.tokenizer.sequence_to_ids(tokens)
+        input_ids, input_mask, segment_ids = input_ids
+
+        zero = [0 for i in range(self.tokenizer.max_seq_len)]
+        span_mask = [input_mask for i in range(sum(input_mask))]
+        span_mask.extend([zero for i in range(sum(input_mask), self.tokenizer.max_seq_len)])
+        span_mask = np.array(span_mask)
+
+        #soft_lexicon
+        soft_ids = None
+        soft_weights = None
+        if text in lexicon_id_weight_dict:
+            text_key = text.strip()
+            soft_ids, soft_weights = lexicon_id_weight_dict[text_key]
+            import numpy as np
+            soft_ids = np.array(soft_ids)
+            soft_weights = np.array(soft_weights)
+        else:
+            print('===== could not find, text_len: {}, text: {} ====='.format(len(text), text))
+
+        features = {
+            'input_ids': input_ids,
+            'attention_mask': input_mask,
+            'token_type_ids': segment_ids,
+            'span_mask': span_mask,
+            #soft_lexicon
+            'soft_ids': soft_ids,
+            'soft_weights': soft_weights,
+        }
+
+        return features, token_mapping
+
+    def _get_input_ids(
+        self,
+        text
+    ):
+        if self.tokenizer.tokenizer_type == 'vanilla':
+            return self._convert_to_vanilla_ids(text)
+        elif self.tokenizer.tokenizer_type == 'transfomer':
+            return self._convert_to_transfomer_ids(text)
+        elif self.tokenizer.tokenizer_type == 'customized':
+            return self._convert_to_customized_ids(text)
+        else:
+            raise ValueError("The tokenizer type does not exist")
+
+    def _get_module_one_sample_inputs(
+        self,
+        features
+    ):
+        tensor_dict = {}
+        for col in features:
+            if col == 'soft_weights':
+                tensor_dict[col] = torch.Tensor(features[col]).type(torch.float32).unsqueeze(0).to(self.device)
+            else:
+                tensor_dict[col] = torch.Tensor(features[col]).type(torch.long).unsqueeze(0).to(self.device)
+        return tensor_dict
+        #return {col: torch.Tensor(features[col]).type(torch.long).unsqueeze(0).to(self.device) for col in features}
+
+    def predict_one_sample(
+        self,
+        text='',
+        threshold=0
+    ):
+        """
+        单样本预测
+
+        Args:
+            text (:obj:`string`): 输入文本
+            threshold (:obj:`float`, optional, defaults to 0): 预测的阈值
+        """  # noqa: ignore flake8"
+
+        features, token_mapping = self._get_input_ids(text)
+        self.module.eval()
+
+        with torch.no_grad():
+            inputs = self._get_module_one_sample_inputs(features)
+            scores = self.module(**inputs)[0].cpu()
+                
+        scores[:, [0, -1]] -= np.inf
+        scores[:, :, [0, -1]] -= np.inf
+
+        entities = []
+
+        for category, start, end in zip(*np.where(scores > threshold)):
+            if end-1 > token_mapping[-1][-1]:
+                break
+            if token_mapping[start-1][0] <= token_mapping[end-1][-1]:
+                entitie_ = {
+                    "start_idx": token_mapping[start-1][0],
+                    "end_idx": token_mapping[end-1][-1],
+                    "entity": text[token_mapping[start-1][0]: token_mapping[end-1][-1]+1],
+                    "type": self.id2cat[category]
+                }
+
+                if entitie_['entity'] == '':
+                    continue
+
+                entities.append(entitie_)
+
+        return entities
+
+def predict(model, tokenizer, ner_train_dataset, ner_dev_dataset):
+    ner_predictor_instance = GlobalPointerNERPredictor_softlexicon(model.module, tokenizer, ner_train_dataset.cat2id)
 
     from tqdm import tqdm
 
