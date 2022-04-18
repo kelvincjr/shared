@@ -384,8 +384,8 @@ def train(model, ner_train_dataset, ner_dev_dataset, num_epoches, batch_size):
     print('===== model save done =====')
 
 def load_model(model, model_path):
-    #model.module.load_state_dict(torch.load(model_path, map_location='cpu'))
-    model.module.load_state_dict(torch.load(model_path))
+    model.module.load_state_dict(torch.load(model_path, map_location='cpu'))
+    #model.module.load_state_dict(torch.load(model_path))
     print('===== model load done =====')
     return model
 
@@ -527,22 +527,24 @@ class GlobalPointerNERPredictor_softlexicon(object):
         self.cat2id = cat2id
         self.tokenizer = tokernizer
         print('device: ', list(self.module.parameters())[0].device)
-        self.device = 'cuda:0' #list(self.module.parameters())[0].device
+        self.device = list(self.module.parameters())[0].device
 
         self.id2cat = {}
         for cat_, idx_ in self.cat2id.items():
             self.id2cat[idx_] = cat_
 
-    def _convert_to_transfomer_ids(
-        self,
-        text
-    ):
         #soft_lexicon
         import pickle
         lexicon_id_weight_path = '/kaggle/working/vocab_data/lexicon_id_weight_list.pkl'
         #lexicon_id_weight_path = '/opt/kelvin/python/knowledge_graph/ai_contest/gaiic2022/baseline/baseline/vocab_data/lexicon_id_weight_list.pkl'
-        lexicon_id_weight_dict = pickle.load(open(lexicon_id_weight_path, 'rb'))
+        self.lexicon_id_weight_dict = pickle.load(open(lexicon_id_weight_path, 'rb'))
+        print('===== lexicon_id_weight_dict load done =====')
 
+    def _convert_to_transfomer_ids(
+        self,
+        text
+    ):
+        
         tokens = self.tokenizer.tokenize(text)
         token_mapping = self.tokenizer.get_token_mapping(text, tokens)
 
@@ -558,8 +560,8 @@ class GlobalPointerNERPredictor_softlexicon(object):
         soft_ids = None
         soft_weights = None
         text_key = text.strip()
-        if text_key in lexicon_id_weight_dict:
-            soft_ids, soft_weights = lexicon_id_weight_dict[text_key]
+        if text_key in self.lexicon_id_weight_dict:
+            soft_ids, soft_weights = self.lexicon_id_weight_dict[text_key]
             soft_ids = np.array(soft_ids)
             soft_weights = np.array(soft_weights)
         else:
