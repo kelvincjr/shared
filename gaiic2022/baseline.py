@@ -558,7 +558,6 @@ class GlobalPointerNERPredictor_softlexicon(object):
         if text in lexicon_id_weight_dict:
             text_key = text.strip()
             soft_ids, soft_weights = lexicon_id_weight_dict[text_key]
-            import numpy as np
             soft_ids = np.array(soft_ids)
             soft_weights = np.array(soft_weights)
         else:
