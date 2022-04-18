@@ -658,9 +658,15 @@ def predict(model, tokenizer, ner_train_dataset, ner_dev_dataset):
     print('===== start to predict =====')
     with open(data_path + 'sample_per_line_preliminary_A.txt', 'r', encoding='utf-8') as f:
         lines = f.readlines()
+        total_num = len(lines)
+        count = 0
         for _line in tqdm(lines):
             label = len(_line) * ['O']
-            for _preditc in ner_predictor_instance.predict_one_sample(_line[:-1]):
+            count += 1
+            text = _line[:-1]
+            if count == total_num:
+                text = _line
+            for _preditc in ner_predictor_instance.predict_one_sample(text):
                 if 'I' in label[_preditc['start_idx']]:
                     continue
                 if 'B' in label[_preditc['start_idx']] and 'O' not in label[_preditc['end_idx']]:
