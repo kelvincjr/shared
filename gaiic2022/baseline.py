@@ -526,7 +526,8 @@ class GlobalPointerNERPredictor_softlexicon(object):
 
         self.cat2id = cat2id
         self.tokenizer = tokernizer
-        self.device = list(self.module.parameters())[0].device
+        print('device: ', list(self.module.parameters())[0].device)
+        self.device = 'cuda:0' #list(self.module.parameters())[0].device
 
         self.id2cat = {}
         for cat_, idx_ in self.cat2id.items():
