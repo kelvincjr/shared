@@ -384,7 +384,8 @@ def train(model, ner_train_dataset, ner_dev_dataset, num_epoches, batch_size):
     print('===== model save done =====')
 
 def load_model(model, model_path):
-    model.module.load_state_dict(torch.load(model_path, map_location='cpu'))
+    #model.module.load_state_dict(torch.load(model_path, map_location='cpu'))
+    model.module.load_state_dict(torch.load(model_path))
     print('===== model load done =====')
     return model
 
