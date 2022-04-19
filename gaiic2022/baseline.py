@@ -67,6 +67,7 @@ def get_argparse():
     parser.add_argument("--mode", default="train", type=str, help="模型训练模式")
     parser.add_argument("--pseudo_mode", default="no", type=str, help="伪标签模式")
     parser.add_argument("--kfold", default=0, type=int, help="k折")
+    parser.add_argument("--pred_threshold", default=0, type=int, help="predict threshold")
     
     return parser
 
@@ -648,8 +649,8 @@ class GlobalPointerNERPredictor_softlexicon(object):
 
         return entities
 
-def predict(model, tokenizer, ner_train_dataset, ner_dev_dataset):
-    ner_predictor_instance = GlobalPointerNERPredictor_softlexicon(model.module, tokenizer, ner_train_dataset.cat2id)
+def predict(model, tokenizer, ner_train_dataset, ner_dev_dataset, threshold):
+    ner_predictor_instance = GlobalPointerNERPredictor(model.module, tokenizer, ner_train_dataset.cat2id)
 
     from tqdm import tqdm
 
@@ -666,7 +667,7 @@ def predict(model, tokenizer, ner_train_dataset, ner_dev_dataset):
             text = _line[:-1]
             if count == total_num:
                 text = _line
-            for _preditc in ner_predictor_instance.predict_one_sample(text):
+            for _preditc in ner_predictor_instance.predict_one_sample(text, threshold=threshold):
                 if 'I' in label[_preditc['start_idx']]:
                     continue
                 if 'B' in label[_preditc['start_idx']] and 'O' not in label[_preditc['end_idx']]:
@@ -716,4 +717,4 @@ if __name__ == "__main__":
     elif args.mode == 'test':
         model = load_model(model, './model_save/best_model.pth')
         
-    predict(model, tokenizer, ner_train_dataset, ner_dev_dataset)
+    predict(model, tokenizer, ner_train_dataset, ner_dev_dataset, threshold=args.pred_threshold)
