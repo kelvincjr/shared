@@ -155,8 +155,8 @@ if __name__ == "__main__":
     train_dataset = MLMDataset(training_texts, tokenizer, config)
     train_dataloader = DataLoader(train_dataset, batch_size=config.batch_size,  shuffle=False, num_workers=0)
 
-    #bert_model = BertForMaskedLM.from_pretrained('./pretrained_bert')
-    bert_model = BertForMaskedLM.from_pretrained(config.from_path)
+    bert_model = BertForMaskedLM.from_pretrained('./pretrained_bert')
+    #bert_model = BertForMaskedLM.from_pretrained(config.from_path)
     bert_model.to(device)
     train(bert_model, config, train_dataloader)
 
