@@ -535,7 +535,6 @@ class GlobalPointerNERPredictor_softlexicon(object):
             self.id2cat[idx_] = cat_
 
         #soft_lexicon
-        import pickle
         lexicon_id_weight_path = '/kaggle/working/vocab_data/lexicon_id_weight_list.pkl'
         #lexicon_id_weight_path = '/opt/kelvin/python/knowledge_graph/ai_contest/gaiic2022/baseline/baseline/vocab_data/lexicon_id_weight_list.pkl'
         self.lexicon_id_weight_dict = pickle.load(open(lexicon_id_weight_path, 'rb'))
@@ -655,7 +654,7 @@ def predict(model, tokenizer, ner_train_dataset, ner_dev_dataset, threshold):
     from tqdm import tqdm
 
     predict_results = []
-
+    predicts = []
     print('===== start to predict =====')
     with open(data_path + 'sample_per_line_preliminary_A.txt', 'r', encoding='utf-8') as f:
         lines = f.readlines()
@@ -679,6 +678,12 @@ def predict(model, tokenizer, ner_train_dataset, ner_dev_dataset, threshold):
                 label[_preditc['start_idx']+1: _preditc['end_idx']+1] = (_preditc['end_idx'] - _preditc['start_idx']) * [('I-' +  _preditc['type'])]
                 
             predict_results.append([_line, label])
+            predicts.append(_preditc)
+
+    print('===== start to dump predicts =====')
+    with open(data_path + 'predicts.pkl', 'wb') as f:
+        pickle.dump(predicts, f)
+    print('===== predicts dump done =====')
 
     print('===== start to save result =====')
     with open(data_path + 'submit_result.txt', 'w', encoding='utf-8') as f:
