@@ -67,7 +67,7 @@ def get_argparse():
     parser.add_argument("--mode", default="train", type=str, help="模型训练模式")
     parser.add_argument("--pseudo_mode", default="no", type=str, help="伪标签模式")
     parser.add_argument("--kfold", default=0, type=int, help="k折")
-    parser.add_argument("--pred_threshold", default=0, type=int, help="predict threshold")
+    parser.add_argument("--pred_threshold", default=0, type=float, help="predict threshold")
     
     return parser
 
