@@ -357,7 +357,7 @@ def build_model(model_path, tokenizer, ner_train_dataset, ner_dev_dataset, num_e
             if evaluate_save:
                 if save_module_path is None:
                     prefix = './model_save/' + str(self.module.__class__.__name__) + '_'
-                    save_module_path = time.strftime(prefix + '%m%d_%H:%M:%S.pth')
+                    save_module_path = time.strftime(prefix + '%m%d_%H_%M_%S.pth')
 
                 torch.save(self.module.state_dict(), save_module_path)
 
