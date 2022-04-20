@@ -717,8 +717,8 @@ if __name__ == "__main__":
     batch_size = args.per_gpu_train_batch_size
     model_path = args.model_name_or_path
     tk_model_path = 'hfl/chinese-bert-wwm'
-    #tokenizer = convert_to_ids(tk_model_path, ner_train_dataset, ner_dev_dataset)
-    tokenizer = convert_to_ids(model_path, ner_train_dataset, ner_dev_dataset)
+    tokenizer = convert_to_ids(tk_model_path, ner_train_dataset, ner_dev_dataset)
+    #tokenizer = convert_to_ids(model_path, ner_train_dataset, ner_dev_dataset)
     model = build_model(model_path, tokenizer, ner_train_dataset, ner_dev_dataset, num_epoches, batch_size)
     if args.mode == 'train':
         train(model, ner_train_dataset, ner_dev_dataset, num_epoches, batch_size)
