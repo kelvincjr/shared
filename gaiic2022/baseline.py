@@ -666,6 +666,7 @@ def predict(model, tokenizer, ner_train_dataset, ner_dev_dataset, threshold):
             text = _line[:-1]
             if count == total_num:
                 text = _line
+            predict_entities = []
             for _preditc in ner_predictor_instance.predict_one_sample(text, threshold=threshold):
                 if 'I' in label[_preditc['start_idx']]:
                     continue
@@ -677,8 +678,10 @@ def predict(model, tokenizer, ner_train_dataset, ner_dev_dataset, threshold):
                 label[_preditc['start_idx']] = 'B-' +  _preditc['type']
                 label[_preditc['start_idx']+1: _preditc['end_idx']+1] = (_preditc['end_idx'] - _preditc['start_idx']) * [('I-' +  _preditc['type'])]
                 
+                predict_entities.append(_preditc)
+            
             predict_results.append([_line, label])
-            predicts.append(_preditc)
+            predicts.append(predict_entities)
 
     print('===== start to dump predicts =====')
     with open(data_path + 'predicts.pkl', 'wb') as f:
