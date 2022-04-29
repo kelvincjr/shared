@@ -27,6 +27,7 @@ from nezha.modeling.modeling import NeZhaConfig, NeZhaForMaskedLM
 
 warnings.filterwarnings('ignore')
 
+data_path = './data/'
 
 def save_pickle(dic, save_path):
     with open(save_path, 'wb') as f:
@@ -52,7 +53,7 @@ def seed_everything(seed):
 def read_data_jd(args, tokenizer: BertTokenizer) -> dict:
     max_len = 0
     len_512_count = 0
-    with open('../data/unlabeled_train_data.txt', 'r', encoding='utf-8') as f:
+    with open(data_path + 'unlabeled_train_data.txt', 'r', encoding='utf-8') as f:
         training_texts = []
         for item in f.readlines():
             if item.strip() == "":
@@ -83,51 +84,6 @@ def read_data_jd(args, tokenizer: BertTokenizer) -> dict:
     save_pickle(inputs, args.data_cache_path)
 
     return inputs
-
-
-def read_data(args, tokenizer: BertTokenizer) -> dict:
-    train_path = os.path.join(args.pretrain_data_dir, 'train.csv')
-    test_path = os.path.join(args.pretrain_data_dir, 'testa_nolabel.csv')
-
-    train_df = pd.read_csv(train_path, sep=',')
-    test_df = pd.read_csv(test_path, sep=',')
-
-    if args.debug:
-        train_df = train_df.head(3000)
-        test_df = test_df.head(300)
-
-    inputs = defaultdict(list)
-    for i, row in tqdm(train_df.iterrows(), desc='', total=len(train_df)):
-        id, name, content, label = row[0], row[1], row[2], row[3]
-        if str(name) == 'nan':
-            name = '无'
-        if str(content) == 'nan':
-            content = '无'
-        inputs_dict = tokenizer.encode_plus(name, content, add_special_tokens=True,
-                                            return_token_type_ids=True, return_attention_mask=True)
-
-        inputs['input_ids'].append(inputs_dict['input_ids'])
-        inputs['token_type_ids'].append(inputs_dict['token_type_ids'])
-        inputs['attention_mask'].append(inputs_dict['attention_mask'])
-
-    for i, row in tqdm(test_df.iterrows(), desc='', total=len(test_df)):
-        id, name, content = row[0], row[1], row[2]
-        if str(name) == 'nan':
-            name = '无'
-        if str(content) == 'nan':
-            content = '无'
-        inputs_dict = tokenizer.encode_plus(name, content, add_special_tokens=True,
-                                            return_token_type_ids=True, return_attention_mask=True)
-
-        inputs['input_ids'].append(inputs_dict['input_ids'])
-        inputs['token_type_ids'].append(inputs_dict['token_type_ids'])
-        inputs['attention_mask'].append(inputs_dict['attention_mask'])
-
-    os.makedirs(os.path.dirname(args.data_cache_path), exist_ok=True)
-    save_pickle(inputs, args.data_cache_path)
-
-    return inputs
-
 
 class DGDataset(Dataset):
     def __init__(self, data_dict: dict):
@@ -439,7 +395,7 @@ def pretrain(args):
 
 
 def main_pretrain():
-    pretrain_data_dir = '../data'
+    pretrain_data_dir = data_path
     pre_model_dir = '../kaggle_ref/nezha_bert/'
     new_pretrain_dir = 'model_save/nezha_pretrain'
     parser = ArgumentParser()
