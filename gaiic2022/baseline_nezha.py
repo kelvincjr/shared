@@ -182,6 +182,44 @@ def prepare_dataset_kfold(datalist, label_set, eval_size, kfold):
     print('===== dataset init done =====')
     return ner_train_dataset, ner_dev_dataset
 
+def prepare_dataset_kfold_pseudo(raw_datalist, raw_label_set, pseudo_datalist, eval_size, kfold):
+    print('===== prepare_dataset, kfold {} ====='.format(kfold))
+    #train_data_all_df = pd.DataFrame(datalist[:100])
+    train_data_all_df = pd.DataFrame(raw_datalist)
+    train_data_all_df['label'] = train_data_all_df['label'].apply(lambda x: str(x))
+
+    pseudo_train_data_all_df = pd.DataFrame(pseudo_datalist)
+    pseudo_train_data_all_df['label'] = pseudo_train_data_all_df['label'].apply(lambda x: str(x))
+
+    #dev_data_df = pd.DataFrame(datalist[-100:])
+    #dev_data_df = pd.DataFrame(datalist[-eval_size:])
+    #dev_data_df['label'] = dev_data_df['label'].apply(lambda x: str(x))
+    from sklearn.model_selection import KFold
+    from sklearn.model_selection import StratifiedKFold
+    #skf = StratifiedKFold(n_splits=5, shuffle=False) #, random_state=1996)
+    kf = KFold(n_splits=5, shuffle=False)
+    for i, (trn_idx, val_idx) in enumerate(kf.split(train_data_all_df)):
+        if i < kfold:
+            continue
+        train_data_df = train_data_all_df.iloc[trn_idx].reset_index(drop=True)
+        dev_data_df = train_data_all_df.iloc[val_idx].reset_index(drop=True)
+        break
+    print('===== dataframe init done =====')
+
+    train_data_df = pd.concat([train_data_df, pseudo_train_data_all_df])
+
+    label_list = sorted(list(raw_label_set))
+    print('===== label_list =====')
+    print(label_list)
+    
+    ner_train_dataset = Dataset(train_data_df, categories=label_list)
+    print('===== cat2id =====')
+    print(ner_train_dataset.cat2id)
+
+    ner_dev_dataset = Dataset(dev_data_df, categories=ner_train_dataset.categories)
+    print('===== dataset init done =====')
+    return ner_train_dataset, ner_dev_dataset
+
 #tokenizer = Tokenizer(vocab='hfl/chinese-bert-wwm', max_seq_len=128)
 #model_path = '../../model/jd_bert'
 #model_path = '../bert-base/'
@@ -705,14 +743,17 @@ if __name__ == "__main__":
         datalist, pseudo_label_set = get_raw_data('train_pseudo.txt')
         #datalist = datalist[:20000]
         raw_datalist, label_set = get_raw_data('train.txt')
-        datalist.extend(raw_datalist)
+        if args.kfold == 100:
+            datalist.extend(raw_datalist)
+            ner_train_dataset, ner_dev_dataset = prepare_dataset(datalist, label_set, args.eval_size)
+        else:
+            ner_train_dataset, ner_dev_dataset = prepare_dataset_kfold_pseudo(raw_datalist, label_set, datalist, args.eval_size, kfold=args.kfold) 
     else:
         datalist, label_set = get_raw_data('train.txt')
-
-    if args.kfold == 100:
-        ner_train_dataset, ner_dev_dataset = prepare_dataset(datalist, label_set, args.eval_size)
-    else:
-        ner_train_dataset, ner_dev_dataset = prepare_dataset_kfold(datalist, label_set, args.eval_size, kfold=args.kfold)
+        if args.kfold == 100:
+            ner_train_dataset, ner_dev_dataset = prepare_dataset(datalist, label_set, args.eval_size)
+        else:
+            ner_train_dataset, ner_dev_dataset = prepare_dataset_kfold(datalist, label_set, args.eval_size, kfold=args.kfold)
     num_epoches = args.num_train_epochs
     batch_size = args.per_gpu_train_batch_size
     model_path = args.model_name_or_path

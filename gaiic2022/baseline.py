@@ -13,7 +13,7 @@ import pandas as pd
 import json
 import numpy as np
 import sys
-#sys.path.insert(0, '/data/kelvin/python/knowledge_graph/ai_contest/gaiic2022/baseline/ark-nlp-main_nezha')
+#sys.path.insert(0, '/data/kelvin/python/knowledge_graph/ai_contest/gaiic2022/baseline/ark-nlp-main')
 sys.path.insert(0, './ark-nlp-main')
 from ark_nlp.factory.utils.seed import set_seed 
 from ark_nlp.model.ner.global_pointer_bert import GlobalPointerBert
@@ -131,12 +131,12 @@ def get_raw_data(filename):
     return datalist, label_set
 
 def prepare_dataset(datalist, label_set, eval_size):
-    #train_data_df = pd.DataFrame(datalist[:100])
-    train_data_df = pd.DataFrame(datalist[:-eval_size])
+    train_data_df = pd.DataFrame(datalist[:100])
+    #train_data_df = pd.DataFrame(datalist[:-eval_size])
     train_data_df['label'] = train_data_df['label'].apply(lambda x: str(x))
 
-    #dev_data_df = pd.DataFrame(datalist[-100:])
-    dev_data_df = pd.DataFrame(datalist[-eval_size:])
+    dev_data_df = pd.DataFrame(datalist[-400:])
+    #dev_data_df = pd.DataFrame(datalist[-eval_size:])
     dev_data_df['label'] = dev_data_df['label'].apply(lambda x: str(x))
     print('===== dataframe init done =====')
 
@@ -178,6 +178,44 @@ def prepare_dataset_kfold(datalist, label_set, eval_size, kfold):
     print('===== cat2id =====')
     print(ner_train_dataset.cat2id)
     #sys.exit(0)
+    ner_dev_dataset = Dataset(dev_data_df, categories=ner_train_dataset.categories)
+    print('===== dataset init done =====')
+    return ner_train_dataset, ner_dev_dataset
+
+def prepare_dataset_kfold_pseudo(raw_datalist, raw_label_set, pseudo_datalist, eval_size, kfold):
+    print('===== prepare_dataset, kfold {} ====='.format(kfold))
+    #train_data_all_df = pd.DataFrame(datalist[:100])
+    train_data_all_df = pd.DataFrame(raw_datalist)
+    train_data_all_df['label'] = train_data_all_df['label'].apply(lambda x: str(x))
+
+    pseudo_train_data_all_df = pd.DataFrame(pseudo_datalist)
+    pseudo_train_data_all_df['label'] = pseudo_train_data_all_df['label'].apply(lambda x: str(x))
+
+    #dev_data_df = pd.DataFrame(datalist[-100:])
+    #dev_data_df = pd.DataFrame(datalist[-eval_size:])
+    #dev_data_df['label'] = dev_data_df['label'].apply(lambda x: str(x))
+    from sklearn.model_selection import KFold
+    from sklearn.model_selection import StratifiedKFold
+    #skf = StratifiedKFold(n_splits=5, shuffle=False) #, random_state=1996)
+    kf = KFold(n_splits=5, shuffle=False)
+    for i, (trn_idx, val_idx) in enumerate(kf.split(train_data_all_df)):
+        if i < kfold:
+            continue
+        train_data_df = train_data_all_df.iloc[trn_idx].reset_index(drop=True)
+        dev_data_df = train_data_all_df.iloc[val_idx].reset_index(drop=True)
+        break
+    print('===== dataframe init done =====')
+
+    train_data_df = pd.concat([train_data_df, pseudo_train_data_all_df])
+
+    label_list = sorted(list(raw_label_set))
+    print('===== label_list =====')
+    print(label_list)
+    
+    ner_train_dataset = Dataset(train_data_df, categories=label_list)
+    print('===== cat2id =====')
+    print(ner_train_dataset.cat2id)
+
     ner_dev_dataset = Dataset(dev_data_df, categories=ner_train_dataset.categories)
     print('===== dataset init done =====')
     return ner_train_dataset, ner_dev_dataset
@@ -382,6 +420,14 @@ def train(model, ner_train_dataset, ner_dev_dataset, num_epoches, batch_size):
 
     torch.save(model.module.state_dict(), './model_save.pth')
     print('===== model save done =====')
+
+def evaluate(model, ner_dev_dataset, batch_size):
+    print('===== start to evaluate =====')
+    print('device: ', model.device)
+    #model.id2cat = ner_dev_dataset.id2cat
+    #model.cat2id = ner_dev_dataset.cat2id
+    model.evaluate(ner_dev_dataset)
+    print('===== evaluate done =====')
 
 def load_model(model, model_path):
     model.module.load_state_dict(torch.load(model_path, map_location='cpu'))
@@ -705,14 +751,17 @@ if __name__ == "__main__":
         datalist, pseudo_label_set = get_raw_data('train_pseudo.txt')
         #datalist = datalist[:20000]
         raw_datalist, label_set = get_raw_data('train.txt')
-        datalist.extend(raw_datalist)
+        if args.kfold == 100:
+            datalist.extend(raw_datalist)
+            ner_train_dataset, ner_dev_dataset = prepare_dataset(datalist, label_set, args.eval_size)
+        else:
+            ner_train_dataset, ner_dev_dataset = prepare_dataset_kfold_pseudo(raw_datalist, label_set, datalist, args.eval_size, kfold=args.kfold) 
     else:
         datalist, label_set = get_raw_data('train.txt')
-
-    if args.kfold == 100:
-        ner_train_dataset, ner_dev_dataset = prepare_dataset(datalist, label_set, args.eval_size)
-    else:
-        ner_train_dataset, ner_dev_dataset = prepare_dataset_kfold(datalist, label_set, args.eval_size, kfold=args.kfold)
+        if args.kfold == 100:
+            ner_train_dataset, ner_dev_dataset = prepare_dataset(datalist, label_set, args.eval_size)
+        else:
+            ner_train_dataset, ner_dev_dataset = prepare_dataset_kfold(datalist, label_set, args.eval_size, kfold=args.kfold)
     num_epoches = args.num_train_epochs
     batch_size = args.per_gpu_train_batch_size
     model_path = args.model_name_or_path
@@ -724,5 +773,7 @@ if __name__ == "__main__":
         train(model, ner_train_dataset, ner_dev_dataset, num_epoches, batch_size)
     elif args.mode == 'test':
         model = load_model(model, './model_save/best_model.pth')
-        
-    predict(model, tokenizer, ner_train_dataset, ner_dev_dataset, threshold=args.pred_threshold)
+        predict(model, tokenizer, ner_train_dataset, ner_dev_dataset, threshold=args.pred_threshold)
+    elif args.mode == 'eval':
+        model = load_model(model, './model_save/best_model.pth')
+        evaluate(model, ner_dev_dataset, batch_size) 
