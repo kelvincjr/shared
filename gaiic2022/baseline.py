@@ -131,12 +131,12 @@ def get_raw_data(filename):
     return datalist, label_set
 
 def prepare_dataset(datalist, label_set, eval_size):
-    train_data_df = pd.DataFrame(datalist[:100])
-    #train_data_df = pd.DataFrame(datalist[:-eval_size])
+    #train_data_df = pd.DataFrame(datalist[:100])
+    train_data_df = pd.DataFrame(datalist[:-eval_size])
     train_data_df['label'] = train_data_df['label'].apply(lambda x: str(x))
 
-    dev_data_df = pd.DataFrame(datalist[-400:])
-    #dev_data_df = pd.DataFrame(datalist[-eval_size:])
+    #dev_data_df = pd.DataFrame(datalist[-400:])
+    dev_data_df = pd.DataFrame(datalist[-eval_size:])
     dev_data_df['label'] = dev_data_df['label'].apply(lambda x: str(x))
     print('===== dataframe init done =====')
 
