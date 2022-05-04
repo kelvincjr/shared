@@ -300,13 +300,16 @@ def build_model(model_path, tokenizer, ner_train_dataset, ner_dev_dataset, num_e
 
             self.module.train()
             
-            #self.fgm = PGD(self.module)
-            self.fgm = FGM(self.module)
+            #self.fgm = FGM(self.module)
+
+            #pgd
+            self.pgd = PGD(self.module)
+            self.K = 3
 
             self._on_train_begin_record(**kwargs)
 
             return train_generator
-        
+        '''
         def _on_backward(
             self,
             inputs,
@@ -336,6 +339,46 @@ def build_model(model_path, tokenizer, ner_train_dataset, ner_dev_dataset, num_e
             #self.optimizer.step()
             #self.scheduler.step()
             #self.optimizer.zero_grad()
+            
+            self._on_backward_record(loss, **kwargs)
+
+            return loss
+        '''
+        #pgd
+        def _on_backward(
+            self,
+            inputs,
+            outputs,
+            logits,
+            loss,
+            gradient_accumulation_steps=1,
+            **kwargs
+        ):
+
+            # 如果GPU数量大于1
+            if self.n_gpu > 1:
+                loss = loss.mean()
+            # 如果使用了梯度累积，除以累积的轮数
+            if gradient_accumulation_steps > 1:
+                loss = loss / gradient_accumulation_steps
+
+            loss.backward()
+            
+            self.pgd.backup_grad()
+        
+            for t in range(self.K):
+                self.pgd.attack(is_first_attack=(t==0)) 
+                if t != self.K-1:
+                    self.optimizer.zero_grad()
+                else:
+                    self.pgd.restore_grad()
+                    
+                logits = self.module(**inputs)
+                _, attck_loss = self._get_train_loss(inputs, logits, **kwargs)
+                
+                attck_loss.backward()
+
+            self.pgd.restore() 
             
             self._on_backward_record(loss, **kwargs)
 

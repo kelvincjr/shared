@@ -125,7 +125,7 @@ class PGD(object):
         if torch.norm(r) > epsilon:
             r = epsilon * r / torch.norm(r)
         return self.emb_backup[param_name] + r
-
+    '''
     def backup_grad(self):
         for name, param in self.module.named_parameters():
             if param.requires_grad:
@@ -134,4 +134,14 @@ class PGD(object):
     def restore_grad(self):
         for name, param in self.module.named_parameters():
             if param.requires_grad:
+                param.grad = self.grad_backup[name]
+    '''
+    def backup_grad(self):
+    for name, param in self.module.named_parameters():
+        if param.requires_grad and param.grad is not None:
+            self.grad_backup[name] = param.grad.clone()
+
+    def restore_grad(self):
+        for name, param in self.module.named_parameters():
+            if param.requires_grad and param.grad is not None:
                 param.grad = self.grad_backup[name]
