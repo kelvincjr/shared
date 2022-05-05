@@ -369,7 +369,7 @@ def pretrain(args):
                 global_steps += 1
 
                 lr = scheduler.get_last_lr()[0]
-                train_iterator.set_postfix_str(f'loss : {loss.item():.4f}, lr : {lr}, global steps : {global_steps} .')
+                #train_iterator.set_postfix_str(f'loss : {loss.item():.4f}, lr : {lr}, global steps : {global_steps} .')
 
             if (global_steps + 1) % args.save_steps == 0:
                 save_model(args, model, tokenizer, global_steps)
