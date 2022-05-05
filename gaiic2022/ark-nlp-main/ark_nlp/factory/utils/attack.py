@@ -137,9 +137,9 @@ class PGD(object):
                 param.grad = self.grad_backup[name]
     '''
     def backup_grad(self):
-    for name, param in self.module.named_parameters():
-        if param.requires_grad and param.grad is not None:
-            self.grad_backup[name] = param.grad.clone()
+        for name, param in self.module.named_parameters():
+            if param.requires_grad and param.grad is not None:
+                self.grad_backup[name] = param.grad.clone()
 
     def restore_grad(self):
         for name, param in self.module.named_parameters():
