@@ -300,16 +300,16 @@ def build_model(model_path, tokenizer, ner_train_dataset, ner_dev_dataset, num_e
 
             self.module.train()
             
-            #self.fgm = FGM(self.module)
+            self.fgm = FGM(self.module)
 
             #pgd
-            self.pgd = PGD(self.module)
-            self.K = 3
+            #self.pgd = PGD(self.module)
+            #self.K = 3
 
             self._on_train_begin_record(**kwargs)
 
             return train_generator
-        '''
+        
         def _on_backward(
             self,
             inputs,
@@ -383,7 +383,7 @@ def build_model(model_path, tokenizer, ner_train_dataset, ner_dev_dataset, num_e
             self._on_backward_record(loss, **kwargs)
 
             return loss
-       
+        '''
         def _on_optimize(
             self,
             inputs,
