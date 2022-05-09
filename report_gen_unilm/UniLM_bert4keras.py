@@ -18,7 +18,7 @@ from bert4keras.snippets import sequence_padding, open
 from bert4keras.snippets import DataGenerator, AutoRegressiveDecoder
 from keras.models import Model
 from rouge import Rouge
-from nltk.translate.bleu_score import sentence_bleu, SmoothingFunction
+#from nltk.translate.bleu_score import sentence_bleu, SmoothingFunction
 
 # 基本参数
 maxlen = 128
@@ -70,8 +70,8 @@ def load_data(filename):
     return D
 
 # 加载数据集
-train_data = load_data('test_data/train_data.csv')
-valid_data = load_data('test_data/dev_data.csv')
+train_data = load_data('data/train_data.csv')
+valid_data = load_data('data/dev_data.csv')
 print('===== before deduplicate, train_data len: {}, valid_data len: {}'.format(len(train_data), len(valid_data)))
 train_data = list(set(train_data))
 valid_data = list(set(valid_data))
@@ -170,9 +170,12 @@ autotitle = AutoTitle(start_id=None, end_id=tokenizer._token_end_id, maxlen=64)
 def just_show():
     #s1 = u'2020年08月09日08点15分'
     #s2 = u'于当天5时43分许行驶至127公里500米处时'
-    s1 = u'[TIME]在[AL]'
-    s2 = u'[AO]发生一起建筑施工行业高处坠落事故'
-    for s in [s1, s2]:
+    #s1 = u'[TIME]在[AL]'
+    #s2 = u'[AO]发生一起建筑施工行业高处坠落事故'
+    s1 = u'[AO]发生一起道路运输行业道路运输事故'
+    s2 = u'结果小型轿车尾部与[P]身体发生碰撞'
+    s3 = u'造成[P]受伤和车辆损坏的交通事故'
+    for s in [s1, s2, s3]:
         print(u'预测下一句:', autotitle.generate(s))
     print()
 
@@ -181,7 +184,7 @@ class Evaluator(keras.callbacks.Callback):
     """
     def __init__(self):
         self.rouge = Rouge()
-        self.smooth = SmoothingFunction().method1
+        #self.smooth = SmoothingFunction().method1
         self.best_bleu = 0.
 
     def on_epoch_end(self, epoch, logs=None):
@@ -209,11 +212,13 @@ class Evaluator(keras.callbacks.Callback):
                 rouge_2 += scores[0]['rouge-2']['f']
                 rouge_l += scores[0]['rouge-l']['f']
                 bleu = 0
+                '''
                 bleu += sentence_bleu(
                     references=[title.split(' ')],
                     hypothesis=pred_title.split(' '),
                     smoothing_function=self.smooth
                 )
+                '''
         rouge_1 /= total
         rouge_2 /= total
         rouge_l /= total
@@ -227,7 +232,11 @@ class Evaluator(keras.callbacks.Callback):
 
 
 if __name__ == '__main__':
-    #model.load_weights('./model/best_model.weights')
+    '''
+    model.load_weights('./model_save/bert4keras/best_model.weights')
+    print('===== model load done =====')
+    just_show()
+    '''
     evaluator = Evaluator()
     train_generator = data_generator(train_data, batch_size)
 
@@ -237,7 +246,6 @@ if __name__ == '__main__':
         epochs=epochs,
         callbacks=[evaluator]
     )
-
 else:
     model.load_weights('./model/best_model.weights')
 
