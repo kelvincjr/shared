@@ -355,7 +355,8 @@ def pretrain(args):
                 else:
                     optimizer.step()
 
-                scheduler.step()
+                #kelvin
+                #scheduler.step()
                 optimizer.zero_grad()
 
                 if (global_steps + 1) % args.logging_step == 0:
@@ -368,7 +369,8 @@ def pretrain(args):
                     cur_avg_loss = 0.0
                 global_steps += 1
 
-                lr = scheduler.get_last_lr()[0]
+                #kelvin
+                #lr = scheduler.get_last_lr()[0]
                 #train_iterator.set_postfix_str(f'loss : {loss.item():.4f}, lr : {lr}, global steps : {global_steps} .')
 
             if (global_steps + 1) % args.save_steps == 0:
@@ -419,7 +421,8 @@ def main_pretrain():
     parser.add_argument('--num_epochs', type=int, default=150)
     parser.add_argument('--max_seq_len', type=int, default=350)
     parser.add_argument('--batch_size', type=int, default=10)
-    parser.add_argument('--learning_rate', type=float, default=6e-5)
+    #parser.add_argument('--learning_rate', type=float, default=6e-5)
+    parser.add_argument('--learning_rate', type=float, default=2e-5)
     parser.add_argument('--eps', type=float, default=1e-8)
 
     parser.add_argument('--gradient_accumulation_steps', type=int, default=1)
