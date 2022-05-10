@@ -131,12 +131,12 @@ def get_raw_data(filename):
     return datalist, label_set
 
 def prepare_dataset(datalist, label_set, eval_size):
-    train_data_df = pd.DataFrame(datalist[:100])
-    #train_data_df = pd.DataFrame(datalist[:-eval_size])
+    #train_data_df = pd.DataFrame(datalist[:100])
+    train_data_df = pd.DataFrame(datalist[:-eval_size])
     train_data_df['label'] = train_data_df['label'].apply(lambda x: str(x))
 
-    dev_data_df = pd.DataFrame(datalist[-100:])
-    #dev_data_df = pd.DataFrame(datalist[-eval_size:])
+    #dev_data_df = pd.DataFrame(datalist[-100:])
+    dev_data_df = pd.DataFrame(datalist[-eval_size:])
     dev_data_df['label'] = dev_data_df['label'].apply(lambda x: str(x))
     print('===== dataframe init done =====')
 
@@ -164,7 +164,7 @@ def prepare_dataset_kfold(datalist, label_set, eval_size, kfold):
     from sklearn.model_selection import KFold
     from sklearn.model_selection import StratifiedKFold
     #skf = StratifiedKFold(n_splits=5, shuffle=False) #, random_state=1996)
-    kf = KFold(n_splits=5, shuffle=False)
+    kf = KFold(n_splits=20, shuffle=False)
     for i, (trn_idx, val_idx) in enumerate(kf.split(train_data_all_df)):
         if i < kfold:
             continue
