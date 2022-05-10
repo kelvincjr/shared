@@ -228,7 +228,8 @@ def build_optimizer(args, model, train_steps):
     ]
 
     optimizer = AdamW(optimizer_grouped_parameters, lr=args.learning_rate, eps=args.eps)
-    scheduler = WarmupLinearSchedule(optimizer, warmup_steps=train_steps * args.warmup_ratio, t_total=train_steps)
+    #kelvin
+    scheduler = None #WarmupLinearSchedule(optimizer, warmup_steps=train_steps * args.warmup_ratio, t_total=train_steps)
 
     return optimizer, scheduler
 
@@ -390,8 +391,9 @@ def pretrain(args):
     plt.savefig(fig_save_path)
     plt.show()
     '''
-
-    del model, tokenizer, optimizer, scheduler
+    #kelvin
+    #del model, tokenizer, optimizer, scheduler
+    del model, tokenizer, optimizer
     torch.cuda.empty_cache()
     gc.collect()
 
