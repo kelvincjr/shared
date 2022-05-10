@@ -2,7 +2,7 @@ import warnings
 warnings.filterwarnings("ignore")
 
 import os
-#import jieba
+import jieba
 import torch
 import pickle
 import time
@@ -131,12 +131,12 @@ def get_raw_data(filename):
     return datalist, label_set
 
 def prepare_dataset(datalist, label_set, eval_size):
-    train_data_df = pd.DataFrame(datalist[:100])
-    #train_data_df = pd.DataFrame(datalist[:-eval_size])
+    #train_data_df = pd.DataFrame(datalist[:100])
+    train_data_df = pd.DataFrame(datalist[:-eval_size])
     train_data_df['label'] = train_data_df['label'].apply(lambda x: str(x))
 
-    dev_data_df = pd.DataFrame(datalist[-100:])
-    #dev_data_df = pd.DataFrame(datalist[-eval_size:])
+    #dev_data_df = pd.DataFrame(datalist[-400:])
+    dev_data_df = pd.DataFrame(datalist[-eval_size:])
     dev_data_df['label'] = dev_data_df['label'].apply(lambda x: str(x))
     print('===== dataframe init done =====')
 
@@ -147,8 +147,6 @@ def prepare_dataset(datalist, label_set, eval_size):
     print('===== cat2id =====')
     print(ner_train_dataset.cat2id)
     ner_dev_dataset = Dataset(dev_data_df, categories=ner_train_dataset.categories)
-    print('===== dev_data_df cat2id =====')
-    print(ner_dev_dataset.cat2id)
     print('===== dataset init done =====')
     return ner_train_dataset, ner_dev_dataset
 
@@ -199,7 +197,7 @@ def prepare_dataset_kfold_pseudo(raw_datalist, raw_label_set, pseudo_datalist, e
     from sklearn.model_selection import KFold
     from sklearn.model_selection import StratifiedKFold
     #skf = StratifiedKFold(n_splits=5, shuffle=False) #, random_state=1996)
-    kf = KFold(n_splits=20, shuffle=False)
+    kf = KFold(n_splits=5, shuffle=False)
     for i, (trn_idx, val_idx) in enumerate(kf.split(train_data_all_df)):
         if i < kfold:
             continue
@@ -208,7 +206,7 @@ def prepare_dataset_kfold_pseudo(raw_datalist, raw_label_set, pseudo_datalist, e
         break
     print('===== dataframe init done =====')
 
-    train_data_df = pd.concat([pseudo_train_data_all_df, train_data_df])
+    train_data_df = pd.concat([train_data_df, pseudo_train_data_all_df])
 
     label_list = sorted(list(raw_label_set))
     print('===== label_list =====')
@@ -469,9 +467,8 @@ def train(model, ner_train_dataset, ner_dev_dataset, num_epoches, batch_size):
 def evaluate(model, ner_dev_dataset, batch_size):
     print('===== start to evaluate =====')
     print('device: ', model.device)
-    model.module.eval()
-    model.id2cat = ner_dev_dataset.id2cat
-    model.cat2id = ner_dev_dataset.cat2id
+    #model.id2cat = ner_dev_dataset.id2cat
+    #model.cat2id = ner_dev_dataset.cat2id
     model.evaluate(ner_dev_dataset)
     print('===== evaluate done =====')
 
