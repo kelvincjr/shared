@@ -275,6 +275,9 @@ def main():
     model.resize_token_embeddings(tokenizer.vocab_size)
     dataset = DGDataset(data)
 
+    #os.environ['WANDB_NOTEBOOK_NAME'] = 'nezha_pretrain'
+    #import wandb
+    #wandb.init(project="nezha_pretrain", entity="nezha_pretrain")
     training_args = TrainingArguments(
         seed=args.seed,
         fp16=args.fp16,
@@ -286,7 +289,9 @@ def main():
         learning_rate=args.learning_rate,
         save_total_limit=args.ckpt_save_limit,
         num_train_epochs=args.num_train_epochs,
-        per_device_train_batch_size=args.batch_size
+        per_device_train_batch_size=args.batch_size,
+        report_to="none",
+        disable_tqdm=True
     )
 
     trainer = Trainer(
