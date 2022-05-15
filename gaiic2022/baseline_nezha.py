@@ -2,7 +2,7 @@ import warnings
 warnings.filterwarnings("ignore")
 
 import os
-import jieba
+#import jieba
 import torch
 import pickle
 import time
@@ -25,7 +25,7 @@ from ark_nlp.model.ner.global_pointer_bert import Tokenizer
 
 from ark_nlp.factory.optimizer import get_optimizer
 from ark_nlp.factory.lr_scheduler import get_default_linear_schedule_with_warmup
-from ark_nlp.factory.utils.attack import FGM, PGD
+from ark_nlp.factory.utils.attack import FGM, PGD, AWP
 from ark_nlp.factory.utils.conlleval import get_entity_bio
 
 set_seed(42)
@@ -162,7 +162,7 @@ def prepare_dataset_kfold(datalist, label_set, eval_size, kfold):
     from sklearn.model_selection import KFold
     from sklearn.model_selection import StratifiedKFold
     #skf = StratifiedKFold(n_splits=5, shuffle=False) #, random_state=1996)
-    kf = KFold(n_splits=5, shuffle=False)
+    kf = KFold(n_splits=20, shuffle=False)
     for i, (trn_idx, val_idx) in enumerate(kf.split(train_data_all_df)):
         if i < kfold:
             continue
@@ -197,7 +197,7 @@ def prepare_dataset_kfold_pseudo(raw_datalist, raw_label_set, pseudo_datalist, e
     from sklearn.model_selection import KFold
     from sklearn.model_selection import StratifiedKFold
     #skf = StratifiedKFold(n_splits=5, shuffle=False) #, random_state=1996)
-    kf = KFold(n_splits=5, shuffle=False)
+    kf = KFold(n_splits=20, shuffle=False)
     for i, (trn_idx, val_idx) in enumerate(kf.split(train_data_all_df)):
         if i < kfold:
             continue
@@ -268,6 +268,7 @@ def build_model(model_path, tokenizer, ner_train_dataset, ner_dev_dataset, num_e
             **kwargs
         ):
             print('===== AttackTask =====')
+            self.evaluate_save_count = 0
             if hasattr(train_data, 'id2cat'):
                 self.id2cat = train_data.id2cat
                 self.cat2id = {v_: k_ for k_, v_ in train_data.id2cat.items()}
@@ -301,12 +302,18 @@ def build_model(model_path, tokenizer, ner_train_dataset, ner_dev_dataset, num_e
             self.module.train()
             
             #self.fgm = PGD(self.module)
-            self.fgm = FGM(self.module)
+            #self.fgm = FGM(self.module)
+            
+            #pgd
+            self.pgd = AWP(self.module)
+            self.K = 3
 
             self._on_train_begin_record(**kwargs)
 
             return train_generator
         
+        #fgm
+        '''
         def _on_backward(
             self,
             inputs,
@@ -336,6 +343,46 @@ def build_model(model_path, tokenizer, ner_train_dataset, ner_dev_dataset, num_e
             #self.optimizer.step()
             #self.scheduler.step()
             #self.optimizer.zero_grad()
+            
+            self._on_backward_record(loss, **kwargs)
+
+            return loss
+        '''
+        #pgd
+        def _on_backward(
+            self,
+            inputs,
+            outputs,
+            logits,
+            loss,
+            gradient_accumulation_steps=1,
+            **kwargs
+        ):
+
+            # 如果GPU数量大于1
+            if self.n_gpu > 1:
+                loss = loss.mean()
+            # 如果使用了梯度累积，除以累积的轮数
+            if gradient_accumulation_steps > 1:
+                loss = loss / gradient_accumulation_steps
+
+            loss.backward()
+            
+            self.pgd.backup_grad()
+        
+            for t in range(self.K):
+                self.pgd.attack(is_first_attack=(t==0)) 
+                if t != self.K-1:
+                    self.optimizer.zero_grad()
+                else:
+                    self.pgd.restore_grad()
+                    
+                logits = self.module(**inputs)
+                _, attck_loss = self._get_train_loss(inputs, logits, **kwargs)
+                
+                attck_loss.backward()
+
+            self.pgd.restore() 
             
             self._on_backward_record(loss, **kwargs)
 
@@ -391,12 +438,13 @@ def build_model(model_path, tokenizer, ner_train_dataset, ner_dev_dataset, num_e
             **kwargs
         ):
 
-            if evaluate_save:
+            if evaluate_save and (self.evaluate_save_count == 5):
                 if save_module_path is None:
                     prefix = './model_save/' + str(self.module.__class__.__name__) + '_'
                     save_module_path = time.strftime(prefix + '%m%d_%H_%M_%S.pth')
 
                 torch.save(self.module.state_dict(), save_module_path)
+            self.evaluate_save_count += 1
 
             self._on_evaluate_end_record()
 
@@ -766,4 +814,4 @@ if __name__ == "__main__":
     elif args.mode == 'test':
         model = load_model(model, './model_save/best_model.pth')
         
-    predict(model, tokenizer, ner_train_dataset, ner_dev_dataset, threshold=args.pred_threshold)
+    #predict(model, tokenizer, ner_train_dataset, ner_dev_dataset, threshold=args.pred_threshold)
