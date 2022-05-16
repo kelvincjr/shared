@@ -102,6 +102,12 @@ class BIONERTask(TokenClassificationTask):
                 eval_info['recall'],
                 eval_info['f1'])
             )
+            with open('./evaluate_log.txt', 'w', encoding='utf-8') as f:
+                f.write('eval loss is {:.6f}, precision is:{}, recall is:{}, f1_score is:{}\n'.format(
+                    self.evaluate_logs['eval_loss'] / self.evaluate_logs['eval_step'],
+                    eval_info['acc'],
+                    eval_info['recall'],
+                    eval_info['f1']))
 
 
 class CRFNERTask(TokenClassificationTask):
