@@ -31,7 +31,7 @@ import torch.nn as nn
 import torch.nn.functional as F
 import torch.nn.init as I
 
- def compute_kl_loss(self, p, q, pad_mask=None):
+def compute_kl_loss(self, p, q, pad_mask=None):
     pad_mask = torch.unsqueeze(pad_mask, -1).bool()
     p_loss = F.kl_div(p.log(), q, reduction='none', log_target=False)
     q_loss = F.kl_div(q.log(), p, reduction='none', log_target=False)
