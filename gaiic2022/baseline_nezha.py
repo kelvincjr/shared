@@ -438,7 +438,7 @@ def build_model(model_path, tokenizer, ner_train_dataset, ner_dev_dataset, num_e
             **kwargs
         ):
 
-            if evaluate_save and (self.evaluate_save_count == 5):
+            if evaluate_save and ((self.evaluate_save_count == 5) or (self.evaluate_save_count == 6)):
                 if save_module_path is None:
                     prefix = './model_save/' + str(self.module.__class__.__name__) + '_'
                     save_module_path = time.strftime(prefix + '%m%d_%H_%M_%S.pth')
@@ -814,4 +814,4 @@ if __name__ == "__main__":
     elif args.mode == 'test':
         model = load_model(model, './model_save/best_model.pth')
         
-    #predict(model, tokenizer, ner_train_dataset, ner_dev_dataset, threshold=args.pred_threshold)
+    predict(model, tokenizer, ner_train_dataset, ner_dev_dataset, threshold=args.pred_threshold)
