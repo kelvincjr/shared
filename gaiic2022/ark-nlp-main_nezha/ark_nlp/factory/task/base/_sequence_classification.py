@@ -128,7 +128,7 @@ class SequenceClassificationTask(Task):
                 logits1, loss1 = self._get_train_loss(inputs, outputs1, **kwargs)
                 ce_loss = (loss + loss1) / 2
                 kl_loss = compute_kl_loss(logits, logits1)
-                rdrop_alpha = 0.25
+                rdrop_alpha = 0.05
                 loss = ce_loss + rdrop_alpha * kl_loss
 
                 # loss backword
