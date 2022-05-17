@@ -100,3 +100,10 @@ class GlobalPointerNERTask(TokenClassificationTask):
                 self.evaluate_logs['denominator'],
                 2*self.evaluate_logs['numerate']/self.evaluate_logs['denominator'])
             )
+            print('===== write evaluate_log.txt =====')
+            with open('./evaluate_log.txt', 'a+', encoding='utf-8') as f:
+                f.write('eval loss is {:.6f}, precision is:{}, recall is:{}, f1_score is:{}\n'.format(
+                self.evaluate_logs['eval_loss'] / self.evaluate_logs['eval_step'],
+                self.evaluate_logs['numerate'],
+                self.evaluate_logs['denominator'],
+                2*self.evaluate_logs['numerate']/self.evaluate_logs['denominator']))

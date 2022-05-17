@@ -131,11 +131,11 @@ def get_raw_data(filename):
     return datalist, label_set
 
 def prepare_dataset(datalist, label_set, eval_size):
-    #train_data_df = pd.DataFrame(datalist[:100])
+    #train_data_df = pd.DataFrame(datalist[:1000])
     train_data_df = pd.DataFrame(datalist[:-eval_size])
     train_data_df['label'] = train_data_df['label'].apply(lambda x: str(x))
 
-    #dev_data_df = pd.DataFrame(datalist[-100:])
+    #dev_data_df = pd.DataFrame(datalist[-200:])
     dev_data_df = pd.DataFrame(datalist[-eval_size:])
     dev_data_df['label'] = dev_data_df['label'].apply(lambda x: str(x))
     print('===== dataframe init done =====')
@@ -438,7 +438,8 @@ def build_model(model_path, tokenizer, ner_train_dataset, ner_dev_dataset, num_e
             **kwargs
         ):
 
-            if evaluate_save and ((self.evaluate_save_count == 5) or (self.evaluate_save_count == 6)):
+            #if evaluate_save and ((self.evaluate_save_count == 5) or (self.evaluate_save_count == 6)):
+            if evaluate_save and (self.evaluate_save_count == 5):
                 if save_module_path is None:
                     prefix = './model_save/' + str(self.module.__class__.__name__) + '_'
                     save_module_path = time.strftime(prefix + '%m%d_%H_%M_%S.pth')
@@ -813,5 +814,6 @@ if __name__ == "__main__":
         train(model, ner_train_dataset, ner_dev_dataset, num_epoches, batch_size)
     elif args.mode == 'test':
         model = load_model(model, './model_save/best_model.pth')
+        #model = load_model(model, './pretrained_nezha_bert/best_model.pth')
         
     predict(model, tokenizer, ner_train_dataset, ner_dev_dataset, threshold=args.pred_threshold)

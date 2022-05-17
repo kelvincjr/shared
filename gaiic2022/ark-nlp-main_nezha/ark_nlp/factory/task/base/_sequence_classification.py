@@ -32,20 +32,19 @@ import torch.nn.functional as F
 import torch.nn.init as I
 
 def compute_kl_loss(p, q, pad_mask=None):
-    pad_mask = torch.unsqueeze(pad_mask, -1).bool()
-    p_loss = F.kl_div(p.log(), q, reduction='none', log_target=False)
-    q_loss = F.kl_div(q.log(), p, reduction='none', log_target=False)
+    p_loss = F.kl_div(F.log_softmax(p, dim=-1), F.softmax(q, dim=-1), reduction='none')
+    q_loss = F.kl_div(F.log_softmax(q, dim=-1), F.softmax(p, dim=-1), reduction='none')
+
     # pad_mask is for seq-level tasks
     if pad_mask is not None:
         p_loss.masked_fill_(pad_mask, 0.)
         q_loss.masked_fill_(pad_mask, 0.)
-
     # You can choose whether to use function "sum" and "mean" depending on your task
     p_loss = p_loss.sum()
     q_loss = q_loss.sum()
-
     loss = (p_loss + q_loss) / 2
-    return loss.mean()
+    return loss
+
 
 class SequenceClassificationTask(Task):
     """
@@ -129,7 +128,7 @@ class SequenceClassificationTask(Task):
                 logits1, loss1 = self._get_train_loss(inputs, outputs1, **kwargs)
                 ce_loss = (loss + loss1) / 2
                 kl_loss = compute_kl_loss(logits, logits1)
-                rdrop_alpha = 1.0
+                rdrop_alpha = 0.25
                 loss = ce_loss + rdrop_alpha * kl_loss
 
                 # loss backword
