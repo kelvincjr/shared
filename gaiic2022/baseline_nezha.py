@@ -813,7 +813,7 @@ if __name__ == "__main__":
     if args.mode == 'train':
         train(model, ner_train_dataset, ner_dev_dataset, num_epoches, batch_size)
     elif args.mode == 'test':
-        model = load_model(model, './model_save/best_model.pth')
-        #model = load_model(model, './pretrained_nezha_bert/best_model.pth')
+        #model = load_model(model, './model_save/best_model.pth')
+        model = load_model(model, './pretrained_nezha_bert/best_model.pth')
         
-    predict(model, tokenizer, ner_train_dataset, ner_dev_dataset, threshold=args.pred_threshold)
+    #predict(model, tokenizer, ner_train_dataset, ner_dev_dataset, threshold=args.pred_threshold)
