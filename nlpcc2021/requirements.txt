@@ -12,4 +12,4 @@ tensorboardX==2.2
 torchaudio==0.8.1
 torchvision==0.9.1
 tqdm==4.60.0
-transformers==3.4.0
+transformers==4.30.0
